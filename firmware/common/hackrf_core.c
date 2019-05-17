@@ -47,7 +47,7 @@
 
 /* GPIO Output PinMux */
 static struct gpio_t gpio_led[] = {
-	GPIO(2,  1),
+	GPIO(0,  10),
 	GPIO(2,  2),
 	GPIO(2,  8),
 #ifdef RAD1O

@@ -20,26 +20,30 @@
  */
 
 #include "hackrf_core.h"
+#include "gpio_lpc.h"
+
+static struct gpio_t gpio_led[] = {
+	GPIO(3,  7),
+	GPIO(2,  2),
+	GPIO(2,  8),
+#ifdef RAD1O
+	GPIO(5,  26),
+#endif
+};
 
 int main(void)
 {
-	pin_setup();
-
-	/* enable all power supplies */
-	enable_1v8_power();
+	gpio_init();
+	gpio_output(&gpio_led[0]);
 
 	/* Blink LED1/2/3 on the board. */
 	while (1) 
 	{
-		led_on(LED1);
-		led_on(LED2);
-		led_on(LED3);
+		gpio_set(&gpio_led[0]);
 
 		delay(2000000);
 		
-		led_off(LED1);
-		led_off(LED2);
-		led_off(LED3);
+		gpio_clear(&gpio_led[0]);
 		
 		delay(2000000);
 	}
