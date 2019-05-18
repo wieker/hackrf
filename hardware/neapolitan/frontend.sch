@@ -1,37 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:hackrf
-LIBS:gsg-symbols
+EESchema Schematic File Version 4
 LIBS:neapolitan-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr User 17000 11000
 encoding utf-8
@@ -77,12 +46,12 @@ Wire Wire Line
 Wire Wire Line
 	12600 6300 12600 6200
 Wire Wire Line
-	10050 8800 10500 8800
+	10050 8800 10150 8800
 Wire Wire Line
 	12600 6700 12600 6600
 Connection ~ 12600 6950
 Wire Wire Line
-	12300 6950 12700 6950
+	12300 6950 12600 6950
 Wire Wire Line
 	13400 6950 13300 6950
 Wire Wire Line
@@ -115,11 +84,11 @@ Wire Wire Line
 Wire Wire Line
 	13100 3700 12800 3700
 Wire Wire Line
-	5700 4450 7200 4450
+	5700 4450 6700 4450
 Wire Wire Line
-	5500 4650 7200 4650
+	5500 4650 6100 4650
 Wire Wire Line
-	5650 8050 6650 8050
+	5650 8050 5750 8050
 Wire Wire Line
 	5650 8050 5650 7950
 Wire Wire Line
@@ -133,7 +102,7 @@ Wire Wire Line
 Wire Wire Line
 	6950 6900 6950 6800
 Wire Wire Line
-	12150 8250 13150 8250
+	12150 8250 12300 8250
 Wire Wire Line
 	10100 7300 10000 7300
 Wire Wire Line
@@ -182,7 +151,7 @@ Connection ~ 10500 8800
 Wire Wire Line
 	10150 8900 10150 8800
 Wire Wire Line
-	10500 7900 10500 8300
+	10500 7900 10500 8000
 Wire Wire Line
 	11600 9100 13050 9100
 Wire Wire Line
@@ -260,7 +229,7 @@ Wire Wire Line
 Wire Wire Line
 	2400 4750 2400 4650
 Wire Wire Line
-	2400 4050 2400 4350
+	2400 4050 2400 4250
 Wire Wire Line
 	2300 4050 2300 4150
 Wire Wire Line
@@ -278,14 +247,14 @@ Wire Wire Line
 Wire Wire Line
 	4100 3450 4100 4150
 Wire Wire Line
-	4100 4150 3700 4150
+	4100 4150 3900 4150
 Connection ~ 3900 3350
 Wire Wire Line
 	3700 4000 3800 4000
 Wire Wire Line
 	3800 4000 3800 3350
 Wire Wire Line
-	3800 3350 4200 3350
+	3800 3350 3900 3350
 Wire Wire Line
 	3100 4000 3000 4000
 Connection ~ 1600 2250
@@ -294,7 +263,7 @@ Wire Wire Line
 Wire Wire Line
 	2200 1000 2100 1000
 Wire Wire Line
-	1700 900  1700 1250
+	1700 900  1700 1000
 Connection ~ 1700 1000
 Connection ~ 1700 6050
 Wire Wire Line
@@ -327,9 +296,9 @@ Wire Wire Line
 	15900 9150 15900 9050
 Connection ~ 6300 9800
 Wire Wire Line
-	6300 9800 7000 9800
+	6300 9800 6700 9800
 Wire Wire Line
-	6300 9700 6300 9900
+	6300 9700 6300 9800
 Wire Wire Line
 	7100 3950 7100 4050
 Wire Wire Line
@@ -363,7 +332,7 @@ Wire Wire Line
 Wire Wire Line
 	8300 2950 8300 2850
 Wire Wire Line
-	6500 2950 8300 2950
+	6500 2950 8000 2950
 Wire Wire Line
 	7300 2550 7300 2450
 Connection ~ 7300 2050
@@ -374,7 +343,7 @@ Wire Wire Line
 	6800 2150 6800 2050
 Connection ~ 4400 5050
 Wire Wire Line
-	4400 4650 4400 5150
+	4400 4650 4400 4750
 Connection ~ 4400 4750
 Wire Wire Line
 	4500 5050 4400 5050
@@ -390,7 +359,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 5950 6150 5950
 Wire Wire Line
-	5200 5950 5550 5950
+	5200 5950 5300 5950
 Wire Wire Line
 	4100 3250 4200 3250
 Wire Wire Line
@@ -409,9 +378,9 @@ Wire Wire Line
 Wire Wire Line
 	6600 2750 6600 2050
 Wire Wire Line
-	6600 2050 6900 2050
+	6600 2050 6800 2050
 Wire Wire Line
-	7200 2050 7400 2050
+	7200 2050 7300 2050
 Wire Wire Line
 	6800 2550 6800 2450
 Wire Wire Line
@@ -422,7 +391,7 @@ Wire Wire Line
 	8000 2450 8000 2950
 Connection ~ 8000 2950
 Wire Wire Line
-	7700 2050 8300 2050
+	7700 2050 7800 2050
 Wire Wire Line
 	8300 2050 8300 2150
 Connection ~ 7800 2050
@@ -462,14 +431,14 @@ Wire Wire Line
 Wire Wire Line
 	12200 2450 12000 2450
 Wire Wire Line
-	10000 3750 10000 4100
+	10000 3750 10000 4000
 Wire Wire Line
 	10000 4500 10000 4400
 Connection ~ 5300 5150
 Wire Wire Line
-	5300 4250 5300 5250
+	5300 4250 5300 5050
 Wire Wire Line
-	5200 4250 5200 5950
+	5200 4250 5200 4750
 Wire Wire Line
 	10800 2450 10600 2450
 Wire Wire Line
@@ -540,7 +509,7 @@ Wire Wire Line
 Wire Wire Line
 	14450 3300 14550 3300
 Wire Wire Line
-	1600 7200 1600 7400
+	1600 7200 1600 7300
 Wire Wire Line
 	14350 8150 14250 8150
 Wire Wire Line
@@ -560,11 +529,11 @@ Wire Wire Line
 Wire Wire Line
 	13050 8450 13150 8450
 Wire Wire Line
-	8950 8800 9450 8800
+	8950 8800 9350 8800
 Connection ~ 9350 8800
 Connection ~ 10150 8800
 Wire Wire Line
-	6750 6800 6750 7000
+	6750 6800 6750 6900
 Connection ~ 6750 6900
 Wire Wire Line
 	7350 5600 7250 5600
@@ -572,7 +541,7 @@ Wire Wire Line
 	9500 1650 9400 1650
 Connection ~ 9400 1650
 Wire Wire Line
-	9300 2650 9300 2950
+	9300 2650 9300 2850
 Wire Wire Line
 	6950 5800 7900 5800
 Wire Wire Line
@@ -586,7 +555,7 @@ Wire Wire Line
 Wire Wire Line
 	12700 4350 12700 4250
 Wire Wire Line
-	12700 3600 12700 3950
+	12700 3600 12700 3850
 Connection ~ 12700 3850
 Wire Wire Line
 	15750 3600 15750 3700
@@ -629,13 +598,13 @@ Connection ~ 11100 8500
 Wire Wire Line
 	5650 8350 5650 8450
 Wire Wire Line
-	5650 8350 6650 8350
+	5650 8350 5750 8350
 Wire Wire Line
 	5100 4350 5100 4250
 Wire Wire Line
-	5600 4550 7200 4550
+	5600 4550 6400 4550
 Wire Wire Line
-	5400 4750 7200 4750
+	5400 4750 5800 4750
 Wire Wire Line
 	15750 1150 15750 2900
 Wire Wire Line
@@ -653,17 +622,17 @@ Wire Wire Line
 Wire Wire Line
 	13800 6650 13400 6650
 Wire Wire Line
-	13400 6550 13400 6950
+	13400 6550 13400 6650
 Connection ~ 13400 6650
 Wire Wire Line
 	12600 7050 12600 6950
 Wire Wire Line
-	12300 6850 12300 7050
+	12300 6850 12300 6950
 Connection ~ 12300 6950
 Wire Wire Line
-	10500 8700 10500 8900
+	10500 8700 10500 8800
 Wire Wire Line
-	12300 6100 12300 6450
+	12300 6100 12300 6200
 Connection ~ 12300 6200
 Wire Wire Line
 	11900 6300 11700 6300
@@ -688,7 +657,7 @@ Wire Wire Line
 Text Notes 10900 7500 0    40   ~ 0
 amplifier bypass path
 $Comp
-L C C53
+L neapolitan-rescue:C C53
 U 1 1 5054932E
 P 10150 8250
 F 0 "C53" H 10200 8350 50  0000 L CNN
@@ -702,7 +671,7 @@ F 6 "CAP CER 1UF 10V 10% X5R 0402" H 10150 8250 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR01
+L power:VAA #PWR01
 U 1 1 50471BB9
 P 4400 4650
 F 0 "#PWR01" H 4400 4710 30  0001 C CNN
@@ -713,7 +682,7 @@ F 3 "" H 4400 4650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 50457E6B
 P 13300 6650
 F 0 "#PWR02" H 13300 6650 30  0001 C CNN
@@ -724,7 +693,7 @@ F 3 "" H 13300 6650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 50457E69
 P 13200 6650
 F 0 "#PWR03" H 13200 6650 30  0001 C CNN
@@ -735,7 +704,7 @@ F 3 "" H 13200 6650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR04
+L power:VAA #PWR04
 U 1 1 50457D5F
 P 12300 6100
 F 0 "#PWR04" H 12300 6160 30  0001 C CNN
@@ -746,7 +715,7 @@ F 3 "" H 12300 6100 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 50457CD5
 P 12600 6700
 F 0 "#PWR05" H 12600 6700 30  0001 C CNN
@@ -757,7 +726,7 @@ F 3 "" H 12600 6700 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 50457C43
 P 13400 5550
 F 0 "#PWR06" H 13400 5550 30  0001 C CNN
@@ -768,7 +737,7 @@ F 3 "" H 13400 5550 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 50457C40
 P 13300 5550
 F 0 "#PWR07" H 13300 5550 30  0001 C CNN
@@ -781,7 +750,7 @@ $EndComp
 Text Label 11050 5550 2    40   ~ 0
 TX_AMP_IN
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 50457B40
 P 10150 8500
 F 0 "#PWR08" H 10150 8500 30  0001 C CNN
@@ -792,7 +761,7 @@ F 3 "" H 10150 8500 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 50457B1B
 P 9350 10150
 F 0 "#PWR09" H 9350 10150 30  0001 C CNN
@@ -803,7 +772,7 @@ F 3 "" H 9350 10150 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 50457B19
 P 9450 10150
 F 0 "#PWR010" H 9450 10150 30  0001 C CNN
@@ -814,7 +783,7 @@ F 3 "" H 9450 10150 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 50457B06
 P 9550 9050
 F 0 "#PWR011" H 9550 9050 30  0001 C CNN
@@ -825,7 +794,7 @@ F 3 "" H 9550 9050 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR012
+L power:GND #PWR012
 U 1 1 50457B03
 P 9450 9050
 F 0 "#PWR012" H 9450 9050 30  0001 C CNN
@@ -846,7 +815,7 @@ MIXER_SDATA
 Text GLabel 6300 9300 1    40   Input ~ 0
 MIX_CLK
 $Comp
-L VAA #PWR013
+L power:VAA #PWR013
 U 1 1 5043D020
 P 10500 7900
 F 0 "#PWR013" H 10500 7960 30  0001 C CNN
@@ -857,7 +826,7 @@ F 3 "" H 10500 7900 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR014
+L power:VAA #PWR014
 U 1 1 5043CFFC
 P 5650 7950
 F 0 "#PWR014" H 5650 8010 30  0001 C CNN
@@ -868,7 +837,7 @@ F 3 "" H 5650 7950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR015
+L power:GND #PWR015
 U 1 1 5043CFF1
 P 5650 8450
 F 0 "#PWR015" H 5650 8450 30  0001 C CNN
@@ -879,7 +848,7 @@ F 3 "" H 5650 8450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR016
+L power:VAA #PWR016
 U 1 1 5043CF9A
 P 6600 3050
 F 0 "#PWR016" H 6600 3110 30  0001 C CNN
@@ -890,7 +859,7 @@ F 3 "" H 6600 3050 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VAA #PWR017
+L power:VAA #PWR017
 U 1 1 5043CF97
 P 4100 3250
 F 0 "#PWR017" H 4100 3310 30  0001 C CNN
@@ -901,7 +870,7 @@ F 3 "" H 4100 3250 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R24
+L neapolitan-rescue:R R24
 U 1 1 503C490B
 P 12050 6300
 F 0 "R24" V 12130 6300 50  0000 C CNN
@@ -915,7 +884,7 @@ F 6 "RES 10K OHM 1/16W 5% 0402 SMD" H 12050 6300 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R29
+L neapolitan-rescue:R R29
 U 1 1 503C48ED
 P 10750 8100
 F 0 "R29" V 10830 8100 50  0000 C CNN
@@ -929,7 +898,7 @@ F 6 "RES 10K OHM 1/16W 5% 0402 SMD" H 10750 8100 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MGA-81563 U25
+L hackrf:MGA-81563 U25
 U 1 1 503BF2DD
 P 13300 6100
 F 0 "U25" H 13300 6150 60  0000 C CNN
@@ -943,7 +912,7 @@ F 6 "0.1-6 GHz 3 V, 14 dBm Amplifier" H 13300 6100 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L INDUCTOR L12
+L neapolitan-rescue:INDUCTOR L12
 U 1 1 503BF2DC
 P 13000 6950
 F 0 "L12" V 12950 6950 40  0000 C CNN
@@ -957,7 +926,7 @@ F 6 "INDUCTR 10UH 220MA 20% 0603 SMD" H 15550 8050 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C160
+L neapolitan-rescue:C C160
 U 1 1 503BF2DB
 P 12600 7200
 F 0 "C160" H 12650 7300 50  0000 L CNN
@@ -971,7 +940,7 @@ F 6 "CAP CER 100PF 50V 5% NP0 0402" H 15600 8750 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C161
+L neapolitan-rescue:C C161
 U 1 1 503BF2DA
 P 12600 6450
 F 0 "C161" H 12650 6550 50  0000 L CNN
@@ -985,7 +954,7 @@ F 6 "CAP CER 1UF 10V 10% X5R 0402" H 12600 6450 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR018
+L power:GND #PWR018
 U 1 1 503BF2D9
 P 12600 7450
 F 0 "#PWR018" H 12600 7450 30  0001 C CNN
@@ -996,7 +965,7 @@ F 3 "" H 12600 7450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR019
+L power:GND #PWR019
 U 1 1 503BF2D8
 P 12300 7450
 F 0 "#PWR019" H 12300 7450 30  0001 C CNN
@@ -1007,7 +976,7 @@ F 3 "" H 12300 7450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOSFET_P Q2
+L neapolitan-rescue:MOSFET_P Q2
 U 1 1 503BF2D7
 P 12200 6650
 F 0 "Q2" H 12200 6840 60  0000 R CNN
@@ -1021,7 +990,7 @@ F 6 "MOSFET P-CH 50V 130MA SOT-23" H 12200 6650 60  0001 C CNN "Description"
 	1    0    0    1   
 $EndComp
 $Comp
-L C C162
+L neapolitan-rescue:C C162
 U 1 1 503BF2D5
 P 12300 7200
 F 0 "C162" H 12350 7300 50  0000 L CNN
@@ -1035,7 +1004,7 @@ F 6 "CAP CER 10000PF 16V 10% X7R 0402" H 18700 5950 60  0001 C CNN "Description"
 	1    0    0    1   
 $EndComp
 $Comp
-L C C163
+L neapolitan-rescue:C C163
 U 1 1 503BF2CB
 P 10500 9050
 F 0 "C163" H 10550 9150 50  0000 L CNN
@@ -1049,7 +1018,7 @@ F 6 "CAP CER 10000PF 16V 10% X7R 0402" H 16900 7800 60  0001 C CNN "Description"
 	1    0    0    1   
 $EndComp
 $Comp
-L INDUCTOR L3
+L neapolitan-rescue:INDUCTOR L3
 U 1 1 503BF2B7
 P 4800 5050
 F 0 "L3" V 4750 5050 40  0000 C CNN
@@ -1063,7 +1032,7 @@ F 6 "INDUCTR 10UH 220MA 20% 0603 SMD" H 15550 8050 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L INDUCTOR L2
+L neapolitan-rescue:INDUCTOR L2
 U 1 1 503BF2A7
 P 4800 4750
 F 0 "L2" V 4750 4750 40  0000 C CNN
@@ -1081,7 +1050,7 @@ TX_IF
 Text GLabel 1100 6200 0    60   Input ~ 0
 RX_IF
 $Comp
-L C C49
+L neapolitan-rescue:C C49
 U 1 1 503BB2CE
 P 6250 6250
 F 0 "C49" H 6300 6350 50  0000 L CNN
@@ -1095,7 +1064,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7300 10000 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C25
+L neapolitan-rescue:C C25
 U 1 1 503BB2BD
 P 3000 3750
 F 0 "C25" H 3050 3850 50  0000 L CNN
@@ -1109,7 +1078,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7300 10050 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR020
+L power:GND #PWR020
 U 1 1 502E7B4C
 P 6950 6900
 F 0 "#PWR020" H 6950 6900 30  0001 C CNN
@@ -1120,7 +1089,7 @@ F 3 "" H 6950 6900 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR021
+L power:GND #PWR021
 U 1 1 502E7A17
 P 10500 7300
 F 0 "#PWR021" H 10500 7300 30  0001 C CNN
@@ -1131,7 +1100,7 @@ F 3 "" H 10500 7300 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C57
+L neapolitan-rescue:C C57
 U 1 1 502E7A16
 P 10250 7300
 F 0 "C57" H 10300 7400 50  0000 L CNN
@@ -1145,7 +1114,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 21600 9550 60  0001 C CNN "Description"
 	0    -1   1    0   
 $EndComp
 $Comp
-L C C55
+L neapolitan-rescue:C C55
 U 1 1 502E7A10
 P 10150 6750
 F 0 "C55" H 10200 6850 50  0000 L CNN
@@ -1159,7 +1128,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 21500 9000 60  0001 C CNN "Description"
 	0    -1   1    0   
 $EndComp
 $Comp
-L GND #PWR022
+L power:GND #PWR022
 U 1 1 502E7A0F
 P 10400 6750
 F 0 "#PWR022" H 10400 6750 30  0001 C CNN
@@ -1170,7 +1139,7 @@ F 3 "" H 10400 6750 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR023
+L power:GND #PWR023
 U 1 1 502E79FB
 P 8200 7950
 F 0 "#PWR023" H 8200 7950 30  0001 C CNN
@@ -1181,7 +1150,7 @@ F 3 "" H 8200 7950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C60
+L neapolitan-rescue:C C60
 U 1 1 502E79FA
 P 8200 7700
 F 0 "C60" H 8250 7800 50  0000 L CNN
@@ -1195,7 +1164,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 19550 9950 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR024
+L power:GND #PWR024
 U 1 1 502E79D7
 P 14950 8100
 F 0 "#PWR024" H 14950 8100 30  0001 C CNN
@@ -1206,7 +1175,7 @@ F 3 "" H 14950 8100 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C63
+L neapolitan-rescue:C C63
 U 1 1 502E79CE
 P 14700 8100
 F 0 "C63" H 14750 8200 50  0000 L CNN
@@ -1220,7 +1189,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 26050 10350 60  0001 C CNN "Description"
 	0    -1   1    0   
 $EndComp
 $Comp
-L C C66
+L neapolitan-rescue:C C66
 U 1 1 502E798C
 P 12850 8600
 F 0 "C66" H 12900 8700 50  0000 L CNN
@@ -1234,7 +1203,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 24200 10850 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR025
+L power:GND #PWR025
 U 1 1 502E798B
 P 12850 8850
 F 0 "#PWR025" H 12850 8850 30  0001 C CNN
@@ -1245,7 +1214,7 @@ F 3 "" H 12850 8850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR026
+L power:GND #PWR026
 U 1 1 502E798A
 P 12300 8750
 F 0 "#PWR026" H 12300 8750 30  0001 C CNN
@@ -1256,7 +1225,7 @@ F 3 "" H 12300 8750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C65
+L neapolitan-rescue:C C65
 U 1 1 502E7989
 P 12300 8500
 F 0 "C65" H 12350 8600 50  0000 L CNN
@@ -1270,7 +1239,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 23650 10750 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C38
+L neapolitan-rescue:C C38
 U 1 1 502E792B
 P 13600 3650
 F 0 "C38" H 13650 3750 50  0000 L CNN
@@ -1284,7 +1253,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 24950 5900 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR027
+L power:GND #PWR027
 U 1 1 502E792A
 P 13600 3900
 F 0 "#PWR027" H 13600 3900 30  0001 C CNN
@@ -1295,7 +1264,7 @@ F 3 "" H 13600 3900 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR028
+L power:GND #PWR028
 U 1 1 502E7923
 P 14150 4000
 F 0 "#PWR028" H 14150 4000 30  0001 C CNN
@@ -1306,7 +1275,7 @@ F 3 "" H 14150 4000 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C40
+L neapolitan-rescue:C C40
 U 1 1 502E7922
 P 14150 3750
 F 0 "C40" H 14200 3850 50  0000 L CNN
@@ -1320,7 +1289,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 25500 6000 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C39
+L neapolitan-rescue:C C39
 U 1 1 502E78E2
 P 16150 3650
 F 0 "C39" H 16200 3750 50  0000 L CNN
@@ -1334,7 +1303,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 27500 5900 60  0001 C CNN "Description"
 	1    0    0    1   
 $EndComp
 $Comp
-L GND #PWR029
+L power:GND #PWR029
 U 1 1 502E78E1
 P 16150 3900
 F 0 "#PWR029" H 16150 3900 30  0001 C CNN
@@ -1345,7 +1314,7 @@ F 3 "" H 16150 3900 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C29
+L neapolitan-rescue:C C29
 U 1 1 502E6FEE
 P 12700 4100
 F 0 "C29" H 12750 4200 50  0000 L CNN
@@ -1359,7 +1328,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 15850 3900 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR030
+L power:GND #PWR030
 U 1 1 502E6FED
 P 12700 4350
 F 0 "#PWR030" H 12700 4350 30  0001 C CNN
@@ -1370,7 +1339,7 @@ F 3 "" H 12700 4350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR031
+L power:GND #PWR031
 U 1 1 502E6F90
 P 13300 2600
 F 0 "#PWR031" H 13300 2600 30  0001 C CNN
@@ -1381,7 +1350,7 @@ F 3 "" H 13300 2600 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C19
+L neapolitan-rescue:C C19
 U 1 1 502E6F8B
 P 13050 2600
 F 0 "C19" H 13100 2700 50  0000 L CNN
@@ -1395,7 +1364,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 24400 4850 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR032
+L power:GND #PWR032
 U 1 1 502E6F53
 P 9300 3350
 F 0 "#PWR032" H 9300 3350 30  0001 C CNN
@@ -1406,7 +1375,7 @@ F 3 "" H 9300 3350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C24
+L neapolitan-rescue:C C24
 U 1 1 502E6F11
 P 9300 3100
 F 0 "C24" H 9350 3200 50  0000 L CNN
@@ -1420,7 +1389,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 12450 2900 60  0001 C CNN "Description"
 	1    0    0    1   
 $EndComp
 $Comp
-L GND #PWR033
+L power:GND #PWR033
 U 1 1 502E6F0C
 P 9900 1650
 F 0 "#PWR033" H 9900 1650 30  0001 C CNN
@@ -1431,7 +1400,7 @@ F 3 "" H 9900 1650 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C10
+L neapolitan-rescue:C C10
 U 1 1 502E6EFB
 P 9650 1650
 F 0 "C10" H 9700 1750 50  0000 L CNN
@@ -1445,7 +1414,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 12800 1450 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR034
+L power:GND #PWR034
 U 1 1 502E6EDE
 P 7350 5600
 F 0 "#PWR034" H 7350 5600 30  0001 C CNN
@@ -1456,7 +1425,7 @@ F 3 "" H 7350 5600 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C45
+L neapolitan-rescue:C C45
 U 1 1 502E6ECB
 P 7100 5600
 F 0 "C45" H 7150 5700 50  0000 L CNN
@@ -1470,7 +1439,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 10250 5400 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR035
+L power:GND #PWR035
 U 1 1 502E6EC5
 P 6250 6900
 F 0 "#PWR035" H 6250 6900 30  0001 C CNN
@@ -1481,7 +1450,7 @@ F 3 "" H 6250 6900 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C54
+L neapolitan-rescue:C C54
 U 1 1 502E6EB0
 P 6500 6900
 F 0 "C54" H 6550 7000 50  0000 L CNN
@@ -1495,7 +1464,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 9650 6700 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L MOSFET_P Q1
+L neapolitan-rescue:MOSFET_P Q1
 U 1 1 502E69D1
 P 10600 8500
 F 0 "Q1" H 10600 8690 60  0000 R CNN
@@ -1509,7 +1478,7 @@ F 6 "MOSFET P-CH 50V 130MA SOT-23" H 10600 8500 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C61
+L neapolitan-rescue:C C61
 U 1 1 502E6909
 P 11700 7800
 F 0 "C61" H 11750 7900 50  0000 L CNN
@@ -1529,7 +1498,7 @@ RX_AMP_OUT
 Text Label 12300 9350 0    40   ~ 0
 RX_AMP_IN
 $Comp
-L GND #PWR036
+L power:GND #PWR036
 U 1 1 502E6209
 P 13700 7600
 F 0 "#PWR036" H 13700 7600 30  0001 C CNN
@@ -1540,7 +1509,7 @@ F 3 "" H 13700 7600 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR037
+L power:GND #PWR037
 U 1 1 502E619A
 P 15100 2750
 F 0 "#PWR037" H 15100 2750 30  0001 C CNN
@@ -1551,7 +1520,7 @@ F 3 "" H 15100 2750 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR038
+L power:GND #PWR038
 U 1 1 502E6129
 P 9150 8100
 F 0 "#PWR038" H 9150 8100 30  0001 C CNN
@@ -1562,7 +1531,7 @@ F 3 "" H 9150 8100 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MGA-81563 U13
+L hackrf:MGA-81563 U13
 U 1 1 502DE480
 P 9450 9600
 F 0 "U13" H 9450 9650 60  0000 C CNN
@@ -1576,7 +1545,7 @@ F 6 "0.1-6 GHz 3 V, 14 dBm Amplifier" H 9450 9600 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR039
+L power:GND #PWR039
 U 1 1 502C6DC4
 P 10500 9300
 F 0 "#PWR039" H 10500 9300 30  0001 C CNN
@@ -1587,7 +1556,7 @@ F 3 "" H 10500 9300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR040
+L power:GND #PWR040
 U 1 1 502C6DC1
 P 10150 9300
 F 0 "#PWR040" H 10150 9300 30  0001 C CNN
@@ -1598,7 +1567,7 @@ F 3 "" H 10150 9300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C64
+L neapolitan-rescue:C C64
 U 1 1 502C6D4A
 P 14500 8450
 F 0 "C64" H 14550 8550 50  0000 L CNN
@@ -1612,7 +1581,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7250 10000 60  0001 C CNN "Description"
 	0    -1   1    0   
 $EndComp
 $Comp
-L C C52
+L neapolitan-rescue:C C52
 U 1 1 502C6D36
 P 10150 9050
 F 0 "C52" H 10200 9150 50  0000 L CNN
@@ -1626,7 +1595,7 @@ F 6 "CAP CER 100PF 50V 5% NP0 0402" H 13150 10600 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L INDUCTOR L5
+L neapolitan-rescue:INDUCTOR L5
 U 1 1 502C6D12
 P 9750 8800
 F 0 "L5" V 9700 8800 40  0000 C CNN
@@ -1640,7 +1609,7 @@ F 6 "INDUCTR 10UH 220MA 20% 0603 SMD" H 15550 8050 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L SKY13317 U14
+L hackrf:SKY13317 U14
 U 1 1 502C6BE2
 P 13700 8300
 F 0 "U14" H 13700 8300 60  0000 C CNN
@@ -1654,7 +1623,7 @@ F 6 "20 MHz-6.0 GHz pHEMT GaAs SP3T Switch" H 13700 8300 60  0001 C CNN "Descrip
 	-1   0    0    1   
 $EndComp
 $Comp
-L SKY13317 U12
+L hackrf:SKY13317 U12
 U 1 1 502C6BDF
 P 9150 7400
 F 0 "U12" H 9150 7400 60  0000 C CNN
@@ -1668,7 +1637,7 @@ F 6 "20 MHz-6.0 GHz pHEMT GaAs SP3T Switch" H 9150 7400 60  0001 C CNN "Descript
 	1    0    0    -1  
 $EndComp
 $Comp
-L RFFC5072 U4
+L hackrf:RFFC5072 U4
 U 1 1 502BE21C
 P 5350 3100
 F 0 "U4" H 5350 3200 60  0000 C CNN
@@ -1682,7 +1651,7 @@ F 6 "WIDEBAND SYNTHESIZER/VCO WITH INTEGRATED 6GHz MIXER" H 5350 3100 60  0001 C
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C43
+L neapolitan-rescue:C C43
 U 1 1 502B5738
 P 14450 3850
 F 0 "C43" H 14500 3950 50  0000 L CNN
@@ -1696,7 +1665,7 @@ F 6 "CAP CER 22PF 50V 5% NP0 0402" H 1650 1250 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C32
+L neapolitan-rescue:C C32
 U 1 1 502B571F
 P 15750 3050
 F 0 "C32" H 15800 3150 50  0000 L CNN
@@ -1710,7 +1679,7 @@ F 6 "CAP CER 22PF 50V 5% NP0 0402" H 1650 1350 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SKY13317 U9
+L hackrf:SKY13317 U9
 U 1 1 502B5704
 P 15100 3450
 F 0 "U9" H 15100 3450 60  0000 C CNN
@@ -1724,7 +1693,7 @@ F 6 "20 MHz-6.0 GHz pHEMT GaAs SP3T Switch" H 15100 3450 60  0001 C CNN "Descrip
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C31
+L neapolitan-rescue:C C31
 U 1 1 502B56C2
 P 14200 3200
 F 0 "C31" H 14250 3300 50  0000 L CNN
@@ -1738,7 +1707,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR041
+L power:GND #PWR041
 U 1 1 502B5542
 P 12600 2600
 F 0 "#PWR041" H 12600 2600 30  0001 C CNN
@@ -1749,7 +1718,7 @@ F 3 "" H 12600 2600 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR042
+L power:GND #PWR042
 U 1 1 502B54A4
 P 10200 3850
 F 0 "#PWR042" H 10200 3850 30  0001 C CNN
@@ -1760,7 +1729,7 @@ F 3 "" H 10200 3850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR043
+L power:GND #PWR043
 U 1 1 502B5428
 P 9200 1650
 F 0 "#PWR043" H 9200 1650 30  0001 C CNN
@@ -1771,7 +1740,7 @@ F 3 "" H 9200 1650 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C9
+L neapolitan-rescue:C C9
 U 1 1 502B53A4
 P 9050 1450
 F 0 "C9" H 9100 1550 50  0000 L CNN
@@ -1785,7 +1754,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C48
+L neapolitan-rescue:C C48
 U 1 1 501EF6BA
 P 1350 6200
 F 0 "C48" H 1400 6300 50  0000 L CNN
@@ -1799,7 +1768,7 @@ F 6 "CAP CER 22PF 50V 5% NP0 0402" H 1700 1300 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C23
+L neapolitan-rescue:C C23
 U 1 1 502B4C6F
 P 7900 3800
 F 0 "C23" H 7950 3900 50  0000 L CNN
@@ -1813,7 +1782,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7300 9950 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L SKY13350 U10
+L hackrf:SKY13350 U10
 U 1 1 502B4C1C
 P 6850 6350
 F 0 "U10" H 6850 6550 60  0000 C CNN
@@ -1827,7 +1796,7 @@ F 6 "0.01-6.0 GHz GaAs SPDT Switch" H 6850 6350 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C46
+L neapolitan-rescue:C C46
 U 1 1 502B4C15
 P 6500 5800
 F 0 "C46" H 6550 5900 50  0000 L CNN
@@ -1841,7 +1810,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L INDUCTOR L4
+L neapolitan-rescue:INDUCTOR L4
 U 1 1 4FB55E30
 P 5300 5550
 F 0 "L4" V 5250 5550 40  0000 C CNN
@@ -1853,7 +1822,7 @@ F 4 "DNP" V 5150 5550 60  0000 C CNN "Note"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SKY13350 U2
+L hackrf:SKY13350 U2
 U 1 1 502B490F
 P 9300 2200
 F 0 "U2" H 9300 2400 60  0000 C CNN
@@ -1867,7 +1836,7 @@ F 6 "0.01-6.0 GHz GaAs SPDT Switch" H 9300 2200 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C33
+L neapolitan-rescue:C C33
 U 1 1 502B4780
 P 2400 4500
 F 0 "C33" H 2450 4600 50  0000 L CNN
@@ -1881,7 +1850,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 5550 4300 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR044
+L power:GND #PWR044
 U 1 1 502B477F
 P 2400 4750
 F 0 "#PWR044" H 2400 4750 30  0001 C CNN
@@ -1892,7 +1861,7 @@ F 3 "" H 2400 4750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SKY13350 U7
+L hackrf:SKY13350 U7
 U 1 1 502B477E
 P 2400 3600
 F 0 "U7" H 2400 3800 60  0000 C CNN
@@ -1906,7 +1875,7 @@ F 6 "0.01-6.0 GHz GaAs SPDT Switch" H 2400 3600 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR045
+L power:GND #PWR045
 U 1 1 502B477C
 P 2300 3050
 F 0 "#PWR045" H 2300 3050 30  0001 C CNN
@@ -1917,7 +1886,7 @@ F 3 "" H 2300 3050 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C28
+L neapolitan-rescue:C C28
 U 1 1 502B477A
 P 2850 4150
 F 0 "C28" H 2900 4250 50  0000 L CNN
@@ -1931,7 +1900,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C22
+L neapolitan-rescue:C C22
 U 1 1 502B4779
 P 2750 3050
 F 0 "C22" H 2800 3150 50  0000 L CNN
@@ -1945,7 +1914,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 14100 5300 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR046
+L power:GND #PWR046
 U 1 1 502B4778
 P 3000 3050
 F 0 "#PWR046" H 3000 3050 30  0001 C CNN
@@ -1956,7 +1925,7 @@ F 3 "" H 3000 3050 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L INDUCTOR L1
+L neapolitan-rescue:INDUCTOR L1
 U 1 1 502AFA8C
 P 3900 3750
 F 0 "L1" V 3850 3750 40  0000 C CNN
@@ -1968,7 +1937,7 @@ F 4 "DNP" V 4050 3600 60  0000 C CNN "Note"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR047
+L power:GND #PWR047
 U 1 1 501F4794
 P 1100 2250
 F 0 "#PWR047" H 1100 2250 30  0001 C CNN
@@ -1979,7 +1948,7 @@ F 3 "" H 1100 2250 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C16
+L neapolitan-rescue:C C16
 U 1 1 501F4793
 P 1350 2250
 F 0 "C16" H 1400 2350 50  0000 L CNN
@@ -1993,7 +1962,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 4500 2050 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR048
+L power:GND #PWR048
 U 1 1 501F4789
 P 2200 1000
 F 0 "#PWR048" H 2200 1000 30  0001 C CNN
@@ -2004,7 +1973,7 @@ F 3 "" H 2200 1000 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C7
+L neapolitan-rescue:C C7
 U 1 1 501F4788
 P 1950 1000
 F 0 "C7" H 2000 1100 50  0000 L CNN
@@ -2018,7 +1987,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 13300 3250 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C47
+L neapolitan-rescue:C C47
 U 1 1 501F477D
 P 1950 6050
 F 0 "C47" H 2000 6150 50  0000 L CNN
@@ -2032,7 +2001,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 13300 8300 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR049
+L power:GND #PWR049
 U 1 1 501F477C
 P 2200 6050
 F 0 "#PWR049" H 2200 6050 30  0001 C CNN
@@ -2043,7 +2012,7 @@ F 3 "" H 2200 6050 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C56
+L neapolitan-rescue:C C56
 U 1 1 501F4769
 P 1350 7300
 F 0 "C56" H 1400 7400 50  0000 L CNN
@@ -2057,7 +2026,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 4500 7100 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR050
+L power:GND #PWR050
 U 1 1 501F4768
 P 1100 7300
 F 0 "#PWR050" H 1100 7300 30  0001 C CNN
@@ -2068,7 +2037,7 @@ F 3 "" H 1100 7300 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR051
+L power:GND #PWR051
 U 1 1 501F46AE
 P 10600 2000
 F 0 "#PWR051" H 10600 2000 30  0001 C CNN
@@ -2079,7 +2048,7 @@ F 3 "" H 10600 2000 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C11
+L neapolitan-rescue:C C11
 U 1 1 501F46A8
 P 10350 2000
 F 0 "C11" H 10400 2100 50  0000 L CNN
@@ -2093,7 +2062,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 21700 4250 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C20
+L neapolitan-rescue:C C20
 U 1 1 501F41BD
 P 9750 2750
 F 0 "C20" H 9800 2850 50  0000 L CNN
@@ -2107,7 +2076,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C17
+L neapolitan-rescue:C C17
 U 1 1 501F41BB
 P 10450 2450
 F 0 "C17" H 10500 2550 50  0000 L CNN
@@ -2121,7 +2090,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7250 10000 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C18
+L neapolitan-rescue:C C18
 U 1 1 501F41B9
 P 12350 2450
 F 0 "C18" H 12400 2550 50  0000 L CNN
@@ -2135,7 +2104,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C44
+L neapolitan-rescue:C C44
 U 1 1 501F4169
 P 15750 3850
 F 0 "C44" H 15800 3950 50  0000 L CNN
@@ -2151,7 +2120,7 @@ $EndComp
 Text Notes 10700 3150 0    60   ~ 0
 switchable image reject filters
 $Comp
-L SKY13350 U5
+L hackrf:SKY13350 U5
 U 1 1 501F3B20
 P 12700 3150
 F 0 "U5" H 12700 3350 60  0000 C CNN
@@ -2165,7 +2134,7 @@ F 6 "0.01-6.0 GHz GaAs SPDT Switch" H 12700 3150 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR052
+L power:GND #PWR052
 U 1 1 501EF7A8
 P 1800 2250
 F 0 "#PWR052" H 1800 2250 30  0001 C CNN
@@ -2176,7 +2145,7 @@ F 3 "" H 1800 2250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L neapolitan-rescue:C C8
 U 1 1 501EF782
 P 1350 1150
 F 0 "C8" H 1400 1250 50  0000 L CNN
@@ -2190,7 +2159,7 @@ F 6 "CAP CER 22PF 50V 5% NP0 0402" H 1700 1300 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L SKY13350 U1
+L hackrf:SKY13350 U1
 U 1 1 501EF778
 P 1700 1700
 F 0 "U1" H 1700 1900 60  0000 C CNN
@@ -2204,7 +2173,7 @@ F 6 "0.01-6.0 GHz GaAs SPDT Switch" H 1700 1700 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C21
+L neapolitan-rescue:C C21
 U 1 1 501EF768
 P 1700 2800
 F 0 "C21" H 1750 2900 50  0000 L CNN
@@ -2218,7 +2187,7 @@ F 6 "CAP CER 22PF 50V 5% NP0 0402" H 1650 1250 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C51
+L neapolitan-rescue:C C51
 U 1 1 501EF6A1
 P 2200 6450
 F 0 "C51" H 2250 6550 50  0000 L CNN
@@ -2232,7 +2201,7 @@ F 6 "CAP CER 22PF 50V 5% NP0 0402" H 1650 1250 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR053
+L power:GND #PWR053
 U 1 1 501EF65B
 P 1800 7300
 F 0 "#PWR053" H 1800 7300 30  0001 C CNN
@@ -2243,7 +2212,7 @@ F 3 "" H 1800 7300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SKY13350 U11
+L hackrf:SKY13350 U11
 U 1 1 501EF646
 P 1700 6750
 F 0 "U11" H 1700 6950 60  0000 C CNN
@@ -2257,7 +2226,7 @@ F 6 "0.01-6.0 GHz GaAs SPDT Switch" H 1700 6750 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L BALUN-B0310J50100AHF T2
+L hackrf:BALUN-B0310J50100AHF T2
 U 1 1 501EF4A4
 P 5850 5900
 F 0 "T2" H 5850 6100 70  0000 C CNN
@@ -2271,7 +2240,7 @@ F 6 "Ultra Low Profile 0805 Balun 50 to 100 ohm Balanced" H 5850 5900 60  0001 C
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR054
+L power:GND #PWR054
 U 1 1 501EF4A0
 P 3000 3500
 F 0 "#PWR054" H 3000 3500 30  0001 C CNN
@@ -2282,7 +2251,7 @@ F 3 "" H 3000 3500 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L BALUN-B0310J50100AHF T1
+L hackrf:BALUN-B0310J50100AHF T1
 U 1 1 501EF483
 P 3400 4050
 F 0 "T1" H 3400 4250 70  0000 C CNN
@@ -2296,7 +2265,7 @@ F 6 "Ultra Low Profile 0805 Balun 50 to 100 ohm Balanced" H 3400 4050 60  0001 C
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C27
+L neapolitan-rescue:C C27
 U 1 1 501EF311
 P 10450 4000
 F 0 "C27" H 10500 4100 50  0000 L CNN
@@ -2310,7 +2279,7 @@ F 6 "CAP CER 47PF 50V 5% NP0 0402" H 10450 5700 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L SKY13350 U6
+L hackrf:SKY13350 U6
 U 1 1 501EF258
 P 10100 3300
 F 0 "U6" H 10100 3500 60  0000 C CNN
@@ -2324,7 +2293,7 @@ F 6 "0.01-6.0 GHz GaAs SPDT Switch" H 10100 3300 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C41
+L neapolitan-rescue:C C41
 U 1 1 4FB55FAD
 P 4100 5300
 F 0 "C41" H 4150 5400 50  0000 L CNN
@@ -2338,7 +2307,7 @@ F 6 "CAP CER 100PF 50V 5% NP0 0402" H 7400 6850 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR055
+L power:GND #PWR055
 U 1 1 4FB55FAC
 P 4100 5550
 F 0 "#PWR055" H 4100 5550 30  0001 C CNN
@@ -2351,7 +2320,7 @@ $EndComp
 Text Notes 5000 9600 0    40   ~ 0
 Expected MIX_CLK is 1.8 to 3.3 V\npeak-to-peak at 25 to 52 MHz. It is\ndivided down to 0.5 to 1.5 V (REF_IN).
 $Comp
-L GND #PWR056
+L power:GND #PWR056
 U 1 1 4FB52F5A
 P 6600 3850
 F 0 "#PWR056" H 6600 3850 30  0001 C CNN
@@ -2362,7 +2331,7 @@ F 3 "" H 6600 3850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GSG-DIODE-TVS-BI D1
+L hackrf:GSG-DIODE-TVS-BI D1
 U 1 1 4FB3F9B0
 P 15900 8800
 F 0 "D1" H 15900 8900 50  0000 C CNN
@@ -2376,7 +2345,7 @@ F 6 "TVS DIODE ESD .05PF 15KV 0402" H 15900 8800 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR057
+L power:GND #PWR057
 U 1 1 4FB3F838
 P 15900 9150
 F 0 "#PWR057" H 15900 9150 30  0001 C CNN
@@ -2389,7 +2358,7 @@ $EndComp
 Text Label 7000 9800 2    40   ~ 0
 REF_IN
 $Comp
-L GND #PWR058
+L power:GND #PWR058
 U 1 1 4FB3CC7B
 P 6300 10300
 F 0 "#PWR058" H 6300 10300 30  0001 C CNN
@@ -2402,7 +2371,7 @@ $EndComp
 Text Label 5600 1700 3    40   ~ 0
 REF_IN
 $Comp
-L VCC #PWR059
+L power:VCC #PWR059
 U 1 1 4FAECFB5
 P 7100 3950
 F 0 "#PWR059" H 7100 4050 30  0001 C CNN
@@ -2413,7 +2382,7 @@ F 3 "" H 7100 3950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R6
+L neapolitan-rescue:R R6
 U 1 1 4FAECFAE
 P 7100 4200
 F 0 "R6" V 7180 4200 50  0000 C CNN
@@ -2427,7 +2396,7 @@ F 6 "RES 10K OHM 1/16W 5% 0402 SMD" H 7100 4200 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR060
+L power:GND #PWR060
 U 1 1 4FAECE90
 P 6700 5250
 F 0 "#PWR060" H 6700 5250 30  0001 C CNN
@@ -2438,7 +2407,7 @@ F 3 "" H 6700 5250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR061
+L power:GND #PWR061
 U 1 1 4FAECE8F
 P 6400 5250
 F 0 "#PWR061" H 6400 5250 30  0001 C CNN
@@ -2449,7 +2418,7 @@ F 3 "" H 6400 5250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR062
+L power:GND #PWR062
 U 1 1 4FAECE8E
 P 6100 5250
 F 0 "#PWR062" H 6100 5250 30  0001 C CNN
@@ -2460,7 +2429,7 @@ F 3 "" H 6100 5250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR063
+L power:GND #PWR063
 U 1 1 4FAECE8C
 P 5800 5250
 F 0 "#PWR063" H 5800 5250 30  0001 C CNN
@@ -2471,7 +2440,7 @@ F 3 "" H 5800 5250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C37
+L neapolitan-rescue:C C37
 U 1 1 4FAECE75
 P 6700 5000
 F 0 "C37" H 6750 5100 50  0000 L CNN
@@ -2485,7 +2454,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 6700 5000 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C36
+L neapolitan-rescue:C C36
 U 1 1 4FAECE73
 P 6400 5000
 F 0 "C36" H 6450 5100 50  0000 L CNN
@@ -2499,7 +2468,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 6700 5000 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C35
+L neapolitan-rescue:C C35
 U 1 1 4FAECE70
 P 6100 5000
 F 0 "C35" H 6150 5100 50  0000 L CNN
@@ -2513,7 +2482,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 6700 5000 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C34
+L neapolitan-rescue:C C34
 U 1 1 4FAECE69
 P 5800 5000
 F 0 "C34" H 5850 5100 50  0000 L CNN
@@ -2527,7 +2496,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 6700 5000 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR064
+L power:VCC #PWR064
 U 1 1 4FAECE5B
 P 6900 3950
 F 0 "#PWR064" H 6900 4050 30  0001 C CNN
@@ -2538,7 +2507,7 @@ F 3 "" H 6900 3950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R5
+L neapolitan-rescue:R R5
 U 1 1 4FAECE50
 P 6900 4200
 F 0 "R5" V 6980 4200 50  0000 C CNN
@@ -2552,7 +2521,7 @@ F 6 "RES 10K OHM 1/16W 5% 0402 SMD" H 6900 4200 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR065
+L power:GND #PWR065
 U 1 1 4FAECD9D
 P 5400 1850
 F 0 "#PWR065" H 5400 1850 30  0001 C CNN
@@ -2565,7 +2534,7 @@ $EndComp
 NoConn ~ 6500 3350
 NoConn ~ 6500 3250
 $Comp
-L GND #PWR066
+L power:GND #PWR066
 U 1 1 4FAECC8F
 P 7200 3150
 F 0 "#PWR066" H 7200 3150 30  0001 C CNN
@@ -2578,7 +2547,7 @@ $EndComp
 Text Notes 7000 3100 0    40   ~ 0
 1%
 $Comp
-L R R4
+L neapolitan-rescue:R R4
 U 1 1 4FAECC79
 P 6950 3150
 F 0 "R4" V 7030 3150 50  0000 C CNN
@@ -2592,7 +2561,7 @@ F 6 "RES TF 51K OHM 1% 0.0625W 0402" H 6950 3150 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR067
+L power:GND #PWR067
 U 1 1 4FAECBE1
 P 3700 3050
 F 0 "#PWR067" H 3700 3050 30  0001 C CNN
@@ -2603,7 +2572,7 @@ F 3 "" H 3700 3050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L neapolitan-rescue:C C6
 U 1 1 4FAECBBA
 P 6650 8200
 F 0 "C6" H 6700 8300 50  0000 L CNN
@@ -2617,7 +2586,7 @@ F 6 "CAP CER 10000PF 16V 10% X7R 0402" H 5550 8200 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
+L neapolitan-rescue:C C5
 U 1 1 4FAECBB9
 P 6350 8200
 F 0 "C5" H 6400 8300 50  0000 L CNN
@@ -2631,7 +2600,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 3750 12250 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L neapolitan-rescue:C C3
 U 1 1 4FAECBB6
 P 5750 8200
 F 0 "C3" H 5800 8300 50  0000 L CNN
@@ -2645,7 +2614,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 3700 12250 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L neapolitan-rescue:C C4
 U 1 1 4FAECBB5
 P 6050 8200
 F 0 "C4" H 6100 8300 50  0000 L CNN
@@ -2659,7 +2628,7 @@ F 6 "CAP CER 10000PF 16V 10% X7R 0402" H 5500 8200 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L neapolitan-rescue:C C2
 U 1 1 4FAECBA0
 P 3700 2800
 F 0 "C2" H 3750 2900 50  0000 L CNN
@@ -2673,7 +2642,7 @@ F 6 "CAP CER 10000PF 16V 10% X7R 0402" H 3700 2800 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L neapolitan-rescue:C C1
 U 1 1 4FAECB99
 P 3400 2800
 F 0 "C1" H 3450 2900 50  0000 L CNN
@@ -2689,7 +2658,7 @@ $EndComp
 Text Notes 7100 2800 0    60   ~ 0
 loop filter
 $Comp
-L R R3
+L neapolitan-rescue:R R3
 U 1 1 4FAEC8B2
 P 8300 2700
 F 0 "R3" V 8380 2700 50  0000 C CNN
@@ -2703,7 +2672,7 @@ F 6 "RES 22K OHM 1/10W 5% 0402 SMD" H 8300 2700 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C15
+L neapolitan-rescue:C C15
 U 1 1 4FAEC8B0
 P 8300 2300
 F 0 "C15" H 8350 2400 50  0000 L CNN
@@ -2717,7 +2686,7 @@ F 6 "CAP CER 180PF 50V 5% NP0 0402" H 8300 2300 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C14
+L neapolitan-rescue:C C14
 U 1 1 4FAEC8AD
 P 8000 2300
 F 0 "C14" H 8050 2400 50  0000 L CNN
@@ -2731,7 +2700,7 @@ F 6 "CAP CER 8.2PF 50V NP0 0402" H 8000 2300 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR068
+L power:GND #PWR068
 U 1 1 4FAEC88E
 P 7300 2550
 F 0 "#PWR068" H 7300 2550 30  0001 C CNN
@@ -2742,7 +2711,7 @@ F 3 "" H 7300 2550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR069
+L power:GND #PWR069
 U 1 1 4FAEC88B
 P 6800 2550
 F 0 "#PWR069" H 6800 2550 30  0001 C CNN
@@ -2753,7 +2722,7 @@ F 3 "" H 6800 2550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L neapolitan-rescue:R R2
 U 1 1 4FAEC856
 P 7550 2050
 F 0 "R2" V 7630 2050 50  0000 C CNN
@@ -2767,7 +2736,7 @@ F 6 "RES TF 1/16W 470 OHM 5% 0402" H 7550 2050 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C13
+L neapolitan-rescue:C C13
 U 1 1 4FAEC853
 P 7300 2300
 F 0 "C13" H 7350 2400 50  0000 L CNN
@@ -2781,7 +2750,7 @@ F 6 "CAP CER 330PF 50V 10% X7R 0402" H 6600 2300 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L neapolitan-rescue:R R1
 U 1 1 4FAEC850
 P 7050 2050
 F 0 "R1" V 7130 2050 50  0000 C CNN
@@ -2795,7 +2764,7 @@ F 6 "RES TF 1/16W 470 OHM 5% 0402" H 7050 2050 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C12
+L neapolitan-rescue:C C12
 U 1 1 4FAEC84D
 P 6800 2300
 F 0 "C12" H 6850 2400 50  0000 L CNN
@@ -2809,7 +2778,7 @@ F 6 "CAP CER 330PF 50V 10% X7R 0402" H 6800 2300 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR070
+L power:GND #PWR070
 U 1 1 4FAEC785
 P 4400 5550
 F 0 "#PWR070" H 4400 5550 30  0001 C CNN
@@ -2820,7 +2789,7 @@ F 3 "" H 4400 5550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C42
+L neapolitan-rescue:C C42
 U 1 1 4FAEC781
 P 4400 5300
 F 0 "C42" H 4450 5400 50  0000 L CNN
@@ -2834,7 +2803,7 @@ F 6 "CAP CER 100PF 50V 5% NP0 0402" H 7400 6850 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR071
+L power:GND #PWR071
 U 1 1 4FAA165E
 P 16300 8950
 F 0 "#PWR071" H 16300 8950 30  0001 C CNN
@@ -2845,7 +2814,7 @@ F 3 "" H 16300 8950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C26
+L neapolitan-rescue:C C26
 U 1 1 4FAA149B
 P 12250 3700
 F 0 "C26" H 12300 3800 50  0000 L CNN
@@ -2859,7 +2828,7 @@ F 6 "CAP CER 47PF 50V 5% NP0 0402" H 12250 5400 60  0001 C CNN "Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR072
+L power:GND #PWR072
 U 1 1 4FAA142A
 P 10700 3700
 F 0 "#PWR072" H 10700 3700 30  0001 C CNN
@@ -2870,7 +2839,7 @@ F 3 "" H 10700 3700 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR073
+L power:GND #PWR073
 U 1 1 4FAA1424
 P 10700 2150
 F 0 "#PWR073" H 10700 2150 30  0001 C CNN
@@ -2881,7 +2850,7 @@ F 3 "" H 10700 2150 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR074
+L power:GND #PWR074
 U 1 1 4FAA10AF
 P 12100 2150
 F 0 "#PWR074" H 12100 2150 30  0001 C CNN
@@ -2892,7 +2861,7 @@ F 3 "" H 12100 2150 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR075
+L power:GND #PWR075
 U 1 1 4FAA1098
 P 12100 4000
 F 0 "#PWR075" H 12100 4000 30  0001 C CNN
@@ -2903,7 +2872,7 @@ F 3 "" H 12100 4000 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR076
+L power:GND #PWR076
 U 1 1 4FAA0C6C
 P 10000 4500
 F 0 "#PWR076" H 10000 4500 30  0001 C CNN
@@ -2914,7 +2883,7 @@ F 3 "" H 10000 4500 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C30
+L neapolitan-rescue:C C30
 U 1 1 4FAA0C67
 P 10000 4250
 F 0 "C30" H 10050 4350 50  0000 L CNN
@@ -2928,7 +2897,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 13150 4050 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR077
+L power:VCC #PWR077
 U 1 1 4FAA0C0D
 P 2600 2450
 F 0 "#PWR077" H 2600 2550 30  0001 C CNN
@@ -2939,7 +2908,7 @@ F 3 "" H 2600 2450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR078
+L power:GND #PWR078
 U 1 1 4FAA08EA
 P 6250 6500
 F 0 "#PWR078" H 6250 6500 30  0001 C CNN
@@ -2950,7 +2919,7 @@ F 3 "" H 6250 6500 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L FIL-LP0603 U3
+L hackrf:FIL-LP0603 U3
 U 1 1 4F94D561
 P 11400 2300
 F 0 "U3" H 11400 2350 60  0000 C CNN
@@ -2964,7 +2933,7 @@ F 6 "FILTER LOW PASS 1880MHZ 0603 SMD" H 11400 2300 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L FIL-DEA U8
+L hackrf:FIL-DEA U8
 U 1 1 4F94D4F4
 P 11400 3850
 F 0 "U8" H 11400 3900 60  0000 C CNN
@@ -2978,7 +2947,7 @@ F 6 "FILTER HIGHPASS WLAN&BLUETOOTH" H 11400 3850 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GSG-RF-CONN P4
+L hackrf:GSG-RF-CONN P4
 U 1 1 4F94D0F2
 P 16300 8450
 F 0 "P4" H 16300 8600 60  0000 C CNN
@@ -2992,7 +2961,7 @@ F 6 "CONN SMA JACK 50 OHM EDGE MNT W/JAM NUT & LOCK WASHER" H 16300 8450 60  000
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	14650 8450 16000 8450
+	14650 8450 15550 8450
 Text GLabel 1600 7400 3    40   Input ~ 0
 MIX_BYPASS
 Text GLabel 1700 900  1    40   Input ~ 0
@@ -3002,19 +2971,19 @@ Text GLabel 13250 3500 3    40   Input ~ 0
 Wire Wire Line
 	13250 3500 13250 3400
 Wire Wire Line
-	13250 3400 14550 3400
+	13250 3400 13600 3400
 Text GLabel 1700 5950 1    40   Input ~ 0
 !MIX_BYPASS
 Wire Wire Line
-	1700 5950 1700 6300
+	1700 5950 1700 6050
 Text GLabel 1500 2600 0    40   Input ~ 0
 !MIX_BYPASS
 Wire Wire Line
 	1600 2600 1500 2600
 Wire Wire Line
-	1600 2150 1600 2600
+	1600 2150 1600 2250
 $Comp
-L CONN_1 P6
+L neapolitan-rescue:CONN_1 P6
 U 1 1 526B7056
 P 5100 4500
 F 0 "P6" H 5180 4500 40  0000 L CNN
@@ -3030,7 +2999,7 @@ AMP_BYPASS
 Text GLabel 10100 7100 2    40   Input ~ 0
 AMP_BYPASS
 Wire Wire Line
-	10000 7100 10000 7450
+	10000 7100 10000 7300
 Wire Wire Line
 	10100 7100 10000 7100
 Text GLabel 6750 7000 3    40   Input ~ 0
@@ -3038,15 +3007,15 @@ RX
 Text GLabel 9400 1550 1    40   Input ~ 0
 RX
 Wire Wire Line
-	9400 1550 9400 1750
+	9400 1550 9400 1650
 Text GLabel 2500 2950 1    40   Input ~ 0
 RX
 Wire Wire Line
-	2500 2950 2500 3150
+	2500 2950 2500 3050
 Text GLabel 6850 5500 1    40   Input ~ 0
 TX
 Wire Wire Line
-	6850 5500 6850 5900
+	6850 5500 6850 5600
 Text GLabel 9200 2850 0    40   Input ~ 0
 TX
 Wire Wire Line
@@ -3066,48 +3035,48 @@ Wire Wire Line
 Text GLabel 10100 1900 1    40   Input ~ 0
 LP
 Wire Wire Line
-	10100 1900 10100 2850
+	10100 1900 10100 2000
 Text GLabel 12800 2500 1    40   Input ~ 0
 LP
 Wire Wire Line
-	12800 2500 12800 2700
+	12800 2500 12800 2600
 NoConn ~ 6500 3450
 Text GLabel 13850 3600 3    40   Input ~ 0
 RX_MIX_BP
 Wire Wire Line
 	13850 3600 13850 3500
 Wire Wire Line
-	13850 3500 14550 3500
+	13850 3500 14150 3500
 Text GLabel 16150 3300 1    40   Input ~ 0
 TX_MIX_BP
 Wire Wire Line
-	16150 3300 16150 3500
+	16150 3300 16150 3400
 Text GLabel 12750 8350 0    40   Input ~ 0
 RX_AMP
 Wire Wire Line
-	12750 8350 13150 8350
+	12750 8350 12850 8350
 Text GLabel 14450 8000 1    40   Input ~ 0
 TX_AMP
 Wire Wire Line
-	14450 8000 14450 8250
+	14450 8000 14450 8100
 Text GLabel 9900 6650 1    40   Input ~ 0
 TX_AMP
 Wire Wire Line
-	9900 6650 9900 7350
+	9900 6650 9900 6750
 Text GLabel 8100 7450 0    40   Input ~ 0
 RX_AMP
 Wire Wire Line
-	8100 7450 8600 7450
+	8100 7450 8200 7450
 Text GLabel 11200 8500 2    40   Input ~ 0
 !RX_AMP_PWR
 Wire Wire Line
-	10800 8500 11200 8500
+	10800 8500 11100 8500
 Text GLabel 11600 6650 0    40   Input ~ 0
 !TX_AMP_PWR
 Wire Wire Line
-	11600 6650 12000 6650
+	11600 6650 11700 6650
 $Comp
-L RF-SHIELD-FRAME J2
+L hackrf:RF-SHIELD-FRAME J2
 U 1 1 527E97CF
 P 1750 9000
 F 0 "J2" H 1750 9500 60  0000 C CNN
@@ -3122,7 +3091,7 @@ F 7 "DNP" H 2450 9300 60  0000 C CNN "Note"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR079
+L power:GND #PWR079
 U 1 1 527E97DE
 P 1750 9400
 F 0 "#PWR079" H 1750 9400 30  0001 C CNN
@@ -3135,7 +3104,7 @@ $EndComp
 Wire Wire Line
 	1750 9300 1750 9400
 $Comp
-L RF-SHIELD-COVER J3
+L hackrf:RF-SHIELD-COVER J3
 U 1 1 527EAA54
 P 1750 8350
 F 0 "J3" H 1750 8600 60  0000 C CNN
@@ -3150,7 +3119,7 @@ F 7 "DNP" H 2450 8350 60  0000 C CNN "Note"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 P19
+L neapolitan-rescue:CONN_1 P19
 U 1 1 5280432B
 P 5000 4500
 F 0 "P19" H 5080 4500 40  0000 L CNN
@@ -3164,7 +3133,7 @@ $EndComp
 Wire Wire Line
 	5000 4250 5000 4350
 $Comp
-L CONN_1 P7
+L neapolitan-rescue:CONN_1 P7
 U 1 1 528044D2
 P 4750 1850
 F 0 "P7" H 4830 1850 40  0000 L CNN
@@ -3176,7 +3145,7 @@ F 4 "DNP" H 4750 1850 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P13
+L neapolitan-rescue:CONN_1 P13
 U 1 1 528044D9
 P 4750 1750
 F 0 "P13" H 4830 1750 40  0000 L CNN
@@ -3188,7 +3157,7 @@ F 4 "DNP" H 4750 1750 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P21
+L neapolitan-rescue:CONN_1 P21
 U 1 1 528044E0
 P 6700 9550
 F 0 "P21" H 6780 9550 40  0000 L CNN
@@ -3204,7 +3173,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 1950 5700 1850
 $Comp
-L CONN_1 P17
+L neapolitan-rescue:CONN_1 P17
 U 1 1 52805038
 P 5700 1700
 F 0 "P17" H 5780 1700 40  0000 L CNN
@@ -3224,7 +3193,7 @@ MIXER_SCLK
 Text GLabel 3700 8600 2    40   Input ~ 0
 MIXER_SDATA
 $Comp
-L CONN_1 P27
+L neapolitan-rescue:CONN_1 P27
 U 1 1 528054F2
 P 3450 8600
 F 0 "P27" H 3530 8600 40  0000 L CNN
@@ -3236,7 +3205,7 @@ F 4 "DNP" H 3450 8600 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P31
+L neapolitan-rescue:CONN_1 P31
 U 1 1 528054F9
 P 3450 8700
 F 0 "P31" H 3530 8700 40  0000 L CNN
@@ -3248,7 +3217,7 @@ F 4 "DNP" H 3450 8700 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P32
+L neapolitan-rescue:CONN_1 P32
 U 1 1 52805500
 P 3450 8800
 F 0 "P32" H 3530 8800 40  0000 L CNN
@@ -3260,7 +3229,7 @@ F 4 "DNP" H 3450 8800 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P33
+L neapolitan-rescue:CONN_1 P33
 U 1 1 52805507
 P 3450 8900
 F 0 "P33" H 3530 8900 40  0000 L CNN
@@ -3306,7 +3275,7 @@ Text GLabel 3700 10200 2    40   Input ~ 0
 Text GLabel 3700 10100 2    40   Input ~ 0
 !TX_AMP_PWR
 $Comp
-L CONN_1 P34
+L neapolitan-rescue:CONN_1 P34
 U 1 1 52805C27
 P 3450 9000
 F 0 "P34" H 3530 9000 40  0000 L CNN
@@ -3318,7 +3287,7 @@ F 4 "DNP" H 3450 9000 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P35
+L neapolitan-rescue:CONN_1 P35
 U 1 1 52805C2E
 P 3450 9100
 F 0 "P35" H 3530 9100 40  0000 L CNN
@@ -3330,7 +3299,7 @@ F 4 "DNP" H 3450 9100 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P42
+L neapolitan-rescue:CONN_1 P42
 U 1 1 52805C35
 P 3450 9200
 F 0 "P42" H 3530 9200 40  0000 L CNN
@@ -3342,7 +3311,7 @@ F 4 "DNP" H 3450 9200 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P43
+L neapolitan-rescue:CONN_1 P43
 U 1 1 52805C3C
 P 3450 9300
 F 0 "P43" H 3530 9300 40  0000 L CNN
@@ -3362,7 +3331,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 9000 3700 9000
 $Comp
-L CONN_1 P44
+L neapolitan-rescue:CONN_1 P44
 U 1 1 52805C47
 P 3450 9400
 F 0 "P44" H 3530 9400 40  0000 L CNN
@@ -3374,7 +3343,7 @@ F 4 "DNP" H 3450 9400 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P45
+L neapolitan-rescue:CONN_1 P45
 U 1 1 52805C4E
 P 3450 9500
 F 0 "P45" H 3530 9500 40  0000 L CNN
@@ -3386,7 +3355,7 @@ F 4 "DNP" H 3450 9500 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P46
+L neapolitan-rescue:CONN_1 P46
 U 1 1 52805C55
 P 3450 9600
 F 0 "P46" H 3530 9600 40  0000 L CNN
@@ -3398,7 +3367,7 @@ F 4 "DNP" H 3450 9600 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P47
+L neapolitan-rescue:CONN_1 P47
 U 1 1 52805C5C
 P 3450 9700
 F 0 "P47" H 3530 9700 40  0000 L CNN
@@ -3418,7 +3387,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 9400 3700 9400
 $Comp
-L CONN_1 P48
+L neapolitan-rescue:CONN_1 P48
 U 1 1 52805C67
 P 3450 9800
 F 0 "P48" H 3530 9800 40  0000 L CNN
@@ -3430,7 +3399,7 @@ F 4 "DNP" H 3450 9800 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P49
+L neapolitan-rescue:CONN_1 P49
 U 1 1 52805C6E
 P 3450 9900
 F 0 "P49" H 3530 9900 40  0000 L CNN
@@ -3442,7 +3411,7 @@ F 4 "DNP" H 3450 9900 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P50
+L neapolitan-rescue:CONN_1 P50
 U 1 1 52805C75
 P 3450 10000
 F 0 "P50" H 3530 10000 40  0000 L CNN
@@ -3454,7 +3423,7 @@ F 4 "DNP" H 3450 10000 60  0001 C CNN "Note"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_1 P51
+L neapolitan-rescue:CONN_1 P51
 U 1 1 52805C7C
 P 3450 10100
 F 0 "P51" H 3530 10100 40  0000 L CNN
@@ -3474,7 +3443,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 9800 3700 9800
 $Comp
-L CONN_1 P52
+L neapolitan-rescue:CONN_1 P52
 U 1 1 52805C87
 P 3450 10200
 F 0 "P52" H 3530 10200 40  0000 L CNN
@@ -3491,7 +3460,7 @@ Wire Wire Line
 	6700 9700 6700 9800
 Connection ~ 6700 9800
 $Comp
-L C C166
+L neapolitan-rescue:C C166
 U 1 1 5281BF94
 P 7300 10050
 F 0 "C166" H 7350 10150 50  0000 L CNN
@@ -3505,7 +3474,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7300 10050 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR080
+L power:GND #PWR080
 U 1 1 5281BF9C
 P 7300 10300
 F 0 "#PWR080" H 7300 10300 30  0001 C CNN
@@ -3516,7 +3485,7 @@ F 3 "" H 7300 10300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR081
+L power:VAA #PWR081
 U 1 1 5281BFB9
 P 7300 9800
 F 0 "#PWR081" H 7300 9860 30  0001 C CNN
@@ -3531,7 +3500,7 @@ Wire Wire Line
 Wire Wire Line
 	7300 10200 7300 10300
 $Comp
-L C C58
+L neapolitan-rescue:C C58
 U 1 1 528EA8DE
 P 11450 9100
 F 0 "C58" H 11500 9200 50  0000 L CNN
@@ -3545,7 +3514,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 6950 9750 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C50
+L neapolitan-rescue:C C50
 U 1 1 528EA90E
 P 8800 8800
 F 0 "C50" H 8850 8900 50  0000 L CNN
@@ -3559,7 +3528,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7250 10000 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C59
+L neapolitan-rescue:C C59
 U 1 1 528EA93E
 P 12000 5550
 F 0 "C59" H 12050 5650 50  0000 L CNN
@@ -3573,7 +3542,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    -1   1    0   
 $EndComp
 $Comp
-L C C62
+L neapolitan-rescue:C C62
 U 1 1 528EA96E
 P 13950 6650
 F 0 "C62" H 14000 6750 50  0000 L CNN
@@ -3587,7 +3556,7 @@ F 6 "CAP CER 0.1UF 10V 10% X5R 0402" H 7350 10000 60  0001 C CNN "Description"
 	0    1    -1   0   
 $EndComp
 $Comp
-L CONN_1 J4
+L neapolitan-rescue:CONN_1 J4
 U 1 1 528FA040
 P 850 9850
 F 0 "J4" H 930 9850 40  0000 L CNN
@@ -3599,7 +3568,7 @@ F 4 "DNP" H 850 9850 60  0001 C CNN "Note"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR082
+L power:GND #PWR082
 U 1 1 528FA054
 P 850 10100
 F 0 "#PWR082" H 850 10100 30  0001 C CNN
@@ -3612,7 +3581,7 @@ $EndComp
 Wire Wire Line
 	850  10000 850  10100
 $Comp
-L CONN_1 J5
+L neapolitan-rescue:CONN_1 J5
 U 1 1 528FA22A
 P 1050 9850
 F 0 "J5" H 1130 9850 40  0000 L CNN
@@ -3624,7 +3593,7 @@ F 4 "DNP" H 1050 9850 60  0001 C CNN "Note"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR083
+L power:GND #PWR083
 U 1 1 528FA230
 P 1050 10100
 F 0 "#PWR083" H 1050 10100 30  0001 C CNN
@@ -3637,7 +3606,7 @@ $EndComp
 Wire Wire Line
 	1050 10000 1050 10100
 $Comp
-L CONN_1 J6
+L neapolitan-rescue:CONN_1 J6
 U 1 1 528FA29A
 P 1250 9850
 F 0 "J6" H 1330 9850 40  0000 L CNN
@@ -3649,7 +3618,7 @@ F 4 "DNP" H 1250 9850 60  0001 C CNN "Note"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR084
+L power:GND #PWR084
 U 1 1 528FA2A0
 P 1250 10100
 F 0 "#PWR084" H 1250 10100 30  0001 C CNN
@@ -3662,7 +3631,7 @@ $EndComp
 Wire Wire Line
 	1250 10000 1250 10100
 $Comp
-L CONN_1 J7
+L neapolitan-rescue:CONN_1 J7
 U 1 1 528FA2A8
 P 1450 9850
 F 0 "J7" H 1530 9850 40  0000 L CNN
@@ -3674,7 +3643,7 @@ F 4 "DNP" H 1450 9850 60  0001 C CNN "Note"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR085
+L power:GND #PWR085
 U 1 1 528FA2AE
 P 1450 10100
 F 0 "#PWR085" H 1450 10100 30  0001 C CNN
@@ -3687,7 +3656,7 @@ $EndComp
 Wire Wire Line
 	1450 10000 1450 10100
 $Comp
-L CONN_1 J8
+L neapolitan-rescue:CONN_1 J8
 U 1 1 528FA2B6
 P 1650 9850
 F 0 "J8" H 1730 9850 40  0000 L CNN
@@ -3699,7 +3668,7 @@ F 4 "DNP" H 1650 9850 60  0001 C CNN "Note"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR086
+L power:GND #PWR086
 U 1 1 528FA2BC
 P 1650 10100
 F 0 "#PWR086" H 1650 10100 30  0001 C CNN
@@ -3712,7 +3681,7 @@ $EndComp
 Wire Wire Line
 	1650 10000 1650 10100
 $Comp
-L CONN_1 J9
+L neapolitan-rescue:CONN_1 J9
 U 1 1 528FA2C4
 P 1850 9850
 F 0 "J9" H 1930 9850 40  0000 L CNN
@@ -3724,7 +3693,7 @@ F 4 "DNP" H 1850 9850 60  0001 C CNN "Note"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR087
+L power:GND #PWR087
 U 1 1 528FA2CA
 P 1850 10100
 F 0 "#PWR087" H 1850 10100 30  0001 C CNN
@@ -3739,7 +3708,7 @@ Wire Wire Line
 Text Notes 800  10300 0    40   ~ 0
 mounting holes are connected to GND
 $Comp
-L C C67
+L neapolitan-rescue:C C67
 U 1 1 52901196
 P 6300 9550
 F 0 "C67" H 6350 9650 50  0000 L CNN
@@ -3753,7 +3722,7 @@ F 6 "CAP CER 33PF 50V 5% NP0 0402" H 17650 11800 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C70
+L neapolitan-rescue:C C70
 U 1 1 529011D6
 P 6300 10050
 F 0 "C70" H 6350 10150 50  0000 L CNN
@@ -3767,7 +3736,7 @@ F 6 "CAP CER 100PF 50V 5% NP0 0402" H 9300 11600 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 J10
+L neapolitan-rescue:CONN_1 J10
 U 1 1 5293FD15
 P 2600 9850
 F 0 "J10" H 2680 9850 40  0000 L CNN
@@ -3782,7 +3751,7 @@ F 7 "DNP" H 2600 9850 60  0001 C CNN "Note"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR088
+L power:GND #PWR088
 U 1 1 5293FD1B
 P 2600 10100
 F 0 "#PWR088" H 2600 10100 30  0001 C CNN
@@ -3799,7 +3768,7 @@ optional alligator\nclip test point
 Wire Wire Line
 	16300 8850 16300 8950
 $Comp
-L VAA #PWR089
+L power:VAA #PWR089
 U 1 1 52EA1171
 P 15550 5950
 F 0 "#PWR089" H 15550 6010 30  0001 C CNN
@@ -3810,7 +3779,7 @@ F 3 "" H 15550 5950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR090
+L power:GND #PWR090
 U 1 1 52EA1177
 P 16000 6550
 F 0 "#PWR090" H 16000 6550 30  0001 C CNN
@@ -3821,7 +3790,7 @@ F 3 "" H 16000 6550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R36
+L neapolitan-rescue:R R36
 U 1 1 52EA1180
 P 15000 6300
 F 0 "R36" V 15080 6300 50  0000 C CNN
@@ -3835,7 +3804,7 @@ F 6 "RES 10K OHM 1/16W 5% 0402 SMD" H 15000 6300 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L INDUCTOR L13
+L neapolitan-rescue:INDUCTOR L13
 U 1 1 52EA1189
 P 15550 8050
 F 0 "L13" V 15500 8050 40  0000 C CNN
@@ -3849,7 +3818,7 @@ F 6 "INDUCTR 10UH 220MA 20% 0603 SMD" H 15550 8050 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C171
+L neapolitan-rescue:C C171
 U 1 1 52EA119B
 P 16000 6300
 F 0 "C171" H 16050 6400 50  0000 L CNN
@@ -3872,7 +3841,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 1750 5100 1750
 Wire Wire Line
-	5100 1650 5100 1950
+	5100 1650 5100 1750
 Connection ~ 5100 1750
 Text Label 5400 1650 2    40   ~ 0
 ANT_BIAS
@@ -3884,7 +3853,7 @@ Wire Wire Line
 	15650 3400 16150 3400
 Connection ~ 16150 3400
 $Comp
-L INDUCTOR L11
+L neapolitan-rescue:INDUCTOR L11
 U 1 1 57E4FFD8
 P 3000 2550
 F 0 "L11" V 2950 2550 40  0000 C CNN
@@ -3898,7 +3867,7 @@ F 6 "INDUCTR 10UH 220MA 20% 0603 SMD" H 13750 5850 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR091
+L power:GND #PWR091
 U 1 1 57E5275E
 P 3400 3050
 F 0 "#PWR091" H 3400 3050 30  0001 C CNN
@@ -3913,7 +3882,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 2950 3700 3050
 Wire Wire Line
-	3300 2550 4000 2550
+	3300 2550 3400 2550
 Wire Wire Line
 	3400 2550 3400 2650
 Wire Wire Line
@@ -3929,7 +3898,7 @@ Wire Wire Line
 	4000 2950 4000 2550
 Connection ~ 3700 2550
 $Comp
-L NX5P2553GV U20
+L gsg-symbols:NX5P2553GV U20
 U 1 1 57E6AE8D
 P 15450 6550
 F 0 "U20" H 15450 6800 60  0000 C CNN
@@ -3943,7 +3912,7 @@ F 6 "IC PD SW CURR LIMIT SOT26" H 15450 6550 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR092
+L power:GND #PWR092
 U 1 1 57E6B2C6
 P 15450 6050
 F 0 "#PWR092" H 15450 6050 30  0001 C CNN
@@ -3954,7 +3923,7 @@ F 3 "" H 15450 6050 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR093
+L power:GND #PWR093
 U 1 1 57E6CFB6
 P 15000 6550
 F 0 "#PWR093" H 15000 6550 30  0001 C CNN
@@ -3967,12 +3936,12 @@ $EndComp
 Wire Wire Line
 	15000 6450 15000 6550
 Wire Wire Line
-	14650 6050 15350 6050
+	14650 6050 15000 6050
 Wire Wire Line
 	15000 6050 15000 6150
 Connection ~ 15000 6050
 $Comp
-L R R33
+L neapolitan-rescue:R R33
 U 1 1 57E6E64A
 P 15100 7050
 F 0 "R33" V 15180 7050 50  0000 C CNN
@@ -3986,7 +3955,7 @@ F 6 "RES 10K OHM 1/16W 5% 0402 SMD" H 15100 7050 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR094
+L power:GND #PWR094
 U 1 1 57E70C91
 P 15450 7050
 F 0 "#PWR094" H 15450 7050 30  0001 C CNN
@@ -3999,7 +3968,7 @@ $EndComp
 Wire Wire Line
 	15450 7050 15450 6950
 Wire Wire Line
-	15550 5950 15550 6150
+	15550 5950 15550 6050
 Wire Wire Line
 	15550 6050 16000 6050
 Wire Wire Line
@@ -4012,7 +3981,7 @@ Wire Wire Line
 Wire Wire Line
 	15350 6050 15350 6150
 $Comp
-L VAA #PWR095
+L power:VAA #PWR095
 U 1 1 57E75398
 P 14850 6950
 F 0 "#PWR095" H 14850 7010 30  0001 C CNN
@@ -4029,9 +3998,9 @@ Wire Wire Line
 Wire Wire Line
 	15250 7050 15350 7050
 Wire Wire Line
-	15350 6950 15350 7150
+	15350 6950 15350 7050
 $Comp
-L CONN_1 P3
+L neapolitan-rescue:CONN_1 P3
 U 1 1 57E76694
 P 15350 7300
 F 0 "P3" H 15430 7300 40  0000 L CNN
@@ -4045,4 +4014,146 @@ $EndComp
 Connection ~ 15350 7050
 Text Notes 15700 7050 0    40   ~ 0
 ILIM shorted to GND for\n75 mA current limit
+Wire Wire Line
+	11700 6650 12000 6650
+Wire Wire Line
+	10500 8100 10500 8300
+Wire Wire Line
+	12300 6300 12300 6450
+Wire Wire Line
+	12600 6950 12700 6950
+Wire Wire Line
+	10500 8000 10500 8100
+Wire Wire Line
+	9900 6750 9900 7350
+Wire Wire Line
+	8200 7450 8600 7450
+Wire Wire Line
+	14450 8100 14450 8250
+Wire Wire Line
+	12800 2600 12800 2700
+Wire Wire Line
+	9300 2850 9300 2950
+Wire Wire Line
+	6850 5600 6850 5900
+Wire Wire Line
+	10500 8800 10500 8900
+Wire Wire Line
+	15900 8450 16000 8450
+Wire Wire Line
+	2500 3050 2500 3150
+Wire Wire Line
+	2400 4250 2400 4350
+Wire Wire Line
+	3900 4150 3700 4150
+Wire Wire Line
+	3900 3350 4200 3350
+Wire Wire Line
+	1600 2250 1600 2600
+Wire Wire Line
+	1700 1000 1700 1250
+Wire Wire Line
+	1700 6050 1700 6300
+Wire Wire Line
+	1600 7300 1600 7400
+Wire Wire Line
+	10000 4000 10000 4100
+Wire Wire Line
+	4400 4950 4400 5050
+Wire Wire Line
+	5300 5950 5550 5950
+Wire Wire Line
+	6300 9800 6300 9900
+Wire Wire Line
+	6400 4550 7200 4550
+Wire Wire Line
+	5800 4750 6900 4750
+Wire Wire Line
+	6900 4750 7200 4750
+Wire Wire Line
+	6050 8050 6350 8050
+Wire Wire Line
+	6050 8350 6350 8350
+Wire Wire Line
+	8000 2050 8300 2050
+Wire Wire Line
+	7300 2050 7400 2050
+Wire Wire Line
+	6800 2050 6900 2050
+Wire Wire Line
+	4400 5050 4400 5150
+Wire Wire Line
+	4400 4750 4400 4950
+Wire Wire Line
+	5200 4750 5200 5950
+Wire Wire Line
+	5300 5050 5300 5150
+Wire Wire Line
+	8000 2950 8300 2950
+Wire Wire Line
+	7800 2050 8000 2050
+Wire Wire Line
+	5750 8350 6050 8350
+Wire Wire Line
+	6350 8350 6650 8350
+Wire Wire Line
+	5750 8050 6050 8050
+Wire Wire Line
+	6350 8050 6650 8050
+Wire Wire Line
+	6100 4650 7100 4650
+Wire Wire Line
+	6700 4450 7200 4450
+Wire Wire Line
+	7100 4650 7200 4650
+Wire Wire Line
+	5300 5150 5300 5250
+Wire Wire Line
+	10100 2000 10100 2850
+Wire Wire Line
+	9350 8800 9450 8800
+Wire Wire Line
+	10150 8800 10500 8800
+Wire Wire Line
+	6750 6900 6750 7000
+Wire Wire Line
+	9400 1650 9400 1750
+Wire Wire Line
+	12700 3850 12700 3950
+Wire Wire Line
+	14150 3500 14550 3500
+Wire Wire Line
+	13600 3400 14550 3400
+Wire Wire Line
+	12300 8250 13150 8250
+Wire Wire Line
+	12850 8350 13150 8350
+Wire Wire Line
+	10000 7300 10000 7450
+Wire Wire Line
+	11100 8500 11200 8500
+Wire Wire Line
+	13400 6650 13400 6950
+Wire Wire Line
+	12300 6950 12300 7050
+Wire Wire Line
+	12300 6200 12300 6300
+Wire Wire Line
+	6700 9800 7000 9800
+Wire Wire Line
+	15550 8450 15900 8450
+Wire Wire Line
+	5100 1750 5100 1950
+Wire Wire Line
+	16150 3400 16150 3500
+Wire Wire Line
+	3400 2550 3700 2550
+Wire Wire Line
+	3700 2550 4000 2550
+Wire Wire Line
+	15000 6050 15350 6050
+Wire Wire Line
+	15550 6050 15550 6150
+Wire Wire Line
+	15350 7050 15350 7150
 $EndSCHEMATC

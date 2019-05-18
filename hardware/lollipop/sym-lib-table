@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name lollipop-rescue)(type Legacy)(uri ${KIPRJMOD}/lollipop-rescue.lib)(options "")(descr ""))
+  (lib (name hackrf)(type Legacy)(uri /home/wieker/Projects/linux/hackrf/hackrf/hardware/kicad/hackrf.lib)(options "")(descr ""))
+)

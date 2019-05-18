@@ -25,10 +25,7 @@
 static struct gpio_t gpio_led[] = {
 	GPIO(3,  7),
 	GPIO(0,  7),
-	GPIO(2,  8),
-#ifdef RAD1O
-	GPIO(5,  26),
-#endif
+	GPIO(3,  5),
 };
 
 int main(void)
@@ -42,13 +39,21 @@ int main(void)
 	{
 		gpio_set(&gpio_led[0]);
 		gpio_clear(&gpio_led[1]);
+		gpio_clear(&gpio_led[2]);
 
-		delay(2000000);
+		delay(20000000);
 		
 		gpio_set(&gpio_led[1]);
 		gpio_clear(&gpio_led[0]);
+		gpio_clear(&gpio_led[2]);
 		
-		delay(2000000);
+		delay(20000000);
+		
+		gpio_set(&gpio_led[2]);
+		gpio_clear(&gpio_led[1]);
+		gpio_clear(&gpio_led[0]);
+		
+		delay(20000000);
 	}
 
 	return 0;
