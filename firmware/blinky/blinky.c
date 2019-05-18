@@ -24,7 +24,7 @@
 
 static struct gpio_t gpio_led[] = {
 	GPIO(3,  7),
-	GPIO(2,  2),
+	GPIO(0,  7),
 	GPIO(2,  8),
 #ifdef RAD1O
 	GPIO(5,  26),
@@ -35,14 +35,17 @@ int main(void)
 {
 	gpio_init();
 	gpio_output(&gpio_led[0]);
+	gpio_output(&gpio_led[1]);
 
 	/* Blink LED1/2/3 on the board. */
 	while (1) 
 	{
 		gpio_set(&gpio_led[0]);
+		gpio_clear(&gpio_led[1]);
 
 		delay(2000000);
 		
+		gpio_set(&gpio_led[1]);
 		gpio_clear(&gpio_led[0]);
 		
 		delay(2000000);
