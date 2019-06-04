@@ -235,6 +235,12 @@ hackrf_usb_BINARY_DIR:STATIC=/home/wieker/Projects/linux/hackrf/hackrf/firmware/
 //Value Computed by CMake
 hackrf_usb_SOURCE_DIR:STATIC=/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb
 
+//Value Computed by CMake
+om13088ul_usb_BINARY_DIR:STATIC=/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb
+
+//Value Computed by CMake
+om13088ul_usb_SOURCE_DIR:STATIC=/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb
+
 
 ########################
 # INTERNAL cache entries
@@ -343,7 +349,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //objcopy tool
 CMAKE_OBJCOPY:INTERNAL=/usr/lib/arm-none-eabi/bin/objcopy
 //ADVANCED property for variable: CMAKE_OBJDUMP

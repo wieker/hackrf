@@ -344,6 +344,123 @@ hackrf_usb.bin/fast:
 	$(MAKE) -f hackrf_usb/CMakeFiles/hackrf_usb.bin.dir/build.make hackrf_usb/CMakeFiles/hackrf_usb.bin.dir/build
 .PHONY : hackrf_usb.bin/fast
 
+#=============================================================================
+# Target rules for targets named om13088ul_usb.dfu
+
+# Build rule for target.
+om13088ul_usb.dfu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb.dfu
+.PHONY : om13088ul_usb.dfu
+
+# fast build rule for target.
+om13088ul_usb.dfu/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb.dfu.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb.dfu.dir/build
+.PHONY : om13088ul_usb.dfu/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb_dfu.bin
+
+# Build rule for target.
+om13088ul_usb_dfu.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb_dfu.bin
+.PHONY : om13088ul_usb_dfu.bin
+
+# fast build rule for target.
+om13088ul_usb_dfu.bin/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_dfu.bin.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_dfu.bin.dir/build
+.PHONY : om13088ul_usb_dfu.bin/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb-program
+
+# Build rule for target.
+om13088ul_usb-program: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb-program
+.PHONY : om13088ul_usb-program
+
+# fast build rule for target.
+om13088ul_usb-program/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb-program.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb-program.dir/build
+.PHONY : om13088ul_usb-program/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb_m0.bin
+
+# Build rule for target.
+om13088ul_usb_m0.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb_m0.bin
+.PHONY : om13088ul_usb_m0.bin
+
+# fast build rule for target.
+om13088ul_usb_m0.bin/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_m0.bin.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_m0.bin.dir/build
+.PHONY : om13088ul_usb_m0.bin/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb_objects
+
+# Build rule for target.
+om13088ul_usb_objects: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb_objects
+.PHONY : om13088ul_usb_objects
+
+# fast build rule for target.
+om13088ul_usb_objects/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build
+.PHONY : om13088ul_usb_objects/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb_dfu.elf
+
+# Build rule for target.
+om13088ul_usb_dfu.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb_dfu.elf
+.PHONY : om13088ul_usb_dfu.elf
+
+# fast build rule for target.
+om13088ul_usb_dfu.elf/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_dfu.elf.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_dfu.elf.dir/build
+.PHONY : om13088ul_usb_dfu.elf/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb_m0.elf
+
+# Build rule for target.
+om13088ul_usb_m0.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb_m0.elf
+.PHONY : om13088ul_usb_m0.elf
+
+# fast build rule for target.
+om13088ul_usb_m0.elf/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_m0.elf.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_m0.elf.dir/build
+.PHONY : om13088ul_usb_m0.elf/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb.elf
+
+# Build rule for target.
+om13088ul_usb.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb.elf
+.PHONY : om13088ul_usb.elf
+
+# fast build rule for target.
+om13088ul_usb.elf/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb.elf.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb.elf.dir/build
+.PHONY : om13088ul_usb.elf/fast
+
+#=============================================================================
+# Target rules for targets named om13088ul_usb.bin
+
+# Build rule for target.
+om13088ul_usb.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 om13088ul_usb.bin
+.PHONY : om13088ul_usb.bin
+
+# fast build rule for target.
+om13088ul_usb.bin/fast:
+	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb.bin.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb.bin.dir/build
+.PHONY : om13088ul_usb.bin/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -370,6 +487,15 @@ help:
 	@echo "... hackrf_usb_dfu.bin"
 	@echo "... hackrf_usb.elf"
 	@echo "... hackrf_usb.bin"
+	@echo "... om13088ul_usb.dfu"
+	@echo "... om13088ul_usb_dfu.bin"
+	@echo "... om13088ul_usb-program"
+	@echo "... om13088ul_usb_m0.bin"
+	@echo "... om13088ul_usb_objects"
+	@echo "... om13088ul_usb_dfu.elf"
+	@echo "... om13088ul_usb_m0.elf"
+	@echo "... om13088ul_usb.elf"
+	@echo "... om13088ul_usb.bin"
 .PHONY : help
 
 

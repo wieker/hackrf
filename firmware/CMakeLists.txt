@@ -27,3 +27,4 @@ project (hackrf_firmware_all)
 
 add_subdirectory(blinky)
 add_subdirectory(hackrf_usb)
+add_subdirectory(om13088ul_usb)
