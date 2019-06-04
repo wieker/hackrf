@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="blinky"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\blinky\;CMake Files\common\;CMake Files\hackrf_usb\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_dfu.bin">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_dfu.bin"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_m0.bin">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_m0.bin"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky-program">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky-program"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_m0.elf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/blinky_m0.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_m0.elf"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_m0.elf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/blinky_m0.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_m0.elf/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_dfu.elf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/blinky_dfu.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_dfu.elf"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_dfu.elf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/blinky_dfu.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_dfu.elf/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_objects">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/blinky_objects.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_objects"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky_objects/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/blinky_objects.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky_objects/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky.elf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/blinky.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky.elf"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky.elf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/blinky.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky.elf/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky.dfu">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky.dfu"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="blinky.bin">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 blinky.bin"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/gpio_lpc.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/hackrf_core.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/i2c_bus.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/i2c_lpc.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/max2837.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/max2837_target.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/max5864.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/max5864_target.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/mixer.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/rf_path.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/rffc5071.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/rffc5071_spi.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/sgpio.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/si5351c.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/spi_bus.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/spi_ssp.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/w25q80bv.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/__/common/w25q80bv_target.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/blinky.c.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeFiles/blinky_objects.dir/m0_bin.s.obj">
+			<Option target="blinky_dfu.elf"/>
+			<Option target="blinky.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/blinky.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/m0_bin.s">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio_lpc.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio_lpc.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/hackrf_core.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/hackrf_core.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_bus.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_bus.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_lpc.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_lpc.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/m0_sleep.c">
+			<Option target="blinky_m0.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837_target.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837_target.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864_target.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864_target.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/mixer.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/mixer.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rf_path.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rf_path.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rffc5071.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rffc5071.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rffc5071_spi.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rffc5071_spi.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/sgpio.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/sgpio.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/si5351c.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/si5351c.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_bus.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_bus.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_ssp.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_ssp.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/w25q80bv.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/w25q80bv.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/w25q80bv_target.c">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/w25q80bv_target.h">
+			<Option target="blinky_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/dfu-util.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf-common.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/toolchain-arm-cortex-m.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\blinky\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/m0_bin.s.cmake">
+			<Option virtualFolder="CMake Files\common\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\hackrf_usb\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
