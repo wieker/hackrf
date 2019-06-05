@@ -29,6 +29,7 @@
 
 #include <stddef.h>
 #include <string.h>
+#include <libopencm3/lpc43xx/rgu.h>
 
 char version_string[] = VERSION_STRING;
 
@@ -62,6 +63,8 @@ usb_request_status_t usb_vendor_request_read_partid_serialno(
 	uint8_t length;
 	read_partid_serialno_t read_partid_serialno;
 	iap_cmd_res_t iap_cmd_res;
+
+    RESET_CTRL0 = 1;
 
 	if (stage == USB_TRANSFER_STAGE_SETUP) 
 	{

@@ -201,7 +201,7 @@ int main(void) {
 
     usb_set_descriptor_by_serial_number();
 
-    usb_set_configuration_changed_cb(usb_configuration_changed);
+    //usb_set_configuration_changed_cb(usb_configuration_changed);
     usb_peripheral_reset();
 
     usb_device_init(0, &usb_device);
