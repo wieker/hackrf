@@ -1,0 +1,1 @@
+program /home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/om13088ul_usb_dfu.bin 0x1A000000
