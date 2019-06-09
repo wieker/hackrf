@@ -176,6 +176,8 @@ int main(void) {
     gpio_output(&gpio_led[0]);
     gpio_output(&gpio_led[1]);
 
+    // Enable USB
+
     /* use XTAL_OSC as clock source for PLL0USB */
     CGU_PLL0USB_CTRL = CGU_PLL0USB_CTRL_PD(1)
                        | CGU_PLL0USB_CTRL_AUTOBLOCK(1)
@@ -215,6 +217,10 @@ int main(void) {
     usb_endpoint_init(&usb_endpoint_control_in);
 
     usb_run(&usb_device);
+
+
+    // Enable I2C for Si5351
+    clock_only_i2c();
 
     /* Blink LED1/2/3 on the board. */
     while (1)

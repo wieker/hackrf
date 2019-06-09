@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="libhackrf"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\modules\;CMake Files\libhackrf\;CMake Files\libhackrf\src\;CMake Files\hackrf-tools\;CMake Files\hackrf-tools\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hackrf-static">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/libhackrf.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add directory="/usr/include/libusb-1.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 hackrf-static"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hackrf-static/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/libhackrf.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add directory="/usr/include/libusb-1.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 hackrf-static/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hackrf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/libhackrf.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add directory="/usr/include/libusb-1.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 hackrf"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hackrf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/libhackrf.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add directory="/usr/include/libusb-1.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 hackrf/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src/hackrf.c">
+			<Option target="hackrf-static"/>
+			<Option target="hackrf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src/hackrf.h">
+			<Option target="hackrf-static"/>
+			<Option target="hackrf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake/set_release.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake/modules/FindFFTW.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake/modules/FindThreads.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake/modules/FindUSB1.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/53-hackrf.rules.in">
+			<Option virtualFolder="CMake Files\libhackrf\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libhackrf\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/libhackrf.pc.in">
+			<Option virtualFolder="CMake Files\libhackrf\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libhackrf\src\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/hackrf-tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\hackrf-tools\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/hackrf-tools/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\hackrf-tools\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

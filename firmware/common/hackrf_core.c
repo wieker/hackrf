@@ -457,6 +457,16 @@ bool baseband_filter_bandwidth_set(const uint32_t bandwidth_hz) {
 	return bandwidth_hz_real != 0;
 }
 
+void clock_only_i2c() {
+    /* use IRC as clock source for APB1 (including I2C0) */
+    CGU_BASE_APB1_CLK = CGU_BASE_APB1_CLK_CLK_SEL(CGU_SRC_IRC);
+
+    /* use IRC as clock source for APB3 */
+    CGU_BASE_APB3_CLK = CGU_BASE_APB3_CLK_CLK_SEL(CGU_SRC_IRC);
+
+    i2c_bus_start(clock_gen.bus, &i2c_config_si5351c_slow_clock);
+}
+
 /* clock startup for LPC4320 configure PLL1 to max speed (204MHz).
 Note: PLL1 clock is used by M4/M0 core, Peripheral, APB1. */ 
 void cpu_clock_init(void)
