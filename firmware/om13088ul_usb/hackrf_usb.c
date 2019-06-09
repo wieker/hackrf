@@ -89,7 +89,9 @@ static const usb_request_handler_fn vendor_request_handler[] = {
 	usb_vendor_request_operacake_set_ports,
 	usb_vendor_request_set_hw_sync_mode,
 	usb_vendor_request_reset,
-	usb_vendor_request_operacake_set_ranges
+    usb_vendor_request_operacake_set_ranges,
+    usb_vendor_request_write_i2c,
+    usb_vendor_request_read_i2c,
 };
 
 static const uint32_t vendor_request_handler_count =

@@ -172,6 +172,21 @@ hackrf_spiflash/fast:
 .PHONY : hackrf_spiflash/fast
 
 # Convenience name for target.
+hackrf-tools/src/CMakeFiles/runcmd.dir/rule:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 hackrf-tools/src/CMakeFiles/runcmd.dir/rule
+.PHONY : hackrf-tools/src/CMakeFiles/runcmd.dir/rule
+
+# Convenience name for target.
+runcmd: hackrf-tools/src/CMakeFiles/runcmd.dir/rule
+
+.PHONY : runcmd
+
+# fast build rule for target.
+runcmd/fast:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug && $(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/build
+.PHONY : runcmd/fast
+
+# Convenience name for target.
 hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/rule:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/rule
 .PHONY : hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/rule
@@ -450,6 +465,33 @@ hackrf_transfer.c.s:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug && $(MAKE) -f hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/build.make hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/hackrf_transfer.c.s
 .PHONY : hackrf_transfer.c.s
 
+runcmd.o: runcmd.c.o
+
+.PHONY : runcmd.o
+
+# target to build an object file
+runcmd.c.o:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug && $(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o
+.PHONY : runcmd.c.o
+
+runcmd.i: runcmd.c.i
+
+.PHONY : runcmd.i
+
+# target to preprocess a source file
+runcmd.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug && $(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.i
+.PHONY : runcmd.c.i
+
+runcmd.s: runcmd.c.s
+
+.PHONY : runcmd.s
+
+# target to generate assembly for a file
+runcmd.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug && $(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.s
+.PHONY : runcmd.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,6 +504,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hackrf_spiflash"
+	@echo "... runcmd"
 	@echo "... hackrf_operacake"
 	@echo "... hackrf_cpldjtag"
 	@echo "... hackrf_transfer"
@@ -490,6 +533,9 @@ help:
 	@echo "... hackrf_transfer.o"
 	@echo "... hackrf_transfer.i"
 	@echo "... hackrf_transfer.s"
+	@echo "... runcmd.o"
+	@echo "... runcmd.i"
+	@echo "... runcmd.s"
 .PHONY : help
 
 

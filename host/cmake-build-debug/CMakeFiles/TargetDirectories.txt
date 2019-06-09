@@ -31,6 +31,7 @@
 /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/CMakeFiles/rebuild_cache.dir
 /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/CMakeFiles/edit_cache.dir
 /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir
+/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir
 /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir
 /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir
 /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir

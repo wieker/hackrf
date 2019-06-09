@@ -22,12 +22,6 @@ gpio.h
 stdbool.h
 -
 
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio_lpc.c
-gpio_lpc.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio_lpc.h
-stddef.h
--
-
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio_lpc.h
 stdint.h
 -
@@ -100,20 +94,10 @@ rf_path.h
 cpld_jtag.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/cpld_jtag.h
 
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_bus.c
-i2c_bus.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_bus.h
-
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_bus.h
 stdint.h
 -
 stddef.h
--
-
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_lpc.c
-i2c_lpc.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_lpc.h
-libopencm3/lpc43xx/i2c.h
 -
 
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_lpc.h
@@ -123,16 +107,6 @@ stddef.h
 -
 i2c_bus.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_bus.h
-
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837.c
-stdint.h
--
-string.h
--
-max2837.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837.h
-max2837_regs.def
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837_regs.def
 
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837.h
 stdint.h
@@ -143,8 +117,6 @@ gpio.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio.h
 spi_bus.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_bus.h
-
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837_regs.def
 
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2837_target.c
 max2837_target.h
@@ -164,12 +136,6 @@ gpio.h
 stdint.h
 -
 
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864.c
-stdint.h
--
-max5864.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864.h
-
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864.h
 spi_bus.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_bus.h
@@ -185,18 +151,6 @@ hackrf_core.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864_target.h
 max5864.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max5864.h
-
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/mixer.c
-mixer.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/mixer.h
-rffc5071.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rffc5071.h
-rffc5071_spi.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/rffc5071_spi.h
-max2871.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/max2871.h
-gpio_lpc.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio_lpc.h
 
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/mixer.h
 rffc5071.h
@@ -286,30 +240,14 @@ libopencm3/lpc43xx/sgpio.h
 gpio.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio.h
 
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/si5351c.c
-si5351c.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/si5351c.h
-
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/si5351c.h
 stdint.h
 -
 i2c_bus.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/i2c_bus.h
 
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_bus.c
-spi_bus.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_bus.h
-
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_bus.h
 stddef.h
--
-
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_ssp.c
-spi_ssp.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_ssp.h
-libopencm3/lpc43xx/rgu.h
--
-libopencm3/lpc43xx/ssp.h
 -
 
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/spi_ssp.h
@@ -323,14 +261,6 @@ gpio.h
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/gpio.h
 libopencm3/lpc43xx/ssp.h
 -
-
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/w25q80bv.c
-stdint.h
--
-stddef.h
--
-w25q80bv.h
-/home/wieker/Projects/linux/hackrf/hackrf/firmware/common/w25q80bv.h
 
 /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/w25q80bv.h
 stdint.h
@@ -502,20 +432,8 @@ libopencm3/cm3/common.h
 libopencm3/lpc43xx/memorymap.h
 -
 
-blinky/../../firmware/libopencm3/include/libopencm3/lpc43xx/i2c.h
-libopencm3/cm3/common.h
--
-libopencm3/lpc43xx/memorymap.h
--
-
 blinky/../../firmware/libopencm3/include/libopencm3/lpc43xx/memorymap.h
 libopencm3/cm3/common.h
--
-
-blinky/../../firmware/libopencm3/include/libopencm3/lpc43xx/rgu.h
-libopencm3/cm3/common.h
--
-libopencm3/lpc43xx/memorymap.h
 -
 
 blinky/../../firmware/libopencm3/include/libopencm3/lpc43xx/scu.h

@@ -231,6 +231,7 @@ hackrf-tools/preinstall: hackrf-tools/src/preinstall
 
 # Convenience name for "all" pass in the directory.
 hackrf-tools/src/all: hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/all
+hackrf-tools/src/all: hackrf-tools/src/CMakeFiles/runcmd.dir/all
 hackrf-tools/src/all: hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/all
 hackrf-tools/src/all: hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/all
 hackrf-tools/src/all: hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/all
@@ -242,6 +243,7 @@ hackrf-tools/src/all: hackrf-tools/src/CMakeFiles/hackrf_debug.dir/all
 
 # Convenience name for "clean" pass in the directory.
 hackrf-tools/src/clean: hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/clean
+hackrf-tools/src/clean: hackrf-tools/src/CMakeFiles/runcmd.dir/clean
 hackrf-tools/src/clean: hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/clean
 hackrf-tools/src/clean: hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/clean
 hackrf-tools/src/clean: hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/clean
@@ -290,6 +292,43 @@ hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/clean:
 
 # clean rule for target.
 clean: hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target hackrf-tools/src/CMakeFiles/runcmd.dir
+
+# All Build rule for target.
+hackrf-tools/src/CMakeFiles/runcmd.dir/all: libhackrf/src/CMakeFiles/hackrf.dir/all
+	$(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/depend
+	$(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target runcmd"
+.PHONY : hackrf-tools/src/CMakeFiles/runcmd.dir/all
+
+# Include target in all.
+all: hackrf-tools/src/CMakeFiles/runcmd.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+hackrf-tools/src/CMakeFiles/runcmd.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 hackrf-tools/src/CMakeFiles/runcmd.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/CMakeFiles 0
+.PHONY : hackrf-tools/src/CMakeFiles/runcmd.dir/rule
+
+# Convenience name for target.
+runcmd: hackrf-tools/src/CMakeFiles/runcmd.dir/rule
+
+.PHONY : runcmd
+
+# clean rule for target.
+hackrf-tools/src/CMakeFiles/runcmd.dir/clean:
+	$(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/clean
+.PHONY : hackrf-tools/src/CMakeFiles/runcmd.dir/clean
+
+# clean rule for target.
+clean: hackrf-tools/src/CMakeFiles/runcmd.dir/clean
 
 .PHONY : clean
 

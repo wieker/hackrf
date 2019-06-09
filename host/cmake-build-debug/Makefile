@@ -209,6 +209,19 @@ hackrf_spiflash/fast:
 .PHONY : hackrf_spiflash/fast
 
 #=============================================================================
+# Target rules for targets named runcmd
+
+# Build rule for target.
+runcmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runcmd
+.PHONY : runcmd
+
+# fast build rule for target.
+runcmd/fast:
+	$(MAKE) -f hackrf-tools/src/CMakeFiles/runcmd.dir/build.make hackrf-tools/src/CMakeFiles/runcmd.dir/build
+.PHONY : runcmd/fast
+
+#=============================================================================
 # Target rules for targets named hackrf_operacake
 
 # Build rule for target.
@@ -302,6 +315,7 @@ help:
 	@echo "... hackrf-static"
 	@echo "... hackrf"
 	@echo "... hackrf_spiflash"
+	@echo "... runcmd"
 	@echo "... hackrf_operacake"
 	@echo "... hackrf_cpldjtag"
 	@echo "... hackrf_transfer"

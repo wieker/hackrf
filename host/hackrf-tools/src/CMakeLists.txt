@@ -33,6 +33,7 @@ SET(TOOLS
 	hackrf_debug
 	hackrf_sweep
 	hackrf_operacake
+	runcmd
 )
 
 if(MSVC)

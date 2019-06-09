@@ -79,6 +79,8 @@ typedef enum {
 	HACKRF_VENDOR_REQUEST_SET_HW_SYNC_MODE = 29,
 	HACKRF_VENDOR_REQUEST_RESET = 30,
 	HACKRF_VENDOR_REQUEST_OPERACAKE_SET_RANGES = 31,
+    HACKRF_VENDOR_REQUEST_I2C_WRITE = 32,
+    HACKRF_VENDOR_REQUEST_I2C_READ = 33,
 } hackrf_vendor_request;
 
 #define USB_CONFIG_STANDARD 0x1
@@ -1991,6 +1993,73 @@ int ADDCALL hackrf_set_operacake_ranges(hackrf_device* device, uint8_t* ranges, 
 		return HACKRF_SUCCESS;
 	}
 }
+
+
+
+int ADDCALL hackrf_i2c_read(hackrf_device* device, uint16_t register_number, uint16_t* value)
+{
+    uint8_t temp_value;
+    int result;
+
+    if( register_number >= 256 )
+    {
+        return HACKRF_ERROR_INVALID_PARAM;
+    }
+
+    temp_value = 0;
+    result = libusb_control_transfer(
+            device->usb_device,
+            LIBUSB_ENDPOINT_IN | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
+            HACKRF_VENDOR_REQUEST_I2C_READ,
+            0,
+            register_number,
+            (unsigned char*)&temp_value,
+            1,
+            0
+    );
+
+    if( result < 1 )
+    {
+        last_libusb_error = result;
+        return HACKRF_ERROR_LIBUSB;
+    } else {
+        *value = temp_value;
+        return HACKRF_SUCCESS;
+    }
+}
+
+int ADDCALL hackrf_i2c_write(hackrf_device* device, uint16_t register_number, uint16_t value)
+{
+    int result;
+
+    if( register_number >= 256 )
+    {
+        return HACKRF_ERROR_INVALID_PARAM;
+    }
+    if( value >= 256 ) {
+        return HACKRF_ERROR_INVALID_PARAM;
+    }
+
+    result = libusb_control_transfer(
+            device->usb_device,
+            LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
+            HACKRF_VENDOR_REQUEST_I2C_WRITE,
+            value,
+            register_number,
+            NULL,
+            0,
+            0
+    );
+
+    if( result != 0 )
+    {
+        last_libusb_error = result;
+        return HACKRF_ERROR_LIBUSB;
+    } else {
+        return HACKRF_SUCCESS;
+    }
+}
+
 #ifdef __cplusplus
 } // __cplusplus defined.
 #endif

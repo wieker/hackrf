@@ -32,6 +32,7 @@
 #include <libopencm3/lpc43xx/rgu.h>
 
 char version_string[] = VERSION_STRING;
+uint16_t some_value;
 
 usb_request_status_t usb_vendor_request_read_board_id(
 		usb_endpoint_t* const endpoint, const usb_transfer_stage_t stage)
@@ -104,4 +105,42 @@ usb_request_status_t usb_vendor_request_reset(
 		usb_transfer_schedule_ack(endpoint->in);
 	}
 	return USB_REQUEST_STATUS_OK;
+}
+
+usb_request_status_t usb_vendor_request_write_i2c(
+        usb_endpoint_t* const endpoint,
+        const usb_transfer_stage_t stage
+) {
+    if( stage == USB_TRANSFER_STAGE_SETUP ) {
+        if( endpoint->setup.index < 256 ) {
+            if( endpoint->setup.value < 256 ) {
+                //si5351c_write_single(&clock_gen, endpoint->setup.index, endpoint->setup.value);
+                some_value = endpoint->setup.value;
+                usb_transfer_schedule_ack(endpoint->in);
+                return USB_REQUEST_STATUS_OK;
+            }
+        }
+        return USB_REQUEST_STATUS_STALL;
+    } else {
+        return USB_REQUEST_STATUS_OK;
+    }
+}
+
+usb_request_status_t usb_vendor_request_read_i2c(
+        usb_endpoint_t* const endpoint,
+        const usb_transfer_stage_t stage
+) {
+    if( stage == USB_TRANSFER_STAGE_SETUP ) {
+        if( endpoint->setup.index < 256 ) {
+            //const uint8_t value = si5351c_read_single(&clock_gen, endpoint->setup.index);
+            endpoint->buffer[0] = some_value;
+            usb_transfer_schedule_block(endpoint->in, &endpoint->buffer, 1,
+                                        NULL, NULL);
+            usb_transfer_schedule_ack(endpoint->out);
+            return USB_REQUEST_STATUS_OK;
+        }
+        return USB_REQUEST_STATUS_STALL;
+    } else {
+        return USB_REQUEST_STATUS_OK;
+    }
 }

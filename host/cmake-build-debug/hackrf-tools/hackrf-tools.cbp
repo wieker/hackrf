@@ -24,7 +24,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -49,7 +49,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -67,6 +67,56 @@
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="runcmd">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/runcmd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 runcmd"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runcmd/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/runcmd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 runcmd/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="hackrf_operacake">
 				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src/hackrf_operacake" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/hackrf-tools/src"/>
@@ -74,7 +124,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -99,7 +149,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -124,7 +174,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -149,7 +199,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -174,7 +224,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -199,7 +249,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -224,7 +274,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -249,7 +299,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -274,7 +324,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -299,7 +349,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -324,7 +374,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -349,7 +399,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-d152c94&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -388,6 +438,9 @@
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/hackrf-tools/src/hackrf_transfer.c">
 			<Option target="hackrf_transfer"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/hackrf-tools/src/runcmd.c">
+			<Option target="runcmd"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/host/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
