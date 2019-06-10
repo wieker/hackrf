@@ -22,12 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/blinky.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/m0_bin.s.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" beforeDir="false" afterPath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libhackrf/src/hackrf.c" beforeDir="false" afterPath="$PROJECT_DIR$/libhackrf/src/hackrf.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libhackrf/src/hackrf.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="992" column="12" selection-start-line="992" selection-start-column="12" selection-end-line="992" selection-end-column="12" />
+            <state relative-caret-position="-157">
+              <caret line="2002" column="4" selection-start-line="2002" selection-start-column="4" selection-end-line="2002" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -90,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hackrf-tools/src/runcmd.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="199" selection-start-line="199" selection-end-line="199" />
+            <state relative-caret-position="247">
+              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -126,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackrf-tools/src/hackrf_info.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="31" selection-start-line="31" selection-end-line="32" />
+            <state relative-caret-position="473">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
             </state>
           </provider>
         </entry>
@@ -348,12 +343,12 @@
       <workItem from="1559768292831" duration="2811000" />
       <workItem from="1559973629044" duration="741000" />
       <workItem from="1559979451403" duration="440000" />
-      <workItem from="1560118491888" duration="3949000" />
+      <workItem from="1560118491888" duration="4391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9963000" />
+    <option name="totallyTimeSpent" value="10405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
@@ -483,24 +478,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hackrf-tools/src/hackrf_info.c">
+    <entry file="file://$PROJECT_DIR$/libhackrf/src/hackrf.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="31" selection-start-line="31" selection-end-line="32" />
+        <state relative-caret-position="-157">
+          <caret line="2002" column="4" selection-start-line="2002" selection-start-column="4" selection-end-line="2002" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libhackrf/src/hackrf.c">
+    <entry file="file://$PROJECT_DIR$/hackrf-tools/src/hackrf_info.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="992" column="12" selection-start-line="992" selection-start-column="12" selection-end-line="992" selection-end-column="12" />
+        <state relative-caret-position="473">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hackrf-tools/src/runcmd.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="199" selection-start-line="199" selection-end-line="199" />
+        <state relative-caret-position="247">
+          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
         </state>
       </provider>
     </entry>

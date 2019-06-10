@@ -67,7 +67,7 @@ int read_register(hackrf_device* device,
                   const uint16_t register_number) {
     uint16_t register_value;
     int result = hackrf_i2c_read(device, register_number, &register_value);
-    printf("value = %d", register_value);
+    printf("value = %d\n", register_value);
     return result;
 }
 
@@ -190,13 +190,11 @@ int main(int argc, char** argv) {
     printf("Board ID Number: %d (%s)\n", board_id,
            hackrf_board_id_name(board_id));
 
-    if(write) {
-        result = write_register(device, register_number, register_value);
-    }
+    result = read_register(device, register_number);
 
-    if(read) {
-        result = read_register(device, register_number);
-    }
+    result = write_register(device, register_number, 1);
+
+    result = read_register(device, register_number);
 
 
     result = hackrf_board_id_read(device, &board_id);
