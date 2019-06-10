@@ -1998,6 +1998,7 @@ int ADDCALL hackrf_set_operacake_ranges(hackrf_device* device, uint8_t* ranges, 
 
 int ADDCALL hackrf_i2c_read(hackrf_device* device, uint16_t register_number, uint16_t* value)
 {
+
     uint8_t temp_value;
     int result;
 
@@ -2011,6 +2012,7 @@ int ADDCALL hackrf_i2c_read(hackrf_device* device, uint16_t register_number, uin
             device->usb_device,
             LIBUSB_ENDPOINT_IN | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
             HACKRF_VENDOR_REQUEST_I2C_READ,
+            //HACKRF_VENDOR_REQUEST_BOARD_ID_READ,
             0,
             register_number,
             (unsigned char*)&temp_value,

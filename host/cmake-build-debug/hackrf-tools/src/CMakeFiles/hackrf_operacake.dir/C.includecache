@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libhackrf/src/hackrf.h
+stdint.h
+-
+
+/home/wieker/Projects/linux/hackrf/hackrf/host/hackrf-tools/src/hackrf_operacake.c
+hackrf.h
+-
+stdio.h
+-
+stdlib.h
+-
+getopt.h
+-
+string.h
+-
+

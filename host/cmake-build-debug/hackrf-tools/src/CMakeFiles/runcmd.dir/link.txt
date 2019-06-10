@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=gnu90 -g  -rdynamic CMakeFiles/runcmd.dir/runcmd.c.o  -o runcmd -Wl,-rpath,/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src: -lm -lfftw3f ../../libhackrf/src/libhackrf.so.0.5.0 -lusb-1.0 -lpthread 

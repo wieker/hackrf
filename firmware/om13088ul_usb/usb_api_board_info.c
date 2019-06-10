@@ -32,7 +32,7 @@
 #include <libopencm3/lpc43xx/rgu.h>
 
 char version_string[] = VERSION_STRING;
-uint16_t some_value;
+uint16_t some_value = 9;
 
 usb_request_status_t usb_vendor_request_read_board_id(
 		usb_endpoint_t* const endpoint, const usb_transfer_stage_t stage)
