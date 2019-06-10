@@ -290,12 +290,12 @@ usb_request_status_t usb_vendor_request_set_transceiver_mode(
 		case TRANSCEIVER_MODE_OFF:
 		case TRANSCEIVER_MODE_RX:
 		case TRANSCEIVER_MODE_TX:
-			set_transceiver_mode(endpoint->setup.value);
+			//set_transceiver_mode(endpoint->setup.value);
 			usb_transfer_schedule_ack(endpoint->in);
 			return USB_REQUEST_STATUS_OK;
 		case TRANSCEIVER_MODE_CPLD_UPDATE:
 			usb_endpoint_init(&usb_endpoint_bulk_out);
-			start_cpld_update = true;
+			//start_cpld_update = true;
 			usb_transfer_schedule_ack(endpoint->in);
 			return USB_REQUEST_STATUS_OK;
 		default:

@@ -1,0 +1,32 @@
+usb_vendor_request_read_board_id usb_api_board_info.c:42
+usb_request usb_request.c:54
+usb_check_for_setup_events usb.c:568
+usb0_isr usb.c:623
+<signal handler called> 0x00000000fffffff9
+delay hackrf_core.c:287
+main hackrf_usb.c:240
+reset_handler vector.c:89
+
+(gdb) target remote localhost:3333
+Remote debugging using localhost:3333
+delay (duration=duration@entry=20000000) at /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/hackrf_core.c:288
+288                     __asm__("nop");
+(gdb) c
+Continuing.
+
+^C
+Program received signal SIGINT, Interrupt.
+0x1a001b76 in hard_fault_handler_c (args=0x10087f50) at /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/fault_handler.c:53
+53              hard_fault_stack_pt = (hard_fault_stack_t*)args;
+(gdb) bt
+#0  0x1a001b76 in hard_fault_handler_c (args=0x10087f50) at /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/fault_handler.c:53
+#1  <signal handler called>
+#2  set_transceiver_mode (new_transceiver_mode=<optimized out>) at /home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/usb_api_transceiver.c:282
+#3  0x1a0014c6 in usb_vendor_request_set_transceiver_mode (endpoint=0x10080240 <usb_endpoint_control_out>, stage=<optimized out>) at /home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/usb_api_transceiver.c:293
+#4  0x1a000bc2 in usb_request (endpoint=0x10080240 <usb_endpoint_control_out>, stage=<optimized out>) at /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/usb_request.c:54
+#5  0x1a000ae8 in usb_check_for_setup_events () at /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/usb.c:568
+#6  usb0_isr () at /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/usb.c:623
+#7  <signal handler called>
+#8  0x1a001c42 in delay (duration=duration@entry=20000000) at /home/wieker/Projects/linux/hackrf/hackrf/firmware/common/hackrf_core.c:287
+#9  0x1a0002a2 in main () at /home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/hackrf_usb.c:246
+(gdb)
