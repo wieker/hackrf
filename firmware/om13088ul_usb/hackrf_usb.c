@@ -166,12 +166,39 @@ void usb_set_descriptor_by_serial_number(void)
 #include <libopencm3/lpc43xx/cgu.h>
 #include <libopencm3/lpc43xx/ccu.h>
 #include <libopencm3/lpc43xx/scu.h>
+#include <libopencm3/lpc43xx/i2c.h>
 
 static struct gpio_t gpio_led[] = {
         GPIO(3,  7),
         GPIO(0,  7),
         GPIO(3,  5),
 };
+
+void i2c0_init_slave(const uint16_t duty_cycle_count)
+{
+    /* enable input on SCL and SDA pins */
+    SCU_SFSI2C0 = SCU_I2C0_NOMINAL;
+
+    I2C0_SCLH = duty_cycle_count;
+    I2C0_SCLL = duty_cycle_count;
+
+    /* clear the control bits */
+    I2C0_CONCLR = (I2C_CONCLR_AAC | I2C_CONCLR_SIC
+                   | I2C_CONCLR_STAC | I2C_CONCLR_I2ENC);
+
+    /* enable I2C0 */
+    I2C0_CONSET = I2C_CONSET_I2EN | I2C_CONSET_AA;
+    I2C0_ADR0 = 1;
+}
+
+/* receive data byte */
+uint8_t i2c0_rx_byte_slave(void)
+{
+    while (!(I2C0_CONSET & I2C_CONSET_SI));
+    I2C0_CONCLR = I2C_CONCLR_SIC;
+    while (!(I2C0_CONSET & I2C_CONSET_SI));
+    return I2C0_DAT;
+}
 
 int main(void) {
     gpio_init();
@@ -223,6 +250,9 @@ int main(void) {
 
     // Enable I2C for Si5351
     clock_only_i2c();
+
+    //i2c0_init_slave(255);
+    //i2c0_rx_byte_slave();
 
     /* Blink LED1/2/3 on the board. */
     while (1)

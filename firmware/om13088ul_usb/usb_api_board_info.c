@@ -30,6 +30,9 @@
 #include <stddef.h>
 #include <string.h>
 #include <libopencm3/lpc43xx/rgu.h>
+#include <libopencm3/lpc43xx/scu.h>
+#include <libopencm3/lpc43xx/i2c.h>
+#include <libopencm3/dispatch/nvic.h>
 
 char version_string[] = VERSION_STRING;
 uint16_t some_value = 9;
@@ -107,6 +110,115 @@ usb_request_status_t usb_vendor_request_reset(
 	return USB_REQUEST_STATUS_OK;
 }
 
+void i2c0_init_master(const uint16_t duty_cycle_count)
+{
+    /* enable input on SCL and SDA pins */
+    SCU_SFSI2C0 = SCU_I2C0_NOMINAL;
+
+    I2C0_SCLH = duty_cycle_count;
+    I2C0_SCLL = duty_cycle_count;
+
+    /* clear the control bits */
+    I2C0_CONCLR = (I2C_CONCLR_AAC | I2C_CONCLR_SIC
+                   | I2C_CONCLR_STAC | I2C_CONCLR_I2ENC);
+
+    /* enable I2C0 */
+    I2C0_CONSET = I2C_CONSET_I2EN;
+}
+
+/* transmit start bit */
+void i2c0_tx_bit_master(void)
+{
+    I2C0_CONCLR = I2C_CONCLR_SIC;
+    I2C0_CONSET = I2C_CONSET_STA;
+    while (!(I2C0_CONSET & I2C_CONSET_SI));
+    I2C0_CONCLR = I2C_CONCLR_STAC;
+}
+
+/* transmit data byte */
+void i2c0_tx_byte_master(uint8_t byte)
+{
+    if (I2C0_CONSET & I2C_CONSET_STA) {
+        I2C0_CONCLR = I2C_CONCLR_STAC;
+    }
+    I2C0_DAT = byte;
+    I2C0_CONCLR = I2C_CONCLR_SIC;
+    while (!(I2C0_CONSET & I2C_CONSET_SI));
+}
+
+/* transmit stop bit */
+void i2c0_stop_master(void)
+{
+    if (I2C0_CONSET & I2C_CONSET_STA) {
+        I2C0_CONCLR = I2C_CONCLR_STAC;
+    }
+    I2C0_CONSET = I2C_CONSET_STO;
+    I2C0_CONCLR = I2C_CONCLR_SIC;
+}
+
+void i2c1_init_a(const uint16_t duty_cycle_count)
+{
+    /* enable input on SCL and SDA pins */
+    SCU_SFSI2C0 = SCU_I2C0_NOMINAL;
+
+    I2C1_SCLH = duty_cycle_count;
+    I2C1_SCLL = duty_cycle_count;
+
+    /* clear the control bits */
+    I2C1_CONCLR = (I2C_CONCLR_AAC | I2C_CONCLR_SIC
+                   | I2C_CONCLR_STAC | I2C_CONCLR_I2ENC);
+
+    /* enable I2C0 */
+    I2C1_CONSET = I2C_CONSET_I2EN | I2C_CONSET_AA;
+
+    nvic_enable_irq(NVIC_I2C1_IRQ);
+
+    I2C1_ADR0 = 1;
+
+    SCU_SFSP2_3 = 0x01;
+    SCU_SFSP2_4 = 0x01;
+}
+
+/* transmit start bit */
+void i2c1_tx_start_a(void)
+{
+    I2C1_CONCLR = I2C_CONCLR_SIC;
+    I2C1_CONSET = I2C_CONSET_STA;
+    while (!(I2C1_CONSET & I2C_CONSET_SI));
+    I2C1_CONCLR = I2C_CONCLR_STAC;
+}
+
+/* transmit data byte */
+void i2c1_tx_byte_a(uint8_t byte)
+{
+    if (I2C1_CONSET & I2C_CONSET_STA) {
+        I2C1_CONCLR = I2C_CONCLR_STAC;
+    }
+    I2C1_DAT = byte;
+    I2C1_CONCLR = I2C_CONCLR_SIC;
+    while (!(I2C1_CONSET & I2C_CONSET_SI));
+}
+
+/* receive data byte */
+uint8_t i2c0_rx_byte_a(void)
+{
+    if (I2C0_CONSET & I2C_CONSET_STA) {
+        I2C0_CONCLR = I2C_CONCLR_STAC;
+    }
+    I2C0_CONCLR = I2C_CONCLR_SIC;
+    while (!(I2C0_CONSET & I2C_CONSET_SI));
+    return I2C0_DAT;
+}
+
+/* receive data byte */
+uint8_t i2c1_rx_byte_a(void)
+{
+    while (!(I2C1_CONSET & I2C_CONSET_SI));
+    I2C1_CONCLR = I2C_CONCLR_SIC;
+    while (!(I2C1_CONSET & I2C_CONSET_SI));
+    return I2C1_DAT;
+}
+
 usb_request_status_t usb_vendor_request_write_i2c(
         usb_endpoint_t* const endpoint,
         const usb_transfer_stage_t stage
@@ -116,6 +228,11 @@ usb_request_status_t usb_vendor_request_write_i2c(
             if( endpoint->setup.value < 256 ) {
                 //si5351c_write_single(&clock_gen, endpoint->setup.index, endpoint->setup.value);
                 some_value = endpoint->setup.value;
+                i2c0_init_master(255);
+                i2c0_tx_bit_master();
+                i2c0_tx_byte_master(0);
+                i2c0_tx_byte_master(some_value);
+                i2c0_stop_master();
                 usb_transfer_schedule_ack(endpoint->in);
                 return USB_REQUEST_STATUS_OK;
             }
@@ -133,7 +250,15 @@ usb_request_status_t usb_vendor_request_read_i2c(
     if( stage == USB_TRANSFER_STAGE_SETUP ) {
         if( endpoint->setup.index < 256 ) {
             //const uint8_t value = si5351c_read_single(&clock_gen, endpoint->setup.index);
-            endpoint->buffer[0] = some_value;
+            //i2c0_init_slave(15);
+            //i2c1_tx_start_a();
+            //endpoint->buffer[0] = * (uint32_t *) (0x400A1004);
+
+            //endpoint->buffer[0] = i2c0_rx_byte_slave();
+            endpoint->buffer[0] = * (uint32_t *) (0x400E0004);
+
+
+            //endpoint->buffer[0] = some_value;
             usb_transfer_schedule_block(endpoint->in, &endpoint->buffer, 1,
                                         NULL, NULL);
             usb_transfer_schedule_ack(endpoint->out);
@@ -143,4 +268,8 @@ usb_request_status_t usb_vendor_request_read_i2c(
     } else {
         return USB_REQUEST_STATUS_OK;
     }
+}
+
+void i2c1_isr(void) {
+    some_value = 18;
 }

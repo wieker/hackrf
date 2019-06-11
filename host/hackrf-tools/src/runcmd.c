@@ -67,7 +67,7 @@ int read_register(hackrf_device* device,
                   const uint16_t register_number) {
     uint16_t register_value;
     int result = hackrf_i2c_read(device, register_number, &register_value);
-    printf("value = %d\n", register_value);
+    printf("value = %x\n", register_value);
     return result;
 }
 
@@ -111,7 +111,6 @@ static struct option long_options[] = {
 int main(int argc, char** argv) {
     int opt;
     uint16_t register_number = REGISTER_INVALID;
-    uint16_t register_value;
     hackrf_device* device = NULL;
     int option_index = 0;
     bool read = false;
@@ -128,12 +127,12 @@ int main(int argc, char** argv) {
     while( (opt = getopt_long(argc, argv, "n:rw:d:cmsfh?", long_options, &option_index)) != EOF ) {
         switch( opt ) {
             case 'n':
-                result = parse_int(optarg, &register_number);
+                //result = parse_int(optarg, &register_number);
                 break;
 
             case 'w':
                 write = true;
-                result = parse_int(optarg, &register_value);
+                //result = parse_int(optarg, &register_value);
                 break;
 
             case 'r':
@@ -190,11 +189,13 @@ int main(int argc, char** argv) {
     printf("Board ID Number: %d (%s)\n", board_id,
            hackrf_board_id_name(board_id));
 
-    result = read_register(device, register_number);
+    if (read) {
+        result = read_register(device, register_number);
+    }
 
-    result = write_register(device, register_number, 1);
-
-    result = read_register(device, register_number);
+    if (write) {
+        result = write_register(device, register_number, 1);
+    }
 
 
     result = hackrf_board_id_read(device, &board_id);
