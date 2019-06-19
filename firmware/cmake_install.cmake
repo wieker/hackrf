@@ -37,6 +37,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/cmake_install.cmake")
   include("/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/cmake_install.cmake")
   include("/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/cmake_install.cmake")
+  include("/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/cmake_install.cmake")
 
 endif()
 

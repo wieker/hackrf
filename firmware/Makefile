@@ -461,6 +461,123 @@ om13088ul_usb.bin/fast:
 	$(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb.bin.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb.bin.dir/build
 .PHONY : om13088ul_usb.bin/fast
 
+#=============================================================================
+# Target rules for targets named liblpc-program
+
+# Build rule for target.
+liblpc-program: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc-program
+.PHONY : liblpc-program
+
+# fast build rule for target.
+liblpc-program/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc-program.dir/build.make liblpc/CMakeFiles/liblpc-program.dir/build
+.PHONY : liblpc-program/fast
+
+#=============================================================================
+# Target rules for targets named liblpc.dfu
+
+# Build rule for target.
+liblpc.dfu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc.dfu
+.PHONY : liblpc.dfu
+
+# fast build rule for target.
+liblpc.dfu/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc.dfu.dir/build.make liblpc/CMakeFiles/liblpc.dfu.dir/build
+.PHONY : liblpc.dfu/fast
+
+#=============================================================================
+# Target rules for targets named liblpc_dfu.bin
+
+# Build rule for target.
+liblpc_dfu.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc_dfu.bin
+.PHONY : liblpc_dfu.bin
+
+# fast build rule for target.
+liblpc_dfu.bin/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc_dfu.bin.dir/build.make liblpc/CMakeFiles/liblpc_dfu.bin.dir/build
+.PHONY : liblpc_dfu.bin/fast
+
+#=============================================================================
+# Target rules for targets named liblpc_m0.elf
+
+# Build rule for target.
+liblpc_m0.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc_m0.elf
+.PHONY : liblpc_m0.elf
+
+# fast build rule for target.
+liblpc_m0.elf/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc_m0.elf.dir/build.make liblpc/CMakeFiles/liblpc_m0.elf.dir/build
+.PHONY : liblpc_m0.elf/fast
+
+#=============================================================================
+# Target rules for targets named liblpc_objects
+
+# Build rule for target.
+liblpc_objects: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc_objects
+.PHONY : liblpc_objects
+
+# fast build rule for target.
+liblpc_objects/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc_objects.dir/build.make liblpc/CMakeFiles/liblpc_objects.dir/build
+.PHONY : liblpc_objects/fast
+
+#=============================================================================
+# Target rules for targets named liblpc_dfu.elf
+
+# Build rule for target.
+liblpc_dfu.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc_dfu.elf
+.PHONY : liblpc_dfu.elf
+
+# fast build rule for target.
+liblpc_dfu.elf/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc_dfu.elf.dir/build.make liblpc/CMakeFiles/liblpc_dfu.elf.dir/build
+.PHONY : liblpc_dfu.elf/fast
+
+#=============================================================================
+# Target rules for targets named liblpc.elf
+
+# Build rule for target.
+liblpc.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc.elf
+.PHONY : liblpc.elf
+
+# fast build rule for target.
+liblpc.elf/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc.elf.dir/build.make liblpc/CMakeFiles/liblpc.elf.dir/build
+.PHONY : liblpc.elf/fast
+
+#=============================================================================
+# Target rules for targets named liblpc_m0.bin
+
+# Build rule for target.
+liblpc_m0.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc_m0.bin
+.PHONY : liblpc_m0.bin
+
+# fast build rule for target.
+liblpc_m0.bin/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc_m0.bin.dir/build.make liblpc/CMakeFiles/liblpc_m0.bin.dir/build
+.PHONY : liblpc_m0.bin/fast
+
+#=============================================================================
+# Target rules for targets named liblpc.bin
+
+# Build rule for target.
+liblpc.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 liblpc.bin
+.PHONY : liblpc.bin
+
+# fast build rule for target.
+liblpc.bin/fast:
+	$(MAKE) -f liblpc/CMakeFiles/liblpc.bin.dir/build.make liblpc/CMakeFiles/liblpc.bin.dir/build
+.PHONY : liblpc.bin/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -496,6 +613,15 @@ help:
 	@echo "... om13088ul_usb_m0.elf"
 	@echo "... om13088ul_usb.elf"
 	@echo "... om13088ul_usb.bin"
+	@echo "... liblpc-program"
+	@echo "... liblpc.dfu"
+	@echo "... liblpc_dfu.bin"
+	@echo "... liblpc_m0.elf"
+	@echo "... liblpc_objects"
+	@echo "... liblpc_dfu.elf"
+	@echo "... liblpc.elf"
+	@echo "... liblpc_m0.bin"
+	@echo "... liblpc.bin"
 .PHONY : help
 
 

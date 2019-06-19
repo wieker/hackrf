@@ -3,13 +3,13 @@
 
 # compile ASM with /usr/bin/arm-none-eabi-gcc
 # compile C with /usr/bin/arm-none-eabi-gcc
-ASM_FLAGS = -g   -std=gnu99 -Os -g3 -Wall -Wextra -DHACKRF_ONE -DLPC43XX -DLPC4320 -DTX_ENABLE -D'VERSION_STRING="git-457523f"'  -fno-common -MD -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DLPC43XX_M4
+ASM_FLAGS = -g   -std=gnu99 -Os -g3 -Wall -Wextra -DHACKRF_ONE -DLPC43XX -DLPC4320 -DTX_ENABLE -D'VERSION_STRING="git-1f2c308"'  -fno-common -MD -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DLPC43XX_M4
 
 ASM_DEFINES = 
 
 ASM_INCLUDES = -I/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/libopencm3/include -I/home/wieker/Projects/linux/hackrf/hackrf/firmware/blinky/../../firmware/common 
 
-C_FLAGS = -g   -std=gnu99 -Os -g3 -Wall -Wextra -DHACKRF_ONE -DLPC43XX -DLPC4320 -DTX_ENABLE -D'VERSION_STRING="git-457523f"'  -fno-common -MD -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DLPC43XX_M4
+C_FLAGS = -g   -std=gnu99 -Os -g3 -Wall -Wextra -DHACKRF_ONE -DLPC43XX -DLPC4320 -DTX_ENABLE -D'VERSION_STRING="git-1f2c308"'  -fno-common -MD -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DLPC43XX_M4
 
 C_DEFINES = 
 

@@ -5,7 +5,7 @@
 		<Option title="hackrf_usb"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\blinky\;CMake Files\common\;CMake Files\hackrf_usb\;CMake Files\om13088ul_usb\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\blinky\;CMake Files\common\;CMake Files\hackrf_usb\;CMake Files\om13088ul_usb\;CMake Files\liblpc\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
@@ -674,6 +674,9 @@
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\om13088ul_usb\"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\liblpc\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

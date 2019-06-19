@@ -9,10 +9,10 @@
       <config projectName="HackRF" targetName="hackrf_transfer" />
       <config projectName="HackRF" targetName="hackrf_sweep" />
       <config projectName="HackRF" targetName="hackrf-static" />
-      <config projectName="HackRF" targetName="hackrf_debug" />
+      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
       <config projectName="HackRF" targetName="runcmd" />
       <config projectName="HackRF" targetName="uninstall" />
-      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
+      <config projectName="HackRF" targetName="hackrf_debug" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -23,11 +23,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" beforeDir="false" afterPath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,6 +229,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,17 +346,19 @@
       <workItem from="1559979451403" duration="440000" />
       <workItem from="1560118491888" duration="6282000" />
       <workItem from="1560213300225" duration="598000" />
-      <workItem from="1560288916145" duration="710000" />
+      <workItem from="1560288916145" duration="1347000" />
+      <workItem from="1560893867125" duration="513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13604000" />
+    <option name="totallyTimeSpent" value="14754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26631016" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2695187" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
