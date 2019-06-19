@@ -458,6 +458,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb_objects"/>
@@ -475,6 +476,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb_objects/fast"/>
@@ -492,6 +494,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb_dfu.elf"/>
@@ -509,6 +512,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb_dfu.elf/fast"/>
@@ -526,6 +530,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb_m0.elf"/>
@@ -543,6 +548,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb_m0.elf/fast"/>
@@ -560,6 +566,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb.elf"/>
@@ -577,6 +584,7 @@
 				<Compiler>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/libopencm3/include"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../../firmware/common"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/../liblpc"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/Makefile&quot;  VERBOSE=1 om13088ul_usb.elf/fast"/>
@@ -1548,15 +1556,15 @@
 			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
 		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/i2c.c.obj">
+			<Option target="liblpc_dfu.elf"/>
+			<Option target="liblpc.elf"/>
+		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/i2c_18xx_43xx.c.obj">
 			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/i2cm_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
-			<Option target="liblpc.elf"/>
-		</Unit>
-		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/i2cm_polling.c.obj">
 			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
 		</Unit>
@@ -1581,66 +1589,86 @@
 			<Option target="liblpc.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/board.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/board.h">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/chip_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/clock_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/clock_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/gpio_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/gpio_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
+			<Option target="liblpc_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/i2c.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/i2c_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/i2c_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/i2cm_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/i2cm_18xx_43xx.h">
-			<Option target="liblpc_objects"/>
-		</Unit>
-		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/i2cm_polling.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/m0_bin.s">
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/ring_buffer.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/ring_buffer.h">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/ssp_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/ssp_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/uart_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/uart_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/wm8904.c">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/wm8904.h">
+			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/common/cpld_jtag.c.obj">
@@ -1764,6 +1792,50 @@
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/common/xapp058/ports.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/board.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/chip_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/clock_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/gpio_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/i2c.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/i2c_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/i2cm_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ring_buffer.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ssp_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/uart_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/wm8904.c.obj">
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>

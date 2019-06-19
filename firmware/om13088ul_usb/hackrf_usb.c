@@ -200,6 +200,8 @@ uint8_t i2c0_rx_byte_slave(void)
     return I2C0_DAT;
 }
 
+extern int main_2();
+
 int main(void) {
     gpio_init();
     gpio_output(&gpio_led[0]);
@@ -249,10 +251,12 @@ int main(void) {
 
 
     // Enable I2C for Si5351
-    clock_only_i2c();
+    //clock_only_i2c();
 
     //i2c0_init_slave(255);
     //i2c0_rx_byte_slave();
+
+    main_2();
 
     /* Blink LED1/2/3 on the board. */
     while (1)

@@ -52,6 +52,21 @@ set(SRC_M4
 	"${PATH_HACKRF_FIRMWARE_COMMON}/xapp058/micro.c"
 	"${PATH_HACKRF_FIRMWARE_COMMON}/xapp058/ports.c"
 	"${PATH_HACKRF_FIRMWARE_COMMON}/rom_iap.c"
+		../liblpc/i2c_18xx_43xx.c
+		../liblpc/i2c.c
+		../liblpc/clock_18xx_43xx.c
+		../liblpc/board.c
+		../liblpc/chip_18xx_43xx.c
+		../liblpc/uart_18xx_43xx.c
+		../liblpc/gpio_18xx_43xx.c
+		../liblpc/ring_buffer.c
+		../liblpc/ssp_18xx_43xx.c
+		../liblpc/i2cm_18xx_43xx.c
+		../liblpc/wm8904.c
+)
+
+include_directories(
+		"../liblpc"
 )
 
 DeclareTargets()

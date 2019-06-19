@@ -27,7 +27,8 @@ include(../hackrf-common.cmake)
 
 set(SRC_M4
 		i2c_18xx_43xx.c
-		i2cm_polling.c
+		#i2cm_polling.c
+		i2c.c
 		clock_18xx_43xx.c
 		board.c
 		chip_18xx_43xx.c
