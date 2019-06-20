@@ -436,8 +436,8 @@ int main_2(void)
 	int xflag = 0;
 	static I2C_XFER_T xfer;
 
-	//SystemCoreClockUpdate();
-	//Board_Init();
+	SystemCoreClockUpdate();
+	Board_Init();
 	i2c_app_init(I2C0, SPEED_100KHZ);
 	i2c_app_init(I2C1, SPEED_100KHZ);
 
@@ -448,7 +448,7 @@ int main_2(void)
 	i2c_iox_init(I2C_IOX_BUS);
 
 	i2c_menu();
-	return;
+	//return 0;
 
 	while (!xflag) {
 		switch (i2c_menu()) {
