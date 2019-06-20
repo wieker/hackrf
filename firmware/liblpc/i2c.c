@@ -93,8 +93,8 @@ static void i2c_state_handling(I2C_ID_T id)
 		Chip_I2C_MasterStateHandler(id);
 	}
 	else {
-        DEBUGOUT("slHandler\r\n");
-        Chip_I2C_SlaveStateHandler(id);
+        //DEBUGOUT("slHandler\r\n");
+        //Chip_I2C_SlaveStateHandler(id);
 	}
 }
 
@@ -415,7 +415,7 @@ void SysTick_Handler(void)
  */
 void I2C1_IRQHandler(void)
 {
-    DEBUGOUT("i2c0io\r\n");
+    //DEBUGOUT("i2c0io\r\n");
 	i2c_state_handling(I2C1);
 }
 

@@ -122,7 +122,7 @@ STATIC INLINE int isI2CBusFree(LPC_I2C_T *pI2C)
 STATIC INLINE int getCurState(LPC_I2C_T *pI2C)
 {
     int curState = (int) (pI2C->STAT & I2C_STAT_CODE_BITMASK);
-    DEBUGOUT("CurState: %x\r\n", curState);
+    //DEBUGOUT("CurState: %x\r\n", curState);
     return curState;
 }
 
@@ -182,7 +182,7 @@ int handleMasterXferState(LPC_I2C_T *pI2C, I2C_XFER_T  *xfer)
 	uint32_t cclr = I2C_CON_FLAGS;
 
     int curState = getCurState(pI2C);
-	DEBUGOUT("state: %x\r\n", curState);
+	//DEBUGOUT("state: %x\r\n", curState);
 
     switch (curState) {
 	case 0x08:		/* Start condition on bus */
@@ -494,7 +494,7 @@ int Chip_I2C_IsMasterActive(I2C_ID_T id)
 /* State change handler for master transfer */
 void Chip_I2C_MasterStateHandler(I2C_ID_T id)
 {
-    DEBUGOUT("msHandler\r\n");
+    //DEBUGOUT("msHandler\r\n");
 	if (!handleMasterXferState(i2c[id].ip, i2c[id].mXfer)) {
 		i2c[id].mEvent(id, I2C_EVENT_DONE);
 	}
