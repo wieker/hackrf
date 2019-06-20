@@ -202,6 +202,17 @@ uint8_t i2c0_rx_byte_slave(void)
 
 extern int main_2();
 
+extern void I2C1_IRQHandler(void);
+extern void I2C0_IRQHandler(void);
+
+void i2c1_isr(void) {
+    I2C1_IRQHandler();
+}
+
+void i2c0_isr(void) {
+    I2C0_IRQHandler();
+}
+
 int main(void) {
     gpio_init();
     gpio_output(&gpio_led[0]);

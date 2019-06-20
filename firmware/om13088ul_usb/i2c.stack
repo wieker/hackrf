@@ -1,0 +1,26 @@
+hard_fault_handler_c fault_handler.c:53
+<signal handler called> 0x00000000fffffff1
+handleSlaveXferState i2c_18xx_43xx.c:266
+Chip_I2C_SlaveStateHandler i2c_18xx_43xx.c:534
+<signal handler called> 0x00000000ffffffe9
+Chip_I2C_EventHandler i2c_18xx_43xx.c:342
+Chip_I2C_MasterTransfer i2c_18xx_43xx.c:428
+<unknown> 0x0000000000000000
+
+Chip_I2C_MasterStateHandler i2c_18xx_43xx.c:488
+<signal handler called> 0x00000000ffffffe9
+Chip_I2C_EventHandler i2c_18xx_43xx.c:342
+Chip_I2C_MasterTransfer i2c_18xx_43xx.c:428
+<unknown> 0x0000000000000000
+
+i2c1_isr hackrf_usb.c:209
+<signal handler called> 0x00000000ffffffe9
+Chip_I2C_EventHandler i2c_18xx_43xx.c:342
+Chip_I2C_MasterTransfer i2c_18xx_43xx.c:428
+<unknown> 0x0000000000000000
+
+i2c_state_handling i2c.c:91
+<signal handler called> 0x00000000ffffffe9
+Chip_I2C_EventHandler i2c_18xx_43xx.c:342
+Chip_I2C_MasterTransfer i2c_18xx_43xx.c:428
+<unknown> 0x0000000000000000

@@ -269,7 +269,3 @@ usb_request_status_t usb_vendor_request_read_i2c(
         return USB_REQUEST_STATUS_OK;
     }
 }
-
-void i2c1_isr(void) {
-    some_value = 18;
-}
