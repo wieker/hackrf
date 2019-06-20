@@ -93,7 +93,8 @@ static void i2c_state_handling(I2C_ID_T id)
 		Chip_I2C_MasterStateHandler(id);
 	}
 	else {
-		Chip_I2C_SlaveStateHandler(id);
+        DEBUGOUT("slHandler\r\n");
+        Chip_I2C_SlaveStateHandler(id);
 	}
 }
 
@@ -414,6 +415,7 @@ void SysTick_Handler(void)
  */
 void I2C1_IRQHandler(void)
 {
+    DEBUGOUT("i2c0io\r\n");
 	i2c_state_handling(I2C1);
 }
 
@@ -442,10 +444,10 @@ int main_2(void)
 	i2c_app_init(I2C1, SPEED_100KHZ);
 
 	/* Simulate an EEPROM slave in I2C0 */
-	i2c_eeprom_init(I2C_EEPROM_BUS);
+	//i2c_eeprom_init(I2C_EEPROM_BUS);
 
 	/* Simuldate an IO Expansion slave in I2C0 */
-	i2c_iox_init(I2C_IOX_BUS);
+	//i2c_iox_init(I2C_IOX_BUS);
 
 	i2c_menu();
 	//return 0;
