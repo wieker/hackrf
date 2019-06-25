@@ -449,8 +449,38 @@ int main_2(void)
 	/* Simuldate an IO Expansion slave in I2C0 */
 	//i2c_iox_init(I2C_IOX_BUS);
 
-	i2c_menu();
-	//return 0;
+	//i2c_menu();
+    DEBUGOUT("Hi\r\n");
+    DEBUGOUT("Hi2\r\n");
+    //i2c_rw_input(&xfer, 3);
+
+    xfer.slaveAddr = 0x57;
+    xfer.rxBuff = buffer[0];
+    xfer.txBuff = buffer[1];
+    buffer[1][0] = 0x00;
+    buffer[1][1] = 0x14;
+    xfer.txSz = 2;
+    xfer.rxSz = 1;
+    tmp = xfer.rxSz;
+    Chip_I2C_MasterTransfer(I2C1, &xfer);
+    DEBUGOUT("Master transfer : %s\r\n",
+             xfer.status == I2C_STATUS_DONE ? "SUCCESS" : "FAILURE");
+    DEBUGOUT("Received %d bytes from slave 0x%02X\r\n", tmp - xfer.rxSz, xfer.slaveAddr);
+    con_print_data(buffer[0], tmp - xfer.rxSz);
+    xfer.slaveAddr = 0x57;
+    xfer.rxBuff = buffer[0];
+    xfer.txBuff = buffer[1];
+    buffer[1][0] = 0x00;
+    buffer[1][1] = 0x15;
+    xfer.txSz = 2;
+    xfer.rxSz = 1;
+    tmp = xfer.rxSz;
+    Chip_I2C_MasterTransfer(I2C1, &xfer);
+    DEBUGOUT("Master transfer : %s\r\n",
+             xfer.status == I2C_STATUS_DONE ? "SUCCESS" : "FAILURE");
+    DEBUGOUT("Received %d bytes from slave 0x%02X\r\n", tmp - xfer.rxSz, xfer.slaveAddr);
+    con_print_data(buffer[0], tmp - xfer.rxSz);
+	return 0;
 
 	while (!xflag) {
 		switch (i2c_menu()) {
