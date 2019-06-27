@@ -200,7 +200,7 @@ uint8_t i2c0_rx_byte_slave(void)
     return I2C0_DAT;
 }
 
-extern int main_2();
+extern int init_i2c();
 
 extern void I2C1_IRQHandler(void);
 extern void I2C0_IRQHandler(void);
@@ -260,14 +260,7 @@ int main(void) {
 
     usb_run(&usb_device);
 
-
-    // Enable I2C for Si5351
-    //clock_only_i2c();
-
-    //i2c0_init_slave(255);
-    //i2c0_rx_byte_slave();
-
-    main_2();
+    init_i2c();
 
     /* Blink LED1/2/3 on the board. */
     while (1)

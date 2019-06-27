@@ -1998,34 +1998,23 @@ int ADDCALL hackrf_set_operacake_ranges(hackrf_device* device, uint8_t* ranges, 
 
 int ADDCALL hackrf_i2c_read(hackrf_device* device, uint16_t register_number, uint16_t* value)
 {
-
-    uint8_t temp_value;
     int result;
-
-    if( register_number >= 256 )
-    {
-        return HACKRF_ERROR_INVALID_PARAM;
-    }
-
-    temp_value = 0;
     result = libusb_control_transfer(
             device->usb_device,
             LIBUSB_ENDPOINT_IN | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
             HACKRF_VENDOR_REQUEST_I2C_READ,
-            //HACKRF_VENDOR_REQUEST_BOARD_ID_READ,
             0,
-            register_number,
-            (unsigned char*)&temp_value,
+            0,
+            value,
             1,
             0
     );
 
-    if( result < 1 )
+    if (result < 1)
     {
         last_libusb_error = result;
         return HACKRF_ERROR_LIBUSB;
     } else {
-        *value = temp_value;
         return HACKRF_SUCCESS;
     }
 }

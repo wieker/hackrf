@@ -1,0 +1,11 @@
+Chip_I2C_EventHandler i2c_18xx_43xx.c:350
+Chip_I2C_MasterTransfer i2c_18xx_43xx.c:436
+read_data i2c.c:569
+usb_vendor_request_read_i2c usb_api_board_info.c:139
+usb_request usb_request.c:54
+usb_check_for_setup_events usb.c:568
+usb0_isr usb.c:623
+<signal handler called> 0x00000000fffffff9
+delay hackrf_core.c:288
+main hackrf_usb.c:278
+reset_handler vector.c:89
