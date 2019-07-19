@@ -213,6 +213,8 @@ void i2c0_isr(void) {
     I2C0_IRQHandler();
 }
 
+extern int main_2(void);
+
 int main(void) {
     gpio_init();
     gpio_output(&gpio_led[0]);

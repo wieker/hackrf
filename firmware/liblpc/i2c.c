@@ -86,7 +86,7 @@ static uint8_t iox_data[2];	/* PORT0 input port, PORT1 Output port */
  * Private functions
  ****************************************************************************/
 
-uint8_t* read_data(int slaveAddr, unsigned int addr, int length);
+uint8_t *read_data(int slaveAddr, unsigned int addr);
 
 /* State machine handler for I2C0 and I2C1 */
 static void i2c_state_handling(I2C_ID_T id)
@@ -431,6 +431,9 @@ void I2C0_IRQHandler(void)
 }
 
 int init_i2c() {
+    SystemCoreClockUpdate();
+    Board_Init();
+
     i2c_app_init(I2C0, SPEED_100KHZ);
     i2c_app_init(I2C1, SPEED_100KHZ);
 
@@ -462,10 +465,10 @@ int main_2(void)
 	/* Simuldate an IO Expansion slave in I2C0 */
 	//i2c_iox_init(I2C_IOX_BUS);
 
-	//i2c_menu();
+	i2c_menu();
     DEBUGOUT("Hi\r\n");
     DEBUGOUT("Hi2\r\n");
-    //i2c_rw_input(&xfer, 3);
+    /*//i2c_rw_input(&xfer, 3);
 
     xfer.slaveAddr = 0x57;
     xfer.rxBuff = buffer[0];
@@ -479,11 +482,11 @@ int main_2(void)
     DEBUGOUT("Master transfer : %s\r\n",
              xfer.status == I2C_STATUS_DONE ? "SUCCESS" : "FAILURE");
     DEBUGOUT("Received %d bytes from slave 0x%02X\r\n", tmp - xfer.rxSz, xfer.slaveAddr);
-    con_print_data(buffer[0], tmp - xfer.rxSz);
+    con_print_data(buffer[0], tmp - xfer.rxSz);*/
 
-    read_data(0x57, 0x0015, 1);
-    read_data(0x53, 0x0000, 500);
-    return 0;
+    //read_data(0x57, 0x0015, 1);
+    //read_data(0x53, 0x0000, 500);
+    //return 0;
 
 	while (!xflag) {
 		switch (i2c_menu()) {
@@ -561,14 +564,30 @@ int main_2(void)
 	return 0;
 }
 
-uint8_t* read_data(int slaveAddr, unsigned int addr, int length) {
+uint8_t *read_data(int slaveAddr, unsigned int addr) {
+    static I2C_XFER_T xfer;
+    (xfer).slaveAddr = slaveAddr;
+    (xfer).rxBuff = buffer[0];
+    (xfer).txBuff = buffer[1];
+    buffer[1][0] = addr & 0xff;
+    (xfer).txSz = 1;
+    (xfer).rxSz = 1;
+    Chip_I2C_MasterTransfer(I2C0, &xfer);
+    DEBUGOUT("Master transfer : %s\r\n",
+             (xfer).status == I2C_STATUS_DONE ? "SUCCESS" : "FAILURE");
+    DEBUGOUT("Received %d bytes from slave 0x%02X\r\n", 1 - (xfer).rxSz, (xfer).slaveAddr);
+    con_print_data(buffer[0], 1 - (xfer).rxSz);
+    return buffer[0];
+}
+
+uint8_t* write_data(int slaveAddr, unsigned int addr, int length) {
     static I2C_XFER_T xfer;
     (xfer).slaveAddr = slaveAddr;
     (xfer).rxBuff = buffer[0];
     (xfer).txBuff = buffer[1];
     buffer[1][0] = addr >> 8 & 0xff;
     buffer[1][1] = addr & 0xff;
-    (xfer).txSz = 2;
+    (xfer).txSz = 1;
     (xfer).rxSz = length;
     int tmp = length;
     Chip_I2C_MasterTransfer(I2C1, &xfer);
