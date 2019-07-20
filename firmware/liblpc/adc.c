@@ -293,6 +293,9 @@ int main_adc(void)
     Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
     Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
 
+    LPC_GIMA->ADCSTART1_IN = 0x16;
+    Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_ON_CTOUT8, ADC_TRIGGERMODE_RISING);
+
     App_Interrupt_Test();
     return 0;
 
