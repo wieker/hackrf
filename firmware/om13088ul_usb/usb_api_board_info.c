@@ -137,10 +137,6 @@ usb_request_status_t usb_vendor_request_read_i2c(
 ) {
     if( stage == USB_TRANSFER_STAGE_SETUP ) {
         if( endpoint->setup.index < 256 ) {
-            endpoint->buffer[0] = *read_data(0x60, 0x27);
-            write_data(0x60, 0x27, 0x33);
-            endpoint->buffer[1] = *read_data(0x60, 0x27);
-
             //MSNA_P1
             uint32_t p1 = 128 * 24 -512;
             uint32_t p2 = 0;
@@ -168,7 +164,7 @@ usb_request_status_t usb_vendor_request_read_i2c(
 
             //MS2_P1
             uint32_t ms = 128 * 900 -512;
-            write_data(0x60, 60, 0x70 | (ms >> 16));
+            write_data(0x60, 60, 0x50 | (ms >> 16));
             endpoint->buffer[1] = *read_data(0x60, 60);
             write_data(0x60, 61, (ms >> 8) & (uint32_t) 0xff);
             endpoint->buffer[1] = *read_data(0x60, 61);
@@ -189,8 +185,10 @@ usb_request_status_t usb_vendor_request_read_i2c(
             write_data(0x60, 59, 1);
             endpoint->buffer[1] = *read_data(0x60, 59);
 
+            endpoint->buffer[1] = *read_data(0x60, 3);
             write_data(0x60, 3, 0);
             endpoint->buffer[1] = *read_data(0x60, 3);
+            endpoint->buffer[1] = *read_data(0x60, 18);
             write_data(0x60, 18, 0x4f);
             endpoint->buffer[1] = *read_data(0x60, 18);
             usb_transfer_schedule_block(endpoint->in, &endpoint->buffer, 1,
