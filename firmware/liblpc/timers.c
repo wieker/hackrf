@@ -62,7 +62,8 @@ void TIMER1_IRQHandler(void)
 		Chip_TIMER_ClearMatch(LPC_TIMER1, 1);
 		On = (bool) !On;
 		Board_LED_Set(0, On);
-	}
+        Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+    }
 }
 
 void timer1_isr(void) {
@@ -77,8 +78,8 @@ int main_timer(void)
 {
 	uint32_t timerFreq;
 
-	SystemCoreClockUpdate();
-	Board_Init();
+	//SystemCoreClockUpdate();
+	//Board_Init();
 
 	/* Enable timer 1 clock and reset it */
 	Chip_TIMER_Init(LPC_TIMER1);

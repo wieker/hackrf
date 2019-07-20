@@ -158,6 +158,7 @@ static void App_Interrupt_Test(void)
     }
     Interrupt_Continue_Flag = 1;
     ADC_Interrupt_Done_Flag = 1;
+    return;
     while (Interrupt_Continue_Flag) {
         if (!Burst_Mode_Flag && ADC_Interrupt_Done_Flag) {
             ADC_Interrupt_Done_Flag = 0;
@@ -291,6 +292,9 @@ int main_adc(void)
     /*ADC Init */
     Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
     Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+
+    App_Interrupt_Test();
+    return 0;
 
     while (!end_Flag) {
         DEBUGOUT(WelcomeMenu);
