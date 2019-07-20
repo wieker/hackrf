@@ -66,6 +66,8 @@ set(SRC_M4
 		../liblpc/adc.c
 		../liblpc/adc_18xx_43xx.c
 		../liblpc/gpdma_18xx_43xx.c
+		../liblpc/timers.c
+		../liblpc/timer_18xx_43xx.c
 )
 
 include_directories(

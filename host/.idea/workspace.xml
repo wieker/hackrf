@@ -22,8 +22,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/adc.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firmware/liblpc/timers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_m0.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_m0.elf.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/hackrf_firmware_all.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/hackrf_firmware_all.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/adc.h" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/adc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/om13088ul_usb.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/om13088ul_usb.cbp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -368,6 +376,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2919786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

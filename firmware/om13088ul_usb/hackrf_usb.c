@@ -218,7 +218,7 @@ extern int main_2(void);
 #include "adc.h"
 
 int main(void) {
-    main_adc();
+    main_timer();
 
     gpio_init();
     gpio_output(&gpio_led[0]);

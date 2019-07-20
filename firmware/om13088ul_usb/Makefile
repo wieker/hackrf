@@ -1433,6 +1433,60 @@ __/liblpc/ssp_18xx_43xx.c.s:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ssp_18xx_43xx.c.s
 .PHONY : __/liblpc/ssp_18xx_43xx.c.s
 
+__/liblpc/timer_18xx_43xx.obj: __/liblpc/timer_18xx_43xx.c.obj
+
+.PHONY : __/liblpc/timer_18xx_43xx.obj
+
+# target to build an object file
+__/liblpc/timer_18xx_43xx.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/timer_18xx_43xx.c.obj
+.PHONY : __/liblpc/timer_18xx_43xx.c.obj
+
+__/liblpc/timer_18xx_43xx.i: __/liblpc/timer_18xx_43xx.c.i
+
+.PHONY : __/liblpc/timer_18xx_43xx.i
+
+# target to preprocess a source file
+__/liblpc/timer_18xx_43xx.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/timer_18xx_43xx.c.i
+.PHONY : __/liblpc/timer_18xx_43xx.c.i
+
+__/liblpc/timer_18xx_43xx.s: __/liblpc/timer_18xx_43xx.c.s
+
+.PHONY : __/liblpc/timer_18xx_43xx.s
+
+# target to generate assembly for a file
+__/liblpc/timer_18xx_43xx.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/timer_18xx_43xx.c.s
+.PHONY : __/liblpc/timer_18xx_43xx.c.s
+
+__/liblpc/timers.obj: __/liblpc/timers.c.obj
+
+.PHONY : __/liblpc/timers.obj
+
+# target to build an object file
+__/liblpc/timers.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/timers.c.obj
+.PHONY : __/liblpc/timers.c.obj
+
+__/liblpc/timers.i: __/liblpc/timers.c.i
+
+.PHONY : __/liblpc/timers.i
+
+# target to preprocess a source file
+__/liblpc/timers.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/timers.c.i
+.PHONY : __/liblpc/timers.c.i
+
+__/liblpc/timers.s: __/liblpc/timers.c.s
+
+.PHONY : __/liblpc/timers.s
+
+# target to generate assembly for a file
+__/liblpc/timers.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/timers.c.s
+.PHONY : __/liblpc/timers.c.s
+
 __/liblpc/uart_18xx_43xx.obj: __/liblpc/uart_18xx_43xx.c.obj
 
 .PHONY : __/liblpc/uart_18xx_43xx.obj
@@ -1996,6 +2050,12 @@ help:
 	@echo "... __/liblpc/ssp_18xx_43xx.obj"
 	@echo "... __/liblpc/ssp_18xx_43xx.i"
 	@echo "... __/liblpc/ssp_18xx_43xx.s"
+	@echo "... __/liblpc/timer_18xx_43xx.obj"
+	@echo "... __/liblpc/timer_18xx_43xx.i"
+	@echo "... __/liblpc/timer_18xx_43xx.s"
+	@echo "... __/liblpc/timers.obj"
+	@echo "... __/liblpc/timers.i"
+	@echo "... __/liblpc/timers.s"
 	@echo "... __/liblpc/uart_18xx_43xx.obj"
 	@echo "... __/liblpc/uart_18xx_43xx.i"
 	@echo "... __/liblpc/uart_18xx_43xx.s"
