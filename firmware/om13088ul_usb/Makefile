@@ -1109,6 +1109,60 @@ __/common/xapp058/ports.c.s:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/common/xapp058/ports.c.s
 .PHONY : __/common/xapp058/ports.c.s
 
+__/liblpc/adc.obj: __/liblpc/adc.c.obj
+
+.PHONY : __/liblpc/adc.obj
+
+# target to build an object file
+__/liblpc/adc.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc.c.obj
+.PHONY : __/liblpc/adc.c.obj
+
+__/liblpc/adc.i: __/liblpc/adc.c.i
+
+.PHONY : __/liblpc/adc.i
+
+# target to preprocess a source file
+__/liblpc/adc.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc.c.i
+.PHONY : __/liblpc/adc.c.i
+
+__/liblpc/adc.s: __/liblpc/adc.c.s
+
+.PHONY : __/liblpc/adc.s
+
+# target to generate assembly for a file
+__/liblpc/adc.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc.c.s
+.PHONY : __/liblpc/adc.c.s
+
+__/liblpc/adc_18xx_43xx.obj: __/liblpc/adc_18xx_43xx.c.obj
+
+.PHONY : __/liblpc/adc_18xx_43xx.obj
+
+# target to build an object file
+__/liblpc/adc_18xx_43xx.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc_18xx_43xx.c.obj
+.PHONY : __/liblpc/adc_18xx_43xx.c.obj
+
+__/liblpc/adc_18xx_43xx.i: __/liblpc/adc_18xx_43xx.c.i
+
+.PHONY : __/liblpc/adc_18xx_43xx.i
+
+# target to preprocess a source file
+__/liblpc/adc_18xx_43xx.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc_18xx_43xx.c.i
+.PHONY : __/liblpc/adc_18xx_43xx.c.i
+
+__/liblpc/adc_18xx_43xx.s: __/liblpc/adc_18xx_43xx.c.s
+
+.PHONY : __/liblpc/adc_18xx_43xx.s
+
+# target to generate assembly for a file
+__/liblpc/adc_18xx_43xx.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc_18xx_43xx.c.s
+.PHONY : __/liblpc/adc_18xx_43xx.c.s
+
 __/liblpc/board.obj: __/liblpc/board.c.obj
 
 .PHONY : __/liblpc/board.obj
@@ -1189,6 +1243,33 @@ __/liblpc/clock_18xx_43xx.s: __/liblpc/clock_18xx_43xx.c.s
 __/liblpc/clock_18xx_43xx.c.s:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/clock_18xx_43xx.c.s
 .PHONY : __/liblpc/clock_18xx_43xx.c.s
+
+__/liblpc/gpdma_18xx_43xx.obj: __/liblpc/gpdma_18xx_43xx.c.obj
+
+.PHONY : __/liblpc/gpdma_18xx_43xx.obj
+
+# target to build an object file
+__/liblpc/gpdma_18xx_43xx.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/gpdma_18xx_43xx.c.obj
+.PHONY : __/liblpc/gpdma_18xx_43xx.c.obj
+
+__/liblpc/gpdma_18xx_43xx.i: __/liblpc/gpdma_18xx_43xx.c.i
+
+.PHONY : __/liblpc/gpdma_18xx_43xx.i
+
+# target to preprocess a source file
+__/liblpc/gpdma_18xx_43xx.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/gpdma_18xx_43xx.c.i
+.PHONY : __/liblpc/gpdma_18xx_43xx.c.i
+
+__/liblpc/gpdma_18xx_43xx.s: __/liblpc/gpdma_18xx_43xx.c.s
+
+.PHONY : __/liblpc/gpdma_18xx_43xx.s
+
+# target to generate assembly for a file
+__/liblpc/gpdma_18xx_43xx.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/gpdma_18xx_43xx.c.s
+.PHONY : __/liblpc/gpdma_18xx_43xx.c.s
 
 __/liblpc/gpio_18xx_43xx.obj: __/liblpc/gpio_18xx_43xx.c.obj
 
@@ -1879,6 +1960,12 @@ help:
 	@echo "... __/common/xapp058/ports.obj"
 	@echo "... __/common/xapp058/ports.i"
 	@echo "... __/common/xapp058/ports.s"
+	@echo "... __/liblpc/adc.obj"
+	@echo "... __/liblpc/adc.i"
+	@echo "... __/liblpc/adc.s"
+	@echo "... __/liblpc/adc_18xx_43xx.obj"
+	@echo "... __/liblpc/adc_18xx_43xx.i"
+	@echo "... __/liblpc/adc_18xx_43xx.s"
 	@echo "... __/liblpc/board.obj"
 	@echo "... __/liblpc/board.i"
 	@echo "... __/liblpc/board.s"
@@ -1888,6 +1975,9 @@ help:
 	@echo "... __/liblpc/clock_18xx_43xx.obj"
 	@echo "... __/liblpc/clock_18xx_43xx.i"
 	@echo "... __/liblpc/clock_18xx_43xx.s"
+	@echo "... __/liblpc/gpdma_18xx_43xx.obj"
+	@echo "... __/liblpc/gpdma_18xx_43xx.i"
+	@echo "... __/liblpc/gpdma_18xx_43xx.s"
 	@echo "... __/liblpc/gpio_18xx_43xx.obj"
 	@echo "... __/liblpc/gpio_18xx_43xx.i"
 	@echo "... __/liblpc/gpio_18xx_43xx.s"

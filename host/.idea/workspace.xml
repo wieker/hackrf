@@ -9,10 +9,10 @@
       <config projectName="HackRF" targetName="hackrf_transfer" />
       <config projectName="HackRF" targetName="hackrf_sweep" />
       <config projectName="HackRF" targetName="hackrf-static" />
-      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
+      <config projectName="HackRF" targetName="hackrf_debug" />
       <config projectName="HackRF" targetName="runcmd" />
       <config projectName="HackRF" targetName="uninstall" />
-      <config projectName="HackRF" targetName="hackrf_debug" />
+      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -22,9 +22,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/i2c.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/i2c.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firmware/liblpc/adc.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firmware/liblpc/adc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firmware/liblpc/adc_18xx_43xx.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firmware/liblpc/gpdma_18xx_43xx.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_m0.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_m0.elf.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/hackrf_firmware_all.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/hackrf_firmware_all.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/om13088ul_usb.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/om13088ul_usb.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -52,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hackrf-tools/src/hackrf_transfer.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="794" column="5" selection-start-line="794" selection-start-column="5" selection-end-line="794" selection-end-column="5" />
+            <state relative-caret-position="323">
+              <caret line="798" column="39" selection-start-line="798" selection-start-column="39" selection-end-line="798" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -124,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackrf-tools/src/hackrf_info.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
+            <state relative-caret-position="2100">
               <caret line="140" selection-start-line="140" selection-end-line="140" />
             </state>
           </provider>
@@ -167,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,7 +244,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,17 +371,18 @@
       <workItem from="1562275890146" duration="750000" />
       <workItem from="1562535970291" duration="459000" />
       <workItem from="1563569785160" duration="2366000" />
+      <workItem from="1563600041187" duration="1241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20825000" />
+    <option name="totallyTimeSpent" value="22066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28877005" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2919786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -504,15 +515,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackrf-tools/src/hackrf_info.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
+        <state relative-caret-position="2100">
           <caret line="140" selection-start-line="140" selection-end-line="140" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hackrf-tools/src/hackrf_transfer.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="794" column="5" selection-start-line="794" selection-start-column="5" selection-end-line="794" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="798" column="39" selection-start-line="798" selection-start-column="39" selection-end-line="798" selection-end-column="39" />
         </state>
       </provider>
     </entry>

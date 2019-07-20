@@ -1588,6 +1588,18 @@
 			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
 		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/adc.c">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/adc.h">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/adc_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/adc_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/board.c">
 			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
@@ -1607,6 +1619,12 @@
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/clock_18xx_43xx.h">
 			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/gpdma_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/gpdma_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/gpio_18xx_43xx.c">
 			<Option target="om13088ul_usb_objects"/>
@@ -1795,6 +1813,14 @@
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/adc_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/board.c.obj">
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
@@ -1804,6 +1830,10 @@
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/clock_18xx_43xx.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/gpdma_18xx_43xx.c.obj">
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>

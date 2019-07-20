@@ -215,7 +215,11 @@ void i2c0_isr(void) {
 
 extern int main_2(void);
 
+#include "adc.h"
+
 int main(void) {
+    main_adc();
+
     gpio_init();
     gpio_output(&gpio_led[0]);
     gpio_output(&gpio_led[1]);

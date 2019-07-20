@@ -63,6 +63,9 @@ set(SRC_M4
 		../liblpc/ssp_18xx_43xx.c
 		../liblpc/i2cm_18xx_43xx.c
 		../liblpc/wm8904.c
+		../liblpc/adc.c
+		../liblpc/adc_18xx_43xx.c
+		../liblpc/gpdma_18xx_43xx.c
 )
 
 include_directories(
