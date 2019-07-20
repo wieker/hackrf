@@ -144,7 +144,7 @@ int main_timer(void)
     Chip_TIMER_TIMER_SetCountClockSrc(LPC_TIMER1, TIMER_CAPSRC_BOTH_CAPN, 2);
     Chip_TIMER_ClearCapture(LPC_TIMER1, 2);
     Chip_TIMER_MatchEnableInt(LPC_TIMER1, 1);
-    Chip_TIMER_SetMatch(LPC_TIMER1, 1, 2);
+    Chip_TIMER_SetMatch(LPC_TIMER1, 1, 8000);
     Chip_TIMER_ResetOnMatchEnable(LPC_TIMER1, 1);
     Chip_TIMER_Enable(LPC_TIMER1);
 
