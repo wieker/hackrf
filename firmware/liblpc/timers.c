@@ -179,8 +179,4 @@ int main_timer(void)
     DEBUGSTR("Blinky example using timer 3!\r\n");
     DEBUGOUT("Timer 3 clock     = %d Hz\r\n", timerFreq3);
     DEBUGOUT("Timer 3 tick rate = %d Hz\r\n", TICKRATE_HZ3);
-
-	while (1) {
-		__WFI();
-	}
 }

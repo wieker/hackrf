@@ -222,8 +222,6 @@ int main(void) {
     main_timer();
 
     gpio_init();
-    gpio_output(&gpio_led[0]);
-    gpio_output(&gpio_led[1]);
 
     // Enable USB
 
@@ -270,103 +268,10 @@ int main(void) {
     init_i2c();
 
     /* Blink LED1/2/3 on the board. */
-    while (1)
-    {
-        gpio_set(&gpio_led[0]);
-        gpio_clear(&gpio_led[1]);
-        gpio_clear(&gpio_led[2]);
 
-        delay(20000000);
-
-        gpio_set(&gpio_led[1]);
-        gpio_clear(&gpio_led[0]);
-        gpio_clear(&gpio_led[2]);
-
-        delay(20000000);
-
-        gpio_set(&gpio_led[2]);
-        gpio_clear(&gpio_led[1]);
-        gpio_clear(&gpio_led[0]);
-
-        delay(20000000);
+    while (1) {
+        __asm volatile ("wfi");
     }
-
-    return 0;
-	pin_setup();
-	enable_1v8_power();
-#if (defined HACKRF_ONE || defined RAD1O)
-	enable_rf_power();
-
-	/* Let the voltage stabilize */
-	delay(1000000);
-#endif
-	cpu_clock_init();
-
-	usb_set_descriptor_by_serial_number();
-
-	usb_set_configuration_changed_cb(usb_configuration_changed);
-	usb_peripheral_reset();
-	
-	usb_device_init(0, &usb_device);
-	
-	usb_queue_init(&usb_endpoint_control_out_queue);
-	usb_queue_init(&usb_endpoint_control_in_queue);
-	usb_queue_init(&usb_endpoint_bulk_out_queue);
-	usb_queue_init(&usb_endpoint_bulk_in_queue);
-
-	usb_endpoint_init(&usb_endpoint_control_out);
-	usb_endpoint_init(&usb_endpoint_control_in);
-	
-	nvic_set_priority(NVIC_USB0_IRQ, 255);
-
-	hackrf_ui_init();
-
-	usb_run(&usb_device);
-	
-	rf_path_init(&rf_path);
-	operacake_init();
-
-	unsigned int phase = 0;
-
-	while(true) {
-		// Check whether we need to initiate a CPLD update
-		if (start_cpld_update)
-			cpld_update();
-
-		// Check whether we need to initiate sweep mode
-		if (start_sweep_mode) {
-			start_sweep_mode = false;
-			sweep_mode();
-		}
-
-		// Set up IN transfer of buffer 0.
-		if ( usb_bulk_buffer_offset >= 16384
-		     && phase == 1
-		     && transceiver_mode() != TRANSCEIVER_MODE_OFF) {
-			usb_transfer_schedule_block(
-				(transceiver_mode() == TRANSCEIVER_MODE_RX)
-				? &usb_endpoint_bulk_in : &usb_endpoint_bulk_out,
-				&usb_bulk_buffer[0x0000],
-				0x4000,
-				NULL, NULL
-				);
-			phase = 0;
-		}
-
-		// Set up IN transfer of buffer 1.
-		if ( usb_bulk_buffer_offset < 16384
-		     && phase == 0
-		     && transceiver_mode() != TRANSCEIVER_MODE_OFF) {
-			usb_transfer_schedule_block(
-				(transceiver_mode() == TRANSCEIVER_MODE_RX)
-				? &usb_endpoint_bulk_in : &usb_endpoint_bulk_out,
-				&usb_bulk_buffer[0x4000],
-				0x4000,
-				NULL, NULL
-			);
-			phase = 1;
-		}
-	}
 
 	return 0;
 }

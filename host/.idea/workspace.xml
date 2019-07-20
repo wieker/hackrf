@@ -22,8 +22,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/adc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/i2c.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/i2c.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/liblpc/timers.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/timers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

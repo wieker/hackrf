@@ -580,20 +580,19 @@ uint8_t *read_data(int slaveAddr, unsigned int addr) {
     return buffer[0];
 }
 
-uint8_t* write_data(int slaveAddr, unsigned int addr, int length) {
+void write_data(uint8_t slaveAddr, uint8_t addr, uint8_t data) {
     static I2C_XFER_T xfer;
     (xfer).slaveAddr = slaveAddr;
     (xfer).rxBuff = buffer[0];
     (xfer).txBuff = buffer[1];
-    buffer[1][0] = addr >> 8 & 0xff;
-    buffer[1][1] = addr & 0xff;
-    (xfer).txSz = 1;
-    (xfer).rxSz = length;
-    int tmp = length;
-    Chip_I2C_MasterTransfer(I2C1, &xfer);
+    buffer[1][0] = addr;
+    buffer[1][1] = data;
+    (xfer).txSz = 2;
+    (xfer).rxSz = 0;
+    int tmp = 0;
+    Chip_I2C_MasterTransfer(I2C0, &xfer);
     DEBUGOUT("Master transfer : %s\r\n",
              (xfer).status == I2C_STATUS_DONE ? "SUCCESS" : "FAILURE");
     DEBUGOUT("Received %d bytes from slave 0x%02X\r\n", tmp - (xfer).rxSz, (xfer).slaveAddr);
     con_print_data(buffer[0], tmp - (xfer).rxSz);
-    return buffer[0];
 }

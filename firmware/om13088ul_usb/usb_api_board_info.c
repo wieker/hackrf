@@ -112,6 +112,7 @@ usb_request_status_t usb_vendor_request_reset(
 
 
 extern uint8_t *read_data(int slaveAddr, unsigned int addr);
+extern void write_data(uint8_t slaveAddr, uint8_t addr, uint8_t data);
 
 usb_request_status_t usb_vendor_request_write_i2c(
         usb_endpoint_t* const endpoint,
@@ -136,7 +137,9 @@ usb_request_status_t usb_vendor_request_read_i2c(
 ) {
     if( stage == USB_TRANSFER_STAGE_SETUP ) {
         if( endpoint->setup.index < 256 ) {
-            endpoint->buffer[0] = *read_data(0x60, 0x0000);
+            endpoint->buffer[0] = *read_data(0x60, 0x27);
+            write_data(0x60, 0x27, 0x33);
+            endpoint->buffer[1] = *read_data(0x60, 0x27);
             usb_transfer_schedule_block(endpoint->in, &endpoint->buffer, 1,
                                         NULL, NULL);
             usb_transfer_schedule_ack(endpoint->out);
