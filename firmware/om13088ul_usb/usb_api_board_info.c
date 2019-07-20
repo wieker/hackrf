@@ -140,6 +140,10 @@ usb_request_status_t usb_vendor_request_read_i2c(
             endpoint->buffer[0] = *read_data(0x60, 0x27);
             write_data(0x60, 0x27, 0x33);
             endpoint->buffer[1] = *read_data(0x60, 0x27);
+            write_data(0x60, 3, 0);
+            endpoint->buffer[1] = *read_data(0x60, 3);
+            write_data(0x60, 18, 0x4f);
+            endpoint->buffer[1] = *read_data(0x60, 18);
             usb_transfer_schedule_block(endpoint->in, &endpoint->buffer, 1,
                                         NULL, NULL);
             usb_transfer_schedule_ack(endpoint->out);
