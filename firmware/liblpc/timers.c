@@ -38,7 +38,7 @@
 
 #define TICKRATE_HZ1 10
 #define TICKRATE_HZ2 13
-#define TICKRATE_HZ3 5
+#define TICKRATE_HZ3 1
 
 /*****************************************************************************
  * Public types/enumerations/variables
@@ -141,13 +141,14 @@ int main_timer(void)
 
 	/* Timer setup for match and interrupt at TICKRATE_HZ1 */
     Chip_TIMER_Reset(LPC_TIMER1);
+    Chip_TIMER_TIMER_SetCountClockSrc(LPC_TIMER1, TIMER_CAPSRC_BOTH_CAPN, 2);
+    Chip_TIMER_ClearCapture(LPC_TIMER1, 2);
     Chip_TIMER_MatchEnableInt(LPC_TIMER1, 1);
-    Chip_TIMER_SetMatch(LPC_TIMER1, 1, (timerFreq1 / TICKRATE_HZ1));
+    Chip_TIMER_SetMatch(LPC_TIMER1, 1, 2);
     Chip_TIMER_ResetOnMatchEnable(LPC_TIMER1, 1);
     Chip_TIMER_Enable(LPC_TIMER1);
 
     Chip_TIMER_Reset(LPC_TIMER2);
-    Chip_TIMER_MatchEnableInt(LPC_TIMER2, 0);
     Chip_TIMER_SetMatch(LPC_TIMER2, 0, (timerFreq2 / TICKRATE_HZ2));
     Chip_TIMER_ResetOnMatchEnable(LPC_TIMER2, 0);
     Chip_TIMER_ExtMatchControlSet(LPC_TIMER2, 1, TIMER_EXTMATCH_TOGGLE, 0);
@@ -167,6 +168,9 @@ int main_timer(void)
     NVIC_ClearPendingIRQ(TIMER2_IRQn);
     NVIC_EnableIRQ(TIMER3_IRQn);
     NVIC_ClearPendingIRQ(TIMER3_IRQn);
+
+    LPC_GIMA->CAP0_IN[1][2] = 0x00;
+    Chip_SCU_PinMuxSet(2, 13, (SCU_MODE_INBUFF_EN | SCU_MODE_ZIF_DIS | SCU_MODE_FUNC1));
 
     DEBUGSTR("Blinky example using timer 1!\r\n");
     DEBUGOUT("Timer 1 clock     = %d Hz\r\n", timerFreq1);
