@@ -263,6 +263,18 @@ void DMA_IRQHandler(void)
     }
 }
 
+void adc0_isr(void) {
+    ADC0_IRQHandler();
+}
+
+void adc1_isr(void) {
+    ADC1_IRQHandler();
+}
+
+void dma_isr(void) {
+    DMA_IRQHandler();
+}
+
 /**
  * @brief	Main routine for ADC example
  * @return	Nothing
