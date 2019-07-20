@@ -22,9 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/timers.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/timers.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -360,16 +358,15 @@
       <workItem from="1562275890146" duration="750000" />
       <workItem from="1562535970291" duration="459000" />
       <workItem from="1563569785160" duration="2366000" />
-      <workItem from="1563600041187" duration="3055000" />
+      <workItem from="1563600041187" duration="3654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23880000" />
+    <option name="totallyTimeSpent" value="24479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2919786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
