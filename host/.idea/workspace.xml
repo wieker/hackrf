@@ -23,6 +23,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../firmware/liblpc/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/adc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/timers.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/timers.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -358,12 +359,12 @@
       <workItem from="1562275890146" duration="750000" />
       <workItem from="1562535970291" duration="459000" />
       <workItem from="1563569785160" duration="2366000" />
-      <workItem from="1563600041187" duration="1840000" />
+      <workItem from="1563600041187" duration="3055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22665000" />
+    <option name="totallyTimeSpent" value="23880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
@@ -383,7 +384,7 @@
       <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32824427" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.32824427" />
       <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />

@@ -36,7 +36,8 @@
  * Private types/enumerations/variables
  ****************************************************************************/
 
-#define TICKRATE_HZ 10
+#define TICKRATE_HZ1 10
+#define TICKRATE_HZ2 13
 
 /*****************************************************************************
  * Public types/enumerations/variables
@@ -56,18 +57,40 @@
  */
 void TIMER1_IRQHandler(void)
 {
-	static bool On = false;
+    static bool On = false;
 
-	if (Chip_TIMER_MatchPending(LPC_TIMER1, 1)) {
-		Chip_TIMER_ClearMatch(LPC_TIMER1, 1);
-		On = (bool) !On;
-		Board_LED_Set(0, On);
+    if (Chip_TIMER_MatchPending(LPC_TIMER1, 1)) {
+        Chip_TIMER_ClearMatch(LPC_TIMER1, 1);
+        On = (bool) !On;
+        Board_LED_Set(0, On);
         Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
     }
 }
 
+void TIMER2_IRQHandler(void)
+{
+    static bool On = false;
+
+    if (Chip_TIMER_MatchPending(LPC_TIMER2, 2)) {
+        Chip_TIMER_ClearMatch(LPC_TIMER2, 2);
+        On = (bool) !On;
+        Board_LED_Set(1, On);
+    }
+}
+
 void timer1_isr(void) {
+    DEBUGSTR("blink 1!\r\n");
     TIMER1_IRQHandler();
+}
+
+void timer2_isr(void) {
+    DEBUGSTR("blink 2!\r\n");
+    TIMER2_IRQHandler();
+}
+
+void timer0_isr(void) {
+    DEBUGSTR("blink 0!\r\n");
+    TIMER2_IRQHandler();
 }
 
 /**
@@ -76,33 +99,51 @@ void timer1_isr(void) {
  */
 int main_timer(void)
 {
-	uint32_t timerFreq;
+    uint32_t timerFreq1;
+    uint32_t timerFreq2;
 
 	//SystemCoreClockUpdate();
 	//Board_Init();
 
 	/* Enable timer 1 clock and reset it */
-	Chip_TIMER_Init(LPC_TIMER1);
-	Chip_RGU_TriggerReset(RGU_TIMER1_RST);
-	while (Chip_RGU_InReset(RGU_TIMER1_RST)) {}
+    Chip_TIMER_Init(LPC_TIMER1);
+    Chip_RGU_TriggerReset(RGU_TIMER1_RST);
+    while (Chip_RGU_InReset(RGU_TIMER1_RST)) {}
+
+    Chip_TIMER_Init(LPC_TIMER2);
+    Chip_RGU_TriggerReset(RGU_TIMER2_RST);
+    while (Chip_RGU_InReset(RGU_TIMER2_RST)) {}
 
 	/* Get timer 1 peripheral clock rate */
-	timerFreq = Chip_Clock_GetRate(CLK_MX_TIMER1);
+    timerFreq1 = Chip_Clock_GetRate(CLK_MX_TIMER1);
+    timerFreq2 = Chip_Clock_GetRate(CLK_MX_TIMER2);
 
-	/* Timer setup for match and interrupt at TICKRATE_HZ */
-	Chip_TIMER_Reset(LPC_TIMER1);
-	Chip_TIMER_MatchEnableInt(LPC_TIMER1, 1);
-	Chip_TIMER_SetMatch(LPC_TIMER1, 1, (timerFreq / TICKRATE_HZ));
-	Chip_TIMER_ResetOnMatchEnable(LPC_TIMER1, 1);
-	Chip_TIMER_Enable(LPC_TIMER1);
+	/* Timer setup for match and interrupt at TICKRATE_HZ1 */
+    Chip_TIMER_Reset(LPC_TIMER1);
+    Chip_TIMER_MatchEnableInt(LPC_TIMER1, 1);
+    Chip_TIMER_SetMatch(LPC_TIMER1, 1, (timerFreq1 / TICKRATE_HZ1));
+    Chip_TIMER_ResetOnMatchEnable(LPC_TIMER1, 1);
+    Chip_TIMER_Enable(LPC_TIMER1);
+
+    Chip_TIMER_Reset(LPC_TIMER2);
+    Chip_TIMER_MatchEnableInt(LPC_TIMER2, 2);
+    Chip_TIMER_SetMatch(LPC_TIMER2, 2, (timerFreq2 / TICKRATE_HZ2));
+    Chip_TIMER_ResetOnMatchEnable(LPC_TIMER2, 2);
+    Chip_TIMER_Enable(LPC_TIMER2);
 
 	/* Enable timer interrupt */
-	NVIC_EnableIRQ(TIMER1_IRQn);
-	NVIC_ClearPendingIRQ(TIMER1_IRQn);
+    NVIC_EnableIRQ(TIMER1_IRQn);
+    NVIC_ClearPendingIRQ(TIMER1_IRQn);
+    NVIC_EnableIRQ(TIMER2_IRQn);
+    NVIC_ClearPendingIRQ(TIMER2_IRQn);
 
-	DEBUGSTR("Blinky example using timer 1!\r\n");
-	DEBUGOUT("Timer 1 clock     = %d Hz\r\n", timerFreq);
-	DEBUGOUT("Timer 1 tick rate = %d Hz\r\n", TICKRATE_HZ);
+    DEBUGSTR("Blinky example using timer 1!\r\n");
+    DEBUGOUT("Timer 1 clock     = %d Hz\r\n", timerFreq1);
+    DEBUGOUT("Timer 1 tick rate = %d Hz\r\n", TICKRATE_HZ1);
+
+    DEBUGSTR("Blinky example using timer 2!\r\n");
+    DEBUGOUT("Timer 2 clock     = %d Hz\r\n", timerFreq2);
+    DEBUGOUT("Timer 2 tick rate = %d Hz\r\n", TICKRATE_HZ2);
 
 	while (1) {
 		__WFI();

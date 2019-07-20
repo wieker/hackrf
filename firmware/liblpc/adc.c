@@ -93,7 +93,7 @@ static void App_print_ADC_value(uint16_t data)
     j = 5000000;
     DEBUGOUT("ADC value is : 0x%04x\r\n", data);
     /* Delay */
-    while (j--) {}
+    //while (j--) {}
 }
 
 /* DMA routine for ADC example */
