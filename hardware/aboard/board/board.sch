@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Arduino_As_Uno-cache
+LIBS:board-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -298,4 +298,91 @@ Wire Notes Line
 	11200 1000 10700 1000
 Wire Notes Line
 	10700 1000 10700 500 
+$Comp
+L Memory_EEPROM:24LC512 U3
+U 1 1 5D38B189
+P 5000 2300
+F 0 "U3" H 5000 2778 50  0000 C CNN
+F 1 "24LC512" H 5000 2687 50  0000 C CNN
+F 2 "" H 5000 2300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21754M.pdf" H 5000 2300 50  0001 C CNN
+	1    5000 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_EEPROM:24LC512 U1
+U 1 1 5D38B245
+P 2700 2300
+F 0 "U1" H 2700 2778 50  0000 C CNN
+F 1 "24LC512" H 2700 2687 50  0000 C CNN
+F 2 "" H 2700 2300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21754M.pdf" H 2700 2300 50  0001 C CNN
+	1    2700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_EEPROM:24LC512 U5
+U 1 1 5D38B2D7
+P 6900 2300
+F 0 "U5" H 6900 2778 50  0000 C CNN
+F 1 "24LC512" H 6900 2687 50  0000 C CNN
+F 2 "" H 6900 2300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21754M.pdf" H 6900 2300 50  0001 C CNN
+	1    6900 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_Flash:AT25SF081-SSHD-X U2
+U 1 1 5D38CE55
+P 2850 4300
+F 0 "U2" H 3491 4346 50  0000 L CNN
+F 1 "AT25SF081-SSHD-X" H 3491 4255 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2850 3700 50  0001 C CNN
+F 3 "https://www.adestotech.com/wp-content/uploads/DS-AT25SF081_045.pdf" H 2850 4300 50  0001 C CNN
+	1    2850 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_Flash:AT25SF081-SSHD-X U4
+U 1 1 5D38CF09
+P 5900 4350
+F 0 "U4" H 6541 4396 50  0000 L CNN
+F 1 "AT25SF081-SSHD-X" H 6541 4305 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5900 3750 50  0001 C CNN
+F 3 "https://www.adestotech.com/wp-content/uploads/DS-AT25SF081_045.pdf" H 5900 4350 50  0001 C CNN
+	1    5900 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4150 7350 4150
+Text GLabel 7350 4150 2    50   Input ~ 0
+MISO
+Text GLabel 10550 1700 2    50   Input ~ 0
+MISO
+Text GLabel 10550 1800 2    50   Input ~ 0
+MOSI
+Text GLabel 10550 1600 2    50   Input ~ 0
+SCK
+$Comp
+L Regulator_Switching:LTC3406ES5 U6
+U 1 1 5D38F742
+P 2900 1150
+F 0 "U6" H 2900 1628 50  0000 C CNN
+F 1 "LTC3406ES5" H 2900 1537 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 3600 900 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/3406b12fs.pdf" H 2900 1100 50  0001 C CNN
+	1    2900 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:LTC3406ES5 U7
+U 1 1 5D38F7E0
+P 5100 1100
+F 0 "U7" H 5100 1578 50  0000 C CNN
+F 1 "LTC3406ES5" H 5100 1487 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 5800 850 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/3406b12fs.pdf" H 5100 1050 50  0001 C CNN
+	1    5100 1100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
