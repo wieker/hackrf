@@ -385,4 +385,15 @@ F 3 "http://cds.linear.com/docs/en/datasheet/3406b12fs.pdf" H 5100 1050 50  0001
 	1    5100 1100
 	1    0    0    -1  
 $EndComp
+$Comp
+L kilib:Si5351A U8
+U 1 1 5D392F3E
+P 2900 5550
+F 0 "U8" H 2900 4914 50  0000 C CNN
+F 1 "Si5351A" H 2900 4823 50  0000 C CNN
+F 2 "" H 2900 5550 50  0001 C CNN
+F 3 "" H 2900 5550 50  0001 C CNN
+	1    2900 5550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
