@@ -596,17 +596,9 @@ Text GLabel 10550 1200 2    50   Input ~ 0
 SCL
 Text GLabel 10550 1300 2    50   Input ~ 0
 SDA
-Text GLabel 3100 2200 2    50   Input ~ 0
-SCL
-Text GLabel 3100 2300 2    50   Input ~ 0
-SDA
-Text GLabel 5400 2200 2    50   Input ~ 0
-SCL
 Text GLabel 5400 2300 2    50   Input ~ 0
-SDA
-Text GLabel 7300 2200 2    50   Input ~ 0
 SCL
-Text GLabel 7300 2300 2    50   Input ~ 0
+Text GLabel 5400 2200 2    50   Input ~ 0
 SDA
 Wire Wire Line
 	3100 2400 3100 2650
@@ -1692,4 +1684,12 @@ Wire Wire Line
 Connection ~ 850  5500
 Wire Wire Line
 	850  5500 850  6700
+Text GLabel 3100 2300 2    50   Input ~ 0
+SCL
+Text GLabel 3100 2200 2    50   Input ~ 0
+SDA
+Text GLabel 7300 2300 2    50   Input ~ 0
+SCL
+Text GLabel 7300 2200 2    50   Input ~ 0
+SDA
 $EndSCHEMATC
