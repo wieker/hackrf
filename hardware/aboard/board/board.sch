@@ -670,7 +670,7 @@ F 3 "" H 1850 6800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 6800 1850 6600
+	1850 6800 1850 6700
 $Comp
 L power:GND #PWR021
 U 1 1 5D402B98
@@ -866,17 +866,6 @@ Wire Wire Line
 Wire Wire Line
 	4450 1200 4800 1200
 Connection ~ 4800 1200
-$Comp
-L Device:Crystal Y1
-U 1 1 5D4474B3
-P 1600 5300
-F 0 "Y1" H 1600 5568 50  0000 C CNN
-F 1 "Crystal" H 1600 5477 50  0000 C CNN
-F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm" H 1600 5300 50  0001 C CNN
-F 3 "~" H 1600 5300 50  0001 C CNN
-	1    1600 5300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1450 5300 1450 5600
 Wire Wire Line
@@ -1678,4 +1667,29 @@ $EndComp
 Connection ~ 6550 5050
 Wire Wire Line
 	6550 5050 6400 5050
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 5D3D2794
+P 1600 5300
+F 0 "Y1" H 1409 5254 50  0000 R CNN
+F 1 "Crystal_GND24" H 1409 5345 50  0000 R CNN
+F 2 "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm" H 1600 5300 50  0001 C CNN
+F 3 "~" H 1600 5300 50  0001 C CNN
+	1    1600 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 6700 850  6700
+Wire Wire Line
+	850  5100 1600 5100
+Connection ~ 1850 6700
+Wire Wire Line
+	1850 6700 1850 6600
+Wire Wire Line
+	1600 5500 850  5500
+Wire Wire Line
+	850  5100 850  5500
+Connection ~ 850  5500
+Wire Wire Line
+	850  5500 850  6700
 $EndSCHEMATC
