@@ -26,10 +26,6 @@ Text Label 8900 2700 0    60   ~ 0
 A2
 Text Label 8900 2800 0    60   ~ 0
 A3
-Text Label 8900 2900 0    60   ~ 0
-A4(SDA)
-Text Label 8900 3000 0    60   ~ 0
-A5(SCL)
 Text Label 10550 3000 0    60   ~ 0
 0(Rx)
 Text Label 10550 2800 0    60   ~ 0
@@ -181,10 +177,6 @@ F 3 "" H 11100 650 50  0000 C CNN
 	1    11100 650 
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 10800 850 
-NoConn ~ 10900 850 
-NoConn ~ 11000 850 
-NoConn ~ 11100 850 
 $Comp
 L Connector_Generic:Conn_01x08 P4
 U 1 1 56D7164F
@@ -229,8 +221,6 @@ Wire Wire Line
 	9400 2700 8900 2700
 Wire Wire Line
 	9400 2800 8900 2800
-Wire Wire Line
-	9400 2900 8900 2900
 Wire Wire Line
 	9400 3000 8900 3000
 $Comp
@@ -324,7 +314,7 @@ U 1 1 5D4880BD
 P 1700 2300
 F 0 "U1" H 1700 1914 50  0000 C CNN
 F 1 "24LC512" H 1700 1823 50  0000 C CNN
-F 2 "" H 1700 2300 50  0001 C CNN
+F 2 "Package_DFN_QFN:DFN-S-8-1EP_6x5mm_P1.27mm" H 1700 2300 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21754M.pdf" H 1700 2300 50  0001 C CNN
 	1    1700 2300
 	1    0    0    -1  
@@ -467,7 +457,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 1700 3050 2950
 Wire Wire Line
-	3050 2950 1700 2950
+	3050 2950 2350 2950
 Connection ~ 1700 2950
 NoConn ~ 10550 1400
 NoConn ~ 10550 2100
@@ -520,7 +510,7 @@ F 3 "" H 4850 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 1850 4850 1600
+	4850 1850 4850 1650
 Wire Wire Line
 	900  2950 1700 2950
 NoConn ~ 9350 1450
@@ -537,4 +527,123 @@ F 3 "" H 1700 3250 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	1700 2950 1700 3250
+Wire Wire Line
+	4250 2550 4150 2550
+Wire Wire Line
+	4150 2550 4150 2450
+Wire Wire Line
+	4150 1650 4850 1650
+Connection ~ 4850 1650
+Wire Wire Line
+	4850 1650 4850 1600
+Wire Wire Line
+	4250 2450 4150 2450
+Connection ~ 4150 2450
+Wire Wire Line
+	4150 2450 4150 1650
+$Comp
+L power:+3.3V #PWR07
+U 1 1 5D4A58F9
+P 5900 1050
+F 0 "#PWR07" H 5900 900 50  0001 C CNN
+F 1 "+3.3V" V 5900 1300 50  0000 C CNN
+F 2 "" H 5900 1050 50  0000 C CNN
+F 3 "" H 5900 1050 50  0000 C CNN
+	1    5900 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5D4A73A8
+P 5900 1500
+F 0 "#PWR08" H 5900 1250 50  0001 C CNN
+F 1 "GND" H 5900 1350 50  0000 C CNN
+F 2 "" H 5900 1500 50  0000 C CNN
+F 3 "" H 5900 1500 50  0000 C CNN
+	1    5900 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5D4A8E69
+P 5900 1300
+F 0 "C2" H 6015 1346 50  0000 L CNN
+F 1 "0.1uF" H 6015 1255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5938 1150 50  0001 C CNN
+F 3 "~" H 5900 1300 50  0001 C CNN
+	1    5900 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1500 5900 1450
+Wire Wire Line
+	5900 1050 5900 1150
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5D4AC6B5
+P 2700 950
+F 0 "#PWR05" H 2700 800 50  0001 C CNN
+F 1 "+3.3V" V 2700 1200 50  0000 C CNN
+F 2 "" H 2700 950 50  0000 C CNN
+F 3 "" H 2700 950 50  0000 C CNN
+	1    2700 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5D4AC6BB
+P 2700 1400
+F 0 "#PWR06" H 2700 1150 50  0001 C CNN
+F 1 "GND" H 2700 1250 50  0000 C CNN
+F 2 "" H 2700 1400 50  0000 C CNN
+F 3 "" H 2700 1400 50  0000 C CNN
+	1    2700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D4AC6C1
+P 2700 1200
+F 0 "C1" H 2815 1246 50  0000 L CNN
+F 1 "0.1uF" H 2815 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2738 1050 50  0001 C CNN
+F 3 "~" H 2700 1200 50  0001 C CNN
+	1    2700 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1400 2700 1350
+Wire Wire Line
+	2700 950  2700 1050
+Wire Wire Line
+	2100 2400 2350 2400
+Wire Wire Line
+	2350 2400 2350 2950
+Connection ~ 2350 2950
+Wire Wire Line
+	2350 2950 1700 2950
+NoConn ~ 9400 2900
+NoConn ~ 8900 3000
+$Comp
+L power:GND #PWR0108
+U 1 1 5D4B92C0
+P 10350 850
+F 0 "#PWR0108" H 10350 600 50  0001 C CNN
+F 1 "GND" H 10350 700 50  0000 C CNN
+F 2 "" H 10350 850 50  0000 C CNN
+F 3 "" H 10350 850 50  0000 C CNN
+	1    10350 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 850  10800 850 
+Wire Wire Line
+	10800 850  10900 850 
+Connection ~ 10800 850 
+Connection ~ 10900 850 
+Wire Wire Line
+	10900 850  11000 850 
+Connection ~ 11000 850 
+Wire Wire Line
+	11000 850  11100 850 
 $EndSCHEMATC
