@@ -89,11 +89,9 @@ uint32_t DMAbuffer;
 /* Print ADC value and delay */
 static void App_print_ADC_value(uint16_t data)
 {
-    volatile uint32_t j;
-    j = 5000000;
-    DEBUGOUT("ADC value is : 0x%04x\r\n", data);
-    /* Delay */
-    //while (j--) {}
+    if (data < 0x01fb || data > 0x0204) {
+        DEBUGOUT("ADC value is : 0x%04x\r\n", data);
+    }
 }
 
 /* DMA routine for ADC example */
