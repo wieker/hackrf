@@ -89,7 +89,7 @@ uint32_t DMAbuffer;
 /* Print ADC value and delay */
 static void App_print_ADC_value(uint16_t data)
 {
-    if (data < 0x01fb || data > 0x0204) {
+    if (data < 0x01fa || data > 0x0208) {
         DEBUGOUT("ADC value is : 0x%04x\r\n", data);
     }
 }

@@ -1406,6 +1406,33 @@ __/liblpc/ring_buffer.c.s:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ring_buffer.c.s
 .PHONY : __/liblpc/ring_buffer.c.s
 
+__/liblpc/ssp.obj: __/liblpc/ssp.c.obj
+
+.PHONY : __/liblpc/ssp.obj
+
+# target to build an object file
+__/liblpc/ssp.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ssp.c.obj
+.PHONY : __/liblpc/ssp.c.obj
+
+__/liblpc/ssp.i: __/liblpc/ssp.c.i
+
+.PHONY : __/liblpc/ssp.i
+
+# target to preprocess a source file
+__/liblpc/ssp.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ssp.c.i
+.PHONY : __/liblpc/ssp.c.i
+
+__/liblpc/ssp.s: __/liblpc/ssp.c.s
+
+.PHONY : __/liblpc/ssp.s
+
+# target to generate assembly for a file
+__/liblpc/ssp.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ssp.c.s
+.PHONY : __/liblpc/ssp.c.s
+
 __/liblpc/ssp_18xx_43xx.obj: __/liblpc/ssp_18xx_43xx.c.obj
 
 .PHONY : __/liblpc/ssp_18xx_43xx.obj
@@ -2047,6 +2074,9 @@ help:
 	@echo "... __/liblpc/ring_buffer.obj"
 	@echo "... __/liblpc/ring_buffer.i"
 	@echo "... __/liblpc/ring_buffer.s"
+	@echo "... __/liblpc/ssp.obj"
+	@echo "... __/liblpc/ssp.i"
+	@echo "... __/liblpc/ssp.s"
 	@echo "... __/liblpc/ssp_18xx_43xx.obj"
 	@echo "... __/liblpc/ssp_18xx_43xx.i"
 	@echo "... __/liblpc/ssp_18xx_43xx.s"

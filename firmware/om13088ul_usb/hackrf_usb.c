@@ -201,6 +201,7 @@ uint8_t i2c0_rx_byte_slave(void)
 }
 
 extern int init_i2c();
+extern int main_ssp();
 
 extern void I2C1_IRQHandler(void);
 extern void I2C0_IRQHandler(void);
@@ -218,7 +219,8 @@ extern int main_2(void);
 #include "adc.h"
 
 int main(void) {
-    //main_2();
+    main_ssp();
+    main_2();
     main_adc();
     main_timer();
 
