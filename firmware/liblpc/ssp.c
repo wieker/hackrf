@@ -409,6 +409,7 @@ int main_ssp(void)
 }
 
 void spi_main() {
+    DEBUGOUT("SPI enter\r\n");
 
 
     Chip_SCU_PinMuxSet(0x3, 3, (SCU_MODE_INACT | SCU_MODE_ZIF_DIS | SCU_MODE_INBUFF_EN | SCU_MODE_FUNC1));		/* P2.3 : I2C1_SDA */
@@ -421,4 +422,16 @@ void spi_main() {
     Chip_Clock_Enable(CLK_PERIPH_BUS);
 
     Chip_SPI_Init(LPC_SPI);
+    unsigned char* buf = "hello\r\n";
+    SPI_DATA_SETUP_T spiSet;
+    spiSet.fnAftFrame = spiSet.fnAftTransfer = spiSet.fnBefFrame = spiSet.fnBefTransfer = 0;
+    spiSet.pRxData = spiSet.pTxData = buf;
+    spiSet.cnt = 0;
+    spiSet.length = 2;
+    Chip_SPI_SetMode(LPC_SPI, SPI_MODE_SLAVE);
+    DEBUGOUT("SPI wait\r\n");
+    Chip_SPI_RWFrames_Blocking(LPC_SPI, &spiSet);
+    DEBUGOUT("out: %s\r\n", buf);
+    DEBUGOUT("SPI cmplt\r\n");
+    DEBUGOUT(buf);
 }
