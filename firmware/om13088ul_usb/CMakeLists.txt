@@ -69,6 +69,7 @@ set(SRC_M4
 		../liblpc/timers.c
 		../liblpc/timer_18xx_43xx.c
 		../liblpc/ssp.c
+		../liblpc/spi_18xx_43xx.c
 )
 
 include_directories(

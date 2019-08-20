@@ -407,3 +407,18 @@ int main_ssp(void)
 	appSSPMainMenu();
 	return 0;
 }
+
+void spi_main() {
+
+
+    Chip_SCU_PinMuxSet(0x3, 3, (SCU_MODE_INACT | SCU_MODE_ZIF_DIS | SCU_MODE_INBUFF_EN | SCU_MODE_FUNC1));		/* P2.3 : I2C1_SDA */
+    Chip_SCU_PinMuxSet(0x3, 6, (SCU_MODE_INACT | SCU_MODE_ZIF_DIS | SCU_MODE_INBUFF_EN | SCU_MODE_FUNC1));		/* P2.3 : I2C1_SDA */
+    Chip_SCU_PinMuxSet(0x3, 7, (SCU_MODE_INACT | SCU_MODE_ZIF_DIS | SCU_MODE_INBUFF_EN | SCU_MODE_FUNC1));		/* P2.3 : I2C1_SDA */
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 5, 8);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 5, 8, (bool) true);
+    Chip_Clock_Enable(CLK_SPI);
+    Chip_Clock_Enable(CLK_PERIPH_CORE);
+    Chip_Clock_Enable(CLK_PERIPH_BUS);
+
+    Chip_SPI_Init(LPC_SPI);
+}

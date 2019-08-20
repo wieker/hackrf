@@ -219,12 +219,12 @@ extern int main_2(void);
 #include "adc.h"
 
 int main(void) {
-    main_ssp();
-    main_2();
-    main_adc();
-    main_timer();
+    //main_ssp();
+    //main_2();
+    //main_adc();
+    //main_timer();
 
-    gpio_init();
+    //gpio_init();
 
     // Enable USB
 
@@ -269,6 +269,8 @@ int main(void) {
     usb_run(&usb_device);
 
     init_i2c();
+
+    spi_main();
 
     /* Blink LED1/2/3 on the board. */
 

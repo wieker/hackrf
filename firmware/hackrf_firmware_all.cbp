@@ -1665,6 +1665,12 @@
 			<Option target="om13088ul_usb_objects"/>
 			<Option target="liblpc_objects"/>
 		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/spi_18xx_43xx.c">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/spi_18xx_43xx.h">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/ssp.c">
 			<Option target="om13088ul_usb_objects"/>
 		</Unit>
@@ -1866,6 +1872,10 @@
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ring_buffer.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/spi_18xx_43xx.c.obj">
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>
