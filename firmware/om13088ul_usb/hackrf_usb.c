@@ -219,7 +219,7 @@ extern int main_2(void);
 #include "adc.h"
 
 int main(void) {
-    //main_ssp();
+    main_ssp();
     //main_2();
     //main_adc();
     //main_timer();
@@ -270,7 +270,7 @@ int main(void) {
 
     init_i2c();
 
-    spi_main();
+    //spi_main();
 
     /* Blink LED1/2/3 on the board. */
 
