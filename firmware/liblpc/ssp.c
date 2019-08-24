@@ -391,6 +391,9 @@ int main_ssp(void)
 	SystemCoreClockUpdate();
 	Board_Init();
 
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+
 	/* SSP initialization */
 	Board_SSP_Init(LPC_SSP);
 
@@ -431,12 +434,16 @@ int main_ssp(void)
     xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
     DEBUGOUT("SPI send:\r\n");
     Tx_Buf[0] = 0x9f;
+    for (int i = 1; i < BUFFER_SIZE; i ++) {
+        Tx_Buf[i] = 0xff;
+    }
     con_print_data(Tx_Buf, BUFFER_SIZE);
     Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
     Buffer_Verify();
     DEBUGOUT("SPI receive:\r\n");
     con_print_data(Rx_Buf, BUFFER_SIZE);
     DEBUGOUT("SPI done:\r\n");
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
 
 
     return 0;
