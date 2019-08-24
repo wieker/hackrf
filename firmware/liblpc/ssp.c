@@ -421,6 +421,7 @@ int main_ssp(void)
 #endif
 
 	//appSSPMainMenu();
+    DEBUGOUT("SPI enter\r\n");
 
     Chip_SSP_SetMaster(LPC_SSP, 1);
     Buffer_Init();
@@ -428,9 +429,14 @@ int main_ssp(void)
     xf_setup.tx_data = Tx_Buf;
     xf_setup.rx_data = Rx_Buf;
     xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+    DEBUGOUT("SPI send:\r\n");
+    Tx_Buf[0] = 0x9f;
+    con_print_data(Tx_Buf, BUFFER_SIZE);
     Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
     Buffer_Verify();
+    DEBUGOUT("SPI receive:\r\n");
     con_print_data(Rx_Buf, BUFFER_SIZE);
+    DEBUGOUT("SPI done:\r\n");
 
 
     return 0;
