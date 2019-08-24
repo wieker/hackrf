@@ -366,6 +366,22 @@ void DMA_IRQHandlerA(void)
 	}
 }
 
+/* Print data to console */
+static void con_print_data(const uint8_t *dat, int sz)
+{
+    int i;
+    if (!sz) {
+        return;
+    }
+    for (i = 0; i < sz; i++) {
+        if (!(i & 0xF)) {
+            DEBUGOUT("\r\n%02X: ", i);
+        }
+        DEBUGOUT(" %02X", dat[i]);
+    }
+    DEBUGOUT("\r\n");
+}
+
 /**
  * @brief	Main routine for SSP example
  * @return	Nothing
@@ -413,6 +429,8 @@ int main_ssp(void)
     xf_setup.rx_data = Rx_Buf;
     xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
     Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+    Buffer_Verify();
+    con_print_data(Rx_Buf, BUFFER_SIZE);
 
 
     return 0;
