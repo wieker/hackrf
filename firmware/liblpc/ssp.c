@@ -404,8 +404,18 @@ int main_ssp(void)
 	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0x6, 11, false);
 #endif
 
-	appSSPMainMenu();
-	return 0;
+	//appSSPMainMenu();
+
+    Chip_SSP_SetMaster(LPC_SSP, 1);
+    Buffer_Init();
+    xf_setup.length = BUFFER_SIZE;
+    xf_setup.tx_data = Tx_Buf;
+    xf_setup.rx_data = Rx_Buf;
+    xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+    Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+
+
+    return 0;
 }
 
 void spi_main() {
