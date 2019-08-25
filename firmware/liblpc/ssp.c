@@ -392,7 +392,6 @@ int main_ssp(void)
 	Board_Init();
 
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
 
 	/* SSP initialization */
 	Board_SSP_Init(LPC_SSP);
@@ -422,28 +421,53 @@ int main_ssp(void)
 	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0x6, 10, true);
 	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0x6, 11, false);
 #endif
+    int key;
 
 	//appSSPMainMenu();
-    DEBUGOUT("SPI enter\r\n");
+    while (1) {
+        key = 0xFF;
+        do {
+            key = DEBUGIN();
+        } while ((key & 0xFF) == 0xFF);
 
-    Chip_SSP_SetMaster(LPC_SSP, 1);
-    Buffer_Init();
-    xf_setup.length = BUFFER_SIZE;
-    xf_setup.tx_data = Tx_Buf;
-    xf_setup.rx_data = Rx_Buf;
-    xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
-    DEBUGOUT("SPI send:\r\n");
-    Tx_Buf[0] = 0x9f;
-    for (int i = 1; i < BUFFER_SIZE; i ++) {
-        Tx_Buf[i] = 0xff;
+        DEBUGOUT("SPI enter\r\n");
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+
+        switch (key) {
+            case '1': {
+                Chip_SSP_SetMaster(LPC_SSP, 1);
+                DEBUGOUT("SPI master\r\n");
+                break;
+            }
+            case '2': {
+                Chip_SSP_SetMaster(LPC_SSP, 0);
+                DEBUGOUT("SPI slave\r\n");
+                break;
+            }
+            case 'q':
+                return 0;
+            default:
+                continue;
+        }
+
+        Buffer_Init();
+        xf_setup.length = BUFFER_SIZE;
+        xf_setup.tx_data = Tx_Buf;
+        xf_setup.rx_data = Rx_Buf;
+        xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+        DEBUGOUT("SPI send:\r\n");
+        Tx_Buf[0] = 0x9f;
+        for (int i = 1; i < BUFFER_SIZE; i++) {
+            Tx_Buf[i] = 0xff;
+        }
+        con_print_data(Tx_Buf, BUFFER_SIZE);
+        Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+        Buffer_Verify();
+        DEBUGOUT("SPI receive:\r\n");
+        con_print_data(Rx_Buf, BUFFER_SIZE);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+        DEBUGOUT("SPI done:\r\n");
     }
-    con_print_data(Tx_Buf, BUFFER_SIZE);
-    Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
-    Buffer_Verify();
-    DEBUGOUT("SPI receive:\r\n");
-    con_print_data(Rx_Buf, BUFFER_SIZE);
-    DEBUGOUT("SPI done:\r\n");
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
 
 
     return 0;
