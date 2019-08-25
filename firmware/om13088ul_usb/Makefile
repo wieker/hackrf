@@ -1406,6 +1406,33 @@ __/liblpc/ring_buffer.c.s:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/ring_buffer.c.s
 .PHONY : __/liblpc/ring_buffer.c.s
 
+__/liblpc/sgpio.obj: __/liblpc/sgpio.c.obj
+
+.PHONY : __/liblpc/sgpio.obj
+
+# target to build an object file
+__/liblpc/sgpio.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/sgpio.c.obj
+.PHONY : __/liblpc/sgpio.c.obj
+
+__/liblpc/sgpio.i: __/liblpc/sgpio.c.i
+
+.PHONY : __/liblpc/sgpio.i
+
+# target to preprocess a source file
+__/liblpc/sgpio.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/sgpio.c.i
+.PHONY : __/liblpc/sgpio.c.i
+
+__/liblpc/sgpio.s: __/liblpc/sgpio.c.s
+
+.PHONY : __/liblpc/sgpio.s
+
+# target to generate assembly for a file
+__/liblpc/sgpio.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/sgpio.c.s
+.PHONY : __/liblpc/sgpio.c.s
+
 __/liblpc/spi_18xx_43xx.obj: __/liblpc/spi_18xx_43xx.c.obj
 
 .PHONY : __/liblpc/spi_18xx_43xx.obj
@@ -2101,6 +2128,9 @@ help:
 	@echo "... __/liblpc/ring_buffer.obj"
 	@echo "... __/liblpc/ring_buffer.i"
 	@echo "... __/liblpc/ring_buffer.s"
+	@echo "... __/liblpc/sgpio.obj"
+	@echo "... __/liblpc/sgpio.i"
+	@echo "... __/liblpc/sgpio.s"
 	@echo "... __/liblpc/spi_18xx_43xx.obj"
 	@echo "... __/liblpc/spi_18xx_43xx.i"
 	@echo "... __/liblpc/spi_18xx_43xx.s"

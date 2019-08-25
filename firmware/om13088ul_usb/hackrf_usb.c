@@ -167,6 +167,7 @@ void usb_set_descriptor_by_serial_number(void)
 #include <libopencm3/lpc43xx/ccu.h>
 #include <libopencm3/lpc43xx/scu.h>
 #include <libopencm3/lpc43xx/i2c.h>
+#include "../liblpc/sgpio.h"
 
 static struct gpio_t gpio_led[] = {
         GPIO(3,  7),
@@ -219,7 +220,8 @@ extern int main_2(void);
 #include "adc.h"
 
 int main(void) {
-    main_ssp();
+    init_i2c();
+    sgpio_main();
     //main_2();
     //main_adc();
     //main_timer();
@@ -268,7 +270,6 @@ int main(void) {
 
     usb_run(&usb_device);
 
-    init_i2c();
 
     //spi_main();
 
