@@ -65,9 +65,9 @@ void sgpio_main() {
     LPC_SGPIO->REG_SS[10] = 0x0A1656FB;  // Shadow output data register
 
 // Start SGPIO operation by enabling slice clocks.
+    LPC_SGPIO->SET_EN_1 = 0x01 << 10;
     LPC_SGPIO->CTRL_ENABLED =
             (1L <<  10);     // Slice A
-    LPC_SGPIO->SET_EN_1 = 0x01 << 10;
     DEBUGOUT("SGPIO init done\r\n");
 }
 

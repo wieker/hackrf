@@ -403,6 +403,7 @@ int main_ssp(void)
 	ssp_format.clockMode = SSP_CLOCK_MODE0;
         Chip_SSP_SetFormat(LPC_SSP, ssp_format.bits, ssp_format.frameFormat, ssp_format.clockMode);
 	Chip_SSP_Enable(LPC_SSP);
+	Chip_SSP_SetBitRate(LPC_SSP, 8);
 
 	/* Initialize GPDMA controller */
 	Chip_GPDMA_Init(LPC_GPDMA);
@@ -451,7 +452,7 @@ int main_ssp(void)
         }
 
         Buffer_Init();
-        xf_setup.length = BUFFER_SIZE;
+        xf_setup.length = 8;
         xf_setup.tx_data = Tx_Buf;
         xf_setup.rx_data = Rx_Buf;
         xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
