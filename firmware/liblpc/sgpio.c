@@ -40,7 +40,7 @@ void sgpio_main() {
 // Slice A
     LPC_SGPIO->SGPIO_MUX_CFG[10] =
             (0L << 12) |    // CONCAT_ORDER = 0 (self-loop)
-            (1L << 11) |    // CONCAT_ENABLE = 1 (concatenate data)
+            (0L << 11) |    // CONCAT_ENABLE = 1 (concatenate data)
             (0L <<  9) |    // QUALIFIER_SLICE_MODE = X
             (0L <<  7) |    // QUALIFIER_PIN_MODE = X
             (0L <<  5) |    // QUALIFIER_MODE = 0 (enable)
@@ -105,5 +105,7 @@ void sgpio_isr_custom() {
     : "r0"
     );
     con_print_data(p, 4);
+    uint32_t r = LPC_SGPIO->GPIO_INREG;
+    con_print_data(&r, 4);
     sgpio_buffer_offset = (sgpio_buffer_offset + 4) & sgpio_buffer_mask;
 }

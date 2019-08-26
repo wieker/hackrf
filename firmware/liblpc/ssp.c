@@ -457,8 +457,15 @@ int main_ssp(void)
         xf_setup.rx_data = Rx_Buf;
         xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
         DEBUGOUT("SPI send:\r\n");
-        Tx_Buf[0] = 0x9f;
-        for (int i = 1; i < BUFFER_SIZE; i++) {
+        Tx_Buf[0] = 0x0f;
+        Tx_Buf[1] = 0xf0;
+        Tx_Buf[2] = 0x0f;
+        Tx_Buf[3] = 0xf0;
+        Tx_Buf[4] = 0x0f;
+        Tx_Buf[5] = 0xf0;
+        Tx_Buf[6] = 0x0f;
+        Tx_Buf[7] = 0xf0;
+        for (int i = 8; i < BUFFER_SIZE; i++) {
             Tx_Buf[i] = 0xff;
         }
         con_print_data(Tx_Buf, BUFFER_SIZE);
