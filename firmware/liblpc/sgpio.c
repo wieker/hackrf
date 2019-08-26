@@ -84,6 +84,7 @@ void sgpio_main() {
         } while ((key & 0xFF) == 0xFF);
 
         con_print_data(sgpio_buffer, BUFFER_LEN);
+        sgpio_buffer_offset = 0;
     }
 }
 
@@ -100,6 +101,8 @@ void sgpio_isr_custom() {
     uint32_t* const p = (uint32_t*)&sgpio_buffer[sgpio_buffer_offset];
     __asm__(
     "ldr r0, [%[SGPIO_REG_SS], #0]\n\t"
+    "rev r0, r0\n\t"
+    "rbit r0, r0\n\t"
     "str r0, [%[p], #0]\n\t"
     :
     : [SGPIO_REG_SS] "l" (&LPC_SGPIO->REG_SS[6]),
