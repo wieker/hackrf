@@ -17,6 +17,22 @@ const uint32_t sgpio_buffer_mask = 256 - 1;
 
 volatile uint32_t sgpio_buffer_offset = 0;
 
+/* Print data to console */
+static void con_print_data(const uint8_t *dat, int sz)
+{
+    int i;
+    if (!sz) {
+        return;
+    }
+    for (i = 0; i < sz; i++) {
+        if (!(i & 0xF)) {
+            DEBUGOUT("\r\n%02X: ", i);
+        }
+        DEBUGOUT(" %02X", dat[i]);
+    }
+    DEBUGOUT("\r\n");
+}
+
 void sgpio_main() {
     DEBUGOUT("SGPIO init entry\r\n");
     Chip_SCU_PinMuxSet(1, 3, (SCU_PINIO_FAST |  SCU_MODE_FUNC2));
@@ -51,7 +67,7 @@ void sgpio_main() {
 
     LPC_SGPIO->PRESET[6] = 0;
     LPC_SGPIO->COUNT[6] = 0;
-    LPC_SGPIO->POS[6] = (7 << 8) + 7;
+    LPC_SGPIO->POS[6] = (31 << 8) + 31;
     LPC_SGPIO->REG[6] = 0x0A1656FB;     // Primary output data register
     LPC_SGPIO->REG_SS[6] = 0x0A1656FB;  // Shadow output data register
 
@@ -60,27 +76,19 @@ void sgpio_main() {
     LPC_SGPIO->CTRL_ENABLED =
             (1L <<  6);     // Slice G
     DEBUGOUT("SGPIO init done\r\n");
+
+    while (true) {
+        int key = 0xFF;
+        do {
+            key = DEBUGIN();
+        } while ((key & 0xFF) == 0xFF);
+
+        con_print_data(sgpio_buffer, 256);
+    }
 }
 
 void sgpio_isr() {
-    DEBUGOUT("SGPIO isr\r\n");
     sgpio_isr_custom();
-}
-
-/* Print data to console */
-static void con_print_data(const uint8_t *dat, int sz)
-{
-    int i;
-    if (!sz) {
-        return;
-    }
-    for (i = 0; i < sz; i++) {
-        if (!(i & 0xF)) {
-            DEBUGOUT("\r\n%02X: ", i);
-        }
-        DEBUGOUT(" %02X", dat[i]);
-    }
-    DEBUGOUT("\r\n");
 }
 
 void sgpio_isr_custom() {
@@ -95,8 +103,5 @@ void sgpio_isr_custom() {
     [p] "l" (p)
     : "r0"
     );
-    con_print_data(p, 4);
-    uint32_t r = LPC_SGPIO->GPIO_INREG;
-    con_print_data(&r, 4);
     sgpio_buffer_offset = (sgpio_buffer_offset + 4) & sgpio_buffer_mask;
 }

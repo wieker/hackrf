@@ -222,6 +222,7 @@ extern int main_2(void);
 int main(void) {
     init_i2c();
     sgpio_main();
+    //main_ssp();
     //main_2();
     //main_adc();
     //main_timer();
