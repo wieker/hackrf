@@ -11,9 +11,9 @@
 #include "chip_lpc43xx.h"
 #include "board_api.h"
 
-uint8_t sgpio_buffer[256];
+uint8_t sgpio_buffer[BUFFER_LEN];
 
-const uint32_t sgpio_buffer_mask = 256 - 1;
+const uint32_t sgpio_buffer_mask = BUFFER_LEN - 1;
 
 volatile uint32_t sgpio_buffer_offset = 0;
 
@@ -83,7 +83,7 @@ void sgpio_main() {
             key = DEBUGIN();
         } while ((key & 0xFF) == 0xFF);
 
-        con_print_data(sgpio_buffer, 256);
+        con_print_data(sgpio_buffer, BUFFER_LEN);
     }
 }
 
@@ -93,6 +93,9 @@ void sgpio_isr() {
 
 void sgpio_isr_custom() {
     LPC_SGPIO->CTR_STATUS_1 = (1 << 6);
+    if (sgpio_buffer_offset > BUFFER_LEN) {
+        return;
+    }
 
     uint32_t* const p = (uint32_t*)&sgpio_buffer[sgpio_buffer_offset];
     __asm__(
@@ -103,5 +106,5 @@ void sgpio_isr_custom() {
     [p] "l" (p)
     : "r0"
     );
-    sgpio_buffer_offset = (sgpio_buffer_offset + 4) & sgpio_buffer_mask;
+    sgpio_buffer_offset = (sgpio_buffer_offset + 4) ;//& sgpio_buffer_mask;
 }
