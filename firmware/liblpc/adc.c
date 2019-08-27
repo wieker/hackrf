@@ -89,9 +89,9 @@ uint32_t DMAbuffer;
 /* Print ADC value and delay */
 static void App_print_ADC_value(uint16_t data)
 {
-    if (data < 0x01fa || data > 0x0208) {
+    //if (data < 0x01fa || data > 0x0208) {
         DEBUGOUT("ADC value is : 0x%04x\r\n", data);
-    }
+    //}
 }
 
 /* DMA routine for ADC example */
@@ -295,7 +295,7 @@ int main_adc(void)
     Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_ON_CTOUT8, ADC_TRIGGERMODE_RISING);
 
     App_Interrupt_Test();
-    return 0;
+    //return 0;
 
     while (!end_Flag) {
         DEBUGOUT(WelcomeMenu);

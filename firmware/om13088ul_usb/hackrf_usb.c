@@ -223,8 +223,8 @@ int main(void) {
     init_i2c();
     //sgpio_main();
     //main_ssp();
-    main_2();
-    //main_adc();
+    //main_2();
+    main_adc();
     //main_timer();
 
     //gpio_init();
