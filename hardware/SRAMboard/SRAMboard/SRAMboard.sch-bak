@@ -1,0 +1,28 @@
+EESchema Schematic File Version 4
+LIBS:SRAMboard-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "lun. 30 mars 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L kilib:IS66WV51216EBLL-70TLI U?
+U 1 1 5D69C10C
+P 4300 3350
+F 0 "U?" H 3875 5825 50  0000 C CNN
+F 1 "IS66WV51216EBLL-70TLI" H 3875 5734 50  0000 C CNN
+F 2 "Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm" H 4300 3350 50  0001 C CNN
+F 3 "https://www.mouser.ee/datasheet/2/198/66WV51216EALL-EBLL-462627.pdf" H 4300 3350 50  0001 C CNN
+	1    4300 3350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

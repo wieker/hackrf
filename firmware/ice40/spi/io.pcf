@@ -19,7 +19,7 @@ set_io IOT_51A 42
 set_io IOT_50B 38
 
 #spi
-set_io SPI_SS 16
-set_io SPI_SCK 15
-set_io SPI_MOSI 17
-set_io SPI_MISO 14
+set_io SPI_SCK 2
+set_io SPI_MISO 46
+set_io SPI_MOSI 44
+set_io SPI_SS 47
