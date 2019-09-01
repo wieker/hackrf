@@ -8,3 +8,4 @@ set_io SW2 34
 set_io SW3 43
 
 set_io IOB_6A 2
+set_io IOB_0A 46
