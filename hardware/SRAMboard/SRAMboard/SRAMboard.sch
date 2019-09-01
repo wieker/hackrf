@@ -15,39 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L kilib:IS66WV51216EBLL-70BLI U1
-U 1 1 5D6ABEC0
-P 2200 2150
-F 0 "U1" H 2225 2815 50  0000 C CNN
-F 1 "IS66WV51216EBLL-70BLI" H 2225 2724 50  0000 C CNN
-F 2 "kifootp:BGA-48_6.0x8.0mm_Layout6x8_P0.75mm" H 2300 2450 50  0001 C CNN
-F 3 "https://www.mouser.ee/datasheet/2/198/66WV51216EALL-EBLL-462627.pdf" H 2200 2150 50  0001 C CNN
-	1    2200 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L kilib:IS66WV51216EBLL-70BLI U1
-U 2 1 5D6ACA3A
-P 4900 2100
-F 0 "U1" H 4925 2765 50  0000 C CNN
-F 1 "IS66WV51216EBLL-70BLI" H 4925 2674 50  0000 C CNN
-F 2 "kifootp:BGA-48_6.0x8.0mm_Layout6x8_P0.75mm" H 5000 2400 50  0001 C CNN
-F 3 "https://www.mouser.ee/datasheet/2/198/66WV51216EALL-EBLL-462627.pdf" H 4900 2100 50  0001 C CNN
-	2    4900 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L kilib:IS66WV51216EBLL-70BLI U1
-U 3 1 5D6AD8BD
-P 7600 2100
-F 0 "U1" H 7625 2765 50  0000 C CNN
-F 1 "IS66WV51216EBLL-70BLI" H 7625 2674 50  0000 C CNN
-F 2 "kifootp:BGA-48_6.0x8.0mm_Layout6x8_P0.75mm" H 7700 2400 50  0001 C CNN
-F 3 "https://www.mouser.ee/datasheet/2/198/66WV51216EALL-EBLL-462627.pdf" H 7600 2100 50  0001 C CNN
-	3    7600 2100
-	1    0    0    -1  
-$EndComp
-$Comp
 L kilib:IS66WV51216EBLL-70TLI U2
 U 1 1 5D6AE48C
 P 4350 4750
@@ -58,92 +25,6 @@ F 3 "https://www.mouser.ee/datasheet/2/198/66WV51216EALL-EBLL-462627.pdf" H 4350
 	1    4350 4750
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C1
-U 1 1 5D6B318A
-P 9300 1900
-F 0 "C1" H 9415 1946 50  0000 L CNN
-F 1 "C" H 9415 1855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 9338 1750 50  0001 C CNN
-F 3 "~" H 9300 1900 50  0001 C CNN
-	1    9300 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C2
-U 1 1 5D6B3B06
-P 10450 1600
-F 0 "C2" H 10565 1646 50  0000 L CNN
-F 1 "C" H 10565 1555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 10488 1450 50  0001 C CNN
-F 3 "~" H 10450 1600 50  0001 C CNN
-	1    10450 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR01
-U 1 1 5D6B462C
-P 9650 1300
-F 0 "#PWR01" H 9650 1150 50  0001 C CNN
-F 1 "+3V3" H 9665 1473 50  0000 C CNN
-F 2 "" H 9650 1300 50  0001 C CNN
-F 3 "" H 9650 1300 50  0001 C CNN
-	1    9650 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5D6B5745
-P 9650 2350
-F 0 "#PWR02" H 9650 2100 50  0001 C CNN
-F 1 "GND" H 9655 2177 50  0000 C CNN
-F 2 "" H 9650 2350 50  0001 C CNN
-F 3 "" H 9650 2350 50  0001 C CNN
-	1    9650 2350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9650 1300 9650 1500
-Wire Wire Line
-	9300 1750 9650 1750
-Wire Wire Line
-	9300 2050 9300 2200
-Wire Wire Line
-	9300 2200 9650 2200
-Wire Wire Line
-	9650 2200 9650 2300
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5D6B9CFA
-P 9450 1500
-F 0 "#FLG01" H 9450 1575 50  0001 C CNN
-F 1 "PWR_FLAG" H 9450 1673 50  0000 C CNN
-F 2 "" H 9450 1500 50  0001 C CNN
-F 3 "~" H 9450 1500 50  0001 C CNN
-	1    9450 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG02
-U 1 1 5D6BB1B2
-P 10000 2300
-F 0 "#FLG02" H 10000 2375 50  0001 C CNN
-F 1 "PWR_FLAG" H 10000 2473 50  0000 C CNN
-F 2 "" H 10000 2300 50  0001 C CNN
-F 3 "~" H 10000 2300 50  0001 C CNN
-	1    10000 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 1500 9650 1500
-Connection ~ 9650 1500
-Wire Wire Line
-	9650 1500 9650 1650
-Wire Wire Line
-	9650 2300 10000 2300
-Connection ~ 9650 2300
-Wire Wire Line
-	9650 2300 9650 2350
 Text GLabel 1000 4350 0    50   Input ~ 0
 A0
 Text GLabel 1000 4450 0    50   Input ~ 0
@@ -205,11 +86,11 @@ $EndComp
 Wire Wire Line
 	1500 5250 2000 5250
 Wire Wire Line
-	2000 5250 2000 5600
+	2000 5250 2000 5550
 Wire Wire Line
 	1500 5350 1650 5350
 Wire Wire Line
-	1650 5350 1650 5600
+	1650 5350 1650 5500
 Text GLabel 1500 5050 2    50   Input ~ 0
 GND
 Text GLabel 1500 5150 2    50   Input ~ 0
@@ -225,16 +106,8 @@ F 3 "~" H 7200 4600 50  0001 C CNN
 	1    7200 4600
 	1    0    0    -1  
 $EndComp
-Text GLabel 10450 1450 2    50   Input ~ 0
-3V3
-Text GLabel 10450 1750 2    50   Input ~ 0
-GND
 Text GLabel 7000 4000 0    50   Input ~ 0
 CS0#
-Text GLabel 6900 4100 0    50   Input ~ 0
-CS1#
-Text GLabel 7000 4200 0    50   Input ~ 0
-CS2
 Text GLabel 7000 4300 0    50   Input ~ 0
 OE#
 Text GLabel 7000 4400 0    50   Input ~ 0
@@ -275,22 +148,8 @@ Text GLabel 7500 4800 2    50   Input ~ 0
 IO14
 Text GLabel 7500 4900 2    50   Input ~ 0
 IO15
-Text GLabel 7500 5000 2    50   Input ~ 0
-NC0
-Text GLabel 7500 5100 2    50   Input ~ 0
-NC1
-Text GLabel 7500 5200 2    50   Input ~ 0
-NC2
-Text GLabel 2850 2400 2    50   Input ~ 0
-NC0
-Text GLabel 4300 2150 0    50   Input ~ 0
-NC1
-Text GLabel 8250 2450 2    50   Input ~ 0
-NC2
 Text GLabel 3750 4200 0    50   Input ~ 0
 CS0#
-Text GLabel 8250 1750 2    50   Input ~ 0
-CS2
 $Comp
 L Connector_Generic:Conn_02x13_Odd_Even J1
 U 1 1 5D6EB6AA
@@ -307,22 +166,6 @@ A7
 NoConn ~ 1500 5450
 NoConn ~ 1500 5550
 NoConn ~ 1000 5550
-Text GLabel 1600 1800 0    50   Input ~ 0
-LB#
-Text GLabel 1600 1900 0    50   Input ~ 0
-IO8
-Text GLabel 1600 2000 0    50   Input ~ 0
-IO9
-Text GLabel 1600 2100 0    50   Input ~ 0
-GND
-Text GLabel 1600 2200 0    50   Input ~ 0
-3V3
-Text GLabel 1600 2300 0    50   Input ~ 0
-IO14
-Text GLabel 1600 2400 0    50   Input ~ 0
-IO15
-Text GLabel 1600 2500 0    50   Input ~ 0
-A18
 Text GLabel 3750 3700 0    50   Input ~ 0
 A4
 Text GLabel 3750 3800 0    50   Input ~ 0
@@ -365,87 +208,6 @@ Text GLabel 3750 5700 0    50   Input ~ 0
 A13
 Text GLabel 3750 5800 0    50   Input ~ 0
 A12
-Text GLabel 4300 1750 0    50   Input ~ 0
-A0
-Text GLabel 4300 1850 0    50   Input ~ 0
-A3
-Text GLabel 4300 1950 0    50   Input ~ 0
-A5
-Text GLabel 4300 2050 0    50   Input ~ 0
-A17
-Text GLabel 4300 2250 0    50   Input ~ 0
-A14
-Text GLabel 4300 2350 0    50   Input ~ 0
-A12
-Text GLabel 4300 2450 0    50   Input ~ 0
-A9
-Text GLabel 7000 1750 0    50   Input ~ 0
-A2
-Text GLabel 7000 1950 0    50   Input ~ 0
-IO1
-Text GLabel 7000 2050 0    50   Input ~ 0
-IO3
-Text GLabel 7000 2150 0    50   Input ~ 0
-IO4
-Text GLabel 7000 2250 0    50   Input ~ 0
-IO5
-Text GLabel 7000 2350 0    50   Input ~ 0
-WE#
-Text GLabel 7000 2450 0    50   Input ~ 0
-A11
-Text GLabel 2850 1800 2    50   Input ~ 0
-OE#
-Text GLabel 2850 1900 2    50   Input ~ 0
-UB#
-Text GLabel 2850 2000 2    50   Input ~ 0
-IO10
-Text GLabel 2850 2100 2    50   Input ~ 0
-IO11
-Text GLabel 2850 2200 2    50   Input ~ 0
-IO12
-Text GLabel 2850 2300 2    50   Input ~ 0
-IO13
-Text GLabel 2850 2500 2    50   Input ~ 0
-A8
-Text GLabel 5550 2350 2    50   Input ~ 0
-A13
-Text GLabel 5550 1750 2    50   Input ~ 0
-A1
-Text GLabel 5550 1850 2    50   Input ~ 0
-A4
-Text GLabel 5550 1950 2    50   Input ~ 0
-A6
-Text GLabel 5550 2050 2    50   Input ~ 0
-A7
-Text GLabel 5550 2150 2    50   Input ~ 0
-A16
-Text GLabel 5550 2250 2    50   Input ~ 0
-A15
-Text GLabel 5550 2450 2    50   Input ~ 0
-A10
-Text GLabel 8250 2350 2    50   Input ~ 0
-IO7
-Text GLabel 8250 1850 2    50   Input ~ 0
-IO0
-Text GLabel 8250 1950 2    50   Input ~ 0
-IO2
-Text GLabel 8250 2250 2    50   Input ~ 0
-IO6
-Wire Wire Line
-	8250 2150 9000 2150
-Wire Wire Line
-	9000 2150 9000 2300
-Wire Wire Line
-	9000 2300 9650 2300
-Wire Wire Line
-	8250 2050 8900 2050
-Wire Wire Line
-	8900 2050 8900 1650
-Wire Wire Line
-	8900 1650 9650 1650
-Connection ~ 9650 1650
-Wire Wire Line
-	9650 1650 9650 1750
 Text GLabel 5000 4300 2    50   Input ~ 0
 IO15
 Text GLabel 5000 3700 2    50   Input ~ 0
@@ -518,6 +280,45 @@ Wire Wire Line
 	6100 4700 6100 4850
 Wire Wire Line
 	6900 4100 7000 4100
-Text GLabel 7000 1850 0    50   Input ~ 0
-CS1#
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D6C3E6A
+P 2500 5500
+F 0 "#FLG0101" H 2500 5575 50  0001 C CNN
+F 1 "PWR_FLAG" H 2500 5673 50  0000 C CNN
+F 2 "" H 2500 5500 50  0001 C CNN
+F 3 "~" H 2500 5500 50  0001 C CNN
+	1    2500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D6C42FB
+P 2200 5050
+F 0 "#FLG0102" H 2200 5125 50  0001 C CNN
+F 1 "PWR_FLAG" H 2200 5223 50  0000 C CNN
+F 2 "" H 2200 5050 50  0001 C CNN
+F 3 "~" H 2200 5050 50  0001 C CNN
+	1    2200 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 5500 2200 5500
+Wire Wire Line
+	2200 5500 2200 5050
+Connection ~ 1650 5500
+Wire Wire Line
+	1650 5500 1650 5600
+Wire Wire Line
+	2000 5550 2500 5550
+Wire Wire Line
+	2500 5550 2500 5500
+Connection ~ 2000 5550
+Wire Wire Line
+	2000 5550 2000 5600
+NoConn ~ 6900 4100
+NoConn ~ 7000 4200
+NoConn ~ 7500 5000
+NoConn ~ 7500 5100
+NoConn ~ 7500 5200
 $EndSCHEMATC
