@@ -218,8 +218,10 @@ void i2c0_isr(void) {
 extern int main_2(void);
 
 #include "adc.h"
+#include "main_main.h"
 
 int main(void) {
+    main_main();
     init_i2c();
     //sgpio_main();
     main_ssp();

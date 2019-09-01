@@ -1658,6 +1658,33 @@ m0_bin.s.obj:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/m0_bin.s.obj
 .PHONY : m0_bin.s.obj
 
+main_main.obj: main_main.c.obj
+
+.PHONY : main_main.obj
+
+# target to build an object file
+main_main.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/main_main.c.obj
+.PHONY : main_main.c.obj
+
+main_main.i: main_main.c.i
+
+.PHONY : main_main.i
+
+# target to preprocess a source file
+main_main.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/main_main.c.i
+.PHONY : main_main.c.i
+
+main_main.s: main_main.c.s
+
+.PHONY : main_main.s
+
+# target to generate assembly for a file
+main_main.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/main_main.c.s
+.PHONY : main_main.c.s
+
 sgpio_isr.obj: sgpio_isr.c.obj
 
 .PHONY : sgpio_isr.obj
@@ -2156,6 +2183,9 @@ help:
 	@echo "... hackrf_usb.i"
 	@echo "... hackrf_usb.s"
 	@echo "... m0_bin.obj"
+	@echo "... main_main.obj"
+	@echo "... main_main.i"
+	@echo "... main_main.s"
 	@echo "... sgpio_isr.obj"
 	@echo "... sgpio_isr.i"
 	@echo "... sgpio_isr.s"

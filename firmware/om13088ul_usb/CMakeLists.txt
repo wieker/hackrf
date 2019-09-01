@@ -71,6 +71,7 @@ set(SRC_M4
 		../liblpc/ssp.c
 		../liblpc/spi_18xx_43xx.c
 		../liblpc/sgpio.c
+		main_main.c
 )
 
 include_directories(
