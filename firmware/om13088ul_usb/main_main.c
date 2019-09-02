@@ -5,6 +5,8 @@
 #include <board.h>
 #include "main_main.h"
 
+void gpio_main();
+
 /* Print data to console */
 static void con_print_data(const uint8_t *dat, int sz)
 {
@@ -25,6 +27,39 @@ static void con_print_data(const uint8_t *dat, int sz)
 void main_main() {
     DEBUGINIT();
     DEBUGOUT("Main enter\r\n");
+    DEBUGOUT("Select option:\r\n");
+    DEBUGOUT("1: GPIO:\r\n");
+    DEBUGOUT("2: SPI:\r\n");
+    DEBUGOUT("3: I2C:\r\n");
+    while (1) {
+        int key = 0xFF;
+        do {
+            key = DEBUGIN();
+        } while ((key & 0xFF) == 0xFF);
+
+        switch (key) {
+            case '1': {
+                gpio_main();
+                break;
+            }
+            case '2': {
+                main_ssp();
+                break;
+            }
+            case '3': {
+                main_i2c();
+                break;
+            }
+            case 'q':
+                return;
+            default:
+                continue;
+        }
+    }
+}
+
+void gpio_main() {
+    DEBUGOUT("Main GPIO enter\r\n");
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 13);
     Chip_SCU_PinMuxSet(2, 13, SCU_MODE_FUNC0 | SCU_MODE_INBUFF_EN);

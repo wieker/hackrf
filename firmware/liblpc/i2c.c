@@ -126,7 +126,7 @@ static int con_get_input(const char *str)
 	int i = 0;
 
 	while (!input_valid) {
-		DEBUGOUT("%s", str);
+		DEBUGOUT("%s\r\n", str);
 		while (1) {
 			/* Setting poll mode for slave is a very bad idea, it works nevertheless */
 			if ((mode_poll & (1 << i2cDev)) && Chip_I2C_IsStateChanged(i2cDev)) {
@@ -448,7 +448,7 @@ int init_i2c() {
  * @brief	Main program body
  * @return	int
  */
-int main_2(void)
+int main_i2c(void)
 {
 	int tmp;
 	int xflag = 0;

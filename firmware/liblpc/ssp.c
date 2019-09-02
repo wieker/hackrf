@@ -391,7 +391,8 @@ int main_ssp(void)
 	SystemCoreClockUpdate();
 	Board_Init();
 
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 8);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, (bool) true);
 
 	/* SSP initialization */
 	Board_SSP_Init(LPC_SSP);
@@ -401,7 +402,7 @@ int main_ssp(void)
 	ssp_format.frameFormat = SSP_FRAMEFORMAT_SPI;
 	ssp_format.bits = SSP_DATA_BITS;
 	ssp_format.clockMode = SSP_CLOCK_MODE0;
-        Chip_SSP_SetFormat(LPC_SSP, ssp_format.bits, ssp_format.frameFormat, ssp_format.clockMode);
+    Chip_SSP_SetFormat(LPC_SSP, ssp_format.bits, ssp_format.frameFormat, ssp_format.clockMode);
 	Chip_SSP_Enable(LPC_SSP);
 	//Chip_SSP_SetBitRate(LPC_SSP, 8);
 
@@ -432,7 +433,7 @@ int main_ssp(void)
         } while ((key & 0xFF) == 0xFF);
 
         DEBUGOUT("SPI enter\r\n");
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, (bool) false);
 
         switch (key) {
             case '1': {
@@ -452,28 +453,25 @@ int main_ssp(void)
         }
 
         Buffer_Init();
-        xf_setup.length = 8;
+        xf_setup.length = 6;
         xf_setup.tx_data = Tx_Buf;
         xf_setup.rx_data = Rx_Buf;
         xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
         DEBUGOUT("SPI send:\r\n");
-        Tx_Buf[0] = 0x0f;
-        Tx_Buf[1] = 0xf0;
-        Tx_Buf[2] = 0x0f;
-        Tx_Buf[3] = 0xf0;
-        Tx_Buf[4] = 0x0f;
-        Tx_Buf[5] = 0xf0;
-        Tx_Buf[6] = 0x0f;
-        Tx_Buf[7] = 0xf0;
-        for (int i = 8; i < BUFFER_SIZE; i++) {
+        for (int i = 0; i < xf_setup.length; i++) {
             Tx_Buf[i] = 0xff;
         }
-        con_print_data(Tx_Buf, BUFFER_SIZE);
+        Tx_Buf[0] = 0xA1;
+        Tx_Buf[1] = 0xFF;
+        Tx_Buf[2] = 0xFF;
+        Tx_Buf[3] = 0xFF;
+        Tx_Buf[4] = 0xFF;
+        Tx_Buf[5] = 0xFF;
+        con_print_data(Tx_Buf, xf_setup.length);
         Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
-        Buffer_Verify();
         DEBUGOUT("SPI receive:\r\n");
-        con_print_data(Rx_Buf, BUFFER_SIZE);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+        con_print_data(Rx_Buf, xf_setup.length);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, (bool) true);
         DEBUGOUT("SPI done:\r\n");
     }
 

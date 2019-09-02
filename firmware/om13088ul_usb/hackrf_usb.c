@@ -202,7 +202,6 @@ uint8_t i2c0_rx_byte_slave(void)
 }
 
 extern int init_i2c();
-extern int main_ssp();
 
 extern void I2C1_IRQHandler(void);
 extern void I2C0_IRQHandler(void);
@@ -215,8 +214,6 @@ void i2c0_isr(void) {
     I2C0_IRQHandler();
 }
 
-extern int main_2(void);
-
 #include "adc.h"
 #include "main_main.h"
 
@@ -225,7 +222,7 @@ int main(void) {
     init_i2c();
     //sgpio_main();
     main_ssp();
-    //main_2();
+    //main_i2c();
     //main_adc();
     //main_timer();
 

@@ -7,4 +7,8 @@
 
 extern void main_main();
 
+extern int main_ssp();
+
+extern int main_i2c(void);
+
 #endif //HACKRF_FIRMWARE_ALL_MAIN_MAIN_H
