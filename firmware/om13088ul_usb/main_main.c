@@ -104,30 +104,51 @@ void probe_lpc51u68_i2c0_repeat() {
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 13);
     Chip_SCU_PinMuxSet(2, 13, SCU_MODE_FUNC0 | SCU_MODE_INBUFF_EN);
 
-    while (1) {
-        static I2C_XFER_T xfer;
-        I2C_ID_T i2cDev = I2C0;
-        xfer.slaveAddr = 0x30;
-        xfer.txBuff = xferbuf;
-        xfer.txSz = 8;
-        xferbuf[0] = 0xA5;
-        xferbuf[1] = 0x01;
-        xferbuf[2] = 0x00;
-        xferbuf[3] = 0x00;
-        xferbuf[4] = 0x00;
-        xferbuf[5] = 0x00;
-        xferbuf[6] = 0x00;
-        xferbuf[7] = 0xA4;
-        int tmp = Chip_I2C_MasterSend(i2cDev, xfer.slaveAddr, xfer.txBuff, xfer.txSz);
-        DEBUGOUT("Written %d bytes of data to slave 0x%02X.\r\n", tmp, xfer.slaveAddr);
-        con_print_data(xfer.txBuff, xfer.txSz);
-        //tmp = Chip_I2C_MasterRead(i2cDev, xfer.slaveAddr, xfer.txBuff, xfer.txSz);
-        //con_print_data(xfer.txBuff, xfer.txSz);
-        if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 13)) {
-            DEBUGOUT("Read ON\r\n");
-        } else {
-            DEBUGOUT("Read OFF\r\n");
-        }
+    static I2C_XFER_T xfer;
+    I2C_ID_T i2cDev = I2C0;
+    xfer.slaveAddr = 0x30;
+    xfer.txBuff = xferbuf;
+    xfer.txSz = 8;
+    xferbuf[0] = 0xA5;
+    xferbuf[1] = 0x01;
+    xferbuf[2] = 0x00;
+    xferbuf[3] = 0x00;
+    xferbuf[4] = 0x00;
+    xferbuf[5] = 0x00;
+    xferbuf[6] = 0x00;
+    xferbuf[7] = 0xA4;
+    int tmp = Chip_I2C_MasterSend(i2cDev, xfer.slaveAddr, xfer.txBuff, xfer.txSz);
+    DEBUGOUT("Written %d bytes of data to slave 0x%02X.\r\n", tmp, xfer.slaveAddr);
+    con_print_data(xfer.txBuff, xfer.txSz);
+    if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 13)) {
+        DEBUGOUT("Read ON\r\n");
+    } else {
+        DEBUGOUT("Read OFF\r\n");
+    }
+    tmp = Chip_I2C_MasterRead(i2cDev, xfer.slaveAddr, xfer.txBuff, xfer.txSz);
+    con_print_data(xfer.txBuff, xfer.txSz);
+    if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 13)) {
+        DEBUGOUT("Read ON\r\n");
+    } else {
+        DEBUGOUT("Read OFF\r\n");
+    }
+    xfer.txSz = 1;
+    xferbuf[0] = 0xA1;
+    Chip_I2C_MasterSend(i2cDev, xfer.slaveAddr, xfer.txBuff, xfer.txSz);
+    DEBUGOUT("Written %d bytes of data to slave 0x%02X.\r\n", tmp, xfer.slaveAddr);
+    con_print_data(xfer.txBuff, xfer.txSz);
+    if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 13)) {
+        DEBUGOUT("Read ON\r\n");
+    } else {
+        DEBUGOUT("Read OFF\r\n");
+    }
+    xfer.txSz = 5;
+    tmp = Chip_I2C_MasterRead(i2cDev, xfer.slaveAddr, xfer.txBuff, xfer.txSz);
+    con_print_data(xfer.txBuff, xfer.txSz);
+    if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 13)) {
+        DEBUGOUT("Read ON\r\n");
+    } else {
+        DEBUGOUT("Read OFF\r\n");
     }
 }
 
