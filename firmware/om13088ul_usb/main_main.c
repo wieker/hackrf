@@ -7,6 +7,8 @@
 
 void gpio_main();
 
+void probe_lpc51u68_i2c0();
+
 /* Print data to console */
 static void con_print_data(const uint8_t *dat, int sz)
 {
@@ -23,15 +25,18 @@ static void con_print_data(const uint8_t *dat, int sz)
     DEBUGOUT("\r\n");
 }
 
+uint8_t xferbuf[10];
+
 
 void main_main() {
     DEBUGINIT();
-    DEBUGOUT("Main enter\r\n");
-    DEBUGOUT("Select option:\r\n");
-    DEBUGOUT("1: GPIO:\r\n");
-    DEBUGOUT("2: SPI:\r\n");
-    DEBUGOUT("3: I2C:\r\n");
     while (1) {
+        DEBUGOUT("Main enter\r\n");
+        DEBUGOUT("Select option:\r\n");
+        DEBUGOUT("1: GPIO:\r\n");
+        DEBUGOUT("2: SPI:\r\n");
+        DEBUGOUT("3: I2C:\r\n");
+        DEBUGOUT("4: I2C LPC51u probe on I2C0:\r\n");
         int key = 0xFF;
         do {
             key = DEBUGIN();
@@ -50,12 +55,37 @@ void main_main() {
                 main_i2c();
                 break;
             }
+            case '4': {
+                probe_lpc51u68_i2c0();
+                continue;
+            }
             case 'q':
                 return;
             default:
                 continue;
         }
     }
+}
+
+void probe_lpc51u68_i2c0() {
+    DEBUGOUT("LPCprobe enter\r\n");
+    init_i2c();
+
+    static I2C_XFER_T xfer;
+    I2C_ID_T i2cDev = I2C0;
+    xfer.slaveAddr = 0x18;
+    xfer.txBuff = xferbuf;
+    xfer.txSz = 8;
+    xferbuf[0] = 0xA5;
+    xferbuf[1] = 0x00;
+    xferbuf[2] = 0x00;
+    xferbuf[3] = 0x00;
+    xferbuf[4] = 0x00;
+    xferbuf[5] = 0x00;
+    xferbuf[6] = 0x00;
+    xferbuf[7] = 0xA5;
+    int tmp = Chip_I2C_MasterSend(i2cDev, xfer.slaveAddr, xfer.txBuff, xfer.txSz);
+    DEBUGOUT("Written %d bytes of data to slave 0x%02X.\r\n", tmp, xfer.slaveAddr);
 }
 
 void gpio_main() {

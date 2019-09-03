@@ -201,8 +201,6 @@ uint8_t i2c0_rx_byte_slave(void)
     return I2C0_DAT;
 }
 
-extern int init_i2c();
-
 extern void I2C1_IRQHandler(void);
 extern void I2C0_IRQHandler(void);
 
