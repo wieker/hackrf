@@ -462,8 +462,8 @@ int main_ssp(void)
             Tx_Buf[i] = 0xff;
         }
         Tx_Buf[0] = 0x9F;
-        Tx_Buf[1] = 0xFF;
-        Tx_Buf[2] = 0xFF;
+        Tx_Buf[1] = 0xA0;
+        Tx_Buf[2] = 0xE7;
         Tx_Buf[3] = 0xFF;
         Tx_Buf[4] = 0xFF;
         Tx_Buf[5] = 0xFF;

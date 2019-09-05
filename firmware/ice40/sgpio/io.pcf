@@ -9,3 +9,5 @@ set_io SW3 43
 
 set_io IOB_6A 2
 set_io IOB_0A 46
+set_io IOB_3B 44
+set_io IOB_2A 47
