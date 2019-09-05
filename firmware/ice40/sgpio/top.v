@@ -24,7 +24,7 @@ module top(
                 r_reg <= r_reg;
         end
 
-    assign r_next = {IOB_6A, r_reg[N-1:1]};
+    assign r_next = {IOB_6A, r_reg[7:1]};
     assign IOB_0A = r_reg[0];
 
 endmodule
