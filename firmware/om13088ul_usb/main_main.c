@@ -40,6 +40,7 @@ void main_main() {
         DEBUGOUT("3: I2C:\r\n");
         DEBUGOUT("4: I2C LPC51u probe on I2C0:\r\n");
         DEBUGOUT("5: I2C LPC51u probe on I2C0: rep\r\n");
+        DEBUGOUT("6: SGPIO\r\n");
         int key = 0xFF;
         do {
             key = DEBUGIN();
