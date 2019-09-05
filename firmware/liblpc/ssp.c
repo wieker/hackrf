@@ -391,8 +391,8 @@ int main_ssp(void)
 	SystemCoreClockUpdate();
 	Board_Init();
 
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 8);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, (bool) true);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
 
 	/* SSP initialization */
 	Board_SSP_Init(LPC_SSP);
@@ -433,7 +433,7 @@ int main_ssp(void)
         } while ((key & 0xFF) == 0xFF);
 
         DEBUGOUT("SPI enter\r\n");
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, (bool) false);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
 
         switch (key) {
             case '1': {
@@ -461,7 +461,7 @@ int main_ssp(void)
         for (int i = 0; i < xf_setup.length; i++) {
             Tx_Buf[i] = 0xff;
         }
-        Tx_Buf[0] = 0xA1;
+        Tx_Buf[0] = 0x9F;
         Tx_Buf[1] = 0xFF;
         Tx_Buf[2] = 0xFF;
         Tx_Buf[3] = 0xFF;
@@ -471,7 +471,7 @@ int main_ssp(void)
         Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
         DEBUGOUT("SPI receive:\r\n");
         con_print_data(Rx_Buf, xf_setup.length);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, (bool) true);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
         DEBUGOUT("SPI done:\r\n");
     }
 
