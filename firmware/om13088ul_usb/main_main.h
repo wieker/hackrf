@@ -5,6 +5,9 @@
 #ifndef HACKRF_FIRMWARE_ALL_MAIN_MAIN_H
 #define HACKRF_FIRMWARE_ALL_MAIN_MAIN_H
 
+
+#include "adc.h"
+
 extern void main_main();
 
 extern int main_ssp();

@@ -67,11 +67,6 @@ void TIMER1_IRQHandler(void)
         Chip_TIMER_ClearMatch(LPC_TIMER1, 1);
         On = (bool) !On;
         Board_LED_Set(0, On);
-        counter ++;
-        if (counter == 100) {
-            counter = 0;
-            write_data(0x60, 18, 0x00);
-        }
     }
 }
 
@@ -152,7 +147,7 @@ int main_timer(void)
     Chip_TIMER_TIMER_SetCountClockSrc(LPC_TIMER1, TIMER_CAPSRC_BOTH_CAPN, 2);
     Chip_TIMER_ClearCapture(LPC_TIMER1, 2);
     Chip_TIMER_MatchEnableInt(LPC_TIMER1, 1);
-    Chip_TIMER_SetMatch(LPC_TIMER1, 1, 8000);
+    Chip_TIMER_SetMatch(LPC_TIMER1, 1, 1);
     Chip_TIMER_ResetOnMatchEnable(LPC_TIMER1, 1);
     Chip_TIMER_Enable(LPC_TIMER1);
 

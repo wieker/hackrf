@@ -212,7 +212,6 @@ void i2c0_isr(void) {
     I2C0_IRQHandler();
 }
 
-#include "adc.h"
 #include "main_main.h"
 
 int main(void) {

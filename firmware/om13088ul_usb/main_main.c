@@ -41,6 +41,7 @@ void main_main() {
         DEBUGOUT("4: I2C LPC51u probe on I2C0:\r\n");
         DEBUGOUT("5: I2C LPC51u probe on I2C0: rep\r\n");
         DEBUGOUT("6: SGPIO\r\n");
+        DEBUGOUT("7: enable timers\r\n");
         int key = 0xFF;
         do {
             key = DEBUGIN();
@@ -65,6 +66,10 @@ void main_main() {
             }
             case '5': {
                 probe_lpc51u68_i2c0_repeat();
+                continue;
+            }
+            case '7': {
+                main_timer();
                 continue;
             }
             case 'q':
