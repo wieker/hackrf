@@ -7,6 +7,8 @@ module top(
     wire [7:0] r_next;
     reg [23:0] osc_reg;
     wire clk_slow;
+    reg [2:0] counter8;
+    reg [7:0] stage;
 
     SB_HFOSC inthosc (
         .CLKHFPU(1'b1),
@@ -28,9 +30,19 @@ module top(
     always @(posedge clk_slow)
         begin
             if (IOB_2A)
-                r_reg <= 'hFF;
+                r_reg <= stage;
             else
                 r_reg <= r_next;
+        end
+
+    always @(posedge clk_slow)
+        begin
+            counter8 <= counter8 + 1;
+        end
+
+    always @(posedge clk_slow)
+        begin
+            stage <= stage + (counter8 == 'b111);
         end
 
     assign r_next = {r_reg[6:0], r_reg[7]};
