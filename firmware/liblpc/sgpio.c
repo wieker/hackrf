@@ -70,7 +70,7 @@ void sgpio_main() {
 
     LPC_SGPIO->PRESET[6] = 0;
     LPC_SGPIO->COUNT[6] = 0;
-    LPC_SGPIO->POS[6] = (31 << 8) + 31;
+    LPC_SGPIO->POS[6] = (31 << 8) + 33;
     LPC_SGPIO->REG[6] = 0x0A1656FB;     // Primary output data register
     LPC_SGPIO->REG_SS[6] = 0x0A1656FB;  // Shadow output data register
 

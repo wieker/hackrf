@@ -32,7 +32,7 @@ module top(
             if (counter8 == 'b111)
                 begin
                     stage <= stage + 1;
-                    r_reg <= 'h10;
+                    r_reg <= stage;
                 end
             else
                 r_reg <= r_next;

@@ -30,6 +30,7 @@
  * this code.
  */
 
+#include <unistd.h>
 #include "board.h"
 #include "stdio.h"
 
@@ -433,7 +434,6 @@ int main_ssp(void)
         } while ((key & 0xFF) == 0xFF);
 
         DEBUGOUT("SPI enter\r\n");
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
 
         switch (key) {
             case '1': {
@@ -452,8 +452,46 @@ int main_ssp(void)
                 continue;
         }
 
-        Buffer_Init();
-        xf_setup.length = 6;
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+        xf_setup.length = 1;
+        xf_setup.tx_data = Tx_Buf;
+        xf_setup.rx_data = Rx_Buf;
+        xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+        DEBUGOUT("SPI send:\r\n");
+        for (int i = 0; i < xf_setup.length; i++) {
+            Tx_Buf[i] = 0xff;
+        }
+        Tx_Buf[0] = 0xFF;
+        con_print_data(Tx_Buf, xf_setup.length);
+        Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+        DEBUGOUT("SPI receive:\r\n");
+        con_print_data(Rx_Buf, xf_setup.length);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+        DEBUGOUT("SPI done:\r\n");
+
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+        xf_setup.length = 5;
+        xf_setup.tx_data = Tx_Buf;
+        xf_setup.rx_data = Rx_Buf;
+        xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+        DEBUGOUT("SPI send:\r\n");
+        for (int i = 0; i < xf_setup.length; i++) {
+            Tx_Buf[i] = 0xff;
+        }
+        Tx_Buf[0] = 0xAB;
+        Tx_Buf[1] = 0xFF;
+        Tx_Buf[2] = 0xFF;
+        Tx_Buf[3] = 0xFF;
+        Tx_Buf[4] = 0xFF;
+        con_print_data(Tx_Buf, xf_setup.length);
+        Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+        DEBUGOUT("SPI receive:\r\n");
+        con_print_data(Rx_Buf, xf_setup.length);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+        DEBUGOUT("SPI done:\r\n");
+
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+        xf_setup.length = 5;
         xf_setup.tx_data = Tx_Buf;
         xf_setup.rx_data = Rx_Buf;
         xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
@@ -462,11 +500,10 @@ int main_ssp(void)
             Tx_Buf[i] = 0xff;
         }
         Tx_Buf[0] = 0x9F;
-        Tx_Buf[1] = 0xA0;
-        Tx_Buf[2] = 0xE7;
+        Tx_Buf[1] = 0xFF;
+        Tx_Buf[2] = 0xFF;
         Tx_Buf[3] = 0xFF;
         Tx_Buf[4] = 0xFF;
-        Tx_Buf[5] = 0xFF;
         con_print_data(Tx_Buf, xf_setup.length);
         Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
         DEBUGOUT("SPI receive:\r\n");
