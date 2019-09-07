@@ -29,8 +29,11 @@ module top(
 
     always @(posedge clk_slow)
         begin
-            if (IOB_2A)
-                r_reg <= stage;
+            if (counter8 == 'b111)
+                begin
+                    stage <= stage + 1;
+                    r_reg <= stage;
+                end
             else
                 r_reg <= r_next;
         end
@@ -38,11 +41,6 @@ module top(
     always @(posedge clk_slow)
         begin
             counter8 <= counter8 + 1;
-        end
-
-    always @(posedge clk_slow)
-        begin
-            stage <= stage + (counter8 == 'b111);
         end
 
     assign r_next = {r_reg[6:0], r_reg[7]};
