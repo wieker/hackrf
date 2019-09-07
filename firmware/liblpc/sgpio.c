@@ -97,9 +97,6 @@ void sgpio_isr() {
 
 void sgpio_isr_custom() {
     LPC_SGPIO->CTR_STATUS_1 = (1 << 6);
-    if (sgpio_buffer_offset > BUFFER_LEN) {
-        return;
-    }
 
     uint32_t* const p = (uint32_t*)&sgpio_buffer[sgpio_buffer_offset];
     __asm__(
@@ -112,5 +109,5 @@ void sgpio_isr_custom() {
     [p] "l" (p)
     : "r0"
     );
-    sgpio_buffer_offset = (sgpio_buffer_offset + 4) ;//& sgpio_buffer_mask;
+    sgpio_buffer_offset = (sgpio_buffer_offset + 4) & sgpio_buffer_mask;
 }

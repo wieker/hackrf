@@ -68,6 +68,10 @@ void main_main() {
                 probe_lpc51u68_i2c0_repeat();
                 continue;
             }
+            case '6': {
+                sgpio_main();
+                continue;
+            }
             case '7': {
                 main_timer();
                 continue;

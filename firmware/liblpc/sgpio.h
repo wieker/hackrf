@@ -5,7 +5,7 @@
 #ifndef HACKRF_FIRMWARE_ALL_SGPIO_H
 #define HACKRF_FIRMWARE_ALL_SGPIO_H
 
-#define BUFFER_LEN (8 * 1024)
+#define BUFFER_LEN (128)
 
 extern uint8_t sgpio_buffer[BUFFER_LEN];
 

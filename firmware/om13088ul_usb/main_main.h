@@ -7,6 +7,7 @@
 
 
 #include "adc.h"
+#include "../liblpc/sgpio.h"
 
 extern void main_main();
 

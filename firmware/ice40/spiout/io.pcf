@@ -1,0 +1,13 @@
+set_io RGB0 39
+set_io RGB1 40
+set_io RGB2 41
+
+set_io SW0 23
+set_io SW1 25
+set_io SW2 34
+set_io SW3 43
+
+set_io IOB_6A 2
+set_io IOB_0A 46
+set_io IOB_3B 44
+set_io IOB_2A 47
