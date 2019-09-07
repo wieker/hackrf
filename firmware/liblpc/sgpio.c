@@ -87,11 +87,11 @@ void sgpio_main() {
         } while ((key & 0xFF) == 0xFF);
 
         con_print_data(sgpio_buffer, BUFFER_LEN);
-        sgpio_buffer_offset = 0;
     }
 }
 
 void sgpio_isr() {
+    DEBUGOUT("rcv done\r\n");
     sgpio_isr_custom();
 }
 
@@ -109,5 +109,6 @@ void sgpio_isr_custom() {
     [p] "l" (p)
     : "r0"
     );
+    DEBUGOUT("offset done: %d\r\n", sgpio_buffer_offset);
     sgpio_buffer_offset = (sgpio_buffer_offset + 4) & sgpio_buffer_mask;
 }
