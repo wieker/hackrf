@@ -40,6 +40,6 @@ module top(
 
     assign ICE_MOSI = en1 && ~en2;
     assign ICE_SCK = clk_slow;
-    assign ICE_SS = 0;
+    assign ICE_SS = ~en1 || en2;
 
 endmodule
