@@ -1,3 +1,5 @@
+`include "../common/shift.v"
+
 module top(
     output RGB0, RGB1, RGB2, ICE_SS, ICE_SCK, ICE_MOSI, input SW0, SW1, SW2, ICE_MISO
 );
@@ -12,6 +14,9 @@ module top(
         .CLKHFEN(1'b1),
         .CLKHF(clk)
     );
+
+    wire outv;
+    shift one_shift(clk_slow, 0, 1, outv, 'hAA, outv);
 
     always @(posedge clk)
         begin
@@ -29,7 +34,7 @@ module top(
             bits_cnt <= bits_cnt + 1;
         end
 
-    assign ICE_MOSI = 1;
+    assign ICE_MOSI = outv;
     assign ICE_SCK = clk_slow;
     assign ICE_SS = 0;
 
