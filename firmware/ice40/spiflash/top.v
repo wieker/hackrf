@@ -18,7 +18,7 @@ module top(
 
     wire outv;
     wire en1, en2;
-    shift one_shift(clk_slow, 0, en1 && ~en2, outv, 'hAA, outv);
+    shift one_shift(clk_slow, 0, en1 && ~en2, 0, 'hAA, outv);
     counter one_counter(clk_slow, 'h00ff, 0, en1);
     counter two_counter(clk_slow, 'h01ff, 0, en2);
 
@@ -38,7 +38,7 @@ module top(
             bits_cnt <= bits_cnt + 1;
         end
 
-    assign ICE_MOSI = en1 && ~en2;
+    assign ICE_MOSI = outv;
     assign ICE_SCK = clk_slow;
     assign ICE_SS = ~en1 || en2;
 
