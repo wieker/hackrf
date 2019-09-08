@@ -453,44 +453,6 @@ int main_ssp(void)
         }
 
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
-        xf_setup.length = 1;
-        xf_setup.tx_data = Tx_Buf;
-        xf_setup.rx_data = Rx_Buf;
-        xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
-        DEBUGOUT("SPI send:\r\n");
-        for (int i = 0; i < xf_setup.length; i++) {
-            Tx_Buf[i] = 0xff;
-        }
-        Tx_Buf[0] = 0xFF;
-        con_print_data(Tx_Buf, xf_setup.length);
-        Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
-        DEBUGOUT("SPI receive:\r\n");
-        con_print_data(Rx_Buf, xf_setup.length);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
-        DEBUGOUT("SPI done:\r\n");
-
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
-        xf_setup.length = 5;
-        xf_setup.tx_data = Tx_Buf;
-        xf_setup.rx_data = Rx_Buf;
-        xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
-        DEBUGOUT("SPI send:\r\n");
-        for (int i = 0; i < xf_setup.length; i++) {
-            Tx_Buf[i] = 0xff;
-        }
-        Tx_Buf[0] = 0xAB;
-        Tx_Buf[1] = 0xFF;
-        Tx_Buf[2] = 0xFF;
-        Tx_Buf[3] = 0xFF;
-        Tx_Buf[4] = 0xFF;
-        con_print_data(Tx_Buf, xf_setup.length);
-        Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
-        DEBUGOUT("SPI receive:\r\n");
-        con_print_data(Rx_Buf, xf_setup.length);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
-        DEBUGOUT("SPI done:\r\n");
-
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
         xf_setup.length = 5;
         xf_setup.tx_data = Tx_Buf;
         xf_setup.rx_data = Rx_Buf;
@@ -500,10 +462,10 @@ int main_ssp(void)
             Tx_Buf[i] = 0xff;
         }
         Tx_Buf[0] = 0x9F;
-        Tx_Buf[1] = 0xFF;
-        Tx_Buf[2] = 0xFF;
-        Tx_Buf[3] = 0xFF;
-        Tx_Buf[4] = 0xFF;
+        Tx_Buf[1] = 0x00;
+        Tx_Buf[2] = 0x00;
+        Tx_Buf[3] = 0x00;
+        Tx_Buf[4] = 0x00;
         con_print_data(Tx_Buf, xf_setup.length);
         Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
         DEBUGOUT("SPI receive:\r\n");
