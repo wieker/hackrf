@@ -6,12 +6,17 @@ module shift(input wire clk, input wire reset, input wire enable, input wire in,
 
     initial
     begin
-        shift_reg <= 'hAA;
+        shift_reg <= 'h9f;
     end
 
     always @(posedge clk)
     begin
-        shift_reg <= next_value;
+        if (enable)
+            shift_reg <= next_value;
+        else if (reset)
+            shift_reg <= 'h9f;
+        else
+            shift_reg <= shift_reg;
     end
 
     assign next_value = {in, shift_reg[7:1]};
