@@ -3,6 +3,10 @@ module counter(input wire clk, input wire[15:0] value, input restart,
     reg[15:0] counter_reg;
     reg out_reg;
 
+    initial begin
+        out_reg <= 0;
+    end
+
     always @(posedge clk)
     begin
         if (counter_reg == value)
