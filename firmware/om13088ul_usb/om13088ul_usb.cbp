@@ -491,6 +491,9 @@
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/timers.c">
 			<Option target="om13088ul_usb_objects"/>
 		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/uart.c">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/uart_18xx_43xx.c">
 			<Option target="om13088ul_usb_objects"/>
 		</Unit>
@@ -692,6 +695,10 @@
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/timers.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/__/liblpc/uart.c.obj">
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>

@@ -42,6 +42,7 @@ void main_main() {
         DEBUGOUT("5: I2C LPC51u probe on I2C0: rep\r\n");
         DEBUGOUT("6: SGPIO\r\n");
         DEBUGOUT("7: enable timers\r\n");
+        DEBUGOUT("8: UART\r\n");
         int key = 0xFF;
         do {
             key = DEBUGIN();
@@ -74,6 +75,10 @@ void main_main() {
             }
             case '7': {
                 main_timer();
+                continue;
+            }
+            case '8': {
+                uart_main();
                 continue;
             }
             case 'q':

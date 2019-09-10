@@ -252,7 +252,7 @@ void ADC1_IRQHandler(void)
  * @brief	DMA interrupt handler sub-routine
  * @return	Nothing
  */
-void DMA_IRQHandler(void)
+void DMA_IRQHandler_(void)
 {
     if (Chip_GPDMA_Interrupt(LPC_GPDMA, dmaChannelNum) == SUCCESS) {
         channelTC++;
