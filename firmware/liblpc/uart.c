@@ -310,6 +310,10 @@ void UARTx_IRQHandler(void)
     Chip_UART_IRQRBHandler(LPC_UART, &rxring, &txring);
 }
 
+void usart3_isr(void) {
+    UART3_IRQHandler();
+}
+
 /**
  * @brief	Main UART program body
  * @return	Always returns -1
@@ -415,4 +419,63 @@ int uart_main(void)
     Chip_UART_DeInit(LPC_UART);
 
     return ret;
+}
+
+
+void x_Board_UART3_Init()
+{
+    Chip_SCU_PinMuxSet(2, 4, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_ZIF_DIS | SCU_MODE_FUNC2));					/* P2,4 : U3_RXD */
+    Chip_SCU_PinMuxSet(2, 3, (SCU_MODE_INACT | SCU_MODE_FUNC2));/* P2.3 : U3_TXD */
+}
+
+void x_Chip_UART3_Init(void)
+{
+    x_Board_UART3_Init();
+
+    Chip_UART_Init(LPC_USART3);
+    Chip_UART_SetBaudFDR(LPC_USART3, 115200);
+    Chip_UART_ConfigData(LPC_USART3, UART_LCR_WLEN8 | UART_LCR_SBS_1BIT | UART_LCR_PARITY_DIS);
+
+    /* Enable UART Transmit */
+    Chip_UART_TXEnable(LPC_USART3);
+}
+
+int getrc(void)
+{
+    if (Chip_UART_ReadLineStatus(LPC_USART3) & UART_LSR_RDR) {
+        return (int) Chip_UART_ReadByte(LPC_USART3);
+    }
+    return EOF;
+}
+
+void ptc(char ch)
+{
+    /* Wait for space in FIFO */
+    while ((Chip_UART_ReadLineStatus(LPC_USART3) & UART_LSR_THRE) == 0) {}
+    Chip_UART_SendByte(LPC_USART3, (uint8_t) ch);
+}
+
+int uart_main_read(void)
+{
+    x_Chip_UART3_Init();
+    int a;
+    while (true) {
+        a = getrc();
+        if (a != EOF) {
+            DEBUGOUT("in: %d\r\n", a);
+        }
+    }
+}
+
+
+int uart_main_write(void)
+{
+    x_Chip_UART3_Init();
+    int a;
+    while (true) {
+        a = Board_UARTGetChar();
+        if (a != EOF) {
+            ptc(a);
+        }
+    }
 }
