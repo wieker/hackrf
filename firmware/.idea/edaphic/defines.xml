@@ -1,6 +1,358 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SVCompilerDirectivesDefines">
+    <option name="define">
+      <map>
+        <entry key="DEBUG">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="DEBUGASM">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="DEBUGNETS">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="DEBUGREGS">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="FORMAL">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="FORMAL_KEEP">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="inclusionDependencies">
+                      <list>
+                        <InclusionDependency>
+                          <option name="name" value="FORMAL" />
+                          <option name="rule" value="DEFINED" />
+                        </InclusionDependency>
+                      </list>
+                    </option>
+                    <option name="offset" value="1126" />
+                    <option name="replacementList" value="(* keep *)" />
+                    <option name="source" value="picorv32.v" />
+                  </Body>
+                  <Body>
+                    <option name="inclusionDependencies">
+                      <list>
+                        <InclusionDependency>
+                          <option name="name" value="FORMAL" />
+                          <option name="rule" value="NOT_DEFINED" />
+                        </InclusionDependency>
+                        <InclusionDependency>
+                          <option name="name" value="DEBUGNETS" />
+                          <option name="rule" value="DEFINED" />
+                        </InclusionDependency>
+                      </list>
+                    </option>
+                    <option name="offset" value="1236" />
+                    <option name="replacementList" value="(* keep *)" />
+                    <option name="source" value="picorv32.v" />
+                  </Body>
+                  <Body>
+                    <option name="inclusionDependencies">
+                      <list>
+                        <InclusionDependency>
+                          <option name="name" value="FORMAL" />
+                          <option name="rule" value="NOT_DEFINED" />
+                        </InclusionDependency>
+                        <InclusionDependency>
+                          <option name="name" value="DEBUGNETS" />
+                          <option name="rule" value="NOT_DEFINED" />
+                        </InclusionDependency>
+                      </list>
+                    </option>
+                    <option name="offset" value="1279" />
+                    <option name="source" value="picorv32.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="PICORV32_REGS">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="974" />
+                    <option name="replacementList" value="picosoc_regs" />
+                    <option name="source" value="picosoc.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picosoc.v" />
+                  </DefineDependency>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                  <DefineDependency>
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="PICORV32_V">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="1559" />
+                    <option name="source" value="picorv32.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picosoc.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="PICOSOC_MEM">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="956" />
+                    <option name="replacementList" value="ice40up5k_spram" />
+                    <option name="source" value="icebreaker.v" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="1037" />
+                    <option name="replacementList" value="picosoc_mem" />
+                    <option name="source" value="picosoc.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picosoc.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="PICOSOC_V">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="1182" />
+                    <option name="source" value="picosoc.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="icebreaker.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="RISCV_FORMAL">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="RISCV_FORMAL_ALTOPS">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="RISCV_FORMAL_BLACKBOX_ALU">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="conditionalCompilationSource" value="true" />
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="assert">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="file" value="picorv32.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="debug">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="inclusionDependencies">
+                      <list>
+                        <InclusionDependency>
+                          <option name="name" value="DEBUG" />
+                          <option name="rule" value="DEFINED" />
+                        </InclusionDependency>
+                      </list>
+                    </option>
+                    <option name="offset" value="1022" />
+                    <option name="parameters">
+                      <list>
+                        <Parameter>
+                          <option name="name" value="debug_command" />
+                        </Parameter>
+                      </list>
+                    </option>
+                    <option name="replacementList" value="debug_command" />
+                    <option name="source" value="picorv32.v" />
+                  </Body>
+                  <Body>
+                    <option name="inclusionDependencies">
+                      <list>
+                        <InclusionDependency>
+                          <option name="name" value="DEBUG" />
+                          <option name="rule" value="NOT_DEFINED" />
+                        </InclusionDependency>
+                      </list>
+                    </option>
+                    <option name="offset" value="1073" />
+                    <option name="parameters">
+                      <list>
+                        <Parameter>
+                          <option name="name" value="debug_command" />
+                        </Parameter>
+                      </list>
+                    </option>
+                    <option name="source" value="picorv32.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="error">
+          <value>
+            <Define>
+              <option name="dependencies">
+                <set>
+                  <DefineDependency>
+                    <option name="file" value="picosoc.v" />
+                  </DefineDependency>
+                  <DefineDependency>
+                    <option name="file" value="icebreaker.v" />
+                  </DefineDependency>
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="status" value="NORMAL" />
     <option name="version" value="450" />
   </component>
