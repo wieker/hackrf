@@ -313,7 +313,7 @@ void UARTx_IRQHandler(void)
 void usart3_isr(void) {	/* New data will be ignored if data not popped in time */
     while (Chip_UART_ReadLineStatus(LPC_USART3) & UART_LSR_RDR) {
         uint8_t ch = Chip_UART_ReadByte(LPC_USART3);
-        DEBUGOUT("in: %d\r\n", ch);
+        Board_UARTPutChar(ch);
     }
 }
 
@@ -472,22 +472,15 @@ int uart_main_read(void)
 
     int a;
     while (true) {
-        //a = getrc();
-        //if (a != EOF) {
-          //  DEBUGOUT("in: %d\r\n", a);
-        //}
+        a = Board_UARTGetChar();
+        if (a != EOF) {
+            ptc(a);
+        }
     }
 }
 
 
 int uart_main_write(void)
 {
-    x_Chip_UART3_Init();
-    int a;
-    while (true) {
-        a = Board_UARTGetChar();
-        if (a != EOF) {
-            ptc(a);
-        }
-    }
+    uart_main_read();
 }
