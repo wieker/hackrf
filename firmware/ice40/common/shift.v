@@ -19,7 +19,7 @@ module shift(input wire clk, input wire reset, input wire enable, input wire in,
             shift_reg <= shift_reg;
     end
 
-    assign next_value = {in, shift_reg[7:1]};
-    assign out = shift_reg[0];
+    assign next_value = {shift_reg[6:0], in};
+    assign out = shift_reg[7];
 
 endmodule

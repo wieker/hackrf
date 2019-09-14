@@ -9,5 +9,5 @@ set_io SW3 43
 
 set_io ICE_SS 16
 set_io ICE_SCK 15
-set_io ICE_MOSI 17
-set_io ICE_MISO 14
+set_io ICE_MOSI 14
+set_io ICE_MISO 17
