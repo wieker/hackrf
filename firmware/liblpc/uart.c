@@ -311,7 +311,7 @@ void UARTx_IRQHandler(void)
 }
 
 void usart3_isr(void) {
-    UART3_IRQHandler();
+    DEBUGOUT("int uart3\r\n");
 }
 
 /**
@@ -458,6 +458,15 @@ void ptc(char ch)
 int uart_main_read(void)
 {
     x_Chip_UART3_Init();
+
+    /* Enable UART End of Auto baudrate & Auto baudrate timeout interrupts */
+    Chip_UART_IntEnable(LPC_USART3, (UART_IER_RBRINT | UART_IER_RLSINT));
+
+    /* preemption = 1, sub-priority = 1 */
+    NVIC_SetPriority(USART3_IRQn, 1);
+    /* Enable Interrupt for UART0 channel */
+    NVIC_EnableIRQ(USART3_IRQn);
+
     int a;
     while (true) {
         a = getrc();
