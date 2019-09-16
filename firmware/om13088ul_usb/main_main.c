@@ -6,6 +6,7 @@
 #include "main_main.h"
 
 void gpio_main();
+void sram_main();
 
 void probe_lpc51u68_i2c0();
 
@@ -44,6 +45,7 @@ void main_main() {
         DEBUGOUT("7: enable timers\r\n");
         DEBUGOUT("8: UART read\r\n");
         DEBUGOUT("9: UART write\r\n");
+        DEBUGOUT("G: SRAM write\r\n");
         int key = 0xFF;
         do {
             key = DEBUGIN();
@@ -84,6 +86,10 @@ void main_main() {
             }
             case '9': {
                 uart_main_write();
+                continue;
+            }
+            case 'G': {
+                sram_main();
                 continue;
             }
             case 'q':
@@ -201,6 +207,73 @@ void gpio_main() {
                 } else {
                     DEBUGOUT("Read OFF\r\n");
                 }
+                break;
+            }
+            case 'q':
+                return;
+            default:
+                continue;
+        }
+    }
+}
+
+void delay(uint32_t duration);
+
+void sram_main() {
+    DEBUGOUT("Main SRAM enter\r\n");
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 12); //2[12]
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 10); //P2[10]
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
+    Chip_SCU_PinMuxSet(2, 13, SCU_MODE_FUNC0 | SCU_MODE_INBUFF_EN);
+
+    while (1) {
+        int key = 0xFF;
+        do {
+            key = DEBUGIN();
+        } while ((key & 0xFF) == 0xFF);
+
+        switch (key) {
+            case '1': {
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) false);
+                Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0); //2[12]
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+                DEBUGOUT("Toggled ON\r\n");
+
+                delay(20000000);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
+                break;
+            }
+            case '2': {
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) false);
+                Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0); //2[12]
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+                DEBUGOUT("Toggled OFF\r\n");
+
+                delay(20000000);
+
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
+                break;
+            }
+            case 'r': {
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) false);
+
+                delay(20000000);
+                if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 0)) {
+                    DEBUGOUT("Read ON\r\n");
+                } else {
+                    DEBUGOUT("Read OFF\r\n");
+                }
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
                 break;
             }
             case 'q':
