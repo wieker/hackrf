@@ -227,6 +227,8 @@ void sram_main() {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
     Chip_SCU_PinMuxSet(2, 13, SCU_MODE_FUNC0 | SCU_MODE_INBUFF_EN);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 1); //CS
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
 
     while (1) {
         int key = 0xFF;
@@ -240,12 +242,14 @@ void sram_main() {
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) false);
                 Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0); //2[12]
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) false);
                 DEBUGOUT("Toggled ON\r\n");
 
-                delay(20000000);
+                delay(20);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
                 Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
                 break;
             }
             case '2': {
@@ -253,20 +257,23 @@ void sram_main() {
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) false);
                 Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0); //2[12]
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) false);
                 DEBUGOUT("Toggled OFF\r\n");
 
-                delay(20000000);
+                delay(20);
 
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
                 Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
                 break;
             }
             case 'r': {
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) false);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) false);
 
-                delay(20000000);
+                delay(20);
                 if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 0)) {
                     DEBUGOUT("Read ON\r\n");
                 } else {
@@ -274,6 +281,7 @@ void sram_main() {
                 }
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
                 break;
             }
             case 'q':
