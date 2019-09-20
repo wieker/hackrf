@@ -221,14 +221,13 @@ void delay(uint32_t duration);
 
 void sram_main() {
     DEBUGOUT("Main SRAM enter\r\n");
+    // WE
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 12); //2[12]
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 10); //P2[10]
+    // D0
+    Chip_SCU_PinMuxSet(2, 9, SCU_MODE_FUNC0 | SCU_MODE_INBUFF_EN);
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 10);
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
-    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
-    Chip_SCU_PinMuxSet(2, 13, SCU_MODE_FUNC0 | SCU_MODE_INBUFF_EN);
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 1); //CS
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
 
     while (1) {
         int key = 0xFF;
@@ -238,50 +237,57 @@ void sram_main() {
 
         switch (key) {
             case '1': {
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) false);
-                Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0); //2[12]
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) false);
-                DEBUGOUT("Toggled ON\r\n");
-
-                delay(20);
+                // D0
+                Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 10);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                // WE
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) false);
+
+                DEBUGOUT("Toggled ON\r\n");
+                delay(200);
+
+                // D0
+                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 10);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                // WE
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
-                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
                 break;
             }
             case '2': {
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
+                // D0
+                Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 10);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) false);
-                Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0); //2[12]
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) false);
+                // WE
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) false);
+
                 DEBUGOUT("Toggled OFF\r\n");
+                delay(200);
 
-                delay(20);
-
+                // D0
+                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 10);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                // WE
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
-                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0); //P1[7]
                 break;
             }
             case 'r': {
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) false);
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) false);
+                // D0
+                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 10);
+                // WE
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
 
-                delay(20);
-                if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 0)) {
+                delay(200);
+                if (Chip_GPIO_GetPinState(LPC_GPIO_PORT, 1, 10)) {
                     DEBUGOUT("Read ON\r\n");
                 } else {
                     DEBUGOUT("Read OFF\r\n");
                 }
+
+                // D0
+                Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 10);
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 10, (bool) true);
+                // WE
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 12, (bool) true);
-                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 1, (bool) true);
                 break;
             }
             case 'q':

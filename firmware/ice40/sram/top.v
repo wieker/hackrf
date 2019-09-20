@@ -55,4 +55,13 @@ module top(
         .D_IN_0({sram_in})
     );
 
-endmodule
+    reg [7:0] state;
+
+    always @(posedge clk)
+    begin
+        if (state == 'h00) begin
+            state <= 'h01;
+        end
+    end
+
+endmodule : top
