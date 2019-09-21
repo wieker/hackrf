@@ -10,7 +10,7 @@ prog:
 	iceprog -S $(filename).bin
 
 prog_flash:
-	iceprog $(filename).bin
+	iceprog -d d:003/004 $(filename).bin
 
 clean:
 	rm -rf $(filename).blif $(filename).asc $(filename).bin
