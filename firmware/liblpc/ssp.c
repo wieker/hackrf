@@ -392,6 +392,10 @@ int main_ssp(void)
 	SystemCoreClockUpdate();
 	Board_Init();
 
+    Chip_SCU_PinMuxSet(0x1, 14, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  // ice40 CRESET
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 7);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 7, (bool) false);
+
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
 
@@ -468,7 +472,22 @@ int main_ssp(void)
         con_print_data(Rx_Buf, xf_setup.length);
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
         DEBUGOUT("SPI done:\r\n");
+
+        break;
     }
+
+
+    Chip_SCU_PinMuxSet(0x1, 5, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  /* P1.5 => SSEL1 */
+    //Chip_SCU_PinMuxSet(0xF, 4, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  /* PF.4 => SCK1 */
+
+    Chip_SCU_PinMuxSet(0x1, 4, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_ZIF_DIS | SCU_MODE_FUNC0)); /* P1.4 => MOSI1 */
+    Chip_SCU_PinMuxSet(0x1, 3, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_ZIF_DIS | SCU_MODE_FUNC0)); /* P1.3 => MISO1 */
+
+    Chip_SCU_PinMuxSet(0x3, 1, (SCU_MODE_INACT | SCU_MODE_FUNC0));  /* P1.5 => SSEL1 */
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 5, 8);
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 5, 8, (bool) true);
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0);
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 7);
 
 
     return 0;
