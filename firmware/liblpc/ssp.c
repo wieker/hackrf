@@ -103,6 +103,23 @@ static char sspMainMenu[] = "\t 1: Select SSP Mode (Master/Slave)\n\r"
 static char sspSelectModeMenu[] = "\n\rPress 1-2 to select or 'q' to exit:\n\r"
 								  "\t 1: Master \n\r"
 								  "\t 2: Slave\n\r";
+
+void ice40reset();
+
+void ice40_release();
+
+void spi_deinit();
+
+void spi_init();
+
+int getMenu();
+
+void spi_select();
+
+void spi_unselect();
+
+void spi_send();
+
 #endif /* defined(DEBUG_ENABLE) */
 
 /*****************************************************************************
@@ -389,53 +406,13 @@ static void con_print_data(const uint8_t *dat, int sz)
  */
 int main_ssp(void)
 {
-	SystemCoreClockUpdate();
-	Board_Init();
+    ice40reset();
 
-    Chip_SCU_PinMuxSet(0x1, 14, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  // ice40 CRESET
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 7);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 7, (bool) false);
+    spi_init();
 
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
 
-	/* SSP initialization */
-	Board_SSP_Init(LPC_SSP);
-
-	Chip_SSP_Init(LPC_SSP);
-
-	ssp_format.frameFormat = SSP_FRAMEFORMAT_SPI;
-	ssp_format.bits = SSP_DATA_BITS;
-	ssp_format.clockMode = SSP_CLOCK_CPHA0_CPOL1;
-    Chip_SSP_SetFormat(LPC_SSP, ssp_format.bits, ssp_format.frameFormat, ssp_format.clockMode);
-	Chip_SSP_Enable(LPC_SSP);
-	//Chip_SSP_SetBitRate(LPC_SSP, 8);
-
-	/* Initialize GPDMA controller */
-	Chip_GPDMA_Init(LPC_GPDMA);
-
-	/* Setting GPDMA interrupt */
-	NVIC_DisableIRQ(DMA_IRQn);
-	NVIC_SetPriority(DMA_IRQn, ((0x01 << 3) | 0x01));
-	NVIC_EnableIRQ(DMA_IRQn);
-
-	/* Setting SSP interrupt */
-	NVIC_EnableIRQ(SSP_IRQ);
-
-#if (defined(BOARD_HITEX_EVA_1850) || defined(BOARD_HITEX_EVA_4350))
-	Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0x6, 10);	/* SSEL_MUX_A */
-	Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0x6, 11);	/* SSEL_MUX_B */
-	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0x6, 10, true);
-	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0x6, 11, false);
-#endif
-    int key;
-
-	//appSSPMainMenu();
     while (1) {
-        key = 0xFF;
-        do {
-            key = DEBUGIN();
-        } while ((key & 0xFF) == 0xFF);
+        int key = getMenu();
 
         DEBUGOUT("SPI enter\r\n");
 
@@ -456,44 +433,84 @@ int main_ssp(void)
                 continue;
         }
 
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
-        xf_setup.length = 40;
-        xf_setup.tx_data = Tx_Buf;
-        xf_setup.rx_data = Rx_Buf;
-        xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
-        DEBUGOUT("SPI send:\r\n");
-        for (int i = 0; i < xf_setup.length; i++) {
-            Tx_Buf[i] = 0x00;
-        }
         Tx_Buf[0] = 0x9F;
-        con_print_data(Tx_Buf, xf_setup.length);
-        Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
-        DEBUGOUT("SPI receive:\r\n");
-        con_print_data(Rx_Buf, xf_setup.length);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
-        DEBUGOUT("SPI done:\r\n");
+        spi_send(1, 20);
 
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
-        xf_setup.length = 40;
-        xf_setup.tx_data = Tx_Buf;
-        xf_setup.rx_data = Rx_Buf;
-        xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
-        DEBUGOUT("SPI send:\r\n");
-        for (int i = 0; i < xf_setup.length; i++) {
-            Tx_Buf[i] = 0x00;
-        }
         Tx_Buf[0] = 0x03;
-        con_print_data(Tx_Buf, xf_setup.length);
-        Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
-        DEBUGOUT("SPI receive:\r\n");
-        con_print_data(Rx_Buf, xf_setup.length);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
-        DEBUGOUT("SPI done:\r\n");
+        spi_send(1, 20);
 
         break;
     }
 
 
+    spi_deinit();
+
+    ice40_release();
+
+
+    return 0;
+}
+
+void spi_send(int cmdlen, int rcvlen) {
+    spi_select();
+    xf_setup.length = cmdlen + rcvlen;
+    xf_setup.tx_data = Tx_Buf;
+    xf_setup.rx_data = Rx_Buf;
+    xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
+    DEBUGOUT("SPI send:\r\n");
+    for (int i = cmdlen; i < xf_setup.length; i++) {
+        Tx_Buf[i] = 0x00;
+    }
+    con_print_data(Tx_Buf, cmdlen);
+    Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+    DEBUGOUT("SPI receive:\r\n");
+    con_print_data(Rx_Buf + cmdlen, rcvlen);
+    spi_unselect();
+    DEBUGOUT("SPI done:\r\n");
+}
+
+void spi_unselect() { Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true); }
+
+void spi_select() { Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false); }
+
+int getMenu() {
+    int key;
+    key = 0xFF;
+    do {
+        key = DEBUGIN();
+    } while ((key & 0xFF) == 0xFF);
+    return key;
+}
+
+void spi_init() {
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+
+    /* SSP initialization */
+    Board_SSP_Init(LPC_SSP);
+
+    Chip_SSP_Init(LPC_SSP);
+
+    ssp_format.frameFormat = SSP_FRAMEFORMAT_SPI;
+    ssp_format.bits = SSP_DATA_BITS;
+    ssp_format.clockMode = SSP_CLOCK_CPHA0_CPOL1;
+    Chip_SSP_SetFormat(LPC_SSP, ssp_format.bits, ssp_format.frameFormat, ssp_format.clockMode);
+    Chip_SSP_Enable(LPC_SSP);
+    //Chip_SSP_SetBitRate(LPC_SSP, 8);
+
+    /* Initialize GPDMA controller */
+    Chip_GPDMA_Init(LPC_GPDMA);
+
+    /* Setting GPDMA interrupt */
+    NVIC_DisableIRQ(DMA_IRQn);
+    NVIC_SetPriority(DMA_IRQn, ((0x01 << 3) | 0x01));
+    NVIC_EnableIRQ(DMA_IRQn);
+
+    /* Setting SSP interrupt */
+    NVIC_EnableIRQ(SSP_IRQ);
+}
+
+void spi_deinit() {
     Chip_SCU_PinMuxSet(0x1, 5, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  /* P1.5 => SSEL1 */
     //Chip_SCU_PinMuxSet(0xF, 4, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  /* PF.4 => SCK1 */
 
@@ -504,10 +521,14 @@ int main_ssp(void)
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 5, 8);
     //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 5, 8, (bool) true);
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 0);
-    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 7);
+}
 
+void ice40_release() { Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 7); }
 
-    return 0;
+void ice40reset() {
+    Chip_SCU_PinMuxSet(0x1, 14, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  // ice40 CRESET
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 7);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 7, (bool) false);
 }
 
 void spi_main() {
