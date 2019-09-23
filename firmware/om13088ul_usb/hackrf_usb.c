@@ -224,8 +224,21 @@ int main(void) {
     //main_timer();
 
     //gpio_init();
+    usb_main();
 
-    // Enable USB
+
+    //spi_main();
+
+    /* Blink LED1/2/3 on the board. */
+
+    while (1) {
+        __asm volatile ("wfi");
+    }
+
+	return 0;
+}
+
+void usb_main() {// Enable USB
 
     /* use XTAL_OSC as clock source for PLL0USB */
     CGU_PLL0USB_CTRL = CGU_PLL0USB_CTRL_PD(1)
@@ -266,15 +279,4 @@ int main(void) {
     usb_endpoint_init(&usb_endpoint_control_in);
 
     usb_run(&usb_device);
-
-
-    //spi_main();
-
-    /* Blink LED1/2/3 on the board. */
-
-    while (1) {
-        __asm volatile ("wfi");
-    }
-
-	return 0;
 }

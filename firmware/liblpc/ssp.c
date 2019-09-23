@@ -120,6 +120,8 @@ void spi_unselect();
 
 void spi_send();
 
+uint8_t* spi_flash_read();
+
 #endif /* defined(DEBUG_ENABLE) */
 
 /*****************************************************************************
@@ -436,8 +438,7 @@ int main_ssp(void)
         Tx_Buf[0] = 0x9F;
         spi_send(1, 20);
 
-        Tx_Buf[0] = 0x03;
-        spi_send(1, 20);
+        spi_flash_read();
 
         break;
     }
@@ -449,6 +450,12 @@ int main_ssp(void)
 
 
     return 0;
+}
+
+uint8_t *spi_flash_read() {
+    Tx_Buf[0] = 0x03;
+    spi_send(1, 20);
+    return Rx_Buf;
 }
 
 void spi_send(int cmdlen, int rcvlen) {

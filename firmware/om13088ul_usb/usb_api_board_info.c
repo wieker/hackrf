@@ -131,13 +131,15 @@ usb_request_status_t usb_vendor_request_write_i2c(
     }
 }
 
+uint8_t *spi_flash_read();
+
 usb_request_status_t usb_vendor_request_read_i2c(
         usb_endpoint_t* const endpoint,
         const usb_transfer_stage_t stage
 ) {
     if( stage == USB_TRANSFER_STAGE_SETUP ) {
         if( endpoint->setup.index < 256 ) {
-            //MSNA_P1
+            /*//MSNA_P1
             uint32_t p1 = 128 * 24 -512;
             uint32_t p2 = 0;
             uint32_t p3 = 1;
@@ -191,7 +193,18 @@ usb_request_status_t usb_vendor_request_read_i2c(
             endpoint->buffer[1] = *read_data(0x60, 18);
             usb_transfer_schedule_block(endpoint->in, &endpoint->buffer, 1,
                                         NULL, NULL);
-            usb_transfer_schedule_ack(endpoint->out);
+            usb_transfer_schedule_ack(endpoint->out);*/
+
+            uint32_t addr;
+            uint16_t len;
+
+            addr = (endpoint->setup.value << 16) | endpoint->setup.index;
+            len = endpoint->setup.length;
+            //w25q80bv_read(&spi_flash, addr, len, &spiflash_buffer[0]);
+            uint8_t *buf = spi_flash_read();
+            usb_transfer_schedule_block(endpoint->in, buf, len,
+                                        NULL, NULL);
+
             return USB_REQUEST_STATUS_OK;
         }
         return USB_REQUEST_STATUS_STALL;

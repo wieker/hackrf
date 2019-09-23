@@ -21,4 +21,6 @@ int uart_main(void);
 int uart_main_read(void);
 int uart_main_write(void);
 
+void usb_main();
+
 #endif //HACKRF_FIRMWARE_ALL_MAIN_MAIN_H

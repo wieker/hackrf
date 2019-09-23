@@ -95,7 +95,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
-					<Add option="-DLIBRARY_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/usr/include/libusb-1.0"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -121,7 +121,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
-					<Add option="-DLIBRARY_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/usr/include/libusb-1.0"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -147,7 +147,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
-					<Add option="-DLIBRARY_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/usr/include/libusb-1.0"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -173,7 +173,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBRARY_VERSION=&quot;0.5&quot;"/>
-					<Add option="-DLIBRARY_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DLIBRARY_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/usr/include/libusb-1.0"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -198,7 +198,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -223,7 +223,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -248,7 +248,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -273,7 +273,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -298,7 +298,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -323,7 +323,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -348,7 +348,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -373,7 +373,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -398,7 +398,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -423,7 +423,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -448,7 +448,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -473,7 +473,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -498,7 +498,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -523,7 +523,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -548,7 +548,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
@@ -573,7 +573,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTOOL_RELEASE=&quot;git-ff05a63*&quot;"/>
+					<Add option="-DTOOL_RELEASE=&quot;git-cf791d0*&quot;"/>
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/host/libhackrf/src"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>

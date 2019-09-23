@@ -46,6 +46,7 @@ void main_main() {
         DEBUGOUT("8: UART read\r\n");
         DEBUGOUT("9: UART write\r\n");
         DEBUGOUT("G: SRAM write\r\n");
+        DEBUGOUT("U: USB\r\n");
         int key = 0xFF;
         do {
             key = DEBUGIN();
@@ -90,6 +91,10 @@ void main_main() {
             }
             case 'G': {
                 sram_main();
+                continue;
+            }
+            case 'U': {
+                usb_main();
                 continue;
             }
             case 'q':
