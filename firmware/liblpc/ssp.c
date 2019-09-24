@@ -120,7 +120,7 @@ void spi_unselect();
 
 void spi_send();
 
-uint8_t* spi_flash_read();
+uint8_t *spi_flash_read(uint32_t addr, uint32_t len);
 
 #endif /* defined(DEBUG_ENABLE) */
 
@@ -438,7 +438,7 @@ int main_ssp(void)
         Tx_Buf[0] = 0x9F;
         spi_send(1, 20);
 
-        spi_flash_read();
+        spi_flash_read(0, 20);
 
         break;
     }
@@ -452,15 +452,18 @@ int main_ssp(void)
     return 0;
 }
 
-uint8_t *spi_flash_read() {
+uint8_t *spi_flash_read(uint32_t addr, uint32_t len) {
     Tx_Buf[0] = 0x03;
-    spi_send(1, 20);
-    return Rx_Buf;
+    Tx_Buf[1] = 0x00;
+    Tx_Buf[2] = 0x00;
+    Tx_Buf[3] = 0x00;
+    spi_send(4, len);
+    return Rx_Buf + 4;
 }
 
 void spi_send(int cmdlen, int rcvlen) {
     spi_select();
-    xf_setup.length = cmdlen + rcvlen;
+    xf_setup.length = cmdlen + rcvlen + 1;
     xf_setup.tx_data = Tx_Buf;
     xf_setup.rx_data = Rx_Buf;
     xf_setup.rx_cnt = xf_setup.tx_cnt = 0;

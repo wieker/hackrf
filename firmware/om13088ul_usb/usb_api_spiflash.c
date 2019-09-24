@@ -82,7 +82,7 @@ usb_request_status_t usb_vendor_request_write_spiflash(
 	}
 }
 
-uint8_t *spi_flash_read();
+uint8_t *spi_flash_read(uint32_t addr, uint32_t len);
 
 usb_request_status_t usb_vendor_request_read_spiflash(
 	usb_endpoint_t* const endpoint, const usb_transfer_stage_t stage)
@@ -99,7 +99,7 @@ usb_request_status_t usb_vendor_request_read_spiflash(
 			return USB_REQUEST_STATUS_STALL;
 		} else {
             //w25q80bv_read(&spi_flash, addr, len, &spiflash_buffer[0]);
-            uint8_t *buf = spi_flash_read();
+            uint8_t *buf = spi_flash_read(0, 0);
             usb_transfer_schedule_block(endpoint->in, buf, len,
                                         NULL, NULL);
 			return USB_REQUEST_STATUS_OK;

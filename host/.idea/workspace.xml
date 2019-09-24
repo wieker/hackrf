@@ -2,17 +2,17 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="HackRF" targetName="hackrf-static" />
-      <config projectName="HackRF" targetName="runcmd" />
-      <config projectName="HackRF" targetName="hackrf_operacake" />
-      <config projectName="HackRF" targetName="hackrf_sweep" />
+      <config projectName="HackRF" targetName="hackrf_info" />
       <config projectName="HackRF" targetName="hackrf_spiflash" />
+      <config projectName="HackRF" targetName="hackrf_operacake" />
       <config projectName="HackRF" targetName="hackrf" />
-      <config projectName="HackRF" targetName="hackrf_debug" />
       <config projectName="HackRF" targetName="hackrf_cpldjtag" />
       <config projectName="HackRF" targetName="hackrf_transfer" />
+      <config projectName="HackRF" targetName="hackrf_sweep" />
+      <config projectName="HackRF" targetName="hackrf-static" />
+      <config projectName="HackRF" targetName="runcmd" />
       <config projectName="HackRF" targetName="uninstall" />
-      <config projectName="HackRF" targetName="hackrf_info" />
+      <config projectName="HackRF" targetName="hackrf_debug" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -22,41 +22,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/edaphic/defines.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/main_main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/main_main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/main_main.h" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/main_main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_spiflash.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_spiflash.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/edaphic/defines.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/edaphic/defines.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/HackRF.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/HackRF.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/hackrf-tools.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/hackrf-tools.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/libhackrf.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/libhackrf.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/hackrf.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/hackrf.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/libhackrf.so.0.5.0" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/libhackrf.so.0.5.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" beforeDir="false" afterPath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libhackrf/src/hackrf.c" beforeDir="false" afterPath="$PROJECT_DIR$/libhackrf/src/hackrf.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,16 +44,6 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>RESET_CTRL0</find>
-      <find>si53</find>
-      <find>HACKRF_VENDOR_REQUEST_BOARD_ID_READ</find>
-      <find>board</find>
-      <find>board_id</find>
-      <find>board_id_re</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -216,6 +182,7 @@
       <workItem from="1563600041187" duration="3654000" />
       <workItem from="1564324427192" duration="630000" />
       <workItem from="1569272496267" duration="1459000" />
+      <workItem from="1569357956361" duration="2534000" />
     </task>
     <servers />
   </component>

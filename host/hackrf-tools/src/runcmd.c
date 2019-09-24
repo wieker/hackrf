@@ -66,6 +66,7 @@ int parse_int(char* s, uint16_t* const value) {
 int read_register(hackrf_device* device,
                   const uint16_t register_number) {
     uint16_t register_value;
+    printf("enter usb\n");
     int result = hackrf_i2c_read(device, register_number, &register_value);
     printf("value = %x\n", register_value);
     return result;
