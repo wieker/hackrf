@@ -2040,17 +2040,21 @@ int ADDCALL hackrf_i2c_write(hackrf_device* device, uint16_t register_number, ui
     if( value >= 256 ) {
         return HACKRF_ERROR_INVALID_PARAM;
     }
+    printf("there 2\n");
 
+    unsigned char data[3] = {0xAA, 0x0B, 0x01, 0x00};
+    printf("there 3\n");
     result = libusb_control_transfer(
             device->usb_device,
             LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
             HACKRF_VENDOR_REQUEST_I2C_WRITE,
             value,
             register_number,
-            NULL,
-            0,
+            data,
+            3,
             0
     );
+    printf("there\n");
 
     if( result != 0 )
     {

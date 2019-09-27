@@ -452,6 +452,11 @@ int main_ssp(void)
     return 0;
 }
 
+uint8_t *spi_flash_write(uint32_t addr, uint32_t len, uint8_t* data) {
+    con_print_data(data, len);
+    return Rx_Buf + 4;
+}
+
 uint8_t *spi_flash_read(uint32_t addr, uint32_t len) {
     Tx_Buf[0] = 0x03;
     Tx_Buf[1] = 0x00;

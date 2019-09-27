@@ -114,6 +114,12 @@ usb_request_status_t usb_vendor_request_reset(
 extern uint8_t *read_data(int slaveAddr, unsigned int addr);
 extern void write_data(uint8_t slaveAddr, uint8_t addr, uint8_t data);
 
+uint8_t *spi_flash_write(uint32_t addr, uint32_t len, uint8_t* data);
+
+uint8_t bufA1[128];
+uint32_t addr;
+uint16_t len;
+
 usb_request_status_t usb_vendor_request_write_i2c(
         usb_endpoint_t* const endpoint,
         const usb_transfer_stage_t stage
@@ -121,11 +127,18 @@ usb_request_status_t usb_vendor_request_write_i2c(
     if( stage == USB_TRANSFER_STAGE_SETUP ) {
         if( endpoint->setup.index < 256 ) {
             if( endpoint->setup.value < 256 ) {
-                usb_transfer_schedule_ack(endpoint->in);
+
+                addr = (endpoint->setup.value << 16) | endpoint->setup.index;
+                len = endpoint->setup.length;
+                usb_transfer_schedule_block(endpoint->out, bufA1, len,
+                                            NULL, NULL);
                 return USB_REQUEST_STATUS_OK;
             }
         }
         return USB_REQUEST_STATUS_STALL;
+    } else if (stage == USB_TRANSFER_STAGE_DATA) {
+        spi_flash_write(addr, len, bufA1);
+        usb_transfer_schedule_ack(endpoint->in);
     } else {
         return USB_REQUEST_STATUS_OK;
     }

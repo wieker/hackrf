@@ -1,0 +1,12 @@
+usb_vendor_request_read_i2c usb_api_board_info.c:201
+usb_request usb_request.c:54
+usb_check_for_setup_events usb.c:568
+usb0_isr usb.c:623
+<signal handler called> 0x00000000fffffff9
+Chip_UART_ReadLineStatus uart_18xx_43xx.h:514
+Board_UARTGetChar board.c:91
+getMenu ssp.c:490
+main_ssp ssp.c:417
+main_main main_main.c:61
+main hackrf_usb.c:218
+reset_handler vector.c:89

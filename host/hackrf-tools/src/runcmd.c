@@ -125,12 +125,8 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    while( (opt = getopt_long(argc, argv, "n:rw:d:cmsfh?", long_options, &option_index)) != EOF ) {
+    while( (opt = getopt_long(argc, argv, "rw", long_options, &option_index)) != EOF ) {
         switch( opt ) {
-            case 'n':
-                //result = parse_int(optarg, &register_number);
-                break;
-
             case 'w':
                 write = true;
                 //result = parse_int(optarg, &register_value);
@@ -195,7 +191,8 @@ int main(int argc, char** argv) {
     }
 
     if (write) {
-        result = write_register(device, register_number, 1);
+        printf("here\n");
+        result = write_register(device, 1, 1);
     }
 
 

@@ -2,17 +2,17 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="HackRF" targetName="hackrf_info" />
       <config projectName="HackRF" targetName="hackrf_spiflash" />
       <config projectName="HackRF" targetName="hackrf_operacake" />
       <config projectName="HackRF" targetName="hackrf" />
-      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
+      <config projectName="HackRF" targetName="hackrf_info" />
       <config projectName="HackRF" targetName="hackrf_transfer" />
       <config projectName="HackRF" targetName="hackrf_sweep" />
       <config projectName="HackRF" targetName="hackrf-static" />
+      <config projectName="HackRF" targetName="hackrf_debug" />
       <config projectName="HackRF" targetName="runcmd" />
       <config projectName="HackRF" targetName="uninstall" />
-      <config projectName="HackRF" targetName="hackrf_debug" />
+      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -22,10 +22,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/spi_stack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_spiflash.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_spiflash.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/edaphic/defines.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/edaphic/defines.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" afterDir="false" />
@@ -182,7 +181,8 @@
       <workItem from="1563600041187" duration="3654000" />
       <workItem from="1564324427192" duration="630000" />
       <workItem from="1569272496267" duration="1459000" />
-      <workItem from="1569357956361" duration="2534000" />
+      <workItem from="1569357956361" duration="2861000" />
+      <workItem from="1569559731501" duration="5336000" />
     </task>
     <servers />
   </component>
