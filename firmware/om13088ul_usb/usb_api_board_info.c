@@ -151,63 +151,6 @@ usb_request_status_t usb_vendor_request_custom_wieker_spi_read(
         const usb_transfer_stage_t stage
 ) {
     if( stage == USB_TRANSFER_STAGE_SETUP ) {
-        if( endpoint->setup.index < 256 ) {
-            /*//MSNA_P1
-            uint32_t p1 = 128 * 24 -512;
-            uint32_t p2 = 0;
-            uint32_t p3 = 1;
-            write_data(0x60, 28, p1 >> 16);
-            endpoint->buffer[1] = *read_data(0x60, 28);
-            write_data(0x60, 29, (p1 >> 8) & (uint32_t) 0xff);
-            endpoint->buffer[1] = *read_data(0x60, 29);
-            write_data(0x60, 30, p1 & (uint32_t) 0xff);
-            endpoint->buffer[1] = *read_data(0x60, 30);
-            //MSNA_P2
-            write_data(0x60, 31, 0);
-            endpoint->buffer[1] = *read_data(0x60, 31);
-            write_data(0x60, 32, 0);
-            endpoint->buffer[1] = *read_data(0x60, 32);
-            write_data(0x60, 33, 0);
-            endpoint->buffer[1] = *read_data(0x60, 33);
-            //MSNA_P3
-            write_data(0x60, 31, 0);
-            endpoint->buffer[1] = *read_data(0x60, 31);
-            write_data(0x60, 26, 0);
-            endpoint->buffer[1] = *read_data(0x60, 26);
-            write_data(0x60, 27, 1);
-            endpoint->buffer[1] = *read_data(0x60, 27);
-
-            //MS2_P1
-            uint32_t ms = 128 * 900 -512;
-            write_data(0x60, 60, 0x50 | (ms >> 16));
-            endpoint->buffer[1] = *read_data(0x60, 60);
-            write_data(0x60, 61, (ms >> 8) & (uint32_t) 0xff);
-            endpoint->buffer[1] = *read_data(0x60, 61);
-            write_data(0x60, 62, ms & (uint32_t) 0xff);
-            endpoint->buffer[1] = *read_data(0x60, 62);
-            //MSNA_P2
-            write_data(0x60, 63, 0);
-            endpoint->buffer[1] = *read_data(0x60, 63);
-            write_data(0x60, 64, 0);
-            endpoint->buffer[1] = *read_data(0x60, 64);
-            write_data(0x60, 65, 0);
-            endpoint->buffer[1] = *read_data(0x60, 65);
-            //MSNA_P3
-            write_data(0x60, 63, 0);
-            endpoint->buffer[1] = *read_data(0x60, 63);
-            write_data(0x60, 58, 0);
-            endpoint->buffer[1] = *read_data(0x60, 58);
-            write_data(0x60, 59, 1);
-            endpoint->buffer[1] = *read_data(0x60, 59);
-
-            // enable clk2
-            endpoint->buffer[1] = *read_data(0x60, 18);
-            write_data(0x60, 18, 0x0c);
-            endpoint->buffer[1] = *read_data(0x60, 18);
-            usb_transfer_schedule_block(endpoint->in, &endpoint->buffer, 1,
-                                        NULL, NULL);
-            usb_transfer_schedule_ack(endpoint->out);*/
-
             uint32_t addr;
             uint16_t len;
 
@@ -220,8 +163,6 @@ usb_request_status_t usb_vendor_request_custom_wieker_spi_read(
             usb_transfer_schedule_ack(endpoint->out);
 
             return USB_REQUEST_STATUS_OK;
-        }
-        return USB_REQUEST_STATUS_STALL;
     } else {
         return USB_REQUEST_STATUS_OK;
     }
