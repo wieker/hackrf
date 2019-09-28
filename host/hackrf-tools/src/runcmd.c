@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <zconf.h>
 
 int main(int argc, char** argv) {
     hackrf_device* device = NULL;
@@ -59,6 +60,18 @@ int main(int argc, char** argv) {
     custom_wieker_spi_read(device, 0x00, 0x10, buf);
     custom_wieker_spi_read(device, 0x10, 0x10, buf);
     custom_wieker_spi_read(device, 0x08, 0x10, buf);
+
+
+    FILE *f = fopen("spidump", "wb");
+    int read_size = 32220;
+    int addr;
+    for (addr = 0; addr < read_size; addr += 100) {
+        uint8_t buffer[256];
+        custom_wieker_spi_read(device, addr, 100, buffer);
+        usleep(1000);
+        fwrite(buffer, read_size - addr > 100 ? 100 : read_size - addr, 1, f);
+    }
+    fclose(f);
 
     result = hackrf_board_id_read(device, &board_id);
     if (result != HACKRF_SUCCESS) {
