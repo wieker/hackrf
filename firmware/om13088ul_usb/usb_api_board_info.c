@@ -34,6 +34,8 @@
 #include <libopencm3/lpc43xx/i2c.h>
 #include <libopencm3/dispatch/nvic.h>
 
+#include "ssp_general.h"
+
 char version_string[] = VERSION_STRING;
 uint16_t some_value = 9;
 
@@ -114,8 +116,6 @@ usb_request_status_t usb_vendor_request_reset(
 extern uint8_t *read_data(int slaveAddr, unsigned int addr);
 extern void write_data(uint8_t slaveAddr, uint8_t addr, uint8_t data);
 
-uint8_t *spi_flash_write(uint32_t addr, uint32_t len, uint8_t* data);
-
 uint8_t bufA1[128];
 uint32_t addr;
 uint16_t len;
@@ -137,14 +137,19 @@ usb_request_status_t usb_vendor_request_custom_wieker_spi_write(
         }
         return USB_REQUEST_STATUS_STALL;
     } else if (stage == USB_TRANSFER_STAGE_DATA) {
+        spi_flash_we();
+        spi_flash_wait();
+        spi_flash_we();
+        spi_flash_wait();
+        spi_flash_we();
+        spi_flash_erase(0x00);
+        spi_flash_wait();
         spi_flash_write(addr, len, bufA1);
         usb_transfer_schedule_ack(endpoint->in);
     } else {
         return USB_REQUEST_STATUS_OK;
     }
 }
-
-uint8_t *spi_flash_read(uint32_t addr, uint32_t len);
 
 usb_request_status_t usb_vendor_request_custom_wieker_spi_read(
         usb_endpoint_t* const endpoint,

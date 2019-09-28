@@ -104,6 +104,8 @@ static char sspSelectModeMenu[] = "\n\rPress 1-2 to select or 'q' to exit:\n\r"
 								  "\t 1: Master \n\r"
 								  "\t 2: Slave\n\r";
 
+#include "ssp_general.h"
+
 void ice40reset();
 
 void ice40_release();
@@ -436,7 +438,7 @@ int main_ssp(void)
         }
 
         Tx_Buf[0] = 0x9F;
-        spi_send(1, 20);
+        spi_send(1, 20, 0);
 
         spi_flash_read(0, 20);
 
@@ -462,13 +464,45 @@ uint8_t *spi_flash_read(uint32_t addr, uint32_t len) {
     Tx_Buf[1] = (addr >> 16) & 0xff;
     Tx_Buf[2] = (addr >> 8) & 0xff;;
     Tx_Buf[3] = (addr >> 0) & 0xff;;
-    spi_send(4, len);
+    spi_send(4, len, 0);
     return Rx_Buf + 4;
 }
 
-void spi_send(int cmdlen, int rcvlen) {
+uint8_t *spi_flash_we() {
+    Tx_Buf[0] = 0x06;
+    spi_send(1, 0, 1);
+    return Rx_Buf + 1;
+}
+
+uint8_t *spi_flash_erase(uint32_t addr) {
+    Tx_Buf[0] = 0x20;
+    Tx_Buf[1] = (addr >> 16) & 0xff;
+    Tx_Buf[2] = (addr >> 8) & 0xff;;
+    Tx_Buf[3] = (addr >> 0) & 0xff;;
+    spi_send(4, 1, 0);
+    return Rx_Buf + 4;
+}
+
+void delay(uint32_t duration);
+
+uint8_t *spi_flash_wait() {
+    Tx_Buf[0] = 0x05;
+    DEBUGOUT("SPI wait:\r\n");
+    while (true) {
+        spi_send(1, 1, 0);
+        uint8_t result = *(Rx_Buf + 1);
+        if ((result & 0x01) == 0) {
+            DEBUGOUT("SPI wait done:\r\n");
+            return Rx_Buf + 1;
+        }
+        DEBUGOUT(".\r\n");
+        delay(10000);
+    }
+}
+
+void spi_send(int cmdlen, int rcvlen, int nonStd) {
     spi_select();
-    xf_setup.length = cmdlen + rcvlen + 1;
+    xf_setup.length = cmdlen + rcvlen + (nonStd == 0);
     xf_setup.tx_data = Tx_Buf;
     xf_setup.rx_data = Rx_Buf;
     xf_setup.rx_cnt = xf_setup.tx_cnt = 0;

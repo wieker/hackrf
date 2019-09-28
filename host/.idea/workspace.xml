@@ -22,7 +22,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../firmware/liblpc/ssp_general.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/edaphic/defines.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/edaphic/defines.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/hackrf.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/hackrf.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/libhackrf.so.0.5.0" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/libhackrf.so.0.5.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" beforeDir="false" afterPath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libhackrf/src/hackrf.c" beforeDir="false" afterPath="$PROJECT_DIR$/libhackrf/src/hackrf.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +184,7 @@
       <workItem from="1569272496267" duration="1459000" />
       <workItem from="1569357956361" duration="2861000" />
       <workItem from="1569559731501" duration="5643000" />
-      <workItem from="1569652342732" duration="4752000" />
+      <workItem from="1569652342732" duration="5870000" />
     </task>
     <servers />
   </component>

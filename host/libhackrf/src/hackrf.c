@@ -2030,14 +2030,6 @@ int ADDCALL custom_wieker_spi_read(hackrf_device* device, uint32_t addr, uint32_
 int ADDCALL custom_wieker_spi_write(hackrf_device* device, uint16_t register_number, uint16_t value)
 {
     int result;
-
-    if( register_number >= 256 )
-    {
-        return HACKRF_ERROR_INVALID_PARAM;
-    }
-    if( value >= 256 ) {
-        return HACKRF_ERROR_INVALID_PARAM;
-    }
     printf("there 2\n");
 
     unsigned char data[3] = {0xAA, 0x0B, 0x01, 0x00};
