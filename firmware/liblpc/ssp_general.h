@@ -15,4 +15,6 @@ uint8_t *spi_flash_erase(uint32_t addr);
 
 uint8_t *spi_flash_wait();
 
+uint8_t *spi_flash_erase_all();
+
 #endif //HACKRF_FIRMWARE_ALL_SSP_GENERAL_H

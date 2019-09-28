@@ -45,6 +45,7 @@
 #include "usb_api_sweep.h"
 #include "usb_api_transceiver.h"
 #include "usb_bulk_buffer.h"
+#include "usb_api_wieker.h"
  
 #include "hackrf-ui.h"
 
@@ -92,6 +93,7 @@ static const usb_request_handler_fn vendor_request_handler[] = {
         usb_vendor_request_operacake_set_ranges,
         usb_vendor_request_custom_wieker_spi_write,
         usb_vendor_request_custom_wieker_spi_read,
+        usb_vendor_request_custom_wieker_spi_erase,
 };
 
 static const uint32_t vendor_request_handler_count =

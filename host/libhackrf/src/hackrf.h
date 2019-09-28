@@ -248,6 +248,7 @@ extern ADDAPI int ADDCALL hackrf_set_operacake_ranges(hackrf_device* device,
 extern int ADDCALL custom_wieker_spi_read(hackrf_device* device, uint32_t addr, uint32_t len, uint8_t* buf);
 
 extern int ADDCALL custom_wieker_spi_write(hackrf_device* device, uint32_t addr, uint32_t len, uint8_t* buf);
+extern int ADDCALL custom_wieker_spi_erase(hackrf_device* device);
 
 #ifdef __cplusplus
 } // __cplusplus defined.

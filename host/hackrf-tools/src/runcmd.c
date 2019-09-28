@@ -72,6 +72,7 @@ int main(int argc, char** argv) {
     }
     fclose(f);
 
+    custom_wieker_spi_erase(device);
 
     f = fopen("spidump", "rb");
     read_size = 32220;

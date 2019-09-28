@@ -73,6 +73,7 @@ set(SRC_M4
 		../liblpc/sgpio.c
 		main_main.c
 		../liblpc/uart.c
+		usb_api_wieker.c
 )
 
 include_directories(

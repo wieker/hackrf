@@ -1928,6 +1928,33 @@ usb_api_transceiver.c.s:
 	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/usb_api_transceiver.c.s
 .PHONY : usb_api_transceiver.c.s
 
+usb_api_wieker.obj: usb_api_wieker.c.obj
+
+.PHONY : usb_api_wieker.obj
+
+# target to build an object file
+usb_api_wieker.c.obj:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/usb_api_wieker.c.obj
+.PHONY : usb_api_wieker.c.obj
+
+usb_api_wieker.i: usb_api_wieker.c.i
+
+.PHONY : usb_api_wieker.i
+
+# target to preprocess a source file
+usb_api_wieker.c.i:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/usb_api_wieker.c.i
+.PHONY : usb_api_wieker.c.i
+
+usb_api_wieker.s: usb_api_wieker.c.s
+
+.PHONY : usb_api_wieker.s
+
+# target to generate assembly for a file
+usb_api_wieker.c.s:
+	cd /home/wieker/Projects/linux/hackrf/hackrf/firmware && $(MAKE) -f om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/build.make om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/usb_api_wieker.c.s
+.PHONY : usb_api_wieker.c.s
+
 usb_bulk_buffer.obj: usb_bulk_buffer.c.obj
 
 .PHONY : usb_bulk_buffer.obj
@@ -2240,6 +2267,9 @@ help:
 	@echo "... usb_api_transceiver.obj"
 	@echo "... usb_api_transceiver.i"
 	@echo "... usb_api_transceiver.s"
+	@echo "... usb_api_wieker.obj"
+	@echo "... usb_api_wieker.i"
+	@echo "... usb_api_wieker.s"
 	@echo "... usb_bulk_buffer.obj"
 	@echo "... usb_bulk_buffer.i"
 	@echo "... usb_bulk_buffer.s"

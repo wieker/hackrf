@@ -16,7 +16,7 @@ module top(
     end
 
     assign led1 = led1_reg[23];
-    assign led2 = ~led1_reg[23];
+    assign led2 = ~led1_reg[21];
     assign led3 = led1_reg[22];
 
 endmodule

@@ -1964,6 +1964,10 @@
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
 		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/usb_api_wieker.c.obj">
+			<Option target="om13088ul_usb_dfu.elf"/>
+			<Option target="om13088ul_usb.elf"/>
+		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/CMakeFiles/om13088ul_usb_objects.dir/usb_bulk_buffer.c.obj">
 			<Option target="om13088ul_usb_dfu.elf"/>
 			<Option target="om13088ul_usb.elf"/>
@@ -2038,6 +2042,12 @@
 			<Option target="om13088ul_usb_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/usb_api_transceiver.h">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/usb_api_wieker.c">
+			<Option target="om13088ul_usb_objects"/>
+		</Unit>
+		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/usb_api_wieker.h">
 			<Option target="om13088ul_usb_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/om13088ul_usb/usb_bulk_buffer.c">

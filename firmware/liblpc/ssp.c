@@ -490,6 +490,12 @@ uint8_t *spi_flash_erase(uint32_t addr) {
     return Rx_Buf + 4;
 }
 
+uint8_t *spi_flash_erase_all() {
+    Tx_Buf[0] = 0xC7;
+    spi_send(1, 0, 1);
+    return Rx_Buf + 4;
+}
+
 void delay(uint32_t duration);
 
 uint8_t *spi_flash_wait() {

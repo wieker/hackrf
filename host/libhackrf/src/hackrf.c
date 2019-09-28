@@ -81,6 +81,7 @@ typedef enum {
 	HACKRF_VENDOR_REQUEST_OPERACAKE_SET_RANGES = 31,
     HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_WRITE = 32,
     HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_READ = 33,
+    HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_ERASE = 34,
 } hackrf_vendor_request;
 
 #define USB_CONFIG_STANDARD 0x1
@@ -2050,6 +2051,32 @@ int ADDCALL custom_wieker_spi_write(hackrf_device* device, uint32_t addr, uint32
             0
     );
     printf("there\n");
+
+    if( result != 0 )
+    {
+        last_libusb_error = result;
+        return HACKRF_ERROR_LIBUSB;
+    } else {
+        return HACKRF_SUCCESS;
+    }
+}
+
+int ADDCALL custom_wieker_spi_erase(hackrf_device* device)
+{
+    int result;
+
+    int i;
+
+    result = libusb_control_transfer(
+            device->usb_device,
+            LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
+            HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_ERASE,
+            0,
+            0,
+            NULL,
+            0,
+            0
+    );
 
     if( result != 0 )
     {
