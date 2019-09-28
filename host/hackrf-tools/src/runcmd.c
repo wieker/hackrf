@@ -61,10 +61,7 @@ int main(int argc, char** argv) {
     custom_wieker_spi_read(device, 0x10, 0x10, buf);
     custom_wieker_spi_read(device, 0x08, 0x10, buf);
 
-    custom_wieker_spi_write(device, 0, 0);
-
-
-    /*FILE *f = fopen("spidump-erase", "wb");
+    FILE *f = fopen("spidump-erased", "wb");
     int read_size = 32220;
     int addr;
     for (addr = 0; addr < read_size; addr += 100) {
@@ -73,7 +70,18 @@ int main(int argc, char** argv) {
         usleep(1000);
         fwrite(buffer, read_size - addr > 100 ? 100 : read_size - addr, 1, f);
     }
-    fclose(f);*/
+    fclose(f);
+
+
+    f = fopen("spidump", "rb");
+    read_size = 32220;
+    for (addr = 0; addr < read_size; addr += 16) {
+        int new_len = read_size - addr > 16 ? 16 : read_size - addr;
+        fread(buf, new_len, 1, f);
+        custom_wieker_spi_write(device, addr, new_len, buf);
+        usleep(1000);
+    }
+    fclose(f);
 
     result = hackrf_board_id_read(device, &board_id);
     if (result != HACKRF_SUCCESS) {

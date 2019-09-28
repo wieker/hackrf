@@ -2027,21 +2027,26 @@ int ADDCALL custom_wieker_spi_read(hackrf_device* device, uint32_t addr, uint32_
     }
 }
 
-int ADDCALL custom_wieker_spi_write(hackrf_device* device, uint16_t register_number, uint16_t value)
+int ADDCALL custom_wieker_spi_write(hackrf_device* device, uint32_t addr, uint32_t len, uint8_t* buf)
 {
     int result;
-    printf("there 2\n");
 
-    unsigned char data[3] = {0xAA, 0x0B, 0x01, 0x00};
-    printf("there 3\n");
+    int i;
+    printf("Sending:\n");
+
+    for (i = 0; i < len; i ++) {
+        printf("%x ", (uint8_t) buf[i]);
+    }
+    printf("\n");
+
     result = libusb_control_transfer(
             device->usb_device,
             LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
             HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_WRITE,
-            value,
-            register_number,
-            data,
-            3,
+            addr >> 16,
+            addr & 0xFFFF,
+            buf,
+            len,
             0
     );
     printf("there\n");

@@ -455,7 +455,14 @@ int main_ssp(void)
 }
 
 uint8_t *spi_flash_write(uint32_t addr, uint32_t len, uint8_t* data) {
-    con_print_data(data, len);
+    Tx_Buf[0] = 0x02;
+    Tx_Buf[1] = (addr >> 16) & 0xff;
+    Tx_Buf[2] = (addr >> 8) & 0xff;;
+    Tx_Buf[3] = (addr >> 0) & 0xff;;
+    for (int i = 4; i < 4 + len; i ++) {
+        Tx_Buf[i] = data[i - 4];
+    }
+    spi_send(4 + len, 0, 1);
     return Rx_Buf + 4;
 }
 

@@ -125,26 +125,21 @@ usb_request_status_t usb_vendor_request_custom_wieker_spi_write(
         const usb_transfer_stage_t stage
 ) {
     if( stage == USB_TRANSFER_STAGE_SETUP ) {
-        if( endpoint->setup.index < 256 ) {
-            if( endpoint->setup.value < 256 ) {
-
-                addr = (endpoint->setup.value << 16) | endpoint->setup.index;
-                len = endpoint->setup.length;
-                usb_transfer_schedule_block(endpoint->out, bufA1, len,
-                                            NULL, NULL);
-                return USB_REQUEST_STATUS_OK;
-            }
-        }
-        return USB_REQUEST_STATUS_STALL;
+        addr = (endpoint->setup.value << 16) | endpoint->setup.index;
+        len = endpoint->setup.length;
+        usb_transfer_schedule_block(endpoint->out, bufA1, len,
+                                    NULL, NULL);
+        return USB_REQUEST_STATUS_OK;
     } else if (stage == USB_TRANSFER_STAGE_DATA) {
+        //spi_flash_we();
+        //spi_flash_wait();
+        //spi_flash_we();
+        //spi_flash_wait();
         spi_flash_we();
-        spi_flash_wait();
-        spi_flash_we();
-        spi_flash_wait();
-        spi_flash_we();
-        spi_flash_erase(0x00);
+        //spi_flash_erase(0x00);
         spi_flash_wait();
         spi_flash_write(addr, len, bufA1);
+        spi_flash_wait();
         usb_transfer_schedule_ack(endpoint->in);
     } else {
         return USB_REQUEST_STATUS_OK;
