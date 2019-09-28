@@ -479,7 +479,7 @@ uint8_t *spi_flash_erase(uint32_t addr) {
     Tx_Buf[1] = (addr >> 16) & 0xff;
     Tx_Buf[2] = (addr >> 8) & 0xff;;
     Tx_Buf[3] = (addr >> 0) & 0xff;;
-    spi_send(4, 1, 0);
+    spi_send(4, 0, 1);
     return Rx_Buf + 4;
 }
 
@@ -496,7 +496,6 @@ uint8_t *spi_flash_wait() {
             return Rx_Buf + 1;
         }
         DEBUGOUT(".\r\n");
-        delay(10000);
     }
 }
 
