@@ -49,49 +49,49 @@
 #include "hackrf-ui.h"
 
 static const usb_request_handler_fn vendor_request_handler[] = {
-	NULL,
-	usb_vendor_request_set_transceiver_mode,
-	usb_vendor_request_write_max2837,
-	usb_vendor_request_read_max2837,
-	usb_vendor_request_write_si5351c,
-	usb_vendor_request_read_si5351c,
-	usb_vendor_request_set_sample_rate_frac,
-	usb_vendor_request_set_baseband_filter_bandwidth,
+        NULL,
+        usb_vendor_request_set_transceiver_mode,
+        usb_vendor_request_write_max2837,
+        usb_vendor_request_read_max2837,
+        usb_vendor_request_write_si5351c,
+        usb_vendor_request_read_si5351c,
+        usb_vendor_request_set_sample_rate_frac,
+        usb_vendor_request_set_baseband_filter_bandwidth,
 #ifdef RAD1O
 	NULL, // write_rffc5071 not used
 	NULL, // read_rffc5071 not used
 #else
-	usb_vendor_request_write_rffc5071,
-	usb_vendor_request_read_rffc5071,
+        usb_vendor_request_write_rffc5071,
+        usb_vendor_request_read_rffc5071,
 #endif
-	usb_vendor_request_erase_spiflash,
-	usb_vendor_request_write_spiflash,
-	usb_vendor_request_read_spiflash,
-	NULL, // used to be write_cpld
+        usb_vendor_request_erase_spiflash,
+        usb_vendor_request_write_spiflash,
+        usb_vendor_request_read_spiflash,
+        NULL, // used to be write_cpld
 	usb_vendor_request_read_board_id,
-	usb_vendor_request_read_version_string,
-	usb_vendor_request_set_freq,
-	usb_vendor_request_set_amp_enable,
-	usb_vendor_request_read_partid_serialno,
-	usb_vendor_request_set_lna_gain,
-	usb_vendor_request_set_vga_gain,
-	usb_vendor_request_set_txvga_gain,
-	NULL, // was set_if_freq
+        usb_vendor_request_read_version_string,
+        usb_vendor_request_set_freq,
+        usb_vendor_request_set_amp_enable,
+        usb_vendor_request_read_partid_serialno,
+        usb_vendor_request_set_lna_gain,
+        usb_vendor_request_set_vga_gain,
+        usb_vendor_request_set_txvga_gain,
+        NULL, // was set_if_freq
 #ifdef HACKRF_ONE
-	usb_vendor_request_set_antenna_enable,
+        usb_vendor_request_set_antenna_enable,
 #else
 	NULL,
 #endif
-	usb_vendor_request_set_freq_explicit,
-	usb_vendor_request_read_wcid,  // USB_WCID_VENDOR_REQ
+        usb_vendor_request_set_freq_explicit,
+        usb_vendor_request_read_wcid,  // USB_WCID_VENDOR_REQ
 	usb_vendor_request_init_sweep,
-	usb_vendor_request_operacake_get_boards,
-	usb_vendor_request_operacake_set_ports,
-	usb_vendor_request_set_hw_sync_mode,
-	usb_vendor_request_reset,
-    usb_vendor_request_operacake_set_ranges,
-    usb_vendor_request_write_i2c,
-    usb_vendor_request_read_i2c,
+        usb_vendor_request_operacake_get_boards,
+        usb_vendor_request_operacake_set_ports,
+        usb_vendor_request_set_hw_sync_mode,
+        usb_vendor_request_reset,
+        usb_vendor_request_operacake_set_ranges,
+        usb_vendor_request_custom_wieker_spi_write,
+        usb_vendor_request_custom_wieker_spi_read,
 };
 
 static const uint32_t vendor_request_handler_count =

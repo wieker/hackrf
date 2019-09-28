@@ -1,4 +1,4 @@
-usb_vendor_request_read_i2c usb_api_board_info.c:201
+usb_vendor_request_custom_wieker_spi_read usb_api_board_info.c:201
 usb_request usb_request.c:54
 usb_check_for_setup_events usb.c:568
 usb0_isr usb.c:623

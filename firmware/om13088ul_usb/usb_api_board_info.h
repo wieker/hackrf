@@ -41,11 +41,11 @@ usb_request_status_t usb_vendor_request_read_partid_serialno(
 	usb_endpoint_t* const endpoint, const usb_transfer_stage_t stage);
 usb_request_status_t usb_vendor_request_reset(
 	usb_endpoint_t* const endpoint, const usb_transfer_stage_t stage);
-usb_request_status_t usb_vendor_request_write_i2c(
+usb_request_status_t usb_vendor_request_custom_wieker_spi_write(
         usb_endpoint_t* const endpoint,
         const usb_transfer_stage_t stage
 );
-usb_request_status_t usb_vendor_request_read_i2c(
+usb_request_status_t usb_vendor_request_custom_wieker_spi_read(
         usb_endpoint_t* const endpoint,
         const usb_transfer_stage_t stage
 );

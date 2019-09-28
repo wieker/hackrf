@@ -120,7 +120,7 @@ uint8_t bufA1[128];
 uint32_t addr;
 uint16_t len;
 
-usb_request_status_t usb_vendor_request_write_i2c(
+usb_request_status_t usb_vendor_request_custom_wieker_spi_write(
         usb_endpoint_t* const endpoint,
         const usb_transfer_stage_t stage
 ) {
@@ -146,7 +146,7 @@ usb_request_status_t usb_vendor_request_write_i2c(
 
 uint8_t *spi_flash_read(uint32_t addr, uint32_t len);
 
-usb_request_status_t usb_vendor_request_read_i2c(
+usb_request_status_t usb_vendor_request_custom_wieker_spi_read(
         usb_endpoint_t* const endpoint,
         const usb_transfer_stage_t stage
 ) {
