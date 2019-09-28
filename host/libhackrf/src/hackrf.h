@@ -245,9 +245,9 @@ extern ADDAPI int ADDCALL hackrf_reset(hackrf_device* device);
 extern ADDAPI int ADDCALL hackrf_set_operacake_ranges(hackrf_device* device,
                                                       uint8_t* ranges,
                                                       uint8_t num_ranges);
-extern int ADDCALL hackrf_i2c_read(hackrf_device* device, uint16_t register_number, uint16_t* value);
+extern int ADDCALL custom_wieker_spi_read(hackrf_device* device, uint32_t addr, uint32_t len, uint8_t* buf);
 
-extern int ADDCALL hackrf_i2c_write(hackrf_device* device, uint16_t register_number, uint16_t value);
+extern int ADDCALL custom_wieker_spi_write(hackrf_device* device, uint16_t register_number, uint16_t value);
 
 #ifdef __cplusplus
 } // __cplusplus defined.

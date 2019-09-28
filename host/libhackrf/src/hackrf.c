@@ -79,8 +79,8 @@ typedef enum {
 	HACKRF_VENDOR_REQUEST_SET_HW_SYNC_MODE = 29,
 	HACKRF_VENDOR_REQUEST_RESET = 30,
 	HACKRF_VENDOR_REQUEST_OPERACAKE_SET_RANGES = 31,
-    HACKRF_VENDOR_REQUEST_I2C_WRITE = 32,
-    HACKRF_VENDOR_REQUEST_I2C_READ = 33,
+    HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_WRITE = 32,
+    HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_READ = 33,
 } hackrf_vendor_request;
 
 #define USB_CONFIG_STANDARD 0x1
@@ -1996,29 +1996,27 @@ int ADDCALL hackrf_set_operacake_ranges(hackrf_device* device, uint8_t* ranges, 
 
 
 
-int ADDCALL hackrf_i2c_read(hackrf_device* device, uint16_t register_number, uint16_t* value)
+int ADDCALL custom_wieker_spi_read(hackrf_device* device, uint32_t addr, uint32_t len, uint8_t* buf)
 {
     int result;
 
-    char buf[256];
     int i;
 
     result = libusb_control_transfer(
             device->usb_device,
             LIBUSB_ENDPOINT_IN | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
-            HACKRF_VENDOR_REQUEST_I2C_READ,
-            0,
-            0,
+            HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_READ,
+            addr >> 16,
+            addr & 0xFFFF,
             buf,
-            100,
+            len,
             0
     );
 
-    for (i = 0; i < 100; i ++) {
+    for (i = 0; i < len; i ++) {
         printf("%x ", (uint8_t) buf[i]);
     }
     printf("\n");
-    *value = buf[8];
 
     if (result < 1)
     {
@@ -2029,7 +2027,7 @@ int ADDCALL hackrf_i2c_read(hackrf_device* device, uint16_t register_number, uin
     }
 }
 
-int ADDCALL hackrf_i2c_write(hackrf_device* device, uint16_t register_number, uint16_t value)
+int ADDCALL custom_wieker_spi_write(hackrf_device* device, uint16_t register_number, uint16_t value)
 {
     int result;
 
@@ -2047,7 +2045,7 @@ int ADDCALL hackrf_i2c_write(hackrf_device* device, uint16_t register_number, ui
     result = libusb_control_transfer(
             device->usb_device,
             LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_VENDOR | LIBUSB_RECIPIENT_DEVICE,
-            HACKRF_VENDOR_REQUEST_I2C_WRITE,
+            HACKRF_VENDOR_REQUEST_CUSTOM_WIEKER_SPI_WRITE,
             value,
             register_number,
             data,

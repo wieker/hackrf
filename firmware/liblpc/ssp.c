@@ -459,9 +459,9 @@ uint8_t *spi_flash_write(uint32_t addr, uint32_t len, uint8_t* data) {
 
 uint8_t *spi_flash_read(uint32_t addr, uint32_t len) {
     Tx_Buf[0] = 0x03;
-    Tx_Buf[1] = 0x00;
-    Tx_Buf[2] = 0x00;
-    Tx_Buf[3] = 0x00;
+    Tx_Buf[1] = (addr << 16) & 0xff;
+    Tx_Buf[2] = (addr << 8) & 0xff;;
+    Tx_Buf[3] = (addr << 0) & 0xff;;
     spi_send(4, len);
     return Rx_Buf + 4;
 }
