@@ -22,27 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_wieker.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_wieker.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_m0.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_m0.elf.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/blinky/CMakeFiles/blinky_objects.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/hackrf_firmware_all.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/hackrf_firmware_all.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/ssp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/liblpc/ssp_general.h" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/liblpc/ssp_general.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/hackrf_usb.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/om13088ul_usb.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/om13088ul_usb.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.h" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/om13088ul_usb/usb_api_board_info.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/runcmd.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/runcmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/hackrf.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/hackrf.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/libhackrf.so.0.5.0" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/libhackrf.so.0.5.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" beforeDir="false" afterPath="$PROJECT_DIR$/hackrf-tools/src/runcmd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libhackrf/src/hackrf.c" beforeDir="false" afterPath="$PROJECT_DIR$/libhackrf/src/hackrf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libhackrf/src/hackrf.h" beforeDir="false" afterPath="$PROJECT_DIR$/libhackrf/src/hackrf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +175,7 @@
       <workItem from="1569357956361" duration="2861000" />
       <workItem from="1569559731501" duration="5643000" />
       <workItem from="1569652342732" duration="8159000" />
-      <workItem from="1569711078003" duration="250000" />
+      <workItem from="1569711078003" duration="1300000" />
     </task>
     <servers />
   </component>
