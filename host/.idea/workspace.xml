@@ -22,7 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hardware/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard.kicad_pcb" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard.kicad_pcb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +175,7 @@
       <workItem from="1569357956361" duration="2861000" />
       <workItem from="1569559731501" duration="5643000" />
       <workItem from="1569652342732" duration="8159000" />
-      <workItem from="1569711078003" duration="1300000" />
+      <workItem from="1569711078003" duration="1667000" />
     </task>
     <servers />
   </component>
