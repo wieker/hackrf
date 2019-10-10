@@ -9,10 +9,10 @@
       <config projectName="HackRF" targetName="hackrf_transfer" />
       <config projectName="HackRF" targetName="hackrf_sweep" />
       <config projectName="HackRF" targetName="hackrf-static" />
-      <config projectName="HackRF" targetName="hackrf_debug" />
+      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
       <config projectName="HackRF" targetName="runcmd" />
       <config projectName="HackRF" targetName="uninstall" />
-      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
+      <config projectName="HackRF" targetName="hackrf_debug" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -22,7 +22,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../hardware/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard.kicad_pcb" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard/ice40HX1Kboard.kicad_pcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k/io.pcf" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k/io.pcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k/top.v" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k/top.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hardware/SRAMboard/SRAMboard/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/SRAMboard/SRAMboard/fp-info-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spidump" beforeDir="false" afterPath="$PROJECT_DIR$/spidump" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +180,8 @@
       <workItem from="1569357956361" duration="2861000" />
       <workItem from="1569559731501" duration="5643000" />
       <workItem from="1569652342732" duration="8159000" />
-      <workItem from="1569711078003" duration="1667000" />
+      <workItem from="1569711078003" duration="1907000" />
+      <workItem from="1570722485575" duration="1209000" />
     </task>
     <servers />
   </component>
