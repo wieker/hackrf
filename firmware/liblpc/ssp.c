@@ -418,26 +418,7 @@ int main_ssp(void)
 
 
     while (1) {
-        int key = getMenu();
-
         DEBUGOUT("SPI enter\r\n");
-
-        switch (key) {
-            case '1': {
-                Chip_SSP_SetMaster(LPC_SSP, 1);
-                DEBUGOUT("SPI master\r\n");
-                break;
-            }
-            case '2': {
-                Chip_SSP_SetMaster(LPC_SSP, 0);
-                DEBUGOUT("SPI slave\r\n");
-                break;
-            }
-            case 'q':
-                return 0;
-            default:
-                continue;
-        }
 
         spi_wake_up();
 
@@ -445,14 +426,20 @@ int main_ssp(void)
 
         spi_flash_read(0, 20);
 
-        break;
+        int key = getMenu();
+        switch (key) {
+            case 'q':
+                goto there;
+            default:
+                continue;
+        }
     }
 
+    there: ;
 
     spi_deinit();
 
     ice40_release();
-
 
     return 0;
 }
