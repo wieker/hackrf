@@ -404,6 +404,8 @@ static void con_print_data(const uint8_t *dat, int sz)
     DEBUGOUT("\r\n");
 }
 
+void spi_read_id();
+
 /**
  * @brief	Main routine for SSP example
  * @return	Nothing
@@ -437,8 +439,9 @@ int main_ssp(void)
                 continue;
         }
 
-        Tx_Buf[0] = 0x9F;
-        spi_send(1, 20, 0);
+        spi_wake_up();
+
+        spi_read_id();
 
         spi_flash_read(0, 20);
 
@@ -452,6 +455,16 @@ int main_ssp(void)
 
 
     return 0;
+}
+
+void spi_read_id() {
+    Tx_Buf[0] = 0x9F;
+    spi_send(1, 20, 0);
+}
+
+void spi_wake_up() {
+    Tx_Buf[0] = 0xAB;
+    spi_send(1, 20, 0);
 }
 
 uint8_t *spi_flash_write(uint32_t addr, uint32_t len, uint8_t* data) {

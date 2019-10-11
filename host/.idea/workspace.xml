@@ -22,12 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k/io.pcf" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k/io.pcf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k/top.v" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k/top.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hardware/SRAMboard/SRAMboard/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/SRAMboard/SRAMboard/fp-info-cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spidump" beforeDir="false" afterPath="$PROJECT_DIR$/spidump" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

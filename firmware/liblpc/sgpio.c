@@ -35,9 +35,9 @@ static void con_print_data(const uint8_t *dat, int sz)
 
 void sgpio_main() {
     DEBUGOUT("SGPIO init entry\r\n");
-    Chip_SCU_PinMuxSet(1, 2, (SCU_PINIO_FAST |  SCU_MODE_FUNC3));
-    Chip_SCU_PinMuxSet(1, 3, (SCU_PINIO_FAST |  SCU_MODE_FUNC2));
-    Chip_SCU_PinMuxSet(1, 4, (SCU_PINIO_FAST |  SCU_MODE_FUNC2));
+    Chip_SCU_PinMuxSet(1, 2, (SCU_PINIO_FAST |  SCU_MODE_FUNC3)); //CS
+    Chip_SCU_PinMuxSet(1, 3, (SCU_PINIO_FAST |  SCU_MODE_FUNC2)); // DATA
+    Chip_SCU_PinMuxSet(1, 4, (SCU_PINIO_FAST |  SCU_MODE_FUNC2)); //CLK
 
     Chip_Clock_Enable(CLK_BASE_PERIPH);
     Chip_Clock_Enable(CLK_PERIPH_SGPIO);
@@ -62,7 +62,7 @@ void sgpio_main() {
     LPC_SGPIO->SLICE_MUX_CFG[6] =
             (1L <<  8) |    // INV_QUALIFIER = 0 (use normal qualifier)
             (0L <<  6) |    // PARALLEL_MODE = 0 (shift 1 bit per clock)
-            (0L <<  4) |    // DATA_CAPTURE_MODE = 0 (detect rising edge)
+            (1L <<  4) |    // DATA_CAPTURE_MODE = 0 (detect rising edge)
             (0L <<  3) |    // INV_OUT_CLK = 0 (normal clock)
             (1L <<  2) |    // CLKGEN_MODE = 0 (use clock from COUNTER)
             (0L <<  1) |    // CLK_CAPTURE_MODE = 0 (use rising clock edge)
@@ -96,6 +96,9 @@ void sgpio_isr() {
 
 void sgpio_isr_custom() {
     LPC_SGPIO->CTR_STATUS_1 = (1 << 6);
+    if (sgpio_buffer_offset > BUFFER_LEN) {
+        return;
+    }
 
     uint32_t* const p = (uint32_t*)&sgpio_buffer[sgpio_buffer_offset];
     __asm__(
@@ -108,5 +111,5 @@ void sgpio_isr_custom() {
     [p] "l" (p)
     : "r0"
     );
-    sgpio_buffer_offset = (sgpio_buffer_offset + 4) & sgpio_buffer_mask;
+    sgpio_buffer_offset = (sgpio_buffer_offset + 4);
 }
