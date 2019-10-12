@@ -1,4 +1,4 @@
-update=29.09.2019 12:49:35
+update=Sat 12 Oct 2019 03:44:13 PM EEST
 version=1
 last_client=kicad
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=ice40HX1Kboard.net
+LastNetListRead=HX1KADCboard.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -64,7 +64,7 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.05
+SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
 SolderPasteRatio=-0

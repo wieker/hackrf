@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name ice40HX1Kboard-rescue)(type Legacy)(uri ${KIPRJMOD}/ice40HX1Kboard-rescue.lib)(options "")(descr ""))
-)
