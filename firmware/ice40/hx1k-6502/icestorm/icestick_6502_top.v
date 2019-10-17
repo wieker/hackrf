@@ -15,7 +15,7 @@ module icestick_6502_top(
 	initial
         reset_cnt <= 8'h00;
 
-    ringoscillator #(.DELAY_LUTS(200)) rng(clk);
+    ringoscillator #(.DELAY_LUTS(20)) rng(clk);
     
 	always @(posedge clk)
 	begin
@@ -43,13 +43,5 @@ module icestick_6502_top(
 	);
     
 	// drive LEDs from GPIO
-	//assign {LED1} = gpio_o[7:7];
-
-    reg [20:0] counter;
-    always @(posedge clk)
-        begin
-            counter <= counter + 1;
-        end
-
-    assign LED1 = counter[20];
+	assign {LED1} = gpio_o[7:7];
 endmodule

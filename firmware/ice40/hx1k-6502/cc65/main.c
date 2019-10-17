@@ -34,10 +34,18 @@ int main()
     while(1)
     {
 		// delay
-		cnt = 1024L;
-		while(cnt--)
-		{
-		}
+        cnt = 1024L;
+        while(cnt--)
+        {
+        }
+        cnt = 1024L;
+        while(cnt--)
+        {
+        }
+        cnt = 1024L;
+        while(cnt--)
+        {
+        }
 		
         // write counter msbyte to GPIO
         GPIO_DATA = x;
