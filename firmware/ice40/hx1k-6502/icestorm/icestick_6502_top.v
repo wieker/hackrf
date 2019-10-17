@@ -1,21 +1,21 @@
+`include "../../common/ring.v"
+
 // icestick_6502_top.v - top level for tst_6502 on an icestick
 // 03-02-19 E. Brombaugh
 
 module icestick_6502_top(
 	input  RX,
 	output TX,
-	input  clk,
-	output LED1,
-	output LED2,
-	output LED3,
-	output LED4,
-	output LED5
+	output LED1
 );
 	// reset generator waits > 10us
 	reg [7:0] reset_cnt;
 	reg reset;
+    wire clk;
 	initial
         reset_cnt <= 8'h00;
+
+    ringoscillator #(.DELAY_LUTS(200)) rng(clk);
     
 	always @(posedge clk)
 	begin
@@ -43,5 +43,13 @@ module icestick_6502_top(
 	);
     
 	// drive LEDs from GPIO
-	assign {LED1,LED2,LED3,LED4,LED5} = gpio_o[7:3];
+	//assign {LED1} = gpio_o[7:7];
+
+    reg [20:0] counter;
+    always @(posedge clk)
+        begin
+            counter <= counter + 1;
+        end
+
+    assign LED1 = counter[20];
 endmodule

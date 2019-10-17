@@ -23,7 +23,7 @@ DEVICE = hx1k
 YOSYS = yosys
 NEXTPNR = nextpnr-ice40
 #NEXTPNR_ARGS = --pre-pack $(SDC) --ignore-loops
-NEXTPNR_ARGS = --pre-pack $(SDC)
+NEXTPNR_ARGS = --pre-pack $(SDC) --ignore-loops
 ICEPACK = icepack
 ICETIME = icetime
 ICEPROG = iceprog
@@ -44,7 +44,7 @@ $(FAKE_HEX):
 	$(YOSYS) -p 'synth_ice40 -top $(PROJ) -json $@' $(SRC)
 
 %.asc: %.json $(PIN_DEF) 
-	$(NEXTPNR) $(NEXTPNR_ARGS) --$(DEVICE) --json $< --pcf $(PIN_DEF) --asc $@
+	$(NEXTPNR) $(NEXTPNR_ARGS) --$(DEVICE) --package vq100 --json $< --pcf $(PIN_DEF) --asc $@
 
 $(REAL_HEX):
 	$(MAKE) -C ../cc65/
