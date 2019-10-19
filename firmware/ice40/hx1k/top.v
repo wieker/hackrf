@@ -3,7 +3,7 @@
 `include "../common/ring.v"
 
 module top(
-    output led3
+    output led1, led2, led3
 );
 
     wire clk;
@@ -19,6 +19,8 @@ module top(
             counter <= counter + 1;
         end
 
-    assign led3 = counter[20];
+    assign led1 = counter[20];
+    assign led2 = counter[19];
+    assign led3 = counter[18];
 
 endmodule
