@@ -3,7 +3,7 @@
 `include "../common/ring.v"
 
 module top(
-    output LED1,
+    output LED1, led2, led3,
     A0, A1, A2, A3, A4,
     A5, A6, A7, A8, A9,
     A10, A11, A12, A13, A14,
@@ -28,6 +28,8 @@ module top(
     assign OEn = 0;
     assign WEn = !sram_oe;
     assign LED1 = sram_din_r[0];
+    assign led2 = sram_din_r[1];
+    assign led3 = sram_din_r[2];
 
     assign sram_dout = sram_dout_r;
 
@@ -56,7 +58,7 @@ module top(
             counter <= counter + 1;
             if (counter[19] == 0) begin
                 sram_oe <= 1;
-                sram_dout_r <= (counter[18] == 0) ? 8'h 00 : 8'h ff;
+                sram_dout_r <= (counter[18] == 0) ? 8'h 55 : 8'h AA;
 
                 sram_din_r <= 0;
             end
@@ -72,8 +74,8 @@ module top(
 	) io_buf [7:0] (
 		.PACKAGE_PIN({D0, D1, D2, D3, D4, D5, D6, D7}),
 		.OUTPUT_ENABLE({sram_oe, sram_oe, sram_oe, sram_oe, sram_oe, sram_oe, sram_oe, sram_oe}),
-		.D_OUT_0({sram_din[0], sram_din[1], sram_din[2], sram_din[3], sram_din[4], sram_din[5], sram_din[6], sram_din[7]}),
-		.D_IN_0({sram_dout[0], sram_dout[1], sram_dout[2], sram_dout[3], sram_dout[4], sram_dout[5], sram_dout[6], sram_dout[7]})
+		.D_IN_0({sram_din[0], sram_din[1], sram_din[2], sram_din[3], sram_din[4], sram_din[5], sram_din[6], sram_din[7]}),
+		.D_OUT_0({sram_dout[0], sram_dout[1], sram_dout[2], sram_dout[3], sram_dout[4], sram_dout[5], sram_dout[6], sram_dout[7]})
 	);
 
 endmodule
