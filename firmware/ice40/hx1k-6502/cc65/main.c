@@ -46,6 +46,8 @@ int main()
         while(cnt--)
         {
         }
+        acia_tx_str(txt_buf);
+        acia_tx_str("\n\r");
 		
         // write counter msbyte to GPIO
         GPIO_DATA = x;
