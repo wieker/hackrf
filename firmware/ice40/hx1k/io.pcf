@@ -1,3 +1,5 @@
 set_io led1 51
 set_io led2 52
 set_io led3 53
+set_io tx 54
+set_io rx 56
