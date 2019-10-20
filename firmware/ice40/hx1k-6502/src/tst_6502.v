@@ -42,10 +42,25 @@ module tst_6502(
 	assign sram_oe = (CPU_WE == 1'b1) && (p0 == 1'b1);
 	assign addr = CPU_AB;
 	assign sram_dout = CPU_DO;
-	assign sram_din = CPU_DI;
 
-	// GPIO @ page 10-1f
-	reg [7:0] gpio_do;
 	always @(posedge clk)
 	    gpio_o <= addr[0:7];
+
+	// ROM @ pages f0,f1...
+    reg [7:0] rom_mem[4095:0];
+	reg [7:0] rom_do;
+	initial
+        $readmemh("rom.hex",rom_mem);
+	always @(posedge clk)
+		rom_do <= rom_mem[CPU_AB[11:0]];
+
+	// data mux
+	reg [3:0] mux_sel;
+	always @(posedge clk)
+		mux_sel <= CPU_AB[15:12];
+	always @(*)
+		casez(mux_sel)
+			4'h0: CPU_DI = sram_din;
+			default: CPU_DI = rom_do;
+		endcase
 endmodule
