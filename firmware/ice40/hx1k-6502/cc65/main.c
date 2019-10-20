@@ -23,31 +23,17 @@ int main()
 	for(i=0;i<26;i++)
 		txt_buf[i] = 'A'+i;
 	txt_buf[i] = 0;
-	acia_tx_str(txt_buf);
-	acia_tx_str("\n\r");
+	//acia_tx_str(txt_buf);
+	//acia_tx_str("\n\r");
 	
 	// enable ACIA IRQ for serial echo in background
-	ACIA_CTRL = 0x80;
+	//ACIA_CTRL = 0x80;
 	asm("CLI");
 	
     // Run forever with GPIO blink
     while(1)
     {
 		// delay
-        cnt = 1024L;
-        while(cnt--)
-        {
-        }
-        cnt = 1024L;
-        while(cnt--)
-        {
-        }
-        cnt = 1024L;
-        while(cnt--)
-        {
-        }
-        acia_tx_str(txt_buf);
-        acia_tx_str("\n\r");
 		
         // write counter msbyte to GPIO
         GPIO_DATA = x;
