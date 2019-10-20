@@ -44,7 +44,7 @@ module tst_6502(
 	assign sram_dout = CPU_DO;
 
 	always @(posedge clk)
-	    gpio_o <= addr[0:7];
+	    gpio_o <= addr[14:7];
 
 	// ROM @ pages f0,f1...
     reg [7:0] rom_mem[4095:0];
