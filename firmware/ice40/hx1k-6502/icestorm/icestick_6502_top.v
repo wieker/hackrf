@@ -15,7 +15,7 @@ module icestick_6502_top(
 	initial
         reset_cnt <= 8'h00;
 
-    ringoscillator #(.DELAY_LUTS(20)) rng(clk);
+    ringoscillator #(.DELAY_LUTS(200)) rng(clk);
     
 	always @(posedge clk)
 	begin
