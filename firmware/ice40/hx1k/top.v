@@ -10,10 +10,12 @@ module top(
     reg [20:0] counter;
     wire [21:0] next = counter + 1;
 
-    wire tmp;
+    wire tmp, tmp2;
     reg [7:0] dt = 8'h3f;
     wire [7:0] dtwire;
     wire int;
+    reg [7:0] cmd = 0;
+    reg [2:0] leds = 0;
 
     ringoscillator #(.DELAY_LUTS(200)) rng(clk);
 
@@ -24,13 +26,23 @@ module top(
             counter <= next;
             if (int)
                 dt <= dtwire;
+            if (int)
+                cmd <= dtwire;
+            else
+                cmd <= 0;
         end
 
-    assign led1 = next[20];
-    assign led2 = next[19];
+    assign led1 = leds[0];
+    assign led2 = leds[1];
+    assign led3 = leds[2];
 
-    uart_tx uart_tx(clk, 1, next[21], dt, tmp, led3);
+    uart_tx uart_tx(clk, 1, next[21], dt, tmp, tmp2);
     uart_rx uart_rx(clk, 1, rx, int, dtwire);
     assign tx = tmp;
+    always @(posedge clk)
+        begin
+            if (cmd == 8'h3f)
+                leds[0] <= 1;
+        end
 
 endmodule
