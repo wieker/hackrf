@@ -11,7 +11,7 @@
 
 unsigned long cnt;
 unsigned char x = 0;
-char txt_buf[32];
+char *txt_buf = &SRAM_DATA;
 unsigned long i;
 
 int main()

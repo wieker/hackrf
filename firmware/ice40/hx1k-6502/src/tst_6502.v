@@ -37,7 +37,12 @@ module tst_6502(
 	wire p0 = (CPU_AB[15:12] == 4'h0) ? 1 : 0;
 	wire p1 = (CPU_AB[15:12] == 4'h1) ? 1 : 0;
 	wire p2 = (CPU_AB[15:12] == 4'h2) ? 1 : 0;
+	wire p3 = (CPU_AB[15:12] == 4'h3) ? 1 : 0;
 	wire pf = (CPU_AB[15:12] == 4'hf) ? 1 : 0;
+
+	assign addr = CPU_AB;
+	assign sram_oe = (CPU_WE == 1'b1) && (p3 == 1'b1);
+	assign sram_dout = CPU_DO;
 	
 	// RAM @ pages 00-0f
 	reg [7:0] ram_mem[4095:0];
@@ -88,6 +93,7 @@ module tst_6502(
 			4'h0: CPU_DI = ram_do;
 			4'h1: CPU_DI = gpio_do;
 			4'h2: CPU_DI = acia_do;
+			4'h2: CPU_DI = sram_din;
 			4'hf: CPU_DI = rom_do;
 			default: CPU_DI = rom_do;
 		endcase
