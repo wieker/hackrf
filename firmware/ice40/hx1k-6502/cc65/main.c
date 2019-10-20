@@ -22,7 +22,7 @@ int main()
 	// test some C stuff
 	for(i=0;i<26;i++)
 		txt_buf[i] = 'A'+i;
-	txt_buf[i] = 0;
+	//txt_buf[i] = 0;
 	acia_tx_str(txt_buf);
 	acia_tx_str("\n\r");
 	

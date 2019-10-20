@@ -76,7 +76,12 @@ module icestick_6502_top(
 		.gpio_i(gpio_i),
 		
 		.RX(RX),
-		.TX(TX)
+		.TX(TX),
+
+		.sram_oe(sram_oe),
+		.sram_din(sram_din),
+		.sram_dout(sram_dout),
+		.addr(addr),
 	);
     
 	// drive LEDs from GPIO
