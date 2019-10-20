@@ -21,7 +21,7 @@ module tst_6502(
     reg [7:0] CPU_DI;
     wire [7:0] CPU_DO;
     wire CPU_WE, CPU_IRQ;
-    cpu ucpu(
+    core ucpu(
         .clk(clk),
         .reset(reset),
         .AB(CPU_AB),

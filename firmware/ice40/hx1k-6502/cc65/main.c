@@ -26,7 +26,7 @@ int main()
 	//asm("CLI");
 	
     // Run forever with GPIO blink
-    while(1)
+    //while(1)
     {
 		// delay
 		
