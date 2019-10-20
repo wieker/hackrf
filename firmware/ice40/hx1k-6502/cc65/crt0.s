@@ -22,8 +22,7 @@
 ; ---------------------------------------------------------------------------
 ; A little light 6502 housekeeping
 
-_init:    JMP     $1000
-          LDX     #$FF                 ; Initialize stack pointer to $01FF
+_init:    LDX     #$FF                 ; Initialize stack pointer to $01FF
           TXS
           CLD                          ; Clear decimal mode
 

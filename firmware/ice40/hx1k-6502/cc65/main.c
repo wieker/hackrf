@@ -9,31 +9,49 @@
 #include "fpga.h"
 #include "acia.h"
 
+unsigned long cnt;
+unsigned char x = 0;
+char txt_buf[32];
+unsigned long i;
+
 int main()
 {
 	// Send startup message
-	//acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
+	acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
 	
 	// test some C stuff
-	//for(i=0;i<26;i++)
-	//	txt_buf[i] = 'A'+i;
-	//txt_buf[i] = 0;
-	//acia_tx_str(txt_buf);
-	//acia_tx_str("\n\r");
+	for(i=0;i<26;i++)
+		txt_buf[i] = 'A'+i;
+	txt_buf[i] = 0;
+	acia_tx_str(txt_buf);
+	acia_tx_str("\n\r");
 	
 	// enable ACIA IRQ for serial echo in background
-	//ACIA_CTRL = 0x80;
-	//asm("CLI");
+	ACIA_CTRL = 0x80;
+	asm("CLI");
 	
     // Run forever with GPIO blink
-    //while(1)
+    while(1)
     {
 		// delay
+        cnt = 1024L;
+        while(cnt--)
+        {
+        }
+        cnt = 1024L;
+        while(cnt--)
+        {
+        }
+        cnt = 1024L;
+        while(cnt--)
+        {
+        }
+        acia_tx_str(txt_buf);
+        acia_tx_str("\n\r");
 		
         // write counter msbyte to GPIO
-        //GPIO_DATA = 0;
-        //GPIO_DATA = 0xff;
-        //x++;
+        GPIO_DATA = x;
+        x++;
     }
 
     //  We should never get here!
