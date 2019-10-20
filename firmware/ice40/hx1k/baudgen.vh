@@ -13,7 +13,7 @@
 //-----------------------------------------------------------------------------------
 
 //-- Constants for obtaining standard BAURATES:
-`define B115200 26
+`define B115200 28
 `define B57600  208
 `define B38400  313
 
