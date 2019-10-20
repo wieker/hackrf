@@ -43,8 +43,13 @@ module tst_6502(
 	assign addr = CPU_AB;
 	assign sram_dout = CPU_DO;
 
+	// GPIO @ page 10-1f
+	reg [7:0] gpio_do;
 	always @(posedge clk)
-	    gpio_o <= addr[14:7];
+		if((CPU_WE == 1'b1) && (p1 == 1'b1))
+			gpio_o <= CPU_DO;
+	    else
+		    gpio_o <= {p0, pf, p1, CPU_DO[4:0]};
 
 	// ROM @ pages f0,f1...
     reg [7:0] rom_mem[4095:0];
