@@ -9,7 +9,12 @@ module tst_6502(
 	input [7:0] gpio_i,
 	
 	input RX,				// serial RX
-	output TX				// serial TX
+	output TX,				// serial TX
+
+             	output sram_oe,
+                 input [7:0] sram_din,
+                 output [7:0] sram_dout,
+                 output [15:0] addr,
 );
     // The 6502
     wire [15:0] CPU_AB;
