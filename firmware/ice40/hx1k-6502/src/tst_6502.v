@@ -34,10 +34,9 @@ module tst_6502(
     );
     
 	// address decode - not fully decoded for 512-byte memories
-	wire p0 = (CPU_AB[15:12] == 4'h0) ? 1 : 0;
+	wire p3 = (CPU_AB[15:12] == 4'h0) || (CPU_AB[15:12] == 4'h3) ? 1 : 0;
 	wire p1 = (CPU_AB[15:12] == 4'h1) ? 1 : 0;
 	wire p2 = (CPU_AB[15:12] == 4'h2) ? 1 : 0;
-	wire p3 = (CPU_AB[15:12] == 4'h3) ? 1 : 0;
 	wire pf = (CPU_AB[15:12] == 4'hf) ? 1 : 0;
 
     reg [15:0] sram_addr_reg;
@@ -47,19 +46,10 @@ module tst_6502(
 	assign sram_oe = sram_oe_reg;
 	assign sram_dout = sram_dout_reg;
 	always @(posedge clk) begin
-        addr <= {15'h0, CPU_AB[0:0]};
+        addr <= CPU_AB;
         sram_oe <= (CPU_WE == 1'b1) && (p3 == 1'b1);
         sram_dout <= CPU_DO;
 	end
-	
-	// RAM @ pages 00-0f
-	reg [7:0] ram_mem[4095:0];
-	reg [7:0] ram_do;
-	always @(posedge clk)
-		if((CPU_WE == 1'b1) && (p0 == 1'b1))
-			ram_mem[CPU_AB[11:0]] <= CPU_DO;
-	always @(posedge clk)
-		ram_do <= ram_mem[CPU_AB[11:0]];
 	
 	// GPIO @ page 10-1f
 	reg [7:0] gpio_do;
@@ -98,7 +88,7 @@ module tst_6502(
 		mux_sel <= CPU_AB[15:12];
 	always @(*)
 		casez(mux_sel)
-			4'h0: CPU_DI = ram_do;
+			4'h0: CPU_DI = sram_din;
 			4'h1: CPU_DI = gpio_do;
 			4'h2: CPU_DI = acia_do;
 			4'h3: CPU_DI = sram_din;
