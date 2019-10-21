@@ -11,7 +11,7 @@
 
 unsigned long cnt;
 unsigned char x = 0;
-char *txt_buf = &SRAM_DATA;
+char txt_buf[32];
 unsigned long i;
 
 int main()
@@ -22,9 +22,10 @@ int main()
 	// test some C stuff
 	for(i=0;i<26;i++)
 		txt_buf[i] = 'A'+i;
-	//txt_buf[i] = 0;
+	txt_buf[i] = 0;
 	acia_tx_str(txt_buf);
 	acia_tx_str("\n\r");
+    SRAM_DATA = 'A';
 	
 	// enable ACIA IRQ for serial echo in background
 	ACIA_CTRL = 0x80;
@@ -48,7 +49,10 @@ int main()
         }
         acia_tx_str(txt_buf);
         acia_tx_str("\n\r");
-		
+        acia_tx_chr(SRAM_DATA);
+        acia_tx_str("\n\r");
+        SRAM_DATA = SRAM_DATA + 1;
+
         // write counter msbyte to GPIO
         GPIO_DATA = x;
         x++;
