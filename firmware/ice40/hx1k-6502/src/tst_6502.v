@@ -40,9 +40,17 @@ module tst_6502(
 	wire p3 = (CPU_AB[15:12] == 4'h3) ? 1 : 0;
 	wire pf = (CPU_AB[15:12] == 4'hf) ? 1 : 0;
 
-	assign addr = {15'h0, CPU_AB[0:0]};
-	assign sram_oe = (CPU_WE == 1'b1) && (p3 == 1'b1);
-	assign sram_dout = CPU_DO;
+    reg [15:0] sram_addr_reg;
+    reg [15:0] sram_dout_reg;
+    reg sram_oe_reg;
+	assign addr = sram_addr_reg;
+	assign sram_oe = sram_oe_reg;
+	assign sram_dout = sram_dout_reg;
+	always @(posedge clk) begin
+        addr <= {15'h0, CPU_AB[0:0]};
+        sram_oe <= (CPU_WE == 1'b1) && (p3 == 1'b1);
+        sram_dout <= CPU_DO;
+	end
 	
 	// RAM @ pages 00-0f
 	reg [7:0] ram_mem[4095:0];
