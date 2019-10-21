@@ -40,7 +40,7 @@ module tst_6502(
 	wire p3 = (CPU_AB[15:12] == 4'h3) ? 1 : 0;
 	wire pf = (CPU_AB[15:12] == 4'hf) ? 1 : 0;
 
-	assign addr = 0;
+	assign addr = {15'h0, CPU_AB[0:0]};
 	assign sram_oe = (CPU_WE == 1'b1) && (p3 == 1'b1);
 	assign sram_dout = CPU_DO;
 	
