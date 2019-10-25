@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/wieker/Projects/linux/hackrf/hackrf/hardware/LP1Kboard/LP1Kboard/LP1Kboard/LP1Kboard.sch)
-    (date "Wed 23 Oct 2019 09:55:43 PM EEST")
+    (date "Fri 25 Oct 2019 10:24:04 PM EEST")
     (tool "Eeschema 5.1.4+dfsg1-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block

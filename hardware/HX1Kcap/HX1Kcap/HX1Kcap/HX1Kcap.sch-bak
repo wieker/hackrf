@@ -2179,7 +2179,12 @@ Wire Wire Line
 Connection ~ 8200 3200
 Wire Wire Line
 	7700 3200 7950 3200
+Wire Wire Line
+	7950 2800 8350 2800
 Connection ~ 8950 2800
+Connection ~ 8350 2800
+Wire Wire Line
+	8350 2800 8950 2800
 Wire Wire Line
 	10450 3200 10600 3200
 Wire Wire Line
@@ -2211,6 +2216,4 @@ Connection ~ 10150 1100
 NoConn ~ 10450 2350
 Wire Wire Line
 	7950 2800 7950 3300
-Wire Wire Line
-	7950 2800 8950 2800
 $EndSCHEMATC
