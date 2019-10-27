@@ -17,7 +17,7 @@ module tst_6502(
                  output [15:0] addr,
 
 
-     input [7:0] adc,
+     input [7:0] adc_reg,
 );
     // The 6502
     wire [15:0] CPU_AB;
@@ -96,7 +96,7 @@ module tst_6502(
 			4'h1: CPU_DI = gpio_do;
 			4'h2: CPU_DI = acia_do;
 			4'h3: CPU_DI = sram_din;
-			4'h4: CPU_DI = adc;
+			4'h4: CPU_DI = adc_reg;
 			4'hf: CPU_DI = rom_do;
 			default: CPU_DI = rom_do;
 		endcase
