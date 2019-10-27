@@ -53,3 +53,6 @@ set_io adio2 87
 set_io adio3 86
 set_io adio4 85
 set_io adio5 83
+set_io adio6 82
+set_io adio7 81
+set_io adio8 80

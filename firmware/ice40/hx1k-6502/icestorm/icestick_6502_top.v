@@ -15,7 +15,7 @@ module icestick_6502_top(
                    inout D0, D1, D2, D3,
                    inout D4, D5, D6, D7,
                    output ADC_CLK,
-                   input adio1, adio2, adio3, adio4, adio5,
+                   input adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8,
                    output adled1, adled2, adled3, adled4, adled5,
 );
 	// reset generator waits > 10us
@@ -27,6 +27,7 @@ module icestick_6502_top(
     wire [7:0] sram_din;
     wire [7:0] sram_dout;
     wire [15:0] addr;
+    reg [7:0] adc_reg;
 
 	initial
         reset_cnt <= 8'h00;
@@ -106,4 +107,9 @@ module icestick_6502_top(
 	assign adled3 = adio3;
 	assign adled4 = adio4;
 	assign adled5 = adio5;
+
+	always @(posedge clk)
+	begin
+		adc_reg <= {adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8};
+	end
 endmodule

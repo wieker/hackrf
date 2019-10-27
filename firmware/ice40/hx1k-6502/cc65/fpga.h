@@ -10,5 +10,6 @@
 #define ACIA_CTRL (*(unsigned char *) 0x2000)
 #define ACIA_DATA (*(unsigned char *) 0x2000)
 #define SRAM_DATA (*(unsigned char *) 0x3000)
+#define ADC_DATA (*(unsigned char *) 0x4000)
 
 #endif

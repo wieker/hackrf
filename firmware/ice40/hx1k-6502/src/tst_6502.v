@@ -15,6 +15,9 @@ module tst_6502(
                  input [7:0] sram_din,
                  output [7:0] sram_dout,
                  output [15:0] addr,
+
+
+     input [7:0] adc,
 );
     // The 6502
     wire [15:0] CPU_AB;
@@ -37,6 +40,7 @@ module tst_6502(
 	wire p3 = (CPU_AB[15:12] == 4'h0) || (CPU_AB[15:12] == 4'h3) ? 1 : 0;
 	wire p1 = (CPU_AB[15:12] == 4'h1) ? 1 : 0;
 	wire p2 = (CPU_AB[15:12] == 4'h2) ? 1 : 0;
+	wire padc = (CPU_AB[15:12] == 4'h4) ? 1 : 0;
 	wire pf = (CPU_AB[15:12] == 4'hf) ? 1 : 0;
 
     reg [15:0] sram_addr_reg;
@@ -92,6 +96,7 @@ module tst_6502(
 			4'h1: CPU_DI = gpio_do;
 			4'h2: CPU_DI = acia_do;
 			4'h3: CPU_DI = sram_din;
+			4'h4: CPU_DI = adc;
 			4'hf: CPU_DI = rom_do;
 			default: CPU_DI = rom_do;
 		endcase

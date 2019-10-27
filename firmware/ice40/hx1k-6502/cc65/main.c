@@ -56,6 +56,10 @@ int main()
         acia_tx_str("\n\r");
         SRAM_DATA = SRAM_DATA + 1;
         *(&SRAM_DATA + 1) = *(&SRAM_DATA + 1) + 1;
+        acia_tx_chr('0' + ADC_DATA / 100);
+        acia_tx_chr('0' + ADC_DATA / 10 % 10);
+        acia_tx_chr('0' + ADC_DATA % 10);
+        acia_tx_str("\n\r");
 
         // write counter msbyte to GPIO
         GPIO_DATA = x;
