@@ -12,35 +12,34 @@ module top(
     reg [20:0] counter;
     wire [21:0] next = counter + 1;
 
+    wire capsense_oe;
+    wire [3:0] capsense_in;
+
+    reg sense;
+
     ringoscillator #(.DELAY_LUTS(20)) rng(clk);
 
     always @(posedge clk)
         begin
             counter <= next;
+            if (counter == 24'h 80000) sense <= 0;
+            if (counter == 24'h 80002) sense <= capsense_in[0];
         end
 
     assign led1 = 0;
     assign led2 = capsense_in[0];
-    assign led3 = capsense_in[1];
+    assign led3 = sense;
     assign led7 = 0;
-    assign led9 = capsense_in[2];
+    assign led9 = counter[20];
 
-    wire capsense_oe;
-    wire [3:0] capsense_in;
-
-    CapSense_Sys #(.N(4), .DIRECT(1), .FREQUENCY(24)) CS
-      (.clk_i(clk), .rst_i(1'b0),
-       .capsense_i(capsense_in),
-       .capsense_oe(capsense_oe),
-       .buttons_o({led4,led5,led6,led8}));
-
+    assign capsense_oe = counter == 24'h 80000;
 
   SB_IO #(
       .PIN_TYPE(6'b1010_01),
       .PULLUP(1'b0)
   ) buts [3:0] (
       .PACKAGE_PIN({BTN1,BTN2,BTN3,BTN4}),
-      .OUTPUT_ENABLE(capsense_oe),
+      .OUTPUT_ENABLE({capsense_oe, capsense_oe, capsense_oe, capsense_oe}),
       .D_OUT_0(4'b0),
       .D_IN_0(capsense_in)
 );
