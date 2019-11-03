@@ -13,4 +13,6 @@ set_io BTN1 25
 set_io BTN2 24
 set_io BTN3 27
 set_io BTN4 29
+set_io BTN5 26
+set_io BTN6 28
 

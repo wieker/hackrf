@@ -4,7 +4,7 @@
 
 module top(
 
-    inout BTN1, BTN2, BTN3, BTN4,
+    inout BTN1, BTN2, BTN3, BTN4, BTN5, BTN6,
     output led1, led2, led3, led4, led5, led6, led7, led8, led9
 );
 
@@ -13,9 +13,9 @@ module top(
     wire [21:0] next = counter + 1;
 
     wire capsense_oe;
-    wire [3:0] capsense_in;
+    wire [5:0] capsense_in;
 
-    reg sense;
+    reg [5:0] sense;
 
     ringoscillator #(.DELAY_LUTS(20)) rng(clk);
 
@@ -23,24 +23,29 @@ module top(
         begin
             counter <= next;
             if (counter == 24'h 80000) sense <= 0;
-            if (counter == 24'h 80018) sense <= capsense_in[0];
+            if (counter == 24'h 80018) sense <= capsense_in;
         end
 
     assign led1 = 0;
-    assign led2 = capsense_in[0];
-    assign led3 = sense;
+    assign led2 = sense[5];
+    assign led3 = sense[4];
     assign led7 = 0;
     assign led9 = counter[20];
+
+    assign led4 = sense[0];
+    assign led5 = sense[1];
+    assign led6 = sense[2];
+    assign led8 = sense[3];
 
     assign capsense_oe = counter == 24'h 80000;
 
   SB_IO #(
       .PIN_TYPE(6'b1010_01),
       .PULLUP(1'b0)
-  ) buts [3:0] (
-      .PACKAGE_PIN({BTN1,BTN2,BTN3,BTN4}),
-      .OUTPUT_ENABLE({capsense_oe, capsense_oe, capsense_oe, capsense_oe}),
-      .D_OUT_0(4'b0),
+  ) buts [5:0] (
+      .PACKAGE_PIN({BTN1,BTN2,BTN3,BTN4,BTN5,BTN6}),
+      .OUTPUT_ENABLE({capsense_oe, capsense_oe, capsense_oe, capsense_oe, capsense_oe, capsense_oe}),
+      .D_OUT_0(6'b0),
       .D_IN_0(capsense_in)
 );
 
