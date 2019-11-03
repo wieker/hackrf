@@ -3,7 +3,7 @@
 `include "../common/ring.v"
 
 module top(
-    output led1, led2, led3, tx, input rx
+    output led1, led2, led3, led4, led5, led6, led7, led8, led9, tx, input rx
 );
 
     wire clk;
@@ -24,25 +24,21 @@ module top(
     always @(posedge clk)
         begin
             counter <= next;
-            if (int)
-                dt <= dtwire;
-            if (int)
-                cmd <= dtwire;
-            else
-                cmd <= 0;
         end
 
     assign led1 = leds[0];
     assign led2 = leds[1];
     assign led3 = leds[2];
+    assign led4 = leds[0];
+    assign led5 = leds[1];
+    assign led6 = leds[2];
+    assign led7 = leds[0];
+    assign led8 = leds[1];
+    assign led9 = leds[2];
 
-    uart_tx uart_tx(clk, 1, next[21], dt, tmp, tmp2);
-    uart_rx uart_rx(clk, 1, rx, int, dtwire);
-    assign tx = tmp;
     always @(posedge clk)
         begin
-            if (cmd == 8'h3f)
-                leds[0] <= 1;
+             leds <= counter[20:18];
         end
 
 endmodule
