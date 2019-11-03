@@ -1,0 +1,16 @@
+set_io led1 51
+set_io led2 52
+set_io led3 53
+
+set_io led4 1
+set_io led5 2
+set_io led6 3
+set_io led7 4
+set_io led8 7
+set_io led9 8
+
+set_io BTN1 25
+set_io BTN2 24
+set_io BTN3 27
+set_io BTN4 29
+
