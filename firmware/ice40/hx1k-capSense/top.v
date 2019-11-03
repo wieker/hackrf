@@ -23,7 +23,7 @@ module top(
         begin
             counter <= next;
             if (counter == 24'h 80000) sense <= 0;
-            if (counter == 24'h 80002) sense <= capsense_in[0];
+            if (counter == 24'h 80008) sense <= capsense_in[0];
         end
 
     assign led1 = 0;
