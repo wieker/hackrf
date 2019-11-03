@@ -7,46 +7,46 @@
 .names $true
 1
 .names $undef
-.gate SB_LUT4 I0=counter[4] I1=$abc$418$new_n33_ I2=$abc$418$auto$simplemap.cc:127:simplemap_reduce$222[1]_new_inv_ I3=$abc$418$new_n27_ O=$abc$418$auto$simplemap.cc:256:simplemap_eqne$255
+.gate SB_LUT4 I0=counter[4] I1=counter[3] I2=$abc$418$new_n32_ I3=$abc$418$new_n27_ O=$abc$418$auto$simplemap.cc:256:simplemap_eqne$255
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
 .param LUT_INIT 0111111111111111
-.gate SB_LUT4 I0=$abc$418$new_n29_ I1=$abc$418$new_n28_ I2=counter[1] I3=counter[0] O=$abc$418$new_n27_
+.gate SB_LUT4 I0=$abc$418$new_n31_ I1=$abc$418$new_n30_ I2=$abc$418$new_n29_ I3=$abc$418$auto$simplemap.cc:127:simplemap_reduce$205[4]_new_inv_ O=$abc$418$new_n27_
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
-.param LUT_INIT 0000000000001000
-.gate SB_LUT4 I0=$false I1=counter[19] I2=led9 I3=counter[18] O=$abc$418$new_n28_
+.param LUT_INIT 1000000000000000
+.gate SB_LUT4 I0=$false I1=$false I2=counter[9] I3=counter[8] O=$abc$418$auto$simplemap.cc:127:simplemap_reduce$205[4]_new_inv_
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46"
+.param LUT_INIT 0000000000001111
+.gate SB_LUT4 I0=counter[13] I1=counter[12] I2=counter[11] I3=counter[10] O=$abc$418$new_n29_
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
+.param LUT_INIT 0000000000000001
+.gate SB_LUT4 I0=$false I1=counter[19] I2=led9 I3=counter[18] O=$abc$418$new_n30_
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51"
 .param LUT_INIT 0000000000001100
-.gate SB_LUT4 I0=counter[17] I1=counter[16] I2=counter[3] I3=counter[2] O=$abc$418$new_n29_
+.gate SB_LUT4 I0=counter[17] I1=counter[16] I2=counter[15] I3=counter[14] O=$abc$418$new_n31_
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=$false I1=$false I2=$abc$418$auto$simplemap.cc:127:simplemap_reduce$216[2]_new_inv_ I3=$abc$418$auto$simplemap.cc:127:simplemap_reduce$216[3]_new_inv_ O=$abc$418$auto$simplemap.cc:127:simplemap_reduce$222[1]_new_inv_
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46"
-.param LUT_INIT 1111000000000000
-.gate SB_LUT4 I0=counter[15] I1=counter[14] I2=counter[13] I3=counter[12] O=$abc$418$auto$simplemap.cc:127:simplemap_reduce$216[3]_new_inv_
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
-.param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=counter[11] I1=counter[10] I2=counter[9] I3=counter[8] O=$abc$418$auto$simplemap.cc:127:simplemap_reduce$216[2]_new_inv_
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
-.param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=$false I1=counter[7] I2=counter[6] I3=counter[5] O=$abc$418$new_n33_
+.gate SB_LUT4 I0=$false I1=$abc$418$new_n33_ I2=counter[5] I3=counter[2] O=$abc$418$new_n32_
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51"
-.param LUT_INIT 0000000000000011
-.gate SB_LUT4 I0=$false I1=$abc$418$new_n33_ I2=$abc$418$auto$simplemap.cc:127:simplemap_reduce$222[1]_new_inv_ I3=$abc$418$new_n27_ O=$abc$418$auto$dff2dffe.cc:158:make_patterns_logic$374
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51"
-.param LUT_INIT 1100000000000000
-.gate SB_LUT4 I0=$abc$418$new_n27_ I1=$abc$418$new_n33_ I2=$abc$418$auto$simplemap.cc:127:simplemap_reduce$222[1]_new_inv_ I3=counter[4] O=capsense_oe
+.param LUT_INIT 0000000000001100
+.gate SB_LUT4 I0=counter[7] I1=counter[6] I2=counter[1] I3=counter[0] O=$abc$418$new_n33_
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
-.param LUT_INIT 0000000010000000
+.param LUT_INIT 0000000000000001
+.gate SB_LUT4 I0=$abc$418$new_n32_ I1=$abc$418$new_n27_ I2=counter[4] I3=counter[3] O=$abc$418$auto$dff2dffe.cc:158:make_patterns_logic$374
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
+.param LUT_INIT 1000000000001000
+.gate SB_LUT4 I0=$abc$418$new_n32_ I1=$abc$418$new_n27_ I2=counter[4] I3=counter[3] O=capsense_oe
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:56"
+.param LUT_INIT 0000000000001000
 .gate SB_CARRY CI=$false CO=$auto$alumacc.cc:474:replace_alu$127.C[1] I0=$true I1=counter[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:13|/usr/local/bin/../share/yosys/ice40/arith_map.v:47|/usr/local/bin/../share/yosys/ice40/cells_map.v:68"
