@@ -1,8 +1,8 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.4+dfsg1-1)
+(kicad_pcb (version 20171130) (host pcbnew 5.1.4+dfsg1-2)
 
   (general
     (thickness 1.6)
-    (drawings 5)
+    (drawings 6)
     (tracks 531)
     (zones 0)
     (modules 30)
@@ -1351,6 +1351,7 @@
     )
   )
 
+  (gr_poly (pts (xy 165.32 106.01) (xy 165.34 108.45) (xy 167.88 108.47) (xy 167.85 105.94)) (layer F.Mask) (width 0.1))
   (gr_line (start 202.22 140.19) (end 126.89 142.52) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 198.54 75.36) (end 202.22 140.19) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 171.65 75.76) (end 198.54 75.36) (layer Edge.Cuts) (width 0.1))
