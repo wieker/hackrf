@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP FAN5341
+D 600mA, 500kHz Micropower Synchronous Boost Converter with Output Disconnect, TSOT-23-6
+K boost step-up DC/DC synchronous
+$ENDCMP
+#
 $CMP IS66WV51216EBLL-70BLI
 D SRAM
 K SRAM
@@ -10,6 +15,12 @@ $CMP IS66WV51216EBLL-70TLI
 D SRAM
 K SRAM
 F https://www.mouser.ee/datasheet/2/198/66WV51216EALL-EBLL-462627.pdf
+$ENDCMP
+#
+$CMP LTC3429B
+D 600mA, 500kHz Micropower Synchronous Boost Converter with Output Disconnect, Continuous Switching at Light Loads, TSOT-23-6
+K boost step-up DC/DC synchronous
+F https://www.analog.com/media/en/technical-documentation/data-sheets/3429fa.pdf
 $ENDCMP
 #
 #End Doc Library
