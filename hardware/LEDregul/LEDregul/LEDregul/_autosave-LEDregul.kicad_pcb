@@ -203,7 +203,7 @@
   )
 
   (module kifootp:SiT1534 placed (layer F.Cu) (tedit 5DCC944D) (tstamp 5DCDBDC0)
-    (at 114 92)
+    (at 113 89)
     (path /5DBF88F5)
     (fp_text reference X1 (at -0.04 -4.78 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -222,7 +222,7 @@
   )
 
   (module kifootp:FAN5341 placed (layer F.Cu) (tedit 5DCC8663) (tstamp 5DCDBDB8)
-    (at 112 64)
+    (at 111 64)
     (path /5DD63866)
     (fp_text reference U4 (at -0.01 -4.24) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -247,7 +247,7 @@
   )
 
   (module kifootp:FAN5341 placed (layer F.Cu) (tedit 5DCC8663) (tstamp 5DCDBDAD)
-    (at 114 84)
+    (at 113 84)
     (path /5DD49D31)
     (fp_text reference U3 (at -0.01 -4.24) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -272,7 +272,7 @@
   )
 
   (module kifootp:FAN5341 placed (layer F.Cu) (tedit 5DCC8663) (tstamp 5DCDBDA2)
-    (at 112 73)
+    (at 111 73)
     (path /5DD5AE04)
     (fp_text reference U2 (at -0.01 -4.24) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -297,7 +297,7 @@
   )
 
   (module kifootp:FAN5341 placed (layer F.Cu) (tedit 5DCC8663) (tstamp 5DCDBD97)
-    (at 112 76)
+    (at 111 76)
     (path /5DBFECEC)
     (fp_text reference U1 (at -0.01 -4.24) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -322,7 +322,7 @@
   )
 
   (module Resistor_SMD:R_0402_1005Metric placed (layer F.Cu) (tedit 5B301BBD) (tstamp 5DCDBD8C)
-    (at 123 59)
+    (at 108 56)
     (descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /5DD638C2)
@@ -356,7 +356,7 @@
   )
 
   (module Resistor_SMD:R_0402_1005Metric placed (layer F.Cu) (tedit 5B301BBD) (tstamp 5DCDBD7D)
-    (at 114 89)
+    (at 108 53)
     (descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /5DD49D8D)
@@ -390,7 +390,7 @@
   )
 
   (module Resistor_SMD:R_0402_1005Metric placed (layer F.Cu) (tedit 5B301BBD) (tstamp 5DCDBD6E)
-    (at 114 86)
+    (at 113 86)
     (descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /5DD5AE60)
@@ -424,7 +424,7 @@
   )
 
   (module Resistor_SMD:R_0402_1005Metric placed (layer F.Cu) (tedit 5B301BBD) (tstamp 5DCDBD5F)
-    (at 87 72)
+    (at 86 72)
     (descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /5DC112A9)
@@ -458,7 +458,7 @@
   )
 
   (module Inductor_SMD:L_1812_4532Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBD50)
-    (at 107 69)
+    (at 106 69)
     (descr "Inductor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.nikhef.nl/pub/departments/mt/projects/detectorR_D/dtddice/ERJ2G.pdf), generated with kicad-footprint-generator")
     (tags inductor)
     (path /5DD63895)
@@ -494,7 +494,7 @@
   )
 
   (module Inductor_SMD:L_1812_4532Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBD3F)
-    (at 107 75)
+    (at 106 75)
     (descr "Inductor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.nikhef.nl/pub/departments/mt/projects/detectorR_D/dtddice/ERJ2G.pdf), generated with kicad-footprint-generator")
     (tags inductor)
     (path /5DD49D60)
@@ -530,7 +530,7 @@
   )
 
   (module Inductor_SMD:L_1812_4532Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBD2E)
-    (at 107 63)
+    (at 106 63)
     (descr "Inductor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.nikhef.nl/pub/departments/mt/projects/detectorR_D/dtddice/ERJ2G.pdf), generated with kicad-footprint-generator")
     (tags inductor)
     (path /5DD5AE33)
@@ -566,7 +566,7 @@
   )
 
   (module Inductor_SMD:L_1812_4532Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBD1D)
-    (at 107 81)
+    (at 106 81)
     (descr "Inductor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.nikhef.nl/pub/departments/mt/projects/detectorR_D/dtddice/ERJ2G.pdf), generated with kicad-footprint-generator")
     (tags inductor)
     (path /5DC09BB2)
@@ -602,7 +602,7 @@
   )
 
   (module Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Horizontal placed (layer F.Cu) (tedit 5A19A41C) (tstamp 5DCDBD0C)
-    (at 128 65)
+    (at 127 65)
     (descr "Through hole angled socket strip, 1x20, 2.54mm pitch, 8.51mm socket length, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole angled socket strip THT 1x20 2.54mm single row")
     (path /5DF5206A)
@@ -818,7 +818,7 @@
   )
 
   (module Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical placed (layer F.Cu) (tedit 59FED5CC) (tstamp 5DCDBC58)
-    (at 92 87)
+    (at 91 87)
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /5DCC9BE0)
@@ -862,7 +862,7 @@
   )
 
   (module Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical placed (layer F.Cu) (tedit 59FED5CC) (tstamp 5DCDBC40)
-    (at 102 87)
+    (at 101 87)
     (descr "Through hole straight pin header, 2x04, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x04 2.54mm double row")
     (path /5DC16FDF)
@@ -1030,7 +1030,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBBE9)
-    (at 95 60)
+    (at 94 60)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD638A4)
@@ -1068,7 +1068,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBBD6)
-    (at 96 67)
+    (at 95 67)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD6389E)
@@ -1106,7 +1106,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBBC3)
-    (at 107 52)
+    (at 112 55)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD49D81)
@@ -1144,7 +1144,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBBB0)
-    (at 112 54)
+    (at 117 54)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD49D7B)
@@ -1182,7 +1182,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB9D)
-    (at 117 54)
+    (at 122 58)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD49D75)
@@ -1220,7 +1220,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB8A)
-    (at 91 65)
+    (at 90 67)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD49D6F)
@@ -1258,7 +1258,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB77)
-    (at 91 82)
+    (at 90 82)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD49D69)
@@ -1296,7 +1296,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB64)
-    (at 118 59)
+    (at 117 59)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD5AE54)
@@ -1334,7 +1334,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB51)
-    (at 105 57)
+    (at 104 57)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD5AE4E)
@@ -1372,7 +1372,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB3E)
-    (at 92 55)
+    (at 91 55)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD5AE48)
@@ -1410,7 +1410,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB2B)
-    (at 97 55)
+    (at 96 55)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD5AE42)
@@ -1448,7 +1448,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB18)
-    (at 100 62)
+    (at 99 62)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DD5AE3C)
@@ -1486,7 +1486,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBB05)
-    (at 91 72)
+    (at 90 72)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DC0E918)
@@ -1524,7 +1524,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBAF2)
-    (at 76 77)
+    (at 75 77)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DC0D96D)
@@ -1562,7 +1562,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBADF)
-    (at 81 77)
+    (at 80 77)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DC0D967)
@@ -1600,7 +1600,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBACC)
-    (at 86 77)
+    (at 85 77)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DC0BFEB)
@@ -1638,7 +1638,7 @@
   )
 
   (module LED_SMD:LED_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBAB9)
-    (at 91 77)
+    (at 90 77)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
     (path /5DC0B791)
@@ -1676,7 +1676,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBAA6)
-    (at 96 72)
+    (at 95 72)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DD63878)
@@ -1712,7 +1712,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBA95)
-    (at 101 67)
+    (at 100 67)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DD6388D)
@@ -1748,7 +1748,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBA84)
-    (at 96 77)
+    (at 95 77)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DD49D43)
@@ -1784,7 +1784,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBA73)
-    (at 101 82)
+    (at 100 82)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DD5AE16)
@@ -1820,7 +1820,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBA62)
-    (at 96 82)
+    (at 95 82)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DD49D58)
@@ -1856,7 +1856,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBA51)
-    (at 101 72)
+    (at 100 72)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DD5AE2B)
@@ -1892,7 +1892,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBA40)
-    (at 101 77)
+    (at 100 77)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DC03DC8)
@@ -1928,7 +1928,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric placed (layer F.Cu) (tedit 5B301BBE) (tstamp 5DCDBA2F)
-    (at 113 79)
+    (at 112 79)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5DC09184)
@@ -1964,7 +1964,7 @@
   )
 
   (module kifootp:CR2032 placed (layer F.Cu) (tedit 5DCC7DE7) (tstamp 5DCDBA1E)
-    (at 102 106)
+    (at 101 106)
     (path /5DBF5ADF)
     (fp_text reference BT1 (at 0 0.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
