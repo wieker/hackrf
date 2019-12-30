@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:C C1
-U 1 1 5DF4A28E
-P 4500 3450
-F 0 "C1" H 4615 3496 50  0000 L CNN
-F 1 "0.1uF" H 4615 3405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4538 3300 50  0001 C CNN
-F 3 "~" H 4500 3450 50  0001 C CNN
-	1    4500 3450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 5DF4B0FA
 P 6100 1400
@@ -105,13 +94,6 @@ Wire Wire Line
 	6600 1700 7050 1700
 Wire Wire Line
 	6600 1550 6600 1700
-Wire Wire Line
-	4500 3300 4750 3300
-Wire Wire Line
-	4750 3100 4500 3100
-Wire Wire Line
-	4500 3100 4500 3300
-Connection ~ 4500 3300
 $Comp
 L power:GND #PWR05
 U 1 1 5DF4E85B
@@ -124,53 +106,9 @@ F 3 "" H 5050 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 3600 4500 3750
-Wire Wire Line
 	4500 3750 5050 3750
 Wire Wire Line
 	5050 3750 5050 3900
-Wire Wire Line
-	5050 3750 5350 3750
-Wire Wire Line
-	5550 3750 5550 3700
-Connection ~ 5050 3750
-Wire Wire Line
-	5450 3700 5450 3750
-Connection ~ 5450 3750
-Wire Wire Line
-	5450 3750 5550 3750
-Wire Wire Line
-	5350 3700 5350 3750
-Connection ~ 5350 3750
-Wire Wire Line
-	5350 3750 5450 3750
-$Comp
-L power:+3V3 #PWR06
-U 1 1 5DF50782
-P 5450 1750
-F 0 "#PWR06" H 5450 1600 50  0001 C CNN
-F 1 "+3V3" H 5465 1923 50  0000 C CNN
-F 2 "" H 5450 1750 50  0001 C CNN
-F 3 "" H 5450 1750 50  0001 C CNN
-	1    5450 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 2100 5550 2000
-Wire Wire Line
-	5550 2000 5450 2000
-Wire Wire Line
-	5450 2000 5450 1750
-Wire Wire Line
-	5450 2100 5450 2000
-Connection ~ 5450 2000
-Wire Wire Line
-	6150 3400 6350 3400
-Wire Wire Line
-	6350 3400 6350 3750
-Wire Wire Line
-	6350 3750 5550 3750
-Connection ~ 5550 3750
 $Comp
 L Connector:Conn_01x20_Female J4
 U 1 1 5DF5206A
@@ -198,8 +136,6 @@ Wire Wire Line
 	6150 3000 7200 3000
 Wire Wire Line
 	6150 3100 7200 3100
-Wire Wire Line
-	6150 3300 7200 3300
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J3
 U 1 1 5DF5B1E1
@@ -369,17 +305,9 @@ Connection ~ 2700 2700
 Wire Wire Line
 	2700 2700 2700 2400
 Wire Wire Line
-	2350 2800 3700 2800
+	2350 2800 3100 2800
 Wire Wire Line
-	3700 2800 3700 2500
-Wire Wire Line
-	3700 2500 4750 2500
-Wire Wire Line
-	4750 2700 4050 2700
-Wire Wire Line
-	4050 2700 4050 3300
-Wire Wire Line
-	4050 3300 2350 3300
+	4050 3300 3250 3300
 NoConn ~ 7200 2200
 NoConn ~ 7200 2300
 $Comp
@@ -578,17 +506,183 @@ Wire Wire Line
 Wire Wire Line
 	6800 4400 6850 4400
 NoConn ~ 7200 3900
-Wire Wire Line
-	5250 2100 5450 2100
 $Comp
-L kilib:THS5641 U?
+L kilib:THS5641 U1
 U 1 1 5E0E6A52
 P 5550 2500
-F 0 "U?" H 5550 1535 50  0000 C CNN
+F 0 "U1" H 5550 1535 50  0000 C CNN
 F 1 "THS5641" H 5550 1626 50  0000 C CNN
 F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 5550 2500 50  0001 C CNN
 F 3 "" H 5550 2500 50  0001 C CNN
 	1    5550 2500
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	4950 3100 4800 3100
+Wire Wire Line
+	4800 3100 4800 3300
+Wire Wire Line
+	4800 3300 7200 3300
+Wire Wire Line
+	3700 2400 4950 2400
+Wire Wire Line
+	3700 2400 3700 2800
+Wire Wire Line
+	4050 2500 4950 2500
+Wire Wire Line
+	4050 2500 4050 3300
+Wire Wire Line
+	4950 1800 4500 1800
+Wire Wire Line
+	4500 1800 4500 1900
+Wire Wire Line
+	4500 1900 4950 1900
+Connection ~ 4500 1900
+Wire Wire Line
+	4500 1900 4500 2100
+$Comp
+L Device:C C1
+U 1 1 5E108A69
+P 3350 2550
+F 0 "C1" H 3465 2596 50  0000 L CNN
+F 1 "0.1uF" H 3465 2505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3388 2400 50  0001 C CNN
+F 3 "~" H 3350 2550 50  0001 C CNN
+	1    3350 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5E108A6F
+P 3850 4000
+F 0 "C5" H 3965 4046 50  0000 L CNN
+F 1 "0.1uF" H 3965 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3888 3850 50  0001 C CNN
+F 3 "~" H 3850 4000 50  0001 C CNN
+	1    3850 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5E108A75
+P 4300 4000
+F 0 "C6" H 4415 4046 50  0000 L CNN
+F 1 "0.1uF" H 4415 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4338 3850 50  0001 C CNN
+F 3 "~" H 4300 4000 50  0001 C CNN
+	1    4300 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 4300 4300 4150
+Wire Wire Line
+	3850 4150 3850 4300
+Wire Wire Line
+	3850 4300 4300 4300
+Wire Wire Line
+	4500 3750 4500 4300
+Wire Wire Line
+	4500 4300 4300 4300
+Connection ~ 4500 3750
+Connection ~ 4300 4300
+Wire Wire Line
+	4950 2000 4300 2000
+Wire Wire Line
+	4300 2000 4300 3850
+Wire Wire Line
+	4950 2600 3850 2600
+Wire Wire Line
+	2700 2700 3350 2700
+Wire Wire Line
+	3350 2200 3350 2400
+Wire Wire Line
+	3350 2200 4950 2200
+Wire Wire Line
+	3850 2600 3850 3850
+Wire Wire Line
+	4950 2300 4500 2300
+Connection ~ 4500 2300
+Wire Wire Line
+	4500 2300 4500 2800
+Wire Wire Line
+	4950 2800 4500 2800
+Connection ~ 4500 2800
+Wire Wire Line
+	4500 2800 4500 2900
+Wire Wire Line
+	4950 2900 4500 2900
+Connection ~ 4500 2900
+Wire Wire Line
+	4500 2900 4500 3750
+$Comp
+L Device:R R8
+U 1 1 5E14B7D4
+P 4750 2100
+F 0 "R8" V 4543 2100 50  0000 C CNN
+F 1 "2kOhm" V 4634 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4680 2100 50  0001 C CNN
+F 3 "~" H 4750 2100 50  0001 C CNN
+	1    4750 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 2100 4950 2100
+Wire Wire Line
+	4600 2100 4500 2100
+Connection ~ 4500 2100
+Wire Wire Line
+	4500 2100 4500 2300
+Wire Wire Line
+	4950 2700 3350 2700
+Connection ~ 3350 2700
+Wire Wire Line
+	4950 3000 3350 3000
+Wire Wire Line
+	3350 3000 3350 2700
+$Comp
+L Device:R R7
+U 1 1 5E15FFAB
+P 3250 3450
+F 0 "R7" H 3320 3496 50  0000 L CNN
+F 1 "50Ohm" H 3320 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3180 3450 50  0001 C CNN
+F 3 "~" H 3250 3450 50  0001 C CNN
+	1    3250 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 3250 3300
+Wire Wire Line
+	3250 3300 2350 3300
+$Comp
+L Device:R R6
+U 1 1 5E160852
+P 3100 3050
+F 0 "R6" H 3170 3096 50  0000 L CNN
+F 1 "50Ohm" H 3170 3005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3030 3050 50  0001 C CNN
+F 3 "~" H 3100 3050 50  0001 C CNN
+	1    3100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2800 3100 2900
+Connection ~ 3100 2800
+Wire Wire Line
+	3100 2800 3700 2800
+Wire Wire Line
+	3100 4300 3850 4300
+Connection ~ 3850 4300
+Wire Wire Line
+	3100 3200 3100 3600
+Wire Wire Line
+	3250 3600 3100 3600
+Connection ~ 3100 3600
+Wire Wire Line
+	3100 3600 3100 4300
+NoConn ~ 6150 1800
+NoConn ~ 6150 1900
+NoConn ~ 6150 2000
+NoConn ~ 6150 2100
+NoConn ~ 6150 2200
+NoConn ~ 6150 2300
 $EndSCHEMATC
