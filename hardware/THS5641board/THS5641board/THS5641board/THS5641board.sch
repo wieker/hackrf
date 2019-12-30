@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Analog_ADC:AD9283 U1
-U 1 1 5DF494B5
-P 5450 2900
-F 0 "U1" H 5450 3881 50  0000 C CNN
-F 1 "AD9283" H 5450 3790 50  0000 C CNN
-F 2 "Package_SO:SSOP-20_5.3x7.2mm_P0.65mm" H 5450 2900 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9283.pdf" H 5450 2900 50  0001 C CNN
-	1    5450 2900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C1
 U 1 1 5DF4A28E
 P 4500 3450
@@ -173,12 +162,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 2000 5450 1750
 Wire Wire Line
-	5250 2100 5350 2100
-Wire Wire Line
 	5450 2100 5450 2000
-Connection ~ 5350 2100
-Wire Wire Line
-	5350 2100 5450 2100
 Connection ~ 5450 2000
 Wire Wire Line
 	6150 3400 6350 3400
@@ -594,4 +578,17 @@ Wire Wire Line
 Wire Wire Line
 	6800 4400 6850 4400
 NoConn ~ 7200 3900
+Wire Wire Line
+	5250 2100 5450 2100
+$Comp
+L kilib:THS5641 U?
+U 1 1 5E0E6A52
+P 5550 2500
+F 0 "U?" H 5550 1535 50  0000 C CNN
+F 1 "THS5641" H 5550 1626 50  0000 C CNN
+F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 5550 2500 50  0001 C CNN
+F 3 "" H 5550 2500 50  0001 C CNN
+	1    5550 2500
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
