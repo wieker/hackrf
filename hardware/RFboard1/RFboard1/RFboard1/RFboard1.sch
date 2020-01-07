@@ -503,7 +503,7 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 6400 5050 50  000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5500 5150 6200 5150
+	5500 5150 5650 5150
 Wire Wire Line
 	6600 4300 6600 5150
 Connection ~ 6600 4300
@@ -673,4 +673,23 @@ Wire Wire Line
 Wire Wire Line
 	4200 4300 4250 4300
 Connection ~ 4250 4300
+$Comp
+L Device:D D2
+U 1 1 5E1C47F0
+P 5650 5400
+F 0 "D2" V 5604 5479 50  0000 L CNN
+F 1 "D" V 5695 5479 50  0000 L CNN
+F 2 "" H 5650 5400 50  0001 C CNN
+F 3 "~" H 5650 5400 50  0001 C CNN
+	1    5650 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 5550 5650 5550
+Connection ~ 5050 5550
+Wire Wire Line
+	5650 5250 5650 5150
+Connection ~ 5650 5150
+Wire Wire Line
+	5650 5150 6200 5150
 $EndSCHEMATC
