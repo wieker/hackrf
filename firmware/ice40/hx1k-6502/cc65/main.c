@@ -19,7 +19,7 @@ int main()
 	// Send startup message
 	acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
 
-    while(1) {
+    /*while(1) {
         cnt = 80;
         while(cnt--) {
             acia_tx_chr('0');
@@ -29,7 +29,7 @@ int main()
         while(cnt--)
         {
         }
-    }
+    }*/
 	
 	// test some C stuff
 	for(i=0;i<26;i++)
