@@ -9,7 +9,7 @@
 ;
 ; Checks for a BRK instruction, handles ACIA RX
 
-.import   _acia_rx_chr, _acia_tx_chr
+.import   _acia_rx_chr, _acia_tx_chr, _run_cmd
 .export   _irq_int, _nmi_int
 
 .include  "fpga.inc"
@@ -43,7 +43,8 @@ _irq_int:  PHA                    ; Save accumulator contents to stack
 ; ---------------------------------------------------------------------------
 ; Echo RX char
            JSR _acia_rx_chr       ; get RX char
-           JSR _acia_tx_chr       ; send TX char
+           JSR _run_cmd       ; send TX char
+           ;JSR _acia_tx_chr       ; send TX char
 		   
 ; ---------------------------------------------------------------------------
 ; IRQ detected, return

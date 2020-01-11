@@ -81,3 +81,7 @@ int main()
     //  We should never get here!
     return (0);
 }
+
+void run_cmd() {
+    acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
+}
