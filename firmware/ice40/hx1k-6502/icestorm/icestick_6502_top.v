@@ -109,7 +109,7 @@ module icestick_6502_top(
 	assign adled3 = adio3;
 	assign adled4 = adio4;
 	assign adled5 = adio5;
-	assign {adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8} = 8'h 00;
+	assign {adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8} = 8'h 80;
 
 	always @(posedge clk)
 	begin
