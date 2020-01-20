@@ -56,3 +56,6 @@ set_io adio5 83
 set_io adio6 82
 set_io adio7 81
 set_io adio8 80
+
+set_io charge 74
+set_io sense 73

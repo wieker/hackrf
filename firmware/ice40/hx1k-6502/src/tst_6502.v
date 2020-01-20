@@ -18,6 +18,9 @@ module tst_6502(
 
 
      input [7:0] adc_reg,
+
+	input sense,
+	output charge,
 );
     // The 6502
     wire [15:0] CPU_AB;

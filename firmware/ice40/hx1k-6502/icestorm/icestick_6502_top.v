@@ -17,6 +17,8 @@ module icestick_6502_top(
                    output ADC_CLK,
                    output adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8,
                    output adled1, adled2, adled3, adled4, adled5,
+                   output charge,
+                   input sense,
 );
 	// reset generator waits > 10us
 	reg [7:0] reset_cnt;
@@ -87,7 +89,10 @@ module icestick_6502_top(
 		.sram_dout(sram_dout),
 		.addr(addr),
 
-		.adc_reg(adc_reg)
+		.adc_reg(adc_reg),
+
+		.charge(charge),
+		.sense(sense)
 	);
     
 	// drive LEDs from GPIO
