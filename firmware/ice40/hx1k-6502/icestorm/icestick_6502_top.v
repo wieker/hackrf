@@ -15,7 +15,7 @@ module icestick_6502_top(
                    inout D0, D1, D2, D3,
                    inout D4, D5, D6, D7,
                    output ADC_CLK,
-                   output adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8,
+                   input adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8,
                    output adled1, adled2, adled3, adled4, adled5,
                    output charge,
                    input sense,
@@ -114,7 +114,6 @@ module icestick_6502_top(
 	assign adled3 = adio3;
 	assign adled4 = adio4;
 	assign adled5 = adio5;
-	assign {adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8} = 8'h 80;
 
 	always @(posedge clk)
 	begin
