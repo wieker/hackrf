@@ -188,6 +188,9 @@ void gpio_main() {
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 0);
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 1, 13);
     Chip_SCU_PinMuxSet(2, 13, SCU_MODE_FUNC0 | SCU_MODE_INBUFF_EN);
+    Chip_SCU_PinMuxSet(0x1, 14, (SCU_PINIO_FAST | SCU_MODE_FUNC0));  // ice40 CRESET
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 7);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 7, (bool) false);
 
     while (1) {
         int key = 0xFF;
@@ -198,11 +201,13 @@ void gpio_main() {
         switch (key) {
             case '1': {
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) true);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 7, (bool) true);
                 DEBUGOUT("Toggled ON\r\n");
                 break;
             }
             case '2': {
                 Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 0, (bool) false);
+                Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 7, (bool) false);
                 DEBUGOUT("Toggled OFF\r\n");
                 break;
             }
