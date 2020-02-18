@@ -23,4 +23,8 @@ K boost step-up DC/DC synchronous
 F https://www.analog.com/media/en/technical-documentation/data-sheets/3429fa.pdf
 $ENDCMP
 #
+$CMP MAX1555
+F https://www.mouser.ee/datasheet/2/256/MAX1551-MAX1555-1515122.pdf
+$ENDCMP
+#
 #End Doc Library
