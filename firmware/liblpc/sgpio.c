@@ -4,7 +4,6 @@
 
 #define DEBUG_ENABLE
 
-#include <stdint-gcc.h>
 #include "cmsis.h"
 #include "core_cm4.h"
 #include "sgpio.h"
