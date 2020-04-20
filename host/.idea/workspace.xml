@@ -9,10 +9,10 @@
       <config projectName="HackRF" targetName="hackrf_transfer" />
       <config projectName="HackRF" targetName="hackrf_sweep" />
       <config projectName="HackRF" targetName="hackrf-static" />
-      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
+      <config projectName="HackRF" targetName="hackrf_debug" />
       <config projectName="HackRF" targetName="runcmd" />
       <config projectName="HackRF" targetName="uninstall" />
-      <config projectName="HackRF" targetName="hackrf_debug" />
+      <config projectName="HackRF" targetName="hackrf_cpldjtag" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -24,7 +24,6 @@
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,17 +32,17 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1061" />
-  </component>
   <component name="ProjectId" id="1RFp2uZFIxLYm0FWRM2XypxijZn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -62,18 +61,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hackrf-tools/src" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="CMake Application.runcmd">
     <configuration name="hackrf-static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf-static" CONFIG_NAME="Debug">
@@ -145,6 +132,18 @@
       <item itemvalue="CMake Application.uninstall" />
     </list>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -177,6 +176,7 @@
       <workItem from="1569652342732" duration="8159000" />
       <workItem from="1569711078003" duration="1907000" />
       <workItem from="1570722485575" duration="1209000" />
+      <workItem from="1587388339995" duration="8000" />
     </task>
     <servers />
   </component>

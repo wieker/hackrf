@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "blinky.elf.pdb"
   "blinky.elf"
+  "blinky.elf.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
