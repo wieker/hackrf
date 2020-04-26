@@ -149,32 +149,6 @@ Connection ~ 3550 3250
 Wire Wire Line
 	3550 3650 3550 3450
 Connection ~ 3550 3450
-Text GLabel 5050 2400 0    50   Input ~ 0
-IO78
-Text GLabel 5050 2500 0    50   Input ~ 0
-IO79
-Text GLabel 5050 2600 0    50   Input ~ 0
-IO80
-Text GLabel 5050 2700 0    50   Input ~ 0
-IO81
-Text GLabel 5050 2900 0    50   Input ~ 0
-IO82
-Text GLabel 5050 3100 0    50   Input ~ 0
-IO83
-Text GLabel 5050 3200 0    50   Input ~ 0
-IO85
-Text GLabel 5050 3400 0    50   Input ~ 0
-IO86
-Text GLabel 5050 3500 0    50   Input ~ 0
-IO87
-Text GLabel 5050 3700 0    50   Input ~ 0
-IO89
-Text GLabel 5050 3800 0    50   Input ~ 0
-IO90
-Text GLabel 5050 4000 0    50   Input ~ 0
-IO91
-Text GLabel 5050 4100 0    50   Input ~ 0
-IO93
 $Comp
 L Connector:Conn_01x20_Male J3
 U 1 1 5E67DAEB
@@ -363,18 +337,6 @@ Wire Wire Line
 Connection ~ 6650 2950
 Wire Wire Line
 	6650 2950 6300 2950
-Text GLabel 7150 2550 0    50   Input ~ 0
-IO94
-Text GLabel 7150 2650 0    50   Input ~ 0
-IO95
-Text GLabel 7150 2750 0    50   Input ~ 0
-IO96
-Text GLabel 7150 2850 0    50   Input ~ 0
-IO97
-Text GLabel 7150 3050 0    50   Input ~ 0
-IO99
-Text GLabel 7150 3250 0    50   Input ~ 0
-IO100
 Text GLabel 7150 3850 0    50   Input ~ 0
 IO71
 Text GLabel 7150 3650 0    50   Input ~ 0
@@ -389,4 +351,42 @@ Text GLabel 7150 4150 0    50   Input ~ 0
 IO59
 Text GLabel 7150 4250 0    50   Input ~ 0
 IO60
+Text GLabel 7150 3250 0    50   Input ~ 0
+IO78
+Text GLabel 7150 3050 0    50   Input ~ 0
+IO79
+Text GLabel 7150 2850 0    50   Input ~ 0
+IO80
+Text GLabel 7150 2750 0    50   Input ~ 0
+IO81
+Text GLabel 7150 2650 0    50   Input ~ 0
+IO82
+Text GLabel 7150 2550 0    50   Input ~ 0
+IO83
+Text GLabel 5050 2400 0    50   Input ~ 0
+IO85
+Text GLabel 5050 2500 0    50   Input ~ 0
+IO86
+Text GLabel 5050 2600 0    50   Input ~ 0
+IO87
+Text GLabel 5050 2700 0    50   Input ~ 0
+IO89
+Text GLabel 5050 2900 0    50   Input ~ 0
+IO90
+Text GLabel 5050 3100 0    50   Input ~ 0
+IO91
+Text GLabel 5050 3200 0    50   Input ~ 0
+IO93
+Text GLabel 5050 3400 0    50   Input ~ 0
+IO94
+Text GLabel 5050 3500 0    50   Input ~ 0
+IO95
+Text GLabel 5050 3700 0    50   Input ~ 0
+IO96
+Text GLabel 5050 3800 0    50   Input ~ 0
+IO97
+Text GLabel 5050 4000 0    50   Input ~ 0
+IO99
+Text GLabel 5050 4100 0    50   Input ~ 0
+IO100
 $EndSCHEMATC
