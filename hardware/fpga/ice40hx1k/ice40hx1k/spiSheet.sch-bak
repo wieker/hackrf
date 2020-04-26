@@ -266,7 +266,7 @@ Wire Wire Line
 	5550 2000 5550 2150
 Wire Wire Line
 	5550 2150 5750 2150
-Text GLabel 5550 4400 0    50   Input ~ 0
+Text GLabel 6250 4200 0    50   Input ~ 0
 SPI_OUT
 Text GLabel 6250 4300 0    50   Input ~ 0
 SPI_SCK

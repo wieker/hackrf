@@ -341,15 +341,15 @@ Text GLabel 7150 3850 0    50   Input ~ 0
 IO71
 Text GLabel 7150 3650 0    50   Input ~ 0
 IO72
-Text GLabel 7150 3350 0    50   Input ~ 0
-IO73
 Text GLabel 7150 3550 0    50   Input ~ 0
+IO73
+Text GLabel 7150 3350 0    50   Input ~ 0
 IO74
 Text GLabel 7150 3950 0    50   Input ~ 0
 IO64
-Text GLabel 7150 4150 0    50   Input ~ 0
-IO59
 Text GLabel 7150 4250 0    50   Input ~ 0
+IO59
+Text GLabel 7150 4150 0    50   Input ~ 0
 IO60
 Text GLabel 7150 3250 0    50   Input ~ 0
 IO78
