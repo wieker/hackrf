@@ -290,4 +290,147 @@ Wire Wire Line
 	6700 5700 7100 5700
 Wire Wire Line
 	6700 6050 7100 6050
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 5EA6E6FC
+P 1700 4600
+F 0 "J?" H 1808 5681 50  0000 C CNN
+F 1 "Conn_01x20_Male" H 1808 5590 50  0000 C CNN
+F 2 "" H 1700 4600 50  0001 C CNN
+F 3 "~" H 1700 4600 50  0001 C CNN
+	1    1700 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x20_Female J?
+U 1 1 5EA6FAD6
+P 1550 4600
+F 0 "J?" H 1578 4576 50  0000 L CNN
+F 1 "Conn_01x20_Female" H 1578 4485 50  0000 L CNN
+F 2 "" H 1550 4600 50  0001 C CNN
+F 3 "~" H 1550 4600 50  0001 C CNN
+	1    1550 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EA812AE
+P 2350 3300
+F 0 "#PWR?" H 2350 3150 50  0001 C CNN
+F 1 "+3V3" H 2365 3473 50  0000 C CNN
+F 2 "" H 2350 3300 50  0001 C CNN
+F 3 "" H 2350 3300 50  0001 C CNN
+	1    2350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5500 2350 5500
+Wire Wire Line
+	2350 3300 2350 5500
+$Comp
+L power:GND #PWR?
+U 1 1 5EA84AA8
+P 2200 5950
+F 0 "#PWR?" H 2200 5700 50  0001 C CNN
+F 1 "GND" H 2205 5777 50  0000 C CNN
+F 2 "" H 2200 5950 50  0001 C CNN
+F 3 "" H 2200 5950 50  0001 C CNN
+	1    2200 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5950 2200 5600
+Wire Wire Line
+	1900 5600 2200 5600
+Wire Wire Line
+	2200 5600 2200 5400
+Wire Wire Line
+	2200 3700 1900 3700
+Connection ~ 2200 5600
+Wire Wire Line
+	1900 5400 2200 5400
+Connection ~ 2200 5400
+Wire Wire Line
+	2200 5400 2200 5100
+Wire Wire Line
+	1900 4400 2200 4400
+Connection ~ 2200 4400
+Wire Wire Line
+	2200 4400 2200 4000
+Wire Wire Line
+	1900 4000 2200 4000
+Connection ~ 2200 4000
+Wire Wire Line
+	2200 4000 2200 3700
+Wire Wire Line
+	1900 5100 2200 5100
+Connection ~ 2200 5100
+Wire Wire Line
+	2200 5100 2200 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5EA8BB06
+P 1100 5950
+F 0 "#PWR?" H 1100 5700 50  0001 C CNN
+F 1 "GND" H 1105 5777 50  0000 C CNN
+F 2 "" H 1100 5950 50  0001 C CNN
+F 3 "" H 1100 5950 50  0001 C CNN
+	1    1100 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EA8FE7D
+P 1000 3250
+F 0 "#PWR?" H 1000 3100 50  0001 C CNN
+F 1 "+3V3" H 1015 3423 50  0000 C CNN
+F 2 "" H 1000 3250 50  0001 C CNN
+F 3 "" H 1000 3250 50  0001 C CNN
+	1    1000 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 5500 1000 5500
+Wire Wire Line
+	1000 3250 1000 5500
+Wire Wire Line
+	1100 3700 1350 3700
+Wire Wire Line
+	1100 3700 1100 4000
+Wire Wire Line
+	1350 5600 1100 5600
+Connection ~ 1100 5600
+Wire Wire Line
+	1100 5600 1100 5950
+Wire Wire Line
+	1100 5400 1350 5400
+Connection ~ 1100 5400
+Wire Wire Line
+	1100 5400 1100 5600
+Wire Wire Line
+	1350 5100 1100 5100
+Connection ~ 1100 5100
+Wire Wire Line
+	1100 5100 1100 5400
+Wire Wire Line
+	1100 4400 1350 4400
+Connection ~ 1100 4400
+Wire Wire Line
+	1100 4400 1100 5100
+Wire Wire Line
+	1350 4000 1100 4000
+Connection ~ 1100 4000
+Wire Wire Line
+	1100 4000 1100 4400
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5EA9CF97
+P 9700 1700
+F 0 "J?" H 9672 1582 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 9672 1673 50  0000 R CNN
+F 2 "" H 9700 1700 50  0001 C CNN
+F 3 "~" H 9700 1700 50  0001 C CNN
+	1    9700 1700
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
