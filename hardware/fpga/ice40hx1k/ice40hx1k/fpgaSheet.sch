@@ -768,8 +768,6 @@ Text GLabel 4650 6100 2    50   Input ~ 0
 IO54
 Text GLabel 4650 6000 2    50   Input ~ 0
 IO56
-Text GLabel 4650 5900 2    50   Input ~ 0
-IO57
 Text GLabel 4650 5800 2    50   Input ~ 0
 IO59
 Text GLabel 4650 5700 2    50   Input ~ 0
@@ -877,14 +875,6 @@ Text GLabel 9050 3200 2    50   Input ~ 0
 clock_5
 Text GLabel 9050 3400 2    50   Input ~ 0
 clock_6
-Text GLabel 7450 5450 0    50   Input ~ 0
-fpga_uart_rx_3
-Text GLabel 7450 5550 0    50   Input ~ 0
-fpga_uart_tx_3
-Text GLabel 9000 4600 2    50   Input ~ 0
-uart_fpga_tx_2
-Text GLabel 9000 4700 2    50   Input ~ 0
-uart_fpga_rx_2
 Text GLabel 7400 5900 0    50   Input ~ 0
 uart_tx
 Text GLabel 7400 6000 0    50   Input ~ 0
@@ -893,14 +883,6 @@ Text GLabel 7500 6000 2    50   Input ~ 0
 IO54
 Text GLabel 7500 5900 2    50   Input ~ 0
 IO56
-Text GLabel 7550 5550 2    50   Input ~ 0
-IO57
-Text GLabel 7550 5450 2    50   Input ~ 0
-IO59
-Text GLabel 8900 4700 0    50   Input ~ 0
-IO60
-Text GLabel 8900 4600 0    50   Input ~ 0
-IO64
 Text GLabel 8950 2200 0    50   Input ~ 0
 IO62
 Text GLabel 8950 3400 0    50   Input ~ 0
@@ -913,10 +895,6 @@ Text GLabel 8950 2950 0    50   Input ~ 0
 IO68
 Text GLabel 8950 3200 0    50   Input ~ 0
 IO69
-Wire Wire Line
-	7450 5450 7550 5450
-Wire Wire Line
-	7450 5550 7550 5550
 Wire Wire Line
 	7400 5900 7500 5900
 Wire Wire Line
@@ -933,8 +911,5 @@ Wire Wire Line
 	8950 3200 9050 3200
 Wire Wire Line
 	8950 3400 9050 3400
-Wire Wire Line
-	8900 4600 9000 4600
-Wire Wire Line
-	8900 4700 9000 4700
+NoConn ~ 4650 5900
 $EndSCHEMATC
