@@ -19,7 +19,7 @@ U 1 1 5EA7607B
 P 3750 3750
 F 0 "BT1" H 3868 3846 50  0000 L CNN
 F 1 "Battery_Cell" H 3868 3755 50  0000 L CNN
-F 2 "kifootp:CR2032" V 3750 3810 50  0001 C CNN
+F 2 "Battery:Battery_Panasonic_CR2032-VS1N_Vertical_CircularHoles" V 3750 3810 50  0001 C CNN
 F 3 "~" V 3750 3810 50  0001 C CNN
 	1    3750 3750
 	1    0    0    -1  
