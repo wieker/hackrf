@@ -17,11 +17,45 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="hackrf_usb-program">
+			<Target title="hackrf_usb.elf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb.elf"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hackrf_usb.elf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/libopencm3/include"/>
+					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/common"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb.elf/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hackrf_usb_dfu.bin">
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb-program"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb_dfu.bin"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
@@ -81,35 +115,11 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="hackrf_usb_dfu.elf">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb_dfu.elf" prefix_auto="0" extension_auto="0"/>
+			<Target title="hackrf_usb.bin">
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/libopencm3/include"/>
-					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/common"/>
-				</Compiler>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb_dfu.elf"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="hackrf_usb_dfu.elf/fast">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb_dfu.elf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/libopencm3/include"/>
-					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/common"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb_dfu.elf/fast"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb.bin"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
@@ -149,18 +159,18 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="hackrf_usb_dfu.bin">
+			<Target title="hackrf_usb-program">
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb_dfu.bin"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb-program"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="hackrf_usb.elf">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb.elf" prefix_auto="0" extension_auto="0"/>
+			<Target title="hackrf_usb_dfu.elf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb_dfu.elf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -170,14 +180,14 @@
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/common"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb.elf"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb_dfu.elf"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="hackrf_usb.elf/fast">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb.elf" prefix_auto="0" extension_auto="0"/>
+			<Target title="hackrf_usb_dfu.elf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb_dfu.elf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -187,17 +197,7 @@
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/../../firmware/common"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb.elf/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="hackrf_usb.bin">
-				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb.bin"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 hackrf_usb_dfu.elf/fast"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/Makefile&quot;  VERBOSE=1 clean"/>
@@ -394,184 +394,184 @@
 			<Option target="hackrf_usb_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/cpld_jtag.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/fault_handler.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/gpio_lpc.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/hackrf_core.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/i2c_bus.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/i2c_lpc.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/max2837.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/max2837_target.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/max5864.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/max5864_target.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/mixer.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/operacake.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/rf_path.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/rffc5071.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/rffc5071_spi.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/rom_iap.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/sgpio.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/si5351c.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/spi_bus.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/spi_ssp.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/streaming.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/tuning.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/usb.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/usb_queue.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/usb_request.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/usb_standard_request.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/w25q80bv.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/w25q80bv_target.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/xapp058/lenval.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/xapp058/micro.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/__/common/xapp058/ports.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/hackrf_usb.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/m0_bin.s.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/sgpio_isr.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_api_board_info.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_api_cpld.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_api_operacake.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_api_register.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_api_spiflash.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_api_sweep.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_api_transceiver.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_bulk_buffer.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_descriptor.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_device.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/CMakeFiles/hackrf_usb_objects.dir/usb_endpoint.c.obj">
-			<Option target="hackrf_usb_dfu.elf"/>
 			<Option target="hackrf_usb.elf"/>
+			<Option target="hackrf_usb_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/hackrf_usb/hackrf_usb.c">
 			<Option target="hackrf_usb_objects"/>

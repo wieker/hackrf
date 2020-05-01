@@ -17,38 +17,8 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="liblpc-program">
-				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc-program"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="liblpc.dfu">
-				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc.dfu"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="liblpc_dfu.bin">
-				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_dfu.bin"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="liblpc_m0.elf">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc_m0.elf" prefix_auto="0" extension_auto="0"/>
+			<Target title="liblpc.elf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc.elf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -59,14 +29,14 @@
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/."/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_m0.elf"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc.elf"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="liblpc_m0.elf/fast">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc_m0.elf" prefix_auto="0" extension_auto="0"/>
+			<Target title="liblpc.elf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc.elf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -77,7 +47,7 @@
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/."/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_m0.elf/fast"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc.elf/fast"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -119,6 +89,16 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="liblpc_m0.bin">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_m0.bin"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="liblpc_dfu.elf">
 				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc_dfu.elf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
@@ -155,8 +135,8 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="liblpc.elf">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc.elf" prefix_auto="0" extension_auto="0"/>
+			<Target title="liblpc_m0.elf">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc_m0.elf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -167,14 +147,14 @@
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/."/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc.elf"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_m0.elf"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="liblpc.elf/fast">
-				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc.elf" prefix_auto="0" extension_auto="0"/>
+			<Target title="liblpc_m0.elf/fast">
+				<Option output="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/liblpc_m0.elf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -185,17 +165,17 @@
 					<Add directory="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/."/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc.elf/fast"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_m0.elf/fast"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="liblpc_m0.bin">
+			<Target title="liblpc_dfu.bin">
 				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_m0.bin"/>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc_dfu.bin"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -206,6 +186,26 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc.bin"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="liblpc.dfu">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc.dfu"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="liblpc-program">
+				<Option working_dir="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 liblpc-program"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -324,124 +324,124 @@
 			<Option target="liblpc_objects"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/gpio_lpc.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/hackrf_core.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/i2c_bus.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/i2c_lpc.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/max2837.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/max2837_target.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/max5864.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/max5864_target.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/mixer.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/rf_path.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/rffc5071.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/rffc5071_spi.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/sgpio.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/si5351c.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/spi_bus.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/spi_ssp.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/w25q80bv.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/__/common/w25q80bv_target.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/board.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/chip_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/clock_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/gpio_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/i2c.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/i2c_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/i2cm_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/m0_bin.s.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/ring_buffer.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/ssp_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/uart_18xx_43xx.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/CMakeFiles/liblpc_objects.dir/wm8904.c.obj">
-			<Option target="liblpc_dfu.elf"/>
 			<Option target="liblpc.elf"/>
+			<Option target="liblpc_dfu.elf"/>
 		</Unit>
 		<Unit filename="/home/wieker/Projects/linux/hackrf/hackrf/firmware/liblpc/board.c">
 			<Option target="liblpc_objects"/>

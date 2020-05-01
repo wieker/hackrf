@@ -14,6 +14,17 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
+L RF_Bluetooth:BL652 U1
+U 1 1 5EA5E957
+P 4150 2950
+F 0 "U1" H 4150 4231 50  0000 C CNN
+F 1 "BL652" H 4150 4140 50  0000 C CNN
+F 2 "RF_Module:Laird_BL652" H 4150 1750 50  0001 C CNN
+F 3 "http://cdn.lairdtech.com/home/brandworld/files/Datasheet%20-%20BL652.pdf" H 4150 1650 50  0001 C CNN
+	1    4150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
 L Device:C C1
 U 1 1 5EA60079
 P 7500 2950
@@ -109,6 +120,19 @@ Connection ~ 7600 2500
 Wire Wire Line
 	7600 2500 7850 2500
 $Comp
+L power:+3V3 #PWR05
+U 1 1 5EA62FE7
+P 4150 1500
+F 0 "#PWR05" H 4150 1350 50  0001 C CNN
+F 1 "+3V3" H 4165 1673 50  0000 C CNN
+F 2 "" H 4150 1500 50  0001 C CNN
+F 3 "" H 4150 1500 50  0001 C CNN
+	1    4150 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1500 4150 1850
+$Comp
 L power:GND #PWR06
 U 1 1 5EA63848
 P 4200 4500
@@ -119,6 +143,27 @@ F 3 "" H 4200 4500 50  0001 C CNN
 	1    4200 4500
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4200 4500 4200 4150
+Wire Wire Line
+	4050 3950 4050 4150
+Wire Wire Line
+	4050 4150 4150 4150
+Wire Wire Line
+	4200 4150 4250 4150
+Wire Wire Line
+	4350 4150 4350 3950
+Connection ~ 4200 4150
+Wire Wire Line
+	4250 3950 4250 4150
+Connection ~ 4250 4150
+Wire Wire Line
+	4250 4150 4350 4150
+Wire Wire Line
+	4150 3950 4150 4150
+Connection ~ 4150 4150
+Wire Wire Line
+	4150 4150 4200 4150
 $Comp
 L Device:LED D1
 U 1 1 5EA65302
@@ -267,8 +312,21 @@ F 3 "~" H 1550 4600 50  0001 C CNN
 	1    1550 4600
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3V3 #PWR04
+U 1 1 5EA812AE
+P 2350 3300
+F 0 "#PWR04" H 2350 3150 50  0001 C CNN
+F 1 "+3V3" H 2365 3473 50  0000 C CNN
+F 2 "" H 2350 3300 50  0001 C CNN
+F 3 "" H 2350 3300 50  0001 C CNN
+	1    2350 3300
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	1900 5500 2350 5500
+Wire Wire Line
+	2350 3300 2350 5500
 $Comp
 L power:GND #PWR03
 U 1 1 5EA84AA8
@@ -377,6 +435,10 @@ F 3 "~" H 9700 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1900 5300 2950 5300
+Wire Wire Line
+	3050 3550 3150 3550
+Wire Wire Line
+	2950 3350 3150 3350
 NoConn ~ 1900 4300
 NoConn ~ 1900 4200
 NoConn ~ 1900 4100
@@ -402,11 +464,27 @@ Wire Wire Line
 Wire Wire Line
 	1250 3800 1250 2950
 Wire Wire Line
+	5200 3750 5200 6050
+Wire Wire Line
 	5200 6050 6400 6050
+Wire Wire Line
+	5150 3750 5200 3750
+Wire Wire Line
+	5150 3650 5350 3650
+Wire Wire Line
+	5350 3650 5350 5700
 Wire Wire Line
 	5350 5700 6400 5700
 Wire Wire Line
 	6400 5350 5450 5350
+Wire Wire Line
+	5450 5350 5450 3550
+Wire Wire Line
+	5450 3550 5150 3550
+Wire Wire Line
+	5150 3450 5500 3450
+Wire Wire Line
+	5500 3450 5500 4950
 Wire Wire Line
 	5500 4950 6400 4950
 $Comp
@@ -440,7 +518,43 @@ Wire Wire Line
 Wire Wire Line
 	9250 1500 9500 1500
 Wire Wire Line
+	5150 2050 6050 2050
+Wire Wire Line
+	6050 2050 6050 1600
+Wire Wire Line
+	6050 1600 9500 1600
+Wire Wire Line
+	9500 1700 6200 1700
+Wire Wire Line
+	6200 1700 6200 2150
+Wire Wire Line
+	6200 2150 5150 2150
+NoConn ~ 3150 2050
+NoConn ~ 3150 2150
+NoConn ~ 3150 2250
+NoConn ~ 3150 2350
+NoConn ~ 3150 2450
+NoConn ~ 3150 2550
+NoConn ~ 3150 2650
+NoConn ~ 3150 2750
+NoConn ~ 5150 2950
+NoConn ~ 5150 3050
+NoConn ~ 5150 3150
+NoConn ~ 5150 3250
+NoConn ~ 5150 3350
+Wire Wire Line
+	1250 2950 3150 2950
+Wire Wire Line
+	1150 2850 3150 2850
+NoConn ~ 3150 3050
+NoConn ~ 3150 3150
+NoConn ~ 3150 3250
+NoConn ~ 3150 3450
+NoConn ~ 3150 3650
+Wire Wire Line
 	1900 4900 6150 4900
+Wire Wire Line
+	6100 4700 6100 2650
 Wire Wire Line
 	1900 4700 6100 4700
 Wire Wire Line
@@ -456,9 +570,33 @@ Wire Wire Line
 Wire Wire Line
 	1900 4500 4000 4500
 Wire Wire Line
+	6050 4600 6050 2750
+Wire Wire Line
+	5700 4500 5700 2850
+Wire Wire Line
+	5700 2850 5150 2850
+Wire Wire Line
+	6050 2750 5150 2750
+Wire Wire Line
+	6100 2650 5150 2650
+Wire Wire Line
+	2950 3350 2950 5300
+Wire Wire Line
 	1900 4800 6200 4800
+Wire Wire Line
+	6200 4800 6200 2550
+Wire Wire Line
+	3150 5000 3150 3750
 Wire Wire Line
 	1900 5000 3150 5000
 Wire Wire Line
+	3050 3550 3050 5200
+Wire Wire Line
 	1900 5200 3050 5200
+Wire Wire Line
+	6150 2450 5150 2450
+Wire Wire Line
+	6150 2450 6150 4900
+Wire Wire Line
+	5150 2550 6200 2550
 $EndSCHEMATC
