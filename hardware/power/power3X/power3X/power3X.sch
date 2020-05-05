@@ -182,4 +182,71 @@ Wire Wire Line
 Connection ~ 3500 2650
 Wire Wire Line
 	3500 2650 3650 2650
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5EB2702E
+P 1700 2950
+F 0 "BT?" H 1818 3046 50  0000 L CNN
+F 1 "Battery_Cell" H 1818 2955 50  0000 L CNN
+F 2 "" V 1700 3010 50  0001 C CNN
+F 3 "~" V 1700 3010 50  0001 C CNN
+	1    1700 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5EB28955
+P 1700 3250
+F 0 "BT?" H 1818 3346 50  0000 L CNN
+F 1 "Battery_Cell" H 1818 3255 50  0000 L CNN
+F 2 "" V 1700 3310 50  0001 C CNN
+F 3 "~" V 1700 3310 50  0001 C CNN
+	1    1700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5EB290CE
+P 1700 3550
+F 0 "BT?" H 1818 3646 50  0000 L CNN
+F 1 "Battery_Cell" H 1818 3555 50  0000 L CNN
+F 2 "" V 1700 3610 50  0001 C CNN
+F 3 "~" V 1700 3610 50  0001 C CNN
+	1    1700 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5EB298E3
+P 1700 3850
+F 0 "BT?" H 1818 3946 50  0000 L CNN
+F 1 "Battery_Cell" H 1818 3855 50  0000 L CNN
+F 2 "" V 1700 3910 50  0001 C CNN
+F 3 "~" V 1700 3910 50  0001 C CNN
+	1    1700 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3950 1700 4450
+Wire Wire Line
+	1700 4450 3200 4450
+Wire Wire Line
+	3200 4450 3200 3300
+Wire Wire Line
+	1700 2750 1700 2150
+Wire Wire Line
+	1700 2150 3200 2150
+Wire Wire Line
+	3200 2150 3200 2650
+$Comp
+L Analog_Switch:MAX40200AUK U?
+U 1 1 5EB307BB
+P 8500 2950
+F 0 "U?" H 8500 3317 50  0000 C CNN
+F 1 "MAX40200AUK" H 8500 3226 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8500 3450 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX40200.pdf" H 8500 3450 50  0001 C CNN
+	1    8500 2950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
