@@ -140,22 +140,6 @@ F 3 "~" H 7400 3100 50  0001 C CNN
 	1    7400 3100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6150 2400 7200 2400
-Wire Wire Line
-	6150 2500 7200 2500
-Wire Wire Line
-	6150 2600 7200 2600
-Wire Wire Line
-	6150 2700 7200 2700
-Wire Wire Line
-	6150 2800 7200 2800
-Wire Wire Line
-	6150 2900 7200 2900
-Wire Wire Line
-	6150 3000 7200 3000
-Wire Wire Line
-	6150 3100 7200 3100
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J3
 U 1 1 5DF5B1E1
@@ -257,9 +241,6 @@ Wire Wire Line
 Connection ~ 3500 1900
 Wire Wire Line
 	3500 1900 3500 1800
-NoConn ~ 7200 3200
-NoConn ~ 7200 4100
-NoConn ~ 7200 4000
 $Comp
 L Connector:Conn_01x03_Male J1
 U 1 1 5DF6C738
@@ -305,19 +286,6 @@ Wire Wire Line
 	2350 2800 3700 2800
 Wire Wire Line
 	3700 2800 3700 2500
-NoConn ~ 7200 2200
-NoConn ~ 7200 2300
-$Comp
-L Device:LED D1
-U 1 1 5DF85C3A
-P 5900 4550
-F 0 "D1" V 5939 4433 50  0000 R CNN
-F 1 "LED" V 5848 4433 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric" H 5900 4550 50  0001 C CNN
-F 3 "~" H 5900 4550 50  0001 C CNN
-	1    5900 4550
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Device:LED D2
 U 1 1 5DF8703F
@@ -361,17 +329,6 @@ F 2 "LED_SMD:LED_1206_3216Metric" H 6850 4550 50  0001 C CNN
 F 3 "~" H 6850 4550 50  0001 C CNN
 	1    6850 4550
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 5DF8EF38
-P 5900 5000
-F 0 "R1" H 5970 5046 50  0000 L CNN
-F 1 "10 kOhm" H 5970 4955 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 5830 5000 50  0001 C CNN
-F 3 "~" H 5900 5000 50  0001 C CNN
-	1    5900 5000
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
@@ -429,8 +386,6 @@ F 3 "" H 6350 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 5150 5900 5300
-Wire Wire Line
 	5900 5300 6200 5300
 Wire Wire Line
 	6350 5300 6350 5400
@@ -455,8 +410,6 @@ Connection ~ 6200 5300
 Wire Wire Line
 	6200 5300 6350 5300
 Wire Wire Line
-	5900 4700 5900 4850
-Wire Wire Line
 	6200 4850 6200 4700
 Wire Wire Line
 	6450 4850 6450 4700
@@ -465,25 +418,11 @@ Wire Wire Line
 Wire Wire Line
 	6850 4700 6850 4850
 Wire Wire Line
-	7200 3400 6500 3400
-Wire Wire Line
-	6500 3400 6500 3900
-Wire Wire Line
-	6500 3900 5900 3900
-Wire Wire Line
-	5900 3900 5900 4400
-Wire Wire Line
 	6200 4400 6200 4000
 Wire Wire Line
 	6200 4000 6600 4000
 Wire Wire Line
-	6600 4000 6600 3500
-Wire Wire Line
-	6600 3500 7200 3500
-Wire Wire Line
-	7200 3600 6650 3600
-Wire Wire Line
-	6650 3600 6650 4050
+	6600 4000 6600 3700
 Wire Wire Line
 	6650 4050 6450 4050
 Wire Wire Line
@@ -493,16 +432,9 @@ Wire Wire Line
 Wire Wire Line
 	6650 4150 6750 4150
 Wire Wire Line
-	6750 4150 6750 3700
-Wire Wire Line
-	6750 3700 7200 3700
-Wire Wire Line
-	7200 3800 6800 3800
-Wire Wire Line
-	6800 3800 6800 4400
+	6750 4150 6750 3900
 Wire Wire Line
 	6800 4400 6850 4400
-NoConn ~ 7200 3900
 Wire Wire Line
 	3700 2500 4550 2500
 Wire Wire Line
@@ -518,8 +450,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/adc08060.pdf" H 5350 2900 50  0001 C CNN
 	1    5350 2900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6150 3300 7200 3300
 Connection ~ 4550 2500
 Wire Wire Line
 	4550 2500 4750 2500
@@ -661,4 +591,145 @@ Wire Wire Line
 	3500 3100 3500 3200
 Wire Wire Line
 	5050 3700 5050 3750
+$Comp
+L power:+3V3 #PWR010
+U 1 1 5EB914BD
+P 5700 3950
+F 0 "#PWR010" H 5700 3800 50  0001 C CNN
+F 1 "+3V3" H 5715 4123 50  0000 C CNN
+F 2 "" H 5700 3950 50  0001 C CNN
+F 3 "" H 5700 3950 50  0001 C CNN
+	1    5700 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3950 5700 4100
+Wire Wire Line
+	7200 4100 5700 4100
+Wire Wire Line
+	7200 4000 6800 4000
+Wire Wire Line
+	6800 4000 6800 4400
+Wire Wire Line
+	7200 3900 6750 3900
+Wire Wire Line
+	7200 3800 6650 3800
+Wire Wire Line
+	6650 3800 6650 4050
+Wire Wire Line
+	7200 3700 6600 3700
+Wire Wire Line
+	7200 3600 6500 3600
+Wire Wire Line
+	6500 3600 6500 3900
+Wire Wire Line
+	5900 3900 5900 5300
+Wire Wire Line
+	5900 3900 6500 3900
+Wire Wire Line
+	7200 3400 6500 3400
+Wire Wire Line
+	6500 3400 6500 3600
+Connection ~ 6500 3600
+Wire Wire Line
+	6500 3400 6500 3100
+Wire Wire Line
+	6500 2200 7200 2200
+Connection ~ 6500 3400
+Wire Wire Line
+	7200 3100 6500 3100
+Connection ~ 6500 3100
+Wire Wire Line
+	6500 3100 6500 2800
+Wire Wire Line
+	7200 2800 6500 2800
+Connection ~ 6500 2800
+Wire Wire Line
+	6500 2800 6500 2500
+Wire Wire Line
+	7200 2500 6500 2500
+Connection ~ 6500 2500
+Wire Wire Line
+	6500 2500 6500 2200
+Wire Wire Line
+	6150 2400 6150 2300
+Wire Wire Line
+	6150 2300 7200 2300
+Wire Wire Line
+	6150 2500 6250 2500
+Wire Wire Line
+	6250 2500 6250 2400
+Wire Wire Line
+	6250 2400 7200 2400
+Wire Wire Line
+	6150 2600 7200 2600
+Wire Wire Line
+	7200 2700 6150 2700
+Wire Wire Line
+	6150 2800 6350 2800
+Wire Wire Line
+	6350 2800 6350 2900
+Wire Wire Line
+	6350 2900 7200 2900
+Wire Wire Line
+	7200 3000 6300 3000
+Wire Wire Line
+	6300 3000 6300 2900
+Wire Wire Line
+	6300 2900 6150 2900
+Wire Wire Line
+	6150 3000 6250 3000
+Wire Wire Line
+	6250 3000 6250 3100
+Wire Wire Line
+	6250 3100 6350 3100
+Wire Wire Line
+	6350 3100 6350 3150
+Wire Wire Line
+	6350 3150 6450 3150
+Wire Wire Line
+	6450 3150 6450 3200
+Wire Wire Line
+	6450 3200 7200 3200
+Wire Wire Line
+	6150 3100 6150 3150
+Wire Wire Line
+	6150 3150 6250 3150
+Wire Wire Line
+	6250 3150 6250 3200
+Wire Wire Line
+	6250 3200 6350 3200
+Wire Wire Line
+	6350 3200 6350 3250
+Wire Wire Line
+	6350 3250 6450 3250
+Wire Wire Line
+	6450 3250 6450 3300
+Wire Wire Line
+	6450 3300 7200 3300
+Wire Wire Line
+	6150 3300 6400 3300
+Wire Wire Line
+	6400 3300 6400 3500
+Wire Wire Line
+	6400 3500 7200 3500
+$Comp
+L Device:C C6
+U 1 1 5EC03ED3
+P 7500 1400
+F 0 "C6" H 7615 1446 50  0000 L CNN
+F 1 "0.1uF" H 7615 1355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7538 1250 50  0001 C CNN
+F 3 "~" H 7500 1400 50  0001 C CNN
+	1    7500 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 1050 7500 1250
+Wire Wire Line
+	7050 1050 7500 1050
+Wire Wire Line
+	7500 1700 7500 1550
+Wire Wire Line
+	7050 1700 7500 1700
 $EndSCHEMATC
