@@ -61,8 +61,7 @@ int main()
         acia_tx_str("\n\r");
 
         // write counter msbyte to GPIO
-        GPIO_DATA = x;
-        x++;
+        GPIO_DATA ^= 0xFF;
     }
 
     //  We should never get here!
