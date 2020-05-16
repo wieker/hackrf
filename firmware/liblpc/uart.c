@@ -460,6 +460,8 @@ void ptc(char ch)
 
 int uart_main_read(void)
 {
+    DEBUGOUT("UART enter\r\n");
+
     x_Chip_UART3_Init();
 
     /* Enable UART End of Auto baudrate & Auto baudrate timeout interrupts */

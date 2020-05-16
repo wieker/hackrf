@@ -16,6 +16,8 @@ unsigned long i;
 
 int main()
 {
+    int s = 0;
+
 	// Send startup message
 	acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
 
@@ -43,10 +45,9 @@ int main()
 	// enable ACIA IRQ for serial echo in background
 	ACIA_CTRL = 0x80;
 	asm("CLI");
-	
+
     // Run forever with GPIO blink
-    while(1)
-    {
+    while(1) {
         acia_tx_str(txt_buf);
         acia_tx_str("\n\r");
         acia_tx_chr(*(&SRAM_DATA + 1));
@@ -61,7 +62,13 @@ int main()
         acia_tx_str("\n\r");
 
         // write counter msbyte to GPIO
-        GPIO_DATA ^= 0xFF;
+        if (s == 0) {
+            GPIO_DATA = 0xFF;
+            s = 1;
+        } else {
+            GPIO_DATA = 0x00;
+            s = 0;
+        }
     }
 
     //  We should never get here!
