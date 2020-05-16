@@ -14,11 +14,6 @@ module icestick_6502_top(
                    CEn, WEn, OEn,
                    inout D0, D1, D2, D3,
                    inout D4, D5, D6, D7,
-                   output ADC_CLK,
-                   output adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8,
-                   output adled1, adled2, adled3, adled4, adled5,
-                   output charge,
-                   input sense,
                    input CLK,
 );
 	// reset generator waits > 10us
@@ -88,12 +83,7 @@ module icestick_6502_top(
 		.sram_oe(sram_oe),
 		.sram_din(sram_din),
 		.sram_dout(sram_dout),
-		.addr(addr),
-
-		.adc_reg(adc_reg),
-
-		.charge(charge),
-		.sense(sense)
+		.addr(addr)
 	);
     
 	// drive LEDs from GPIO
@@ -108,17 +98,4 @@ module icestick_6502_top(
 		.D_IN_0({sram_din[0], sram_din[1], sram_din[2], sram_din[3], sram_din[4], sram_din[5], sram_din[6], sram_din[7]}),
 		.D_OUT_0({sram_dout[0], sram_dout[1], sram_dout[2], sram_dout[3], sram_dout[4], sram_dout[5], sram_dout[6], sram_dout[7]})
 	);
-
-	assign ADC_CLK = clk;
-	assign adled1 = adio1;
-	assign adled2 = adio2;
-	assign adled3 = adio3;
-	assign adled4 = adio4;
-	assign adled5 = adio5;
-	assign {adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8} = {LED1, LED2, LED3, 5'hff};
-
-	always @(posedge clk)
-	begin
-		adc_reg <= {adio1, adio2, adio3, adio4, adio5, adio6, adio7, adio8};
-	end
 endmodule
