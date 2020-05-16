@@ -47,19 +47,6 @@ int main()
     // Run forever with GPIO blink
     while(1)
     {
-		// delay
-        cnt = 1024L;
-        while(cnt--)
-        {
-        }
-        cnt = 1024L;
-        while(cnt--)
-        {
-        }
-        cnt = 1024L;
-        while(cnt--)
-        {
-        }
         acia_tx_str(txt_buf);
         acia_tx_str("\n\r");
         acia_tx_chr(*(&SRAM_DATA + 1));

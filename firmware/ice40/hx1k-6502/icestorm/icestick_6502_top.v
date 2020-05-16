@@ -19,6 +19,7 @@ module icestick_6502_top(
                    output adled1, adled2, adled3, adled4, adled5,
                    output charge,
                    input sense,
+                   input CLK,
 );
 	// reset generator waits > 10us
 	reg [7:0] reset_cnt;
@@ -34,7 +35,7 @@ module icestick_6502_top(
 	initial
         reset_cnt <= 8'h00;
 
-    ringoscillator #(.DELAY_LUTS(20)) rng(clk);
+    assign clk = CLK;
 
     assign CEn = 0;
     assign OEn = 0;

@@ -436,7 +436,7 @@ void x_Chip_UART3_Init(void)
     x_Board_UART3_Init();
 
     Chip_UART_Init(LPC_USART3);
-    Chip_UART_SetBaudFDR(LPC_USART3, 115200);
+    Chip_UART_SetBaudFDR(LPC_USART3, 1024);
     Chip_UART_ConfigData(LPC_USART3, UART_LCR_WLEN8 | UART_LCR_SBS_1BIT | UART_LCR_PARITY_DIS);
 
     /* Enable UART Transmit */
