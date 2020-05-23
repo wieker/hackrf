@@ -180,58 +180,10 @@ Wire Wire Line
 Connection ~ 3500 2650
 Wire Wire Line
 	3500 2650 3650 2650
-$Comp
-L Device:Battery_Cell BT1
-U 1 1 5EB2702E
-P 1700 2950
-F 0 "BT1" H 1818 3046 50  0000 L CNN
-F 1 "Battery_Cell" H 1818 2955 50  0000 L CNN
-F 2 "kifootp:CR2032" V 1700 3010 50  0001 C CNN
-F 3 "~" V 1700 3010 50  0001 C CNN
-	1    1700 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Battery_Cell BT2
-U 1 1 5EB28955
-P 1700 3250
-F 0 "BT2" H 1818 3346 50  0000 L CNN
-F 1 "Battery_Cell" H 1818 3255 50  0000 L CNN
-F 2 "kifootp:CR2032" V 1700 3310 50  0001 C CNN
-F 3 "~" V 1700 3310 50  0001 C CNN
-	1    1700 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Battery_Cell BT3
-U 1 1 5EB290CE
-P 1700 3550
-F 0 "BT3" H 1818 3646 50  0000 L CNN
-F 1 "Battery_Cell" H 1818 3555 50  0000 L CNN
-F 2 "kifootp:CR2032" V 1700 3610 50  0001 C CNN
-F 3 "~" V 1700 3610 50  0001 C CNN
-	1    1700 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Battery_Cell BT4
-U 1 1 5EB298E3
-P 1700 3850
-F 0 "BT4" H 1818 3946 50  0000 L CNN
-F 1 "Battery_Cell" H 1818 3855 50  0000 L CNN
-F 2 "kifootp:CR2032" V 1700 3910 50  0001 C CNN
-F 3 "~" V 1700 3910 50  0001 C CNN
-	1    1700 3850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1700 3950 1700 4450
 Wire Wire Line
 	1700 4450 3200 4450
 Wire Wire Line
 	3200 4450 3200 3300
-Wire Wire Line
-	1700 2750 1700 2150
 Wire Wire Line
 	1700 2150 2550 2150
 Wire Wire Line
@@ -423,10 +375,27 @@ Connection ~ 6250 4050
 Wire Wire Line
 	9850 2850 9850 3000
 Wire Wire Line
-	4850 6550 9850 6550
-Wire Wire Line
 	9850 3300 9850 4050
-Connection ~ 9850 4050
 Wire Wire Line
-	9850 4050 9850 6550
+	9850 2850 10450 2850
+Wire Wire Line
+	10450 2850 10450 6550
+Wire Wire Line
+	4850 6550 10450 6550
+Connection ~ 9850 2850
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5ED4C098
+P 1500 3150
+F 0 "J2" H 1608 3331 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1608 3240 50  0000 C CNN
+F 2 "" H 1500 3150 50  0001 C CNN
+F 3 "~" H 1500 3150 50  0001 C CNN
+	1    1500 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2150 1700 3150
+Wire Wire Line
+	1700 4450 1700 3250
 $EndSCHEMATC
