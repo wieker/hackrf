@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -13,4 +13,56 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L cyUsb:USBFCI_10103594_MILL X1
+U 1 1 5EC92C33
+P 4900 3000
+F 0 "X1" H 4907 3447 42  0000 C CNN
+F 1 "USBFCI_10103594_MILL" H 4907 3368 42  0000 C CNN
+F 2 "" H 4900 3000 50  0001 C CNN
+F 3 "" H 4900 3000 50  0001 C CNN
+	1    4900 3000
+	1    0    0    -1  
+$EndComp
+Text GLabel 5300 2800 2    50   Input ~ 0
+5V
+NoConn ~ 5300 3100
+$Comp
+L power:GND #PWR0107
+U 1 1 5EC94391
+P 5600 3400
+F 0 "#PWR0107" H 5600 3150 50  0001 C CNN
+F 1 "GND" H 5605 3227 50  0000 C CNN
+F 2 "" H 5600 3400 50  0001 C CNN
+F 3 "" H 5600 3400 50  0001 C CNN
+	1    5600 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3200 5600 3200
+Wire Wire Line
+	5600 3200 5600 3400
+$Comp
+L power:+5V #PWR?
+U 1 1 5ECA793F
+P 6650 1850
+AR Path="/5ECA793F" Ref="#PWR?"  Part="1" 
+AR Path="/5BC77B78/5ECA793F" Ref="#PWR?"  Part="1" 
+AR Path="/5ED3DDCD/5ECA793F" Ref="#PWR?"  Part="1" 
+AR Path="/5ED44E64/5ECA793F" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 6650 1700 50  0001 C CNN
+F 1 "+5V" H 6650 1990 50  0000 C CNN
+F 2 "" H 6650 1850 50  0000 C CNN
+F 3 "" H 6650 1850 50  0000 C CNN
+	1    6650 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 6700 2050 2    50   Input ~ 0
+5V
+Wire Wire Line
+	6650 1850 6650 2050
+Wire Wire Line
+	6650 2050 6700 2050
+NoConn ~ 5300 2900
+NoConn ~ 5300 3000
 $EndSCHEMATC
