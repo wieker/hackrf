@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 4)
-    (tracks 166)
+    (tracks 165)
     (zones 0)
     (modules 5)
     (nets 24)
@@ -160,9 +160,9 @@
     (fp_line (start -4.5 4.5) (end 4.5 4.5) (layer F.SilkS) (width 0.15))
     (fp_line (start -4.5 -4.5) (end -4.5 4.5) (layer F.SilkS) (width 0.15))
     (pad 10 smd rect (at 1.85 3.7 270) (size 1 1) (layers F.Cu F.Paste F.Mask)
-      (net 3 "Net-(J1-Pad16)"))
-    (pad 9 smd rect (at 3.7 3.7 270) (size 1 1) (layers F.Cu F.Paste F.Mask)
       (net 2 "Net-(J1-Pad17)"))
+    (pad 9 smd rect (at 3.7 3.7 270) (size 1 1) (layers F.Cu F.Paste F.Mask)
+      (net 3 "Net-(J1-Pad16)"))
     (pad 8 smd rect (at 3.7 1.85 270) (size 1 1) (layers F.Cu F.Paste F.Mask)
       (net 18 "Net-(U1-Pad8)"))
     (pad 7 smd rect (at 3.7 0 270) (size 1 1) (layers F.Cu F.Paste F.Mask)
@@ -618,7 +618,6 @@
   (gr_line (start 71.02 25.96) (end 71.01 78.96) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 71.01 78.96) (end 107.99 78.97) (layer Edge.Cuts) (width 0.1))
 
-  (via (at 72.66 36.13) (size 0.5) (drill 0.25) (layers F.Cu B.Cu) (net 16))
   (segment (start 74.252081 68.45) (end 74.342081 68.54) (width 0.15) (layer F.Cu) (net 2))
   (segment (start 73.05 68.45) (end 74.252081 68.45) (width 0.15) (layer F.Cu) (net 2))
   (segment (start 74.342081 68.54) (end 77.82 68.54) (width 0.15) (layer F.Cu) (net 2))
