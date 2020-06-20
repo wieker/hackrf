@@ -3,8 +3,8 @@
 
 set_io CLK 69
 
-set_io --warn-no-port RX 56
-set_io --warn-no-port TX 54
+set_io --warn-no-port RX 54
+set_io --warn-no-port TX 56
 set_io LED1 51
 set_io LED2 52
 set_io LED3 53

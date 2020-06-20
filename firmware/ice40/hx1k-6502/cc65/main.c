@@ -20,27 +20,6 @@ int main()
 
 	// Send startup message
 	acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
-
-    /*while(1) {
-        cnt = 80;
-        while(cnt--) {
-            acia_tx_chr('0');
-        }
-        acia_tx_str("\n\r");
-        cnt = 1024L;
-        while(cnt--)
-        {
-        }
-    }*/
-	
-	// test some C stuff
-	for(i=0;i<26;i++)
-		txt_buf[i] = 'A'+i;
-	txt_buf[i] = 0;
-	acia_tx_str(txt_buf);
-	acia_tx_str("\n\r");
-    SRAM_DATA = 'A';
-    *(&SRAM_DATA + 1) = 'B';
 	
 	// enable ACIA IRQ for serial echo in background
 	ACIA_CTRL = 0x80;
@@ -48,20 +27,8 @@ int main()
 
     // Run forever with GPIO blink
     while(1) {
-        acia_tx_str(txt_buf);
-        acia_tx_str("\n\r");
-        acia_tx_chr(*(&SRAM_DATA + 1));
-        acia_tx_chr(SRAM_DATA);
-        acia_tx_chr(*(&SRAM_DATA + 1));
-        acia_tx_str("\n\r");
-        SRAM_DATA = SRAM_DATA + 1;
-        *(&SRAM_DATA + 1) = *(&SRAM_DATA + 1) + 1;
-        acia_tx_chr('0' + ADC_DATA / 100);
-        acia_tx_chr('0' + ADC_DATA / 10 % 10);
-        acia_tx_chr('0' + ADC_DATA % 10);
-        acia_tx_str("\n\r");
+        acia_tx_str("\n\n\n\n\n\n\r\r\r\r\r\r\r");
 
-        // write counter msbyte to GPIO
         if (s == 0) {
             GPIO_DATA = 0xFF;
             s = 1;
