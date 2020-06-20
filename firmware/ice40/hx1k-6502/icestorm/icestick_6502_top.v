@@ -77,7 +77,7 @@ module icestick_6502_top(
 		.gpio_o(gpio_o),
 		.gpio_i(gpio_i),
 		
-		.RX(1),
+		.RX(RX),
 		.TX(TX),
 
 		.sram_oe(sram_oe),
