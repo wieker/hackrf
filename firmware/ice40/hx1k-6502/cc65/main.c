@@ -27,12 +27,13 @@ int main()
 
     // Run forever with GPIO blink
     while(1) {
-        acia_tx_str("\n\n\n\n\n\n\r\r\r\r\r\r\r");
 
         if (s == 0) {
+            acia_tx_str("hello\n");
             GPIO_DATA = 0xFF;
             s = 1;
         } else {
+            acia_tx_str("world\r");
             GPIO_DATA = 0x00;
             s = 0;
         }
