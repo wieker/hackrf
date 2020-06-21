@@ -43,6 +43,7 @@ _irq_int:  PHA                    ; Save accumulator contents to stack
 ; ---------------------------------------------------------------------------
 ; Echo RX char
            JSR _acia_rx_chr       ; get RX char
+           STA ACIA_SRAM_STORE
            JSR _run_cmd       ; send TX char
            ;JSR _acia_tx_chr       ; send TX char
 		   

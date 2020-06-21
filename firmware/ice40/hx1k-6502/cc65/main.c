@@ -17,6 +17,7 @@ unsigned long i;
 int main()
 {
     int s = 0;
+    int i;
 
 	// Send startup message
 	acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
@@ -27,6 +28,9 @@ int main()
 
     // Run forever with GPIO blink
     while(1) {
+        for (i = 0; i < 1000; i ++) {
+
+        }
 
         if (s == 0) {
             acia_tx_str("hello\n");
@@ -44,5 +48,8 @@ int main()
 }
 
 void run_cmd() {
-    acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
+    SRAM_DATA = ACIA_SRAM_STORE;
+    (*(&SRAM_DATA + 1)) = 0;
+    acia_tx_str(&SRAM_DATA);
+    //acia_tx_str("\n\n\rIcestick 6502 cc65 serial test\n\n\r");
 }
