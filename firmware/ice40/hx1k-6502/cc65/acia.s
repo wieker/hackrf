@@ -27,6 +27,7 @@ _acia_data:     .res 2, $00        ;  Reserve a local zero page pointer
 ; ---------------------------------------------------------------------------
 ; Store pointer to zero page memory and load first character
 
+        sei
         sta     _acia_data       ;  Set zero page pointer to string address
         stx     _acia_data+1     ;    (pointer passed in via the A/X registers)
         ldy     #00              ;  Initialize Y to 0
@@ -39,6 +40,7 @@ loop:   jsr     _acia_tx_chr     ;  Loop:  send char to ACIA
         iny                      ;         Increment Y index
         lda     (_acia_data),y   ;         Get next character
         bne     loop             ;         If character == 0, exit loop
+        cli
         rts                      ;  Return
 .endproc
         
