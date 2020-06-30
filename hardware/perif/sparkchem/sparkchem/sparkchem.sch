@@ -1,0 +1,118 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_FET:IRF7486M Q?
+U 1 1 5EFC55A1
+P 5150 2300
+F 0 "Q?" H 5354 2346 50  0000 L CNN
+F 1 "IRF7486M" H 5354 2255 50  0000 L CNN
+F 2 "Package_DirectFET:DirectFET_ME" H 5150 2300 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-IRL7486M-DS-v01_00-EN.pdf?fileId=5546d46258fc0bc10158fec7a83a0629" H 5150 2300 50  0001 L CNN
+	1    5150 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5EFC60FD
+P 6200 1550
+F 0 "D?" H 6200 1333 50  0000 C CNN
+F 1 "D" H 6200 1424 50  0000 C CNN
+F 2 "" H 6200 1550 50  0001 C CNN
+F 3 "~" H 6200 1550 50  0001 C CNN
+	1    6200 1550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6050 1550 5250 1550
+Wire Wire Line
+	5250 1550 5250 2100
+$Comp
+L Device:L L?
+U 1 1 5EFC67DE
+P 4500 1550
+F 0 "L?" V 4319 1550 50  0000 C CNN
+F 1 "L" V 4410 1550 50  0000 C CNN
+F 2 "" H 4500 1550 50  0001 C CNN
+F 3 "~" H 4500 1550 50  0001 C CNN
+	1    4500 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 1550 5250 1550
+Connection ~ 5250 1550
+$Comp
+L Device:C C?
+U 1 1 5EFC716B
+P 3650 2050
+F 0 "C?" H 3765 2096 50  0000 L CNN
+F 1 "C" H 3765 2005 50  0000 L CNN
+F 2 "" H 3688 1900 50  0001 C CNN
+F 3 "~" H 3650 2050 50  0001 C CNN
+	1    3650 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 1900 3650 1550
+Wire Wire Line
+	3650 1550 4350 1550
+Wire Wire Line
+	3650 2200 3650 3150
+Wire Wire Line
+	3650 3150 5250 3150
+Wire Wire Line
+	5250 3150 5250 2500
+$Comp
+L Device:C C?
+U 1 1 5EFC7A1D
+P 6650 2150
+F 0 "C?" H 6765 2196 50  0000 L CNN
+F 1 "C" H 6765 2105 50  0000 L CNN
+F 2 "" H 6688 2000 50  0001 C CNN
+F 3 "~" H 6650 2150 50  0001 C CNN
+	1    6650 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1550 6650 1550
+Wire Wire Line
+	6650 1550 6650 2000
+Wire Wire Line
+	6650 2300 6650 3150
+Wire Wire Line
+	6650 3150 5250 3150
+Connection ~ 5250 3150
+$Comp
+L Device:R R?
+U 1 1 5EFC84A5
+P 7650 2200
+F 0 "R?" H 7720 2246 50  0000 L CNN
+F 1 "R" H 7720 2155 50  0000 L CNN
+F 2 "" V 7580 2200 50  0001 C CNN
+F 3 "~" H 7650 2200 50  0001 C CNN
+	1    7650 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1550 7650 1550
+Wire Wire Line
+	7650 1550 7650 2050
+Connection ~ 6650 1550
+Wire Wire Line
+	7650 2350 7650 3150
+Wire Wire Line
+	7650 3150 6650 3150
+Connection ~ 6650 3150
+$EndSCHEMATC
