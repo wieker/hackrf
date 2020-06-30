@@ -52,33 +52,6 @@ NoConn ~ 4000 5200
 NoConn ~ 4000 5300
 Wire Wire Line
 	4000 5800 9600 5800
-$Comp
-L kilib:M10578-A2 U1
-U 1 1 5ECA8A37
-P 3550 2600
-F 0 "U1" H 3550 3151 39  0000 C CNN
-F 1 "M10578-A2" H 3550 3076 39  0000 C CNN
-F 2 "kifootp:M10578-A3" H 3550 2600 39  0001 C CNN
-F 3 "" H 3550 2600 39  0001 C CNN
-	1    3550 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Antenna_Chip AE1
-U 1 1 5ED30498
-P 4700 3000
-F 0 "AE1" H 4880 3127 50  0000 L CNN
-F 1 "Antenna_Chip" H 4880 3036 50  0000 L CNN
-F 2 "kifootp:575AT43A40" H 4600 3175 50  0001 C CNN
-F 3 "~" H 4600 3175 50  0001 C CNN
-	1    4700 3000
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4800 3100
-NoConn ~ 4150 2900
-NoConn ~ 4150 2700
-NoConn ~ 4150 2600
-NoConn ~ 4150 2500
 NoConn ~ 2950 2500
 NoConn ~ 2950 2600
 Wire Wire Line
@@ -107,7 +80,6 @@ F 3 "~" H 2500 2400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2950 2250 2500 2250
-Connection ~ 2950 2250
 Wire Wire Line
 	2500 2250 2200 2250
 Connection ~ 2500 2250
@@ -119,19 +91,7 @@ Wire Wire Line
 	9600 1100 9600 5800
 Connection ~ 2200 2250
 Wire Wire Line
-	2950 2700 2950 2800
-Connection ~ 2950 2800
-Wire Wire Line
-	2950 2800 2950 2900
-Connection ~ 2950 2900
-Wire Wire Line
-	2950 2900 2950 3000
-Connection ~ 2950 3000
-Wire Wire Line
-	2950 3000 2950 3100
-Wire Wire Line
 	2200 2550 2200 3100
-Connection ~ 2950 3100
 Wire Wire Line
 	5400 4000 5400 3650
 Wire Wire Line
@@ -167,11 +127,22 @@ Wire Wire Line
 Wire Wire Line
 	6200 2350 4150 2350
 Wire Wire Line
-	4150 3100 4600 3100
-Wire Wire Line
 	6200 5600 4000 5600
 Wire Wire Line
 	6200 2350 6200 5600
 Wire Wire Line
 	4000 5500 6900 5500
+Wire Wire Line
+	2950 2700 2950 3100
+$Comp
+L kilib:CAM-M8Q IC?
+U 1 1 5EFF4C22
+P 4100 2400
+F 0 "IC?" H 4100 3186 59  0000 C CNN
+F 1 "CAM-M8Q" H 4100 3081 59  0000 C CNN
+F 2 "" H 4100 2400 50  0001 C CNN
+F 3 "" H 4100 2400 50  0001 C CNN
+	1    4100 2400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
