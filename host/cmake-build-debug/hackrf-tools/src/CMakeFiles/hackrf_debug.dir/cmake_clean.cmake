@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hackrf_debug.dir/hackrf_debug.c.o"
-  "hackrf_debug.pdb"
   "hackrf_debug"
+  "hackrf_debug.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

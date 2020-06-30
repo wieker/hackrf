@@ -2,17 +2,17 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="HackRF" targetName="hackrf_spiflash" />
-      <config projectName="HackRF" targetName="hackrf_operacake" />
-      <config projectName="HackRF" targetName="hackrf" />
-      <config projectName="HackRF" targetName="hackrf_info" />
-      <config projectName="HackRF" targetName="hackrf_transfer" />
-      <config projectName="HackRF" targetName="hackrf_sweep" />
       <config projectName="HackRF" targetName="hackrf-static" />
-      <config projectName="HackRF" targetName="hackrf_debug" />
       <config projectName="HackRF" targetName="runcmd" />
-      <config projectName="HackRF" targetName="uninstall" />
+      <config projectName="HackRF" targetName="hackrf_operacake" />
+      <config projectName="HackRF" targetName="hackrf_sweep" />
+      <config projectName="HackRF" targetName="hackrf_spiflash" />
+      <config projectName="HackRF" targetName="hackrf" />
       <config projectName="HackRF" targetName="hackrf_cpldjtag" />
+      <config projectName="HackRF" targetName="hackrf_debug" />
+      <config projectName="HackRF" targetName="hackrf_transfer" />
+      <config projectName="HackRF" targetName="uninstall" />
+      <config projectName="HackRF" targetName="hackrf_info" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -22,7 +22,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e073570-98d3-4a0d-a23f-2950fee24bff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k-6502/cc65/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k-6502/cc65/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware/ice40/hx1k-6502/src/acia.v" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware/ice40/hx1k-6502/src/acia.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hardware/aboard/board/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/aboard/board/fp-info-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hardware/mcu/nrf52/nrf52/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/mcu/nrf52/nrf52/fp-info-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hardware/mcu/stdAtmelUSB/stdAtmelUSB/stdAtmelUSB/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/mcu/stdAtmelUSB/stdAtmelUSB/stdAtmelUSB/fp-info-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hardware/perif/gps/gps/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/perif/gps/gps/fp-info-cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/uninstall.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/uninstall.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/HackRF.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/HackRF.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_uninstall.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/hackrf-tools.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/hackrf-tools.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_cpldjtag.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_debug.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_info.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_operacake.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_spiflash.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_sweep.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/hackrf_transfer.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/CMakeFiles/runcmd.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hackrf-tools/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/libhackrf.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/libhackrf.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf-static.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/CMakeFiles/hackrf.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libhackrf/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spidump" beforeDir="false" afterPath="$PROJECT_DIR$/spidump" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +110,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -40,13 +119,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/hackrf-tools/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -63,57 +142,57 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.runcmd">
-    <configuration name="hackrf-static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf-static" CONFIG_NAME="Debug">
+    <configuration name="hackrf-static" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf-static" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf" CONFIG_NAME="Debug">
+    <configuration name="hackrf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf_cpldjtag" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_cpldjtag" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_cpldjtag">
+    <configuration name="hackrf_cpldjtag" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_cpldjtag" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_cpldjtag">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf_debug" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_debug" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_debug">
+    <configuration name="hackrf_debug" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_debug" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf_info" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_info" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_info">
+    <configuration name="hackrf_info" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_info" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_info">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf_operacake" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_operacake" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_operacake">
+    <configuration name="hackrf_operacake" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_operacake" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_operacake">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf_spiflash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_spiflash" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_spiflash">
+    <configuration name="hackrf_spiflash" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_spiflash" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_spiflash">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf_sweep" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_sweep" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_sweep">
+    <configuration name="hackrf_sweep" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_sweep" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_sweep">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hackrf_transfer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_transfer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_transfer">
+    <configuration name="hackrf_transfer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="hackrf_transfer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="hackrf_transfer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="runcmd" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="runcmd" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="runcmd">
+    <configuration name="runcmd" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="runcmd" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HackRF" RUN_TARGET_NAME="runcmd">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
+    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HackRF" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -131,18 +210,6 @@
       <item itemvalue="CMake Application.runcmd" />
       <item itemvalue="CMake Application.uninstall" />
     </list>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -177,20 +244,19 @@
       <workItem from="1569711078003" duration="1907000" />
       <workItem from="1570722485575" duration="1209000" />
       <workItem from="1587388339995" duration="8000" />
+      <workItem from="1592668407719" duration="4669000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -209,5 +275,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

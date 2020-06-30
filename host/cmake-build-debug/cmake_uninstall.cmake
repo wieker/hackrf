@@ -10,7 +10,7 @@ FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")
   IF(EXISTS "$ENV{DESTDIR}${file}")
     EXEC_PROGRAM(
-      "/home/source/intellij/clion-2019.1.4/bin/cmake/linux/bin/cmake" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+      "/home/source/intellij/clion-2019.3.2/bin/cmake/linux/bin/cmake" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
       OUTPUT_VARIABLE rm_out
       RETURN_VALUE rm_retval
       )
@@ -19,7 +19,7 @@ FOREACH(file ${files})
     ENDIF(NOT "${rm_retval}" STREQUAL 0)
   ELSEIF(IS_SYMLINK "$ENV{DESTDIR}${file}")
     EXEC_PROGRAM(
-      "/home/source/intellij/clion-2019.1.4/bin/cmake/linux/bin/cmake" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+      "/home/source/intellij/clion-2019.3.2/bin/cmake/linux/bin/cmake" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
       OUTPUT_VARIABLE rm_out
       RETURN_VALUE rm_retval
       )

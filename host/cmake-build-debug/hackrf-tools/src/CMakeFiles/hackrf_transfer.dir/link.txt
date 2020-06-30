@@ -1,1 +1,1 @@
-/usr/bin/cc  -std=gnu90 -g  -rdynamic CMakeFiles/hackrf_transfer.dir/hackrf_transfer.c.o  -o hackrf_transfer -Wl,-rpath,/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src: -lm -lfftw3f ../../libhackrf/src/libhackrf.so.0.5.0 -lusb-1.0 -lpthread 
+/usr/bin/cc  -std=gnu90 -g  -rdynamic CMakeFiles/hackrf_transfer.dir/hackrf_transfer.c.o  -o hackrf_transfer  -Wl,-rpath,/home/wieker/Projects/linux/hackrf/hackrf/host/cmake-build-debug/libhackrf/src: -lm -lfftw3f ../../libhackrf/src/libhackrf.so.0.5.0 -lusb-1.0 -lpthread 

@@ -10,7 +10,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "LIBRARY_RELEASE=\"git-cf791d0*\""
+  "LIBRARY_RELEASE=\"git-8507dfe*\""
   "LIBRARY_VERSION=\"0.5\""
   )
 

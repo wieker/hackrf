@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/runcmd.dir/runcmd.c.o"
-  "runcmd.pdb"
   "runcmd"
+  "runcmd.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
