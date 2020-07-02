@@ -1,0 +1,192 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C?
+U 1 1 5F024F45
+P 8200 1850
+F 0 "C?" H 8315 1896 50  0000 L CNN
+F 1 "C" H 8315 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8238 1700 50  0001 C CNN
+F 3 "~" H 8200 1850 50  0001 C CNN
+	1    8200 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F024F4B
+P 8500 1850
+F 0 "C?" H 8615 1896 50  0000 L CNN
+F 1 "C" H 8615 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8538 1700 50  0001 C CNN
+F 3 "~" H 8500 1850 50  0001 C CNN
+	1    8500 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L kilib:CAM-M8Q IC?
+U 1 1 5F024F5F
+P 4500 3450
+F 0 "IC?" H 4500 4236 59  0000 C CNN
+F 1 "CAM-M8Q" H 4500 4131 59  0000 C CNN
+F 2 "kifootp:CAM-M8Q" H 4500 3450 50  0001 C CNN
+F 3 "" H 4500 3450 50  0001 C CNN
+	1    4500 3450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3800 2950
+Wire Wire Line
+	3800 3150 3800 3250
+NoConn ~ 5200 2950
+NoConn ~ 5200 3350
+NoConn ~ 5200 3450
+NoConn ~ 5200 3650
+NoConn ~ 5200 3750
+NoConn ~ 5200 3850
+NoConn ~ 5200 3950
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F026616
+P 3200 2950
+F 0 "#PWR?" H 3200 2800 50  0001 C CNN
+F 1 "+3V3" H 3215 3123 50  0000 C CNN
+F 2 "" H 3200 2950 50  0001 C CNN
+F 3 "" H 3200 2950 50  0001 C CNN
+	1    3200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F02697A
+P 3100 4400
+F 0 "#PWR?" H 3100 4150 50  0001 C CNN
+F 1 "GND" H 3105 4227 50  0000 C CNN
+F 2 "" H 3100 4400 50  0001 C CNN
+F 3 "" H 3100 4400 50  0001 C CNN
+	1    3100 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4400 3100 3950
+Wire Wire Line
+	3100 3950 3800 3950
+Wire Wire Line
+	3200 2950 3200 3650
+Wire Wire Line
+	3200 3850 3800 3850
+Wire Wire Line
+	3800 3750 3200 3750
+Connection ~ 3200 3750
+Wire Wire Line
+	3200 3750 3200 3850
+Wire Wire Line
+	3800 3650 3200 3650
+Connection ~ 3200 3650
+Wire Wire Line
+	3200 3650 3200 3750
+Text GLabel 6050 3150 2    50   Input ~ 0
+master_rx
+Text GLabel 6050 3250 2    50   Input ~ 0
+master_tx
+$Comp
+L Device:R R?
+U 1 1 5F02AA2F
+P 5500 3150
+F 0 "R?" V 5293 3150 50  0000 C CNN
+F 1 "200" V 5384 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5430 3150 50  0001 C CNN
+F 3 "~" H 5500 3150 50  0001 C CNN
+	1    5500 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F02ADFE
+P 5500 3250
+F 0 "R?" V 5293 3250 50  0000 C CNN
+F 1 "200" V 5384 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5430 3250 50  0001 C CNN
+F 3 "~" H 5500 3250 50  0001 C CNN
+	1    5500 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 3150 5350 3150
+Wire Wire Line
+	5650 3150 6050 3150
+Wire Wire Line
+	6050 3250 5650 3250
+Wire Wire Line
+	5350 3250 5200 3250
+$Comp
+L Device:C C?
+U 1 1 5F02D2FE
+P 8850 1850
+F 0 "C?" H 8965 1896 50  0000 L CNN
+F 1 "C" H 8965 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8888 1700 50  0001 C CNN
+F 3 "~" H 8850 1850 50  0001 C CNN
+	1    8850 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F02E331
+P 8500 1450
+F 0 "#PWR?" H 8500 1300 50  0001 C CNN
+F 1 "+3V3" H 8515 1623 50  0000 C CNN
+F 2 "" H 8500 1450 50  0001 C CNN
+F 3 "" H 8500 1450 50  0001 C CNN
+	1    8500 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1450 8500 1550
+Wire Wire Line
+	8500 1550 8850 1550
+Wire Wire Line
+	8850 1550 8850 1700
+Connection ~ 8500 1550
+Wire Wire Line
+	8500 1550 8500 1700
+Wire Wire Line
+	8200 1550 8500 1550
+Wire Wire Line
+	8200 1550 8200 1700
+$Comp
+L power:GND #PWR?
+U 1 1 5F033B52
+P 8500 2450
+F 0 "#PWR?" H 8500 2200 50  0001 C CNN
+F 1 "GND" H 8505 2277 50  0000 C CNN
+F 2 "" H 8500 2450 50  0001 C CNN
+F 3 "" H 8500 2450 50  0001 C CNN
+	1    8500 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2000 8200 2150
+Wire Wire Line
+	8200 2150 8500 2150
+Wire Wire Line
+	8500 2150 8500 2450
+Wire Wire Line
+	8500 2000 8500 2150
+Connection ~ 8500 2150
+Wire Wire Line
+	8500 2150 8850 2150
+Wire Wire Line
+	8850 2150 8850 2000
+$EndSCHEMATC

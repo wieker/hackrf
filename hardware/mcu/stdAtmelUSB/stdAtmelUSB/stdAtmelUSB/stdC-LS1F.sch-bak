@@ -19,7 +19,7 @@ U 1 1 5E9E9075
 P 2050 3500
 F 0 "J1" H 1942 2275 50  0000 C CNN
 F 1 "Conn_01x20_Female" H 1942 2366 50  0000 C CNN
-F 2 "" H 2050 3500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Horizontal" H 2050 3500 50  0001 C CNN
 F 3 "~" H 2050 3500 50  0001 C CNN
 	1    2050 3500
 	-1   0    0    1   
@@ -53,13 +53,13 @@ uart_tx
 Text GLabel 2250 2800 2    50   Input ~ 0
 uart_rx
 Text GLabel 2250 3300 2    50   Input ~ 0
-spi_clk
+spi_mosi
 Text GLabel 2250 3400 2    50   Input ~ 0
-spi_ss
+spi_sck
 Text GLabel 2250 3500 2    50   Input ~ 0
 spi_miso
 Text GLabel 2250 3600 2    50   Input ~ 0
-spi_mosi
+spi_ss
 Text GLabel 2250 3200 2    50   Input ~ 0
 fpga_reset
 Text GLabel 2250 3100 2    50   Input ~ 0

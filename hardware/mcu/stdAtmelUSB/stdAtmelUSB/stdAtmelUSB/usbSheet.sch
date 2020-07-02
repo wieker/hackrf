@@ -145,13 +145,13 @@ swd_clk
 Text GLabel 2500 2100 0    50   Input ~ 0
 swd_io
 Text GLabel 3500 1800 2    50   Input ~ 0
-spi_clk
+spi_mosi
 Text GLabel 3500 1900 2    50   Input ~ 0
-spi_ss
+spi_sck
 Text GLabel 3500 2000 2    50   Input ~ 0
 spi_miso
 Text GLabel 3500 2100 2    50   Input ~ 0
-spi_mosi
+spi_ss
 Text GLabel 3500 2200 2    50   Input ~ 0
 led_mcu
 $Comp

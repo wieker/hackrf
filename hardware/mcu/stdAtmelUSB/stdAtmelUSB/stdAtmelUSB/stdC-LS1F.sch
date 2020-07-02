@@ -53,13 +53,13 @@ uart_tx
 Text GLabel 2250 2800 2    50   Input ~ 0
 uart_rx
 Text GLabel 2250 3300 2    50   Input ~ 0
-spi_clk
+spi_mosi
 Text GLabel 2250 3400 2    50   Input ~ 0
-spi_ss
+spi_sck
 Text GLabel 2250 3500 2    50   Input ~ 0
 spi_miso
 Text GLabel 2250 3600 2    50   Input ~ 0
-spi_mosi
+spi_ss
 Text GLabel 2250 3200 2    50   Input ~ 0
 fpga_reset
 Text GLabel 2250 3100 2    50   Input ~ 0
