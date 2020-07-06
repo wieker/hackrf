@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -18,5 +18,11 @@ S 1250 1400 2850 800
 U 5F0476C3
 F0 "Converters" 50
 F1 "converters.sch" 50
+$EndSheet
+$Sheet
+S 1250 2950 2850 750 
+U 5F060A49
+F0 "BookBoost" 50
+F1 "bookboost.sch" 50
 $EndSheet
 $EndSCHEMATC
