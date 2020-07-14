@@ -25,4 +25,10 @@ U 5F060A49
 F0 "BookBoost" 50
 F1 "bookboost.sch" 50
 $EndSheet
+$Sheet
+S 5250 1350 2300 750 
+U 5F1215F6
+F0 "Osc" 50
+F1 "osc.sch" 50
+$EndSheet
 $EndSCHEMATC
