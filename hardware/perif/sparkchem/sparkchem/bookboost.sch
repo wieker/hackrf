@@ -13,19 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:D D?
-U 1 1 5F06318C
-P 6300 2450
-F 0 "D?" H 6300 2233 50  0000 C CNN
-F 1 "D" H 6300 2324 50  0000 C CNN
-F 2 "" H 6300 2450 50  0001 C CNN
-F 3 "~" H 6300 2450 50  0001 C CNN
-	1    6300 2450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6150 2450 5350 2450
 Wire Wire Line
 	5350 2450 5350 3000
 $Comp
@@ -39,28 +26,21 @@ F 3 "~" H 4600 2450 50  0001 C CNN
 	1    4600 2450
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4750 2450 5350 2450
-Connection ~ 5350 2450
 $Comp
 L Device:C C?
 U 1 1 5F06319C
-P 3750 2950
-F 0 "C?" H 3865 2996 50  0000 L CNN
-F 1 "C" H 3865 2905 50  0000 L CNN
-F 2 "" H 3788 2800 50  0001 C CNN
-F 3 "~" H 3750 2950 50  0001 C CNN
-	1    3750 2950
+P 2900 2950
+F 0 "C?" H 3015 2996 50  0000 L CNN
+F 1 "C" H 3015 2905 50  0000 L CNN
+F 2 "" H 2938 2800 50  0001 C CNN
+F 3 "~" H 2900 2950 50  0001 C CNN
+	1    2900 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 2800 3750 2450
+	2900 2800 2900 2450
 Wire Wire Line
-	3750 2450 4150 2450
-Wire Wire Line
-	3750 3100 3750 4050
-Wire Wire Line
-	3750 4050 4150 4050
+	2900 3100 2900 4050
 Wire Wire Line
 	5350 4050 5350 3400
 $Comp
@@ -127,15 +107,13 @@ F 3 "" H 2500 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 2450 3750 2450
+	2600 2450 2900 2450
 Wire Wire Line
 	2600 2200 2600 2450
-Connection ~ 3750 2450
 Wire Wire Line
 	2500 4400 2500 4050
 Wire Wire Line
-	2500 4050 3750 4050
-Connection ~ 3750 4050
+	2500 4050 2900 4050
 $Comp
 L Device:R R?
 U 1 1 5F0631D0
@@ -170,17 +148,6 @@ Wire Wire Line
 Connection ~ 7300 2450
 Wire Wire Line
 	7300 2450 7750 2450
-$Comp
-L Connector:Conn_01x03_Male J?
-U 1 1 5F0631E3
-P 1550 3300
-F 0 "J?" H 1658 3581 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 1658 3490 50  0000 C CNN
-F 2 "" H 1550 3300 50  0001 C CNN
-F 3 "~" H 1550 3300 50  0001 C CNN
-	1    1550 3300
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_01x03_Male J?
 U 1 1 5F0631E9
@@ -240,12 +207,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5F063207
-P 2050 3600
-F 0 "#PWR?" H 2050 3350 50  0001 C CNN
-F 1 "GND" H 2055 3427 50  0000 C CNN
-F 2 "" H 2050 3600 50  0001 C CNN
-F 3 "" H 2050 3600 50  0001 C CNN
-	1    2050 3600
+P 2050 4300
+F 0 "#PWR?" H 2050 4050 50  0001 C CNN
+F 1 "GND" H 2055 4127 50  0000 C CNN
+F 2 "" H 2050 4300 50  0001 C CNN
+F 3 "" H 2050 4300 50  0001 C CNN
+	1    2050 4300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -264,12 +231,11 @@ Wire Wire Line
 Wire Wire Line
 	8450 3300 8450 3400
 Wire Wire Line
-	1750 3400 2050 3400
+	1750 4100 2050 4100
 Wire Wire Line
-	2050 3400 2050 3600
+	2050 4100 2050 4300
 Wire Wire Line
 	4150 2950 4150 2450
-Connection ~ 4150 2450
 Wire Wire Line
 	4150 2450 4450 2450
 Wire Wire Line
@@ -299,4 +265,40 @@ F 3 "https://www.diodes.com/assets/Datasheets/ds30896.pdf" H 4050 3150 50  0001 
 	1    4050 3150
 	1    0    0    -1  
 $EndComp
+Connection ~ 2900 4050
+Wire Wire Line
+	2900 4050 4150 4050
+$Comp
+L Transistor_FET:2N7002K Q?
+U 1 1 5F0FAB6A
+P 6250 2550
+F 0 "Q?" H 6454 2596 50  0000 L CNN
+F 1 "2N7002K" H 6454 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6450 2475 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30896.pdf" H 6250 2550 50  0001 L CNN
+	1    6250 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4750 2450 5350 2450
+Connection ~ 5350 2450
+Wire Wire Line
+	5350 2450 6050 2450
+$Comp
+L Transistor_FET:2N7002K Q?
+U 1 1 5F115B33
+P 3500 2550
+F 0 "Q?" H 3704 2596 50  0000 L CNN
+F 1 "2N7002K" H 3704 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3700 2475 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30896.pdf" H 3500 2550 50  0001 L CNN
+	1    3500 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2900 2450 3300 2450
+Connection ~ 2900 2450
+Wire Wire Line
+	3700 2450 4150 2450
+Connection ~ 4150 2450
 $EndSCHEMATC
