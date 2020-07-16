@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 2 2
 Title ""
 Date ""
 Rev ""
@@ -13,4 +13,115 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text GLabel 2700 3300 0    50   Input ~ 0
+RLctl
+$Comp
+L Transistor_FET:2N7002K Q1
+U 1 1 5F13B223
+P 3350 3300
+F 0 "Q1" H 3554 3346 50  0000 L CNN
+F 1 "2N7002K" H 3554 3255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3550 3225 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30896.pdf" H 3350 3300 50  0001 L CNN
+	1    3350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 3300 3150 3300
+$Comp
+L Device:R R1
+U 1 1 5F13EBF2
+P 3950 4050
+F 0 "R1" V 3743 4050 50  0000 C CNN
+F 1 "R" V 3834 4050 50  0000 C CNN
+F 2 "" V 3880 4050 50  0001 C CNN
+F 3 "~" H 3950 4050 50  0001 C CNN
+	1    3950 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5F13F643
+P 4600 4450
+F 0 "L1" H 4653 4496 50  0000 L CNN
+F 1 "L" H 4653 4405 50  0000 L CNN
+F 2 "Inductor_THT:L_Axial_L12.0mm_D5.0mm_P5.08mm_Vertical_Fastron_MISC" H 4600 4450 50  0001 C CNN
+F 3 "~" H 4600 4450 50  0001 C CNN
+	1    4600 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F140665
+P 4600 5050
+F 0 "#PWR02" H 4600 4800 50  0001 C CNN
+F 1 "GND" H 4605 4877 50  0000 C CNN
+F 2 "" H 4600 5050 50  0001 C CNN
+F 3 "" H 4600 5050 50  0001 C CNN
+	1    4600 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR01
+U 1 1 5F140B9B
+P 3450 2750
+F 0 "#PWR01" H 3450 2600 50  0001 C CNN
+F 1 "+3V3" H 3465 2923 50  0000 C CNN
+F 2 "" H 3450 2750 50  0001 C CNN
+F 3 "" H 3450 2750 50  0001 C CNN
+	1    3450 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2750 3450 3100
+Wire Wire Line
+	3450 3500 3450 4050
+Wire Wire Line
+	3450 4050 3800 4050
+Wire Wire Line
+	4100 4050 4600 4050
+Wire Wire Line
+	4600 4050 4600 4300
+Wire Wire Line
+	4600 4600 4600 5050
+Text GLabel 4950 4050 2    50   Input ~ 0
+RLsense
+Wire Wire Line
+	4600 4050 4950 4050
+Connection ~ 4600 4050
+Text GLabel 6750 3000 0    50   Input ~ 0
+RLsense
+$Comp
+L power:GND #PWR?
+U 1 1 5F14ACC1
+P 7550 4250
+F 0 "#PWR?" H 7550 4000 50  0001 C CNN
+F 1 "GND" H 7555 4077 50  0000 C CNN
+F 2 "" H 7550 4250 50  0001 C CNN
+F 3 "" H 7550 4250 50  0001 C CNN
+	1    7550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5F14B315
+P 7550 3900
+F 0 "D?" V 7497 3980 50  0000 L CNN
+F 1 "LED" V 7588 3980 50  0000 L CNN
+F 2 "" H 7550 3900 50  0001 C CNN
+F 3 "~" H 7550 3900 50  0001 C CNN
+	1    7550 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F14BDF1
+P 7550 3350
+F 0 "R?" H 7620 3396 50  0000 L CNN
+F 1 "R" H 7620 3305 50  0000 L CNN
+F 2 "" V 7480 3350 50  0001 C CNN
+F 3 "~" H 7550 3350 50  0001 C CNN
+	1    7550 3350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
