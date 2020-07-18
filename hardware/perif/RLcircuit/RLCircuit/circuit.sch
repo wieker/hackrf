@@ -40,17 +40,6 @@ F 3 "~" H 4600 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
-U 1 1 5F140665
-P 4600 5050
-F 0 "#PWR02" H 4600 4800 50  0001 C CNN
-F 1 "GND" H 4605 4877 50  0000 C CNN
-F 2 "" H 4600 5050 50  0001 C CNN
-F 3 "" H 4600 5050 50  0001 C CNN
-	1    4600 5050
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3V3 #PWR01
 U 1 1 5F140B9B
 P 3450 2750
@@ -71,8 +60,6 @@ Wire Wire Line
 	4100 4050 4600 4050
 Wire Wire Line
 	4600 4050 4600 4300
-Wire Wire Line
-	4600 4600 4600 5050
 Text GLabel 4950 4050 2    50   Input ~ 0
 RLsense
 Wire Wire Line
@@ -80,28 +67,6 @@ Wire Wire Line
 Connection ~ 4600 4050
 Text GLabel 6750 3000 0    50   Input ~ 0
 RLsense
-$Comp
-L power:GND #PWR03
-U 1 1 5F14ACC1
-P 7550 4250
-F 0 "#PWR03" H 7550 4000 50  0001 C CNN
-F 1 "GND" H 7555 4077 50  0000 C CNN
-F 2 "" H 7550 4250 50  0001 C CNN
-F 3 "" H 7550 4250 50  0001 C CNN
-	1    7550 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D1
-U 1 1 5F14B315
-P 7550 3900
-F 0 "D1" V 7497 3980 50  0000 L CNN
-F 1 "LED" V 7588 3980 50  0000 L CNN
-F 2 "LED_SMD:LED_1206_3216Metric" H 7550 3900 50  0001 C CNN
-F 3 "~" H 7550 3900 50  0001 C CNN
-	1    7550 3900
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R2
 U 1 1 5F14BDF1
@@ -117,10 +82,6 @@ Wire Wire Line
 	6750 3000 7550 3000
 Wire Wire Line
 	7550 3000 7550 3200
-Wire Wire Line
-	7550 4250 7550 4050
-Wire Wire Line
-	7550 3750 7550 3500
 $Comp
 L Device:R R1
 U 1 1 5F13EBF2
@@ -211,4 +172,29 @@ Wire Wire Line
 Wire Wire Line
 	3000 6350 3000 6250
 Connection ~ 2650 6350
+Text GLabel 4850 5400 2    50   Input ~ 0
+bias
+Wire Wire Line
+	4600 5400 4850 5400
+Wire Wire Line
+	4600 4600 4600 5400
+Text GLabel 7850 4250 2    50   Input ~ 0
+bias
+Wire Wire Line
+	7550 3750 7550 3500
+Wire Wire Line
+	7550 4250 7550 4050
+Wire Wire Line
+	7850 4250 7550 4250
+$Comp
+L Analog_Switch:MAX40200AUK U?
+U 1 1 5F146940
+P 6800 4000
+F 0 "U?" H 6800 4367 50  0000 C CNN
+F 1 "MAX40200AUK" H 6800 4276 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6800 4500 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX40200.pdf" H 6800 4500 50  0001 C CNN
+	1    6800 4000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
