@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -30,5 +30,11 @@ S 3850 2750 1200 400
 U 5F1B4FA6
 F0 "VSense" 50
 F1 "vsense.sch" 50
+$EndSheet
+$Sheet
+S 3850 3450 1200 300 
+U 5F2031FC
+F0 "PWM" 50
+F1 "pwm.sch" 50
 $EndSheet
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -13,4 +13,137 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L Analog_ADC:MCP3425A3T-ECH U?
+U 1 1 5F1F8FE1
+P 3650 3900
+F 0 "U?" V 3604 4344 50  0000 L CNN
+F 1 "MCP3425A3T-ECH" V 3695 4344 50  0000 L CNN
+F 2 "" H 3650 3900 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22072b.pdf" H 3650 3900 50  0001 C CNN
+	1    3650 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F1F8FE9
+P 3650 5300
+F 0 "#PWR?" H 3650 5050 50  0001 C CNN
+F 1 "GND" H 3655 5127 50  0000 C CNN
+F 2 "" H 3650 5300 50  0001 C CNN
+F 3 "" H 3650 5300 50  0001 C CNN
+	1    3650 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F1F8FF1
+P 3650 2550
+F 0 "#PWR?" H 3650 2400 50  0001 C CNN
+F 1 "+3V3" H 3665 2723 50  0000 C CNN
+F 2 "" H 3650 2550 50  0001 C CNN
+F 3 "" H 3650 2550 50  0001 C CNN
+	1    3650 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 5150 3800 2    50   Input ~ 0
+scl
+Text GLabel 5150 3900 2    50   Input ~ 0
+sda
+$Comp
+L Device:C C?
+U 1 1 5F1F8FFF
+P 6250 3550
+F 0 "C?" H 6365 3596 50  0000 L CNN
+F 1 "C" H 6365 3505 50  0000 L CNN
+F 2 "" H 6288 3400 50  0001 C CNN
+F 3 "~" H 6250 3550 50  0001 C CNN
+	1    6250 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F1F9005
+P 6700 3550
+F 0 "C?" H 6815 3596 50  0000 L CNN
+F 1 "C" H 6815 3505 50  0000 L CNN
+F 2 "" H 6738 3400 50  0001 C CNN
+F 3 "~" H 6700 3550 50  0001 C CNN
+	1    6700 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4300 3650 5300
+Wire Wire Line
+	3650 2550 3650 3500
+Wire Wire Line
+	4150 3900 5150 3900
+Wire Wire Line
+	4150 3800 5150 3800
+$Comp
+L Device:R R?
+U 1 1 5F2009CA
+P 2100 3800
+F 0 "R?" H 2170 3846 50  0000 L CNN
+F 1 "R" H 2170 3755 50  0000 L CNN
+F 2 "" V 2030 3800 50  0001 C CNN
+F 3 "~" H 2100 3800 50  0001 C CNN
+	1    2100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F2010AC
+P 2100 3000
+F 0 "R?" H 2170 3046 50  0000 L CNN
+F 1 "R" H 2170 2955 50  0000 L CNN
+F 2 "" V 2030 3000 50  0001 C CNN
+F 3 "~" H 2100 3000 50  0001 C CNN
+	1    2100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F201596
+P 2100 4700
+F 0 "#PWR?" H 2100 4450 50  0001 C CNN
+F 1 "GND" H 2105 4527 50  0000 C CNN
+F 2 "" H 2100 4700 50  0001 C CNN
+F 3 "" H 2100 4700 50  0001 C CNN
+	1    2100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4650 2100 4300
+Wire Wire Line
+	2100 3150 2100 3400
+Wire Wire Line
+	2650 4000 2650 4300
+Wire Wire Line
+	2650 4300 2100 4300
+Wire Wire Line
+	2650 4000 3150 4000
+Connection ~ 2100 4300
+Wire Wire Line
+	2100 4300 2100 3950
+Wire Wire Line
+	2100 3400 2650 3400
+Wire Wire Line
+	2650 3400 2650 3800
+Wire Wire Line
+	2650 3800 3150 3800
+Connection ~ 2100 3400
+Wire Wire Line
+	2100 3400 2100 3650
+Text GLabel 1250 2500 0    50   Input ~ 0
+vs_in
+Text GLabel 2650 2500 2    50   Input ~ 0
+vs_out
+Wire Wire Line
+	1250 2500 2100 2500
+Wire Wire Line
+	2100 2850 2100 2500
+Connection ~ 2100 2500
+Wire Wire Line
+	2100 2500 2650 2500
 $EndSCHEMATC
