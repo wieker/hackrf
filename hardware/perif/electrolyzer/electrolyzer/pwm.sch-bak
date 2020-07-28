@@ -138,4 +138,8 @@ Wire Wire Line
 	3400 3750 3950 3750
 Text GLabel 2950 3250 0    50   Input ~ 0
 sw_t
+Wire Wire Line
+	2950 3250 3400 3250
+Wire Wire Line
+	3400 3250 3400 3000
 $EndSCHEMATC
