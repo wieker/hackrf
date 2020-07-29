@@ -37,4 +37,10 @@ U 5F2031FC
 F0 "PWM" 50
 F1 "pwm.sch" 50
 $EndSheet
+Text GLabel 1650 4000 0    50   Input ~ 0
+c_out
+Text GLabel 1950 4000 2    50   Input ~ 0
+vs_in
+Wire Wire Line
+	1650 4000 1950 4000
 $EndSCHEMATC
