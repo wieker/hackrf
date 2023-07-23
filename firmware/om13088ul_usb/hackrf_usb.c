@@ -50,7 +50,7 @@ int main(void)
 		gpio_set(&gpio_led[2]);
 
 		delay(20000);
-		gpio_clear(&gpio_led[0]);
+		//gpio_clear(&gpio_led[0]);
 		gpio_clear(&gpio_led[1]);
 		gpio_clear(&gpio_led[2]);
 		

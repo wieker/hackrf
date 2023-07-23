@@ -20,4 +20,4 @@
 	.data
 	.section	.m0_bin, "ax"
 	
-	.incbin		"om13088ul_usb_m0.bin"
+	.incbin		"blinky_m0.bin"
